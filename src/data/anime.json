@@ -45,10 +45,10 @@
     },
     {
       "id": "hunter-x-hunter-2011",
-      "title": "Hunter x Hunter",
+      "title": "Hunter x Hunter (2011)",
       "altTitles": [
-        "Hunter x Hunter",
-        "HUNTER×HUNTER ハンターハンター"
+        "HUNTER×HUNTER ハンターハンター",
+        "Hunter x Hunter"
       ],
       "type": "TV",
       "status": "Finished",
@@ -564,10 +564,11 @@
     },
     {
       "id": "bleach-thousand-year-blood-war",
-      "title": "Bleach: Thousand-Year Blood War",
+      "title": "BLEACH: Thousand-Year Blood War",
       "altTitles": [
-        "BLEACH: Thousand-Year Blood War",
-        "BLEACH 千年血戦篇"
+        "BLEACH: Sennen Kessen-hen",
+        "BLEACH 千年血戦篇",
+        "Bleach: Thousand-Year Blood War"
       ],
       "type": "TV",
       "status": "Ongoing",
@@ -620,6 +621,131 @@
       "gdrive_slug": "bleach-sennen-kessen-hen"
     },
     {
+      "id": "one-piece",
+      "title": "One Piece",
+      "altTitles": [
+        "ワンピース",
+        "One Piece"
+      ],
+      "type": "TV",
+      "status": "Ongoing",
+      "year": 1999,
+      "season": "Fall 1999",
+      "studio": "Toei Animation",
+      "rating": 8.7,
+      "popularity": 1,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama",
+        "Fantasy",
+        "Shounen",
+        "Super Power"
+      ],
+      "synopsis": "Monkey D. Luffy sets out to become the King of the Pirates and find the legendary treasure known as the One Piece. Along the way he gathers a crew of loyal friends, sails across the Grand Line, and battles emperors, warlords, and the World Government in a sweeping epic spanning decades.",
+      "duration": 24,
+      "totalEpisodes": 1114,
+      "featured": true,
+      "image_url": "https://media.kitsu.app/anime/poster_images/12/large.jpg",
+      "kitsu_id": "12",
+      "kitsu_url": "https://kitsu.io/anime/one-piece",
+      "gdrive_slug": "one-piece",
+      "poster": {
+        "variant": 2,
+        "l1": 13,
+        "l2": 97,
+        "angle": 45,
+        "hash": "44bc7de1"
+      },
+      "seasons": [
+        {
+          "name": "East Blue Saga",
+          "episodeCount": 61,
+          "year": 1999,
+          "synopsis": "Luffy gathers his first crew members and sets sail across the East Blue."
+        },
+        {
+          "name": "Arabasta Saga",
+          "episodeCount": 74,
+          "year": 2000,
+          "synopsis": "The crew ventures into the Grand Line and helps Princess Vivi save her country from Crocodile."
+        },
+        {
+          "name": "Skypiea Saga",
+          "episodeCount": 63,
+          "year": 2002,
+          "synopsis": "The Straw Hats sail to a sky island to uncover a 400-year-old mystery."
+        },
+        {
+          "name": "Water 7 Saga",
+          "episodeCount": 119,
+          "year": 2005,
+          "synopsis": "The crew reaches Water 7, faces the CP9, and rescues Robin from Enies Lobby."
+        },
+        {
+          "name": "Thriller Bark Saga",
+          "episodeCount": 59,
+          "year": 2007,
+          "synopsis": "The crew enters the haunted Thriller Bark and faces the Warlord Gecko Moria."
+        },
+        {
+          "name": "Summit War Saga",
+          "episodeCount": 132,
+          "year": 2008,
+          "synopsis": "Separation at Sabaody, Luffy's journey through Amazon Lily, Impel Down, and the Marineford War."
+        },
+        {
+          "name": "Fishman Island Saga",
+          "episodeCount": 58,
+          "year": 2012,
+          "synopsis": "The crew reunites and ventures underwater to Fishman Island."
+        },
+        {
+          "name": "Punk Hazard Saga",
+          "episodeCount": 54,
+          "year": 2013,
+          "synopsis": "The crew teams up with Law to take down Caesar Clown on a frozen island."
+        },
+        {
+          "name": "Dressrosa Saga",
+          "episodeCount": 118,
+          "year": 2014,
+          "synopsis": "Luffy enters a tournament and battles Doflamingo to free the kingdom of Dressrosa."
+        },
+        {
+          "name": "Zou Saga",
+          "episodeCount": 36,
+          "year": 2016,
+          "synopsis": "The crew arrives at Zou and learns about the Yonko Kaido."
+        },
+        {
+          "name": "Whole Cake Island Saga",
+          "episodeCount": 96,
+          "year": 2017,
+          "synopsis": "Luffy and half the crew infiltrate Big Mom's territory to rescue Sanji."
+        },
+        {
+          "name": "Reverie Saga",
+          "episodeCount": 11,
+          "year": 2018,
+          "synopsis": "The Reverie summit and the beginning of the Wano arc setup."
+        },
+        {
+          "name": "Wano Country Saga",
+          "episodeCount": 195,
+          "year": 2019,
+          "synopsis": "The alliance assaults Wano to take down Kaido and Orochi in a massive samurai war."
+        },
+        {
+          "name": "Egghead Saga",
+          "episodeCount": 38,
+          "year": 2023,
+          "synopsis": "The crew arrives at Egghead Island and meets Dr. Vegapunk as the World Government closes in."
+        }
+      ]
+    },
+    {
       "title": "Attack on Titan",
       "altTitles": [
         "Shingeki no Kyojin",
@@ -666,9 +792,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Boku no Hero Academia",
+      "title": "My Hero Academia",
       "altTitles": [
-        "My Hero Academia",
+        "Boku no Hero Academia",
         "僕のヒーローアカデミア"
       ],
       "type": "TV",
@@ -710,9 +836,9 @@
       "gdrive_slug": "boku-no-hero-academia-dub"
     },
     {
-      "title": "Boku no Hero Academia 2",
+      "title": "My Hero Academia Season 2",
       "altTitles": [
-        "My Hero Academia Season 2",
+        "Boku no Hero Academia 2",
         "僕のヒーローアカデミア２"
       ],
       "type": "TV",
@@ -799,9 +925,9 @@
       "gdrive_slug": "one-punch-man"
     },
     {
-      "title": "Boku no Hero Academia 3",
+      "title": "My Hero Academia Season 3",
       "altTitles": [
-        "My Hero Academia Season 3",
+        "Boku no Hero Academia 3",
         "僕のヒーローアカデミア３"
       ],
       "type": "TV",
@@ -982,9 +1108,9 @@
       "gdrive_slug": "fullmetal-alchemist-brotherhood"
     },
     {
-      "title": "Kimi no Na wa.",
+      "title": "Your Name.",
       "altTitles": [
-        "Your Name.",
+        "Kimi no Na wa.",
         "君の名は。"
       ],
       "type": "Movie",
@@ -1027,9 +1153,9 @@
       "gdrive_slug": "kimi-no-na-wa"
     },
     {
-      "title": "Kimetsu no Yaiba",
+      "title": "Demon Slayer: Kimetsu no Yaiba",
       "altTitles": [
-        "Demon Slayer: Kimetsu no Yaiba",
+        "Kimetsu no Yaiba",
         "鬼滅の刃"
       ],
       "type": "TV",
@@ -1066,9 +1192,9 @@
       "gdrive_slug": "kimetsu-no-yaiba"
     },
     {
-      "title": "Nanatsu no Taizai",
+      "title": "The Seven Deadly Sins",
       "altTitles": [
-        "The Seven Deadly Sins",
+        "Nanatsu no Taizai",
         "七つの大罪"
       ],
       "type": "TV",
@@ -1112,9 +1238,9 @@
       "gdrive_slug": "nanatsu-no-taizai"
     },
     {
-      "title": "Koe no Katachi",
+      "title": "A Silent Voice",
       "altTitles": [
-        "A Silent Voice",
+        "Koe no Katachi",
         "聲の形"
       ],
       "type": "Movie",
@@ -1199,52 +1325,6 @@
       "id": "attack-on-titan-season-2",
       "featured": false,
       "gdrive_slug": ""
-    },
-    {
-      "title": "One Piece",
-      "altTitles": [
-        "ONE PIECE"
-      ],
-      "type": "TV",
-      "status": "Ongoing",
-      "year": 1999,
-      "season": "1999",
-      "studio": "Toei Animation",
-      "rating": 8.4,
-      "popularity": 14,
-      "genres": [
-        "Action",
-        "Adventure",
-        "Comedy",
-        "Fantasy",
-        "Super Power",
-        "Drama",
-        "Friendship"
-      ],
-      "synopsis": "Gol D. Roger was known as the \"Pirate King,\" the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the Pirate King. Enter Monkey D. Luffy, a 17-year-old boy who defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate ransacking villages for fun, Luffy’s reason for being a pirate is one of pure wonder: the thought of an exciting adventure that leads him to intriguing people and ultimately, the promised treasure. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach the most coveted of all fortunes—One Piece. [Written by MAL Rewrite]",
-      "duration": 24,
-      "totalEpisodes": 12,
-      "image_url": "https://media.kitsu.app/anime/poster_images/12/large.jpg",
-      "kitsu_id": "12",
-      "kitsu_url": "https://kitsu.io/anime/one-piece",
-      "poster": {
-        "variant": 2,
-        "l1": 13,
-        "l2": 97,
-        "angle": 45,
-        "hash": "44bc7de1"
-      },
-      "seasons": [
-        {
-          "name": "Season 1",
-          "episodeCount": 12,
-          "year": 1999,
-          "synopsis": ""
-        }
-      ],
-      "id": "one-piece",
-      "featured": false,
-      "gdrive_slug": "one-piece"
     },
     {
       "title": "Attack on Titan Season 3",
@@ -1368,9 +1448,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Ansatsu Kyoushitsu 2nd Season",
+      "title": "Assassination Classroom Second Season",
       "altTitles": [
-        "Assassination Classroom Second Season",
+        "Ansatsu Kyoushitsu 2nd Season",
         "暗殺教室　第２期"
       ],
       "type": "TV",
@@ -1411,9 +1491,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Haikyuu!!",
+      "title": "Haikyu!!",
       "altTitles": [
-        "Haikyu!!",
+        "Haikyuu!!",
         "ハイキュー!!"
       ],
       "type": "TV",
@@ -1455,9 +1535,9 @@
       "gdrive_slug": "haikyuu"
     },
     {
-      "title": "Ansatsu Kyoushitsu",
+      "title": "Assassination Classroom",
       "altTitles": [
-        "Assassination Classroom",
+        "Ansatsu Kyoushitsu",
         "暗殺教室"
       ],
       "type": "TV",
@@ -1498,9 +1578,9 @@
       "gdrive_slug": "ansatsu-kyoushitsu-tv-"
     },
     {
-      "title": "Nanatsu no Taizai: Imashime no Fukkatsu",
+      "title": "The Seven Deadly Sins: Revival of the Commandments",
       "altTitles": [
-        "The Seven Deadly Sins: Revival of the Commandments",
+        "Nanatsu no Taizai: Imashime no Fukkatsu",
         "七つの大罪 戒めの復活"
       ],
       "type": "TV",
@@ -1545,9 +1625,9 @@
       "gdrive_slug": "nanatsu-no-taizai-imashime-no-fukkatsu"
     },
     {
-      "title": "No Game No Life",
+      "title": "No Game, No Life",
       "altTitles": [
-        "No Game, No Life",
+        "No Game No Life",
         "ノーゲーム・ノーライフ"
       ],
       "type": "TV",
@@ -1591,9 +1671,9 @@
       "gdrive_slug": "no-game-no-life"
     },
     {
-      "title": "Kimetsu no Yaiba: Mugen Ressha-hen",
+      "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
       "altTitles": [
-        "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+        "Kimetsu no Yaiba: Mugen Ressha-hen",
         "劇場版 鬼滅の刃 無限列車編"
       ],
       "type": "Movie",
@@ -1671,9 +1751,9 @@
       "gdrive_slug": "steinsgate"
     },
     {
-      "title": "Shigatsu wa Kimi no Uso",
+      "title": "Your Lie in April",
       "altTitles": [
-        "Your Lie in April",
+        "Shigatsu wa Kimi no Uso",
         "四月は君の嘘"
       ],
       "type": "TV",
@@ -1755,9 +1835,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Yakusoku no Neverland",
+      "title": "The Promised Neverland",
       "altTitles": [
-        "The Promised Neverland",
+        "Yakusoku no Neverland",
         "約束のネバーランド"
       ],
       "type": "TV",
@@ -1841,9 +1921,9 @@
       "gdrive_slug": "toradora"
     },
     {
-      "title": "Haikyuu!! Second Season",
+      "title": "Haikyu!! 2nd Season",
       "altTitles": [
-        "Haikyu!! 2nd Season",
+        "Haikyuu!! Second Season",
         "ハイキュー!! セカンドシーズン"
       ],
       "type": "TV",
@@ -2111,9 +2191,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Shokugeki no Souma",
+      "title": "Food Wars! Shokugeki no Soma",
       "altTitles": [
-        "Food Wars! Shokugeki no Soma",
+        "Shokugeki no Souma",
         "食戟のソーマ"
       ],
       "type": "TV",
@@ -2154,9 +2234,9 @@
       "gdrive_slug": "shokugeki-no-souma"
     },
     {
-      "title": "Boku dake ga Inai Machi",
+      "title": "ERASED",
       "altTitles": [
-        "ERASED",
+        "Boku dake ga Inai Machi",
         "僕だけがいない街"
       ],
       "type": "TV",
@@ -2240,9 +2320,9 @@
       "gdrive_slug": "noragami-aragoto"
     },
     {
-      "title": "Haikyuu!!: Karasuno Koukou VS Shiratorizawa Gakuen Koukou",
+      "title": "Haikyu!! 3rd Season",
       "altTitles": [
-        "Haikyu!! 3rd Season",
+        "Haikyuu!!: Karasuno Koukou VS Shiratorizawa Gakuen Koukou",
         "ハイキュー!! 烏野高校 VS 白鳥沢学園高校"
       ],
       "type": "TV",
@@ -2284,9 +2364,9 @@
       "gdrive_slug": "haikyuu-karasuno-koukou-vs-shiratorizawa-gakuen-koukou"
     },
     {
-      "title": "Kiseijuu: Sei no Kakuritsu",
+      "title": "Parasyte -the maxim-",
       "altTitles": [
-        "Parasyte -the maxim-",
+        "Kiseijuu: Sei no Kakuritsu",
         "寄生獣 セイの格率"
       ],
       "type": "TV",
@@ -2417,9 +2497,9 @@
       "gdrive_slug": "cowboy-bebop"
     },
     {
-      "title": "Boku no Hero Academia 5",
+      "title": "My Hero Academia Season 5",
       "altTitles": [
-        "My Hero Academia Season 5",
+        "Boku no Hero Academia 5",
         "僕のヒーローアカデミア５"
       ],
       "type": "TV",
@@ -2456,9 +2536,9 @@
       "gdrive_slug": "boku-no-hero-academia-5th-season"
     },
     {
-      "title": "Re:Zero kara Hajimeru Isekai Seikatsu",
+      "title": "Re:ZERO -Starting Life in Another World-",
       "altTitles": [
-        "Re:ZERO -Starting Life in Another World-",
+        "Re:Zero kara Hajimeru Isekai Seikatsu",
         "Re：ゼロから始める異世界生活"
       ],
       "type": "TV",
@@ -2791,9 +2871,9 @@
       "gdrive_slug": "angel-beats-dub"
     },
     {
-      "title": "Tengen Toppa Gurren Lagann",
+      "title": "Gurren Lagann",
       "altTitles": [
-        "Gurren Lagann",
+        "Tengen Toppa Gurren Lagann",
         "天元突破グレンラガン"
       ],
       "type": "TV",
@@ -2893,9 +2973,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
+      "title": "anohana: The Flower We Saw That Day",
       "altTitles": [
-        "anohana: The Flower We Saw That Day",
+        "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
         "あの日見た花の名前を僕達はまだ知らない。"
       ],
       "type": "TV",
@@ -3023,9 +3103,9 @@
       "gdrive_slug": "psycho-pass"
     },
     {
-      "title": "One Punch Man 2",
+      "title": "One-Punch Man 2",
       "altTitles": [
-        "One-Punch Man 2",
+        "One Punch Man 2",
         "ワンパンマン 2"
       ],
       "type": "TV",
@@ -3113,9 +3193,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "FAIRY TAIL (2018)",
+      "title": "Fairy Tail Final Season",
       "altTitles": [
-        "Fairy Tail Final Season"
+        "FAIRY TAIL (2018)"
       ],
       "type": "TV",
       "status": "Finished",
@@ -3181,9 +3261,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Mirai Nikki (TV)",
+      "title": "The Future Diary",
       "altTitles": [
-        "The Future Diary",
+        "Mirai Nikki (TV)",
         "未来日記"
       ],
       "type": "TV",
@@ -3270,9 +3350,9 @@
       "gdrive_slug": "kill-la-kill"
     },
     {
-      "title": "Kimetsu no Yaiba: Yuukaku-hen",
+      "title": "Demon Slayer: Kimetsu no Yaiba - Entertainment District Arc",
       "altTitles": [
-        "Demon Slayer: Kimetsu no Yaiba - Entertainment District Arc",
+        "Kimetsu no Yaiba: Yuukaku-hen",
         "鬼滅の刃 遊郭編"
       ],
       "type": "TV",
@@ -3352,9 +3432,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Ao no Exorcist",
+      "title": "Blue Exorcist",
       "altTitles": [
-        "Blue Exorcist",
+        "Ao no Exorcist",
         "青の祓魔師(エクソシスト)"
       ],
       "type": "TV",
@@ -3396,9 +3476,9 @@
       "gdrive_slug": "ao-no-exorcist-"
     },
     {
-      "title": "Dr. Stone",
+      "title": "Dr. STONE",
       "altTitles": [
-        "Dr. STONE",
+        "Dr. Stone",
         "Dr.STONE"
       ],
       "type": "TV",
@@ -3435,9 +3515,9 @@
       "gdrive_slug": "dr-stone"
     },
     {
-      "title": "Kono Subarashii Sekai ni Shukufuku wo!",
+      "title": "KonoSuba: God's Blessing on This Wonderful World!",
       "altTitles": [
-        "KonoSuba: God's Blessing on This Wonderful World!",
+        "Kono Subarashii Sekai ni Shukufuku wo!",
         "この素晴らしい世界に祝福を！"
       ],
       "type": "TV",
@@ -3481,9 +3561,9 @@
       "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-"
     },
     {
-      "title": "Fate/Zero 2nd Season",
+      "title": "Fate/Zero Season 2",
       "altTitles": [
-        "Fate/Zero Season 2",
+        "Fate/Zero 2nd Season",
         "フェイト/ゼロ 2ndシーズン"
       ],
       "type": "TV",
@@ -3699,9 +3779,9 @@
       "gdrive_slug": "ouran-high-school-host-club"
     },
     {
-      "title": "Clannad: After Story",
+      "title": "Clannad ~After Story~",
       "altTitles": [
-        "Clannad ~After Story~",
+        "Clannad: After Story",
         "CLANNAD〜AFTER STORY〜 クラナド アフターストーリー"
       ],
       "type": "TV",
@@ -3792,9 +3872,9 @@
       "gdrive_slug": "neon-genesis-evangelion-"
     },
     {
-      "title": "Kono Subarashii Sekai ni Shukufuku wo! 2",
+      "title": "KonoSuba: God's Blessing on This Wonderful World! 2",
       "altTitles": [
-        "KonoSuba: God's Blessing on This Wonderful World! 2",
+        "Kono Subarashii Sekai ni Shukufuku wo! 2",
         "この素晴らしい世界に祝福を！ 2"
       ],
       "type": "TV",
@@ -3883,9 +3963,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Shokugeki no Souma: Ni no Sara",
+      "title": "Food Wars! The Second Plate",
       "altTitles": [
-        "Food Wars! The Second Plate",
+        "Shokugeki no Souma: Ni no Sara",
         "食戟のソーマ 弍ノ皿"
       ],
       "type": "TV",
@@ -4051,9 +4131,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+      "title": "Kaguya-sama: Love is War",
       "altTitles": [
-        "Kaguya-sama: Love is War",
+        "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
         "かぐや様は告らせたい～天才たちの恋愛頭脳戦～"
       ],
       "type": "TV",
@@ -4090,9 +4170,9 @@
       "gdrive_slug": "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen"
     },
     {
-      "title": "Kimetsu no Yaiba: Natagumo Yama Hen",
+      "title": "Demon Slayer: Kimetsu no Yaiba - Mt. Natagumo Arc",
       "altTitles": [
-        "Demon Slayer: Kimetsu no Yaiba - Mt. Natagumo Arc",
+        "Kimetsu no Yaiba: Natagumo Yama Hen",
         "鬼滅の刃 那田蜘蛛山編"
       ],
       "type": "Movie",
@@ -4358,9 +4438,9 @@
       "gdrive_slug": "hunter-x-hunter"
     },
     {
-      "title": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+      "title": "Rascal Does Not Dream of Bunny Girl Senpai",
       "altTitles": [
-        "Rascal Does Not Dream of Bunny Girl Senpai",
+        "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
         "青春ブタ野郎はバニーガール先輩の夢を見ない"
       ],
       "type": "TV",
@@ -4445,9 +4525,9 @@
       "gdrive_slug": "another-anime"
     },
     {
-      "title": "Mahou Shoujo Madoka★Magica",
+      "title": "Puella Magi Madoka Magica",
       "altTitles": [
-        "Puella Magi Madoka Magica",
+        "Mahou Shoujo Madoka★Magica",
         "魔法少女まどか★マギカ"
       ],
       "type": "TV",
@@ -4537,9 +4617,9 @@
       "gdrive_slug": "no-game-no-life-zero"
     },
     {
-      "title": "Saiki Kusuo no Ψ-nan (TV)",
+      "title": "The Disastrous Life of Saiki K.",
       "altTitles": [
-        "The Disastrous Life of Saiki K.",
+        "Saiki Kusuo no Ψ-nan (TV)",
         "斉木楠雄のΨ難"
       ],
       "type": "TV",
@@ -4605,9 +4685,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Hotarubi no Mori e",
+      "title": "To the Forest of the Firefly Lights",
       "altTitles": [
-        "To the Forest of the Firefly Lights",
+        "Hotarubi no Mori e",
         "蛍火の杜へ"
       ],
       "type": "Movie",
@@ -4954,9 +5034,9 @@
       "gdrive_slug": "clannad"
     },
     {
-      "title": "Shokugeki no Souma: San no Sara",
+      "title": "Food Wars! The Third Plate",
       "altTitles": [
-        "Food Wars! The Third Plate",
+        "Shokugeki no Souma: San no Sara",
         "食戟のソーマ 餐ノ皿"
       ],
       "type": "TV",
@@ -4996,9 +5076,9 @@
       "gdrive_slug": "shokugeki-no-souma-san-no-sara-dub"
     },
     {
-      "title": "Chuunibyou demo Koi ga Shitai!",
+      "title": "Love, Chunibyo & Other Delusions!",
       "altTitles": [
-        "Love, Chunibyo & Other Delusions!",
+        "Chuunibyou demo Koi ga Shitai!",
         "中二病でも恋がしたい!"
       ],
       "type": "TV",
@@ -5085,9 +5165,9 @@
       "gdrive_slug": "made-in-abyss"
     },
     {
-      "title": "Kuroko no Basket",
+      "title": "Kuroko's Basketball",
       "altTitles": [
-        "Kuroko's Basketball",
+        "Kuroko no Basket",
         "黒子のバスケ"
       ],
       "type": "TV",
@@ -5173,9 +5253,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kaichou wa Maid-sama!",
+      "title": "Maid Sama!",
       "altTitles": [
-        "Maid Sama!",
+        "Kaichou wa Maid-sama!",
         "会長はメイド様!"
       ],
       "type": "TV",
@@ -5254,9 +5334,9 @@
       "gdrive_slug": "haikyuu-to-the-top"
     },
     {
-      "title": "Tensei shitara Slime Datta Ken",
+      "title": "That Time I Got Reincarnated as a Slime",
       "altTitles": [
-        "That Time I Got Reincarnated as a Slime",
+        "Tensei shitara Slime Datta Ken",
         "転生したらスライムだった件"
       ],
       "type": "TV",
@@ -5300,9 +5380,9 @@
       "gdrive_slug": "tensei-shitara-slime-datta-ken"
     },
     {
-      "title": "Sakurasou no Pet na Kanojo",
+      "title": "The Pet Girl of Sakurasou",
       "altTitles": [
-        "The Pet Girl of Sakurasou",
+        "Sakurasou no Pet na Kanojo",
         "さくら荘のペットな彼女"
       ],
       "type": "TV",
@@ -5345,9 +5425,9 @@
       "gdrive_slug": "sakurasou-no-pet-na-kanojo"
     },
     {
-      "title": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka",
+      "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon?",
       "altTitles": [
-        "Is It Wrong to Try to Pick Up Girls in a Dungeon?",
+        "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka",
         "ダンジョンに出会いを求めるのは間違っているだろうか"
       ],
       "type": "TV",
@@ -5390,9 +5470,9 @@
       "gdrive_slug": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-gaiden-sword-oratoria"
     },
     {
-      "title": "Tate no Yuusha no Nariagari",
+      "title": "The Rising of the Shield Hero",
       "altTitles": [
-        "The Rising of the Shield Hero",
+        "Tate no Yuusha no Nariagari",
         "盾の勇者の成り上がり"
       ],
       "type": "TV",
@@ -5436,11 +5516,11 @@
       "gdrive_slug": "tate-no-yuusha-no-nariagari"
     },
     {
-      "title": "JoJo no Kimyou na Bouken (TV)",
+      "title": "JoJo's Bizarre Adventure (2012)",
       "altTitles": [
-        "JoJo's Bizarre Adventure (2012)",
-        "JoJo's Bizarre Adventure",
-        "ジョジョの奇妙な冒険"
+        "JoJo no Kimyou na Bouken (TV)",
+        "ジョジョの奇妙な冒険",
+        "JoJo's Bizarre Adventure"
       ],
       "type": "TV",
       "status": "Finished",
@@ -5481,9 +5561,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Highschool of the Dead",
+      "title": "High School of the Dead",
       "altTitles": [
-        "High School of the Dead",
+        "Highschool of the Dead",
         "学園黙示録 HIGHSCHOOL OF THE DEAD"
       ],
       "type": "TV",
@@ -5526,9 +5606,9 @@
       "gdrive_slug": "highschool-of-the-dead"
     },
     {
-      "title": "Kimetsu no Yaiba: Hashira Gou Kaigi - Chouyashiki Hen",
+      "title": "Demon Slayer: Kimetsu no Yaiba - The Hashira Meeting Arc",
       "altTitles": [
-        "Demon Slayer: Kimetsu no Yaiba - The Hashira Meeting Arc",
+        "Kimetsu no Yaiba: Hashira Gou Kaigi - Chouyashiki Hen",
         "鬼滅の刃 柱合会議・蝶屋敷編"
       ],
       "type": "Movie",
@@ -5609,9 +5689,9 @@
       "gdrive_slug": "the-girl-who-leapt-through-time"
     },
     {
-      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
+      "title": "My Teen Romantic Comedy SNAFU",
       "altTitles": [
-        "My Teen Romantic Comedy SNAFU",
+        "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
         "やはり俺の青春ラブコメはまちがっている。"
       ],
       "type": "TV",
@@ -5826,9 +5906,9 @@
       "gdrive_slug": "black-clover"
     },
     {
-      "title": "Kobayashi-san Chi no Maid Dragon",
+      "title": "Miss Kobayashi's Dragon Maid",
       "altTitles": [
-        "Miss Kobayashi's Dragon Maid",
+        "Kobayashi-san Chi no Maid Dragon",
         "小林さんちのメイドラゴン"
       ],
       "type": "TV",
@@ -5911,9 +5991,9 @@
       "gdrive_slug": "charlotte"
     },
     {
-      "title": "Fairy Tail Series 2",
+      "title": "Fairy Tail Season 2",
       "altTitles": [
-        "Fairy Tail Season 2",
+        "Fairy Tail Series 2",
         "FAIRY TAIL (第2期)"
       ],
       "type": "TV",
@@ -5981,9 +6061,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Haikyuu!! TO THE TOP 2",
+      "title": "Haikyuu!!: To the Top Part 2",
       "altTitles": [
-        "Haikyuu!!: To the Top Part 2",
+        "Haikyuu!! TO THE TOP 2",
         "ハイキュー!! TO THE TOP 2"
       ],
       "type": "TV",
@@ -6065,9 +6145,9 @@
       "gdrive_slug": "magi-the-kingdom-of-magic-dub"
     },
     {
-      "title": "Nichijou",
+      "title": "Nichijou - My Ordinary Life",
       "altTitles": [
-        "Nichijou - My Ordinary Life",
+        "Nichijou",
         "日常"
       ],
       "type": "TV",
@@ -6196,9 +6276,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Darling in the FranXX",
+      "title": "DARLING in the FRANXX",
       "altTitles": [
-        "DARLING in the FRANXX",
+        "Darling in the FranXX",
         "ダーリン・イン・ザ・フランキス"
       ],
       "type": "TV",
@@ -6527,9 +6607,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kyoukai no Kanata",
+      "title": "Beyond the Boundary",
       "altTitles": [
-        "Beyond the Boundary",
+        "Kyoukai no Kanata",
         "境界の彼方"
       ],
       "type": "TV",
@@ -6741,9 +6821,9 @@
       "gdrive_slug": "spice-and-wolf"
     },
     {
-      "title": "Fate/stay night: Unlimited Blade Works",
+      "title": "Fate/stay night [Unlimited Blade Works]",
       "altTitles": [
-        "Fate/stay night [Unlimited Blade Works]"
+        "Fate/stay night: Unlimited Blade Works"
       ],
       "type": "TV",
       "status": "Finished",
@@ -6874,9 +6954,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "SPY×FAMILY",
+      "title": "SPY x FAMILY",
       "altTitles": [
-        "SPY x FAMILY"
+        "SPY×FAMILY"
       ],
       "type": "TV",
       "status": "Finished",
@@ -6912,9 +6992,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kaguya-sama wa Kokurasetai?: Tensaitachi no Renai Zunousen",
+      "title": "Kaguya-sama: Love is War?",
       "altTitles": [
-        "Kaguya-sama: Love is War?",
+        "Kaguya-sama wa Kokurasetai?: Tensaitachi no Renai Zunousen",
         "かぐや様は告らせたい？～天才たちの恋愛頭脳戦～"
       ],
       "type": "TV",
@@ -6951,9 +7031,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Zankyou no Terror",
+      "title": "Terror in Resonance",
       "altTitles": [
-        "Terror in Resonance",
+        "Zankyou no Terror",
         "残響のテロル"
       ],
       "type": "TV",
@@ -6994,9 +7074,9 @@
       "gdrive_slug": "zankyou-no-terror-dub"
     },
     {
-      "title": "Nanatsu no Taizai Movie: Tenkuu no Torawarebito",
+      "title": "The Seven Deadly Sins the Movie: Prisoners of the Sky",
       "altTitles": [
-        "The Seven Deadly Sins the Movie: Prisoners of the Sky",
+        "Nanatsu no Taizai Movie: Tenkuu no Torawarebito",
         "劇場版 七つの大罪 天空の囚われ人"
       ],
       "type": "Movie",
@@ -7129,9 +7209,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Mahoutsukai no Yome",
+      "title": "The Ancient Magus' Bride",
       "altTitles": [
-        "The Ancient Magus' Bride",
+        "Mahoutsukai no Yome",
         "魔法使いの嫁"
       ],
       "type": "TV",
@@ -7172,9 +7252,9 @@
       "gdrive_slug": "mahoutsukai-no-yome"
     },
     {
-      "title": "Owari no Seraph",
+      "title": "Seraph of the End: Vampire Reign",
       "altTitles": [
-        "Seraph of the End: Vampire Reign",
+        "Owari no Seraph",
         "終わりのセラフ"
       ],
       "type": "TV",
@@ -7304,9 +7384,9 @@
       "gdrive_slug": "magi-the-labyrinth-of-magic-dub"
     },
     {
-      "title": "Bungou Stray Dogs",
+      "title": "Bungo Stray Dogs",
       "altTitles": [
-        "Bungo Stray Dogs",
+        "Bungou Stray Dogs",
         "文豪ストレイドッグス"
       ],
       "type": "TV",
@@ -7394,9 +7474,9 @@
       "gdrive_slug": "the-melancholy-of-haruhi-suzumiya"
     },
     {
-      "title": "Nisekoi",
+      "title": "Nisekoi: False Love",
       "altTitles": [
-        "Nisekoi: False Love",
+        "Nisekoi",
         "ニセコイ"
       ],
       "type": "TV",
@@ -7438,9 +7518,9 @@
       "gdrive_slug": "nisekoi"
     },
     {
-      "title": "Kakegurui",
+      "title": "Kakegurui: Compulsive Gambler",
       "altTitles": [
-        "Kakegurui: Compulsive Gambler",
+        "Kakegurui",
         "賭ケグルイ"
       ],
       "type": "TV",
@@ -7527,9 +7607,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Mushishi",
+      "title": "Mushi-Shi",
       "altTitles": [
-        "Mushi-Shi",
+        "Mushishi",
         "蟲師"
       ],
       "type": "TV",
@@ -7658,9 +7738,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kimi no Suizou wo Tabetai",
+      "title": "I Want to Eat Your Pancreas",
       "altTitles": [
-        "I Want to Eat Your Pancreas",
+        "Kimi no Suizou wo Tabetai",
         "君の膵臓をたべたい"
       ],
       "type": "Movie",
@@ -7742,9 +7822,9 @@
       "gdrive_slug": "5-centimeters-per-second"
     },
     {
-      "title": "Kuroko no Basket 2nd Season",
+      "title": "Kuroko's Basketball 2",
       "altTitles": [
-        "Kuroko's Basketball 2",
+        "Kuroko no Basket 2nd Season",
         "黒子のバスケ"
       ],
       "type": "TV",
@@ -7827,9 +7907,9 @@
       "gdrive_slug": "dororo"
     },
     {
-      "title": "Tenki no Ko",
+      "title": "Weathering with You",
       "altTitles": [
-        "Weathering with You",
+        "Tenki no Ko",
         "天気の子"
       ],
       "type": "Movie",
@@ -7866,9 +7946,9 @@
       "gdrive_slug": "tenki-no-ko"
     },
     {
-      "title": "K-On!",
+      "title": "K-ON!",
       "altTitles": [
-        "K-ON!",
+        "K-On!",
         "けいおん!"
       ],
       "type": "TV",
@@ -7950,9 +8030,9 @@
       "gdrive_slug": "black-lagoon"
     },
     {
-      "title": "Gekkan Shoujo Nozaki-kun",
+      "title": "Monthly Girls' Nozaki-kun",
       "altTitles": [
-        "Monthly Girls' Nozaki-kun",
+        "Gekkan Shoujo Nozaki-kun",
         "月刊少女野崎くん"
       ],
       "type": "TV",
@@ -7993,9 +8073,9 @@
       "gdrive_slug": "gekkan-shoujo-nozaki-kun"
     },
     {
-      "title": "JoJo no Kimyou na Bouken: Stardust Crusaders 2nd Season",
+      "title": "JoJo's Bizarre Adventure: Stardust Crusaders - Battle in Egypt",
       "altTitles": [
-        "JoJo's Bizarre Adventure: Stardust Crusaders - Battle in Egypt",
+        "JoJo no Kimyou na Bouken: Stardust Crusaders 2nd Season",
         "ジョジョの奇妙な冒険 スターダストクルセイダース"
       ],
       "type": "TV",
@@ -8161,9 +8241,9 @@
       "gdrive_slug": "monster"
     },
     {
-      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku",
+      "title": "My Teen Romantic Comedy SNAFU TOO!",
       "altTitles": [
-        "My Teen Romantic Comedy SNAFU TOO!",
+        "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku",
         "やはり俺の青春ラブコメはまちがっている。続"
       ],
       "type": "TV",
@@ -8331,9 +8411,9 @@
       "gdrive_slug": "dragon-ball"
     },
     {
-      "title": "Saiki Kusuo no Ψ-nan (TV) 2",
+      "title": "The Disastrous Life of Saiki K. 2",
       "altTitles": [
-        "The Disastrous Life of Saiki K. 2",
+        "Saiki Kusuo no Ψ-nan (TV) 2",
         "斉木楠雄のΨ難 2"
       ],
       "type": "TV",
@@ -8375,9 +8455,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "JoJo no Kimyou na Bouken: Diamond wa Kudakenai",
+      "title": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
       "altTitles": [
-        "JoJo's Bizarre Adventure: Diamond is Unbreakable",
+        "JoJo no Kimyou na Bouken: Diamond wa Kudakenai",
         "ジョジョの奇妙な冒険 ダイヤモンドは砕けない"
       ],
       "type": "TV",
@@ -8438,9 +8518,9 @@
       "gdrive_slug": "jojo-no-kimyou-na-bouken-diamond-wa-kudakenai"
     },
     {
-      "title": "Majo no Takkyuubin",
+      "title": "Kiki's Delivery Service",
       "altTitles": [
-        "Kiki's Delivery Service",
+        "Majo no Takkyuubin",
         "魔女の宅急便"
       ],
       "type": "Movie",
@@ -8484,9 +8564,9 @@
       "gdrive_slug": "majo-no-takkyuubin"
     },
     {
-      "title": "Yuri!!! on Ice",
+      "title": "Yuri!!! On ICE",
       "altTitles": [
-        "Yuri!!! On ICE",
+        "Yuri!!! on Ice",
         "ユーリ!!! on ICE"
       ],
       "type": "TV",
@@ -8527,9 +8607,9 @@
       "gdrive_slug": "yuri-on-ice"
     },
     {
-      "title": "Boku no Hero Academia 4",
+      "title": "My Hero Academia Season 4",
       "altTitles": [
-        "My Hero Academia Season 4",
+        "Boku no Hero Academia 4",
         "僕のヒーローアカデミア４"
       ],
       "type": "TV",
@@ -8566,9 +8646,9 @@
       "gdrive_slug": "boku-no-hero-academia-4th-season"
     },
     {
-      "title": "Shinsekai yori",
+      "title": "From the New World",
       "altTitles": [
-        "From the New World",
+        "Shinsekai yori",
         "新世界より"
       ],
       "type": "TV",
@@ -8612,9 +8692,9 @@
       "gdrive_slug": "shinsekai-yori"
     },
     {
-      "title": "Danshi Koukousei no Nichijou",
+      "title": "Daily Lives of High School Boys",
       "altTitles": [
-        "Daily Lives of High School Boys",
+        "Danshi Koukousei no Nichijou",
         "男子高校生の日常"
       ],
       "type": "TV",
@@ -8655,9 +8735,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kuroko no Basket 3rd Season",
+      "title": "Kuroko's Basketball 3",
       "altTitles": [
-        "Kuroko's Basketball 3",
+        "Kuroko no Basket 3rd Season",
         "黒子のバスケ"
       ],
       "type": "TV",
@@ -8698,9 +8778,9 @@
       "gdrive_slug": "kuroko-no-basket-3rd-season"
     },
     {
-      "title": "Mahouka Koukou no Rettousei",
+      "title": "The Irregular at Magic High School",
       "altTitles": [
-        "The Irregular at Magic High School",
+        "Mahouka Koukou no Rettousei",
         "魔法科高校の劣等生"
       ],
       "type": "TV",
@@ -8744,9 +8824,9 @@
       "gdrive_slug": "mahouka-koukou-no-rettousei"
     },
     {
-      "title": "Shokugeki no Souma: San no Sara - Toutsuki Ressha-hen",
+      "title": "Food Wars! The Third Plate – Totsuki Railway Arc",
       "altTitles": [
-        "Food Wars! The Third Plate – Totsuki Railway Arc",
+        "Shokugeki no Souma: San no Sara - Toutsuki Ressha-hen",
         "Food Wars! The Third Plate: Totsuki Train Arc",
         "食戟のソーマ 餐ノ皿 遠月列車篇"
       ],
@@ -8787,9 +8867,9 @@
       "gdrive_slug": "shokugeki-no-souma-san-no-sara-toutsuki-ressha-hen"
     },
     {
-      "title": "Fate/stay night: Unlimited Blade Works 2nd Season",
+      "title": "Fate/stay night [Unlimited Blade Works] Season 2",
       "altTitles": [
-        "Fate/stay night [Unlimited Blade Works] Season 2",
+        "Fate/stay night: Unlimited Blade Works 2nd Season",
         "Fate/stay night [Unlimited Blade Works] 2nd シーズン"
       ],
       "type": "TV",
@@ -8917,9 +8997,9 @@
       "gdrive_slug": "the-garden-of-words-dub"
     },
     {
-      "title": "Kimi ni Todoke",
+      "title": "Kimi ni Todoke: From Me to You",
       "altTitles": [
-        "Kimi ni Todoke: From Me to You",
+        "Kimi ni Todoke",
         "君に届け"
       ],
       "type": "TV",
@@ -9005,9 +9085,9 @@
       "gdrive_slug": "welcome-to-the-n-h-k-dub"
     },
     {
-      "title": "Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation",
+      "title": "Danganronpa: The Animation",
       "altTitles": [
-        "Danganronpa: The Animation",
+        "Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation",
         "ダンガンロンパ 希望の学園と絶望の高校生 THE ANIMATION"
       ],
       "type": "TV",
@@ -9240,9 +9320,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Akatsuki no Yona",
+      "title": "Yona of the Dawn",
       "altTitles": [
-        "Yona of the Dawn",
+        "Akatsuki no Yona",
         "暁のヨナ"
       ],
       "type": "TV",
@@ -9328,9 +9408,9 @@
       "gdrive_slug": "grave-of-the-fireflies"
     },
     {
-      "title": "JoJo no Kimyou na Bouken: Stardust Crusaders",
+      "title": "JoJo's Bizarre Adventure: Stardust Crusaders",
       "altTitles": [
-        "JoJo's Bizarre Adventure: Stardust Crusaders",
+        "JoJo no Kimyou na Bouken: Stardust Crusaders",
         "ジョジョの奇妙な冒険 スターダストクルセイダース"
       ],
       "type": "TV",
@@ -9507,9 +9587,9 @@
       "gdrive_slug": "ghost-in-the-shell"
     },
     {
-      "title": "Toaru Majutsu no Index",
+      "title": "A Certain Magical Index",
       "altTitles": [
-        "A Certain Magical Index",
+        "Toaru Majutsu no Index",
         "とある魔術の禁書目録"
       ],
       "type": "TV",
@@ -9551,9 +9631,9 @@
       "gdrive_slug": "toaru-majutsu-no-index-dub"
     },
     {
-      "title": "Kimetsu no Yaiba: Kyoudai no Kizuna",
+      "title": "Demon Slayer: Kimetsu no Yaiba Sibling`s Bond",
       "altTitles": [
-        "Demon Slayer: Kimetsu no Yaiba Sibling`s Bond",
+        "Kimetsu no Yaiba: Kyoudai no Kizuna",
         "鬼滅の刃 那田蜘蛛山編"
       ],
       "type": "Movie",
@@ -9630,9 +9710,9 @@
       "gdrive_slug": "relife-dub"
     },
     {
-      "title": "Jibaku Shounen Hanako-kun",
+      "title": "Toilet-bound Hanako-kun",
       "altTitles": [
-        "Toilet-bound Hanako-kun",
+        "Jibaku Shounen Hanako-kun",
         "地縛少年 花子くん"
       ],
       "type": "TV",
@@ -9669,9 +9749,9 @@
       "gdrive_slug": "jibaku-shounen-hanako-kun"
     },
     {
-      "title": "Kimetsu no Yaiba: Tsuzumi Yashiki Hen",
+      "title": "Demon Slayer: Kimetsu no Yaiba - Tsuzumi Mansion Arc",
       "altTitles": [
-        "Demon Slayer: Kimetsu no Yaiba - Tsuzumi Mansion Arc"
+        "Kimetsu no Yaiba: Tsuzumi Yashiki Hen"
       ],
       "type": "Special",
       "status": "Finished",
@@ -9852,9 +9932,9 @@
       "gdrive_slug": "trigun"
     },
     {
-      "title": "Gintama'",
+      "title": "Gintama Season 2",
       "altTitles": [
-        "Gintama Season 2",
+        "Gintama'",
         "銀魂'"
       ],
       "type": "TV",
@@ -9967,9 +10047,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Bungou Stray Dogs 2nd Season",
+      "title": "Bungo Stray Dogs 2",
       "altTitles": [
-        "Bungo Stray Dogs 2",
+        "Bungou Stray Dogs 2nd Season",
         "文豪ストレイドッグス"
       ],
       "type": "TV",
@@ -10055,9 +10135,9 @@
       "gdrive_slug": "kokoro-connect"
     },
     {
-      "title": "Kimetsu no Yaiba: Asakusa Hen",
+      "title": "Demon Slayer: Kimetsu no Yaiba - Asakusa Arc",
       "altTitles": [
-        "Demon Slayer: Kimetsu no Yaiba - Asakusa Arc",
+        "Kimetsu no Yaiba: Asakusa Hen",
         "鬼滅の刃 浅あさ草くさ編へん"
       ],
       "type": "Special",
@@ -10136,9 +10216,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kekkai Sensen",
+      "title": "Blood Blockade Battlefront",
       "altTitles": [
-        "Blood Blockade Battlefront",
+        "Kekkai Sensen",
         "血界戦線"
       ],
       "type": "TV",
@@ -10396,9 +10476,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Boku wa Tomodachi ga Sukunai",
+      "title": "Haganai: I don't have many friends",
       "altTitles": [
-        "Haganai: I don't have many friends",
+        "Boku wa Tomodachi ga Sukunai",
         "僕は友達が少ない"
       ],
       "type": "TV",
@@ -10442,9 +10522,9 @@
       "gdrive_slug": "boku-wa-tomodachi-ga-sukunai"
     },
     {
-      "title": "Boku no Hero Academia the Movie: Futari no Hero",
+      "title": "My Hero Academia the Movie: Two Heroes",
       "altTitles": [
-        "My Hero Academia the Movie: Two Heroes",
+        "Boku no Hero Academia the Movie: Futari no Hero",
         "My Hero Academia: Two Heroes",
         "僕のヒーローアカデミア THE MOVIE ～2人の英雄（ヒーロー）～"
       ],
@@ -10487,9 +10567,9 @@
       "gdrive_slug": "boku-no-hero-academia-the-movie-futari-no-hero"
     },
     {
-      "title": "Btooom!",
+      "title": "BTOOOM!",
       "altTitles": [
-        "BTOOOM!"
+        "Btooom!"
       ],
       "type": "TV",
       "status": "Finished",
@@ -10529,9 +10609,9 @@
       "gdrive_slug": "btooom"
     },
     {
-      "title": "Higurashi no Naku Koro ni",
+      "title": "When They Cry",
       "altTitles": [
-        "When They Cry",
+        "Higurashi no Naku Koro ni",
         "ひぐらしのなく頃に"
       ],
       "type": "TV",
@@ -10617,9 +10697,9 @@
       "gdrive_slug": "prison-school-dub"
     },
     {
-      "title": "Wotaku ni Koi wa Muzukashii",
+      "title": "Wotakoi: Love Is Hard for Otaku",
       "altTitles": [
-        "Wotakoi: Love Is Hard for Otaku",
+        "Wotaku ni Koi wa Muzukashii",
         "ヲタクに恋は難しい"
       ],
       "type": "TV",
@@ -10787,9 +10867,9 @@
       "gdrive_slug": "oreimo"
     },
     {
-      "title": "Kamisama Hajimemashita",
+      "title": "Kamisama Kiss",
       "altTitles": [
-        "Kamisama Kiss",
+        "Kamisama Hajimemashita",
         "神様はじめました"
       ],
       "type": "TV",
@@ -10958,9 +11038,9 @@
       "gdrive_slug": "steinsgate-0"
     },
     {
-      "title": "Enen no Shouboutai",
+      "title": "Fire Force",
       "altTitles": [
-        "Fire Force",
+        "Enen no Shouboutai",
         "炎炎ノ消防隊"
       ],
       "type": "TV",
@@ -11035,9 +11115,9 @@
       "gdrive_slug": "fruits-basket-2019"
     },
     {
-      "title": "Kamisama Hajimemashita◎",
+      "title": "Kamisama Kiss: Season 2",
       "altTitles": [
-        "Kamisama Kiss: Season 2",
+        "Kamisama Hajimemashita◎",
         "Kamisama Kiss Season 2",
         "神様はじめました◎"
       ],
@@ -11081,9 +11161,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Free!",
+      "title": "Free! - Iwatobi Swim Club",
       "altTitles": [
-        "Free! - Iwatobi Swim Club"
+        "Free!"
       ],
       "type": "TV",
       "status": "Finished",
@@ -11125,9 +11205,9 @@
       "gdrive_slug": "free-dub"
     },
     {
-      "title": "One Piece: Episode of East Blue - Luffy to 4-nin no Nakama no Daibouken",
+      "title": "One Piece: Episode of East Blue",
       "altTitles": [
-        "One Piece: Episode of East Blue",
+        "One Piece: Episode of East Blue - Luffy to 4-nin no Nakama no Daibouken",
         "ワンピース エピソードオブ東の海[イーストブルー] ~ルフィと4人の仲間の大冒険~"
       ],
       "type": "Special",
@@ -11171,9 +11251,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Given",
+      "title": "given",
       "altTitles": [
-        "given",
+        "Given",
         "ギヴン"
       ],
       "type": "TV",
@@ -11210,9 +11290,9 @@
       "gdrive_slug": "given"
     },
     {
-      "title": "Yuu☆Yuu☆Hakusho",
+      "title": "Yu Yu Hakusho: Ghost Files",
       "altTitles": [
-        "Yu Yu Hakusho: Ghost Files",
+        "Yuu☆Yuu☆Hakusho",
         "幽☆遊☆白書"
       ],
       "type": "TV",
@@ -11371,9 +11451,9 @@
       "gdrive_slug": "serial-experiments-lain"
     },
     {
-      "title": "Ao Haru Ride",
+      "title": "Blue Spring Ride",
       "altTitles": [
-        "Blue Spring Ride",
+        "Ao Haru Ride",
         "アオハライド"
       ],
       "type": "TV",
@@ -11416,9 +11496,9 @@
       "gdrive_slug": "ao-haru-ride"
     },
     {
-      "title": "Boku no Hero Academia: All Might - Rising The Animation",
+      "title": "My Hero Academia: All Might Rising",
       "altTitles": [
-        "My Hero Academia: All Might Rising",
+        "Boku no Hero Academia: All Might - Rising The Animation",
         "僕のヒーローアカデミア ～オールマイト:ライジング～"
       ],
       "type": "Special",
@@ -11455,9 +11535,9 @@
       "gdrive_slug": "boku-no-hero-academia-all-might-rising-the-animation"
     },
     {
-      "title": "Zero no Tsukaima",
+      "title": "The Familiar of Zero",
       "altTitles": [
-        "The Familiar of Zero",
+        "Zero no Tsukaima",
         "ゼロの使い魔"
       ],
       "type": "TV",
@@ -11504,9 +11584,9 @@
       "gdrive_slug": "zero-no-tsukaima"
     },
     {
-      "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
+      "title": "Classroom of the Elite",
       "altTitles": [
-        "Classroom of the Elite",
+        "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
         "ようこそ実力至上主義の教室へ"
       ],
       "type": "TV",
@@ -11550,9 +11630,9 @@
       "gdrive_slug": "youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv"
     },
     {
-      "title": "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
+      "title": "Steins;Gate: The Movie − Load Region of Déjà Vu",
       "altTitles": [
-        "Steins;Gate: The Movie − Load Region of Déjà Vu",
+        "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
         "劇場版 シュタインズゲート 負荷領域のデジャヴ"
       ],
       "type": "Movie",
@@ -11722,9 +11802,9 @@
       "gdrive_slug": "sword-art-online-alicization"
     },
     {
-      "title": "Kenpuu Denki Berserk",
+      "title": "Berserk",
       "altTitles": [
-        "Berserk",
+        "Kenpuu Denki Berserk",
         "剣風伝奇ベルセルク"
       ],
       "type": "TV",
@@ -11937,9 +12017,9 @@
       "gdrive_slug": "the-world-god-only-knows"
     },
     {
-      "title": "Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu",
+      "title": "KonoSuba: God's Blessing on This Wonderful World!: Legend of Crimson",
       "altTitles": [
-        "KonoSuba: God's Blessing on This Wonderful World!: Legend of Crimson",
+        "Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu",
         "この素晴らしい世界に祝福を！紅伝説"
       ],
       "type": "Movie",
@@ -11983,9 +12063,9 @@
       "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-kurenai-densetsu"
     },
     {
-      "title": "Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!",
+      "title": "WataMote: No Matter How I Look At It, It's You Guys' Fault I'm Unpopular!",
       "altTitles": [
-        "WataMote: No Matter How I Look At It, It's You Guys' Fault I'm Unpopular!",
+        "Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!",
         "私がモテないのはどう考えてもお前らが悪い!"
       ],
       "type": "TV",
@@ -12219,8 +12299,8 @@
       "title": "Eden of the East",
       "altTitles": [
         "Higashi no Eden",
-        "Eden of The East",
-        "東のエデン"
+        "東のエデン",
+        "Eden of The East"
       ],
       "type": "TV",
       "status": "Finished",
@@ -12264,9 +12344,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Gate: Jieitai Kanochi nite, Kaku Tatakaeri",
+      "title": "GATE",
       "altTitles": [
-        "GATE",
+        "Gate: Jieitai Kanochi nite, Kaku Tatakaeri",
         "GATE（ゲート）自衛隊　彼の地にて、斯く戦えり"
       ],
       "type": "TV",
@@ -12308,9 +12388,9 @@
       "gdrive_slug": "gate-jieitai-kanochi-nite-kaku-tatakaeri"
     },
     {
-      "title": "Youjo Senki",
+      "title": "Saga of Tanya the Evil",
       "altTitles": [
-        "Saga of Tanya the Evil",
+        "Youjo Senki",
         "The Saga of Tanya the Evil",
         "幼女戦記"
       ],
@@ -12351,9 +12431,9 @@
       "gdrive_slug": "youjo-senki"
     },
     {
-      "title": "Rakudai Kishi no Cavalry",
+      "title": "Chivalry of a Failed Knight",
       "altTitles": [
-        "Chivalry of a Failed Knight",
+        "Rakudai Kishi no Cavalry",
         "落第騎士の英雄譚《キャバルリィ》"
       ],
       "type": "TV",
@@ -12396,9 +12476,9 @@
       "gdrive_slug": "rakudai-kishi-no-cavalry"
     },
     {
-      "title": "Akagami no Shirayuki-hime",
+      "title": "Snow White with the Red Hair",
       "altTitles": [
-        "Snow White with the Red Hair",
+        "Akagami no Shirayuki-hime",
         "赤髪の白雪姫"
       ],
       "type": "TV",
@@ -12487,9 +12567,9 @@
       "gdrive_slug": "trinity-seven"
     },
     {
-      "title": "K-On!!",
+      "title": "K-ON! Season 2",
       "altTitles": [
-        "K-ON! Season 2",
+        "K-On!!",
         "けいおん!!"
       ],
       "type": "TV",
@@ -12531,9 +12611,9 @@
       "gdrive_slug": "k-on-2"
     },
     {
-      "title": "SK8",
+      "title": "SK8 the Infinity",
       "altTitles": [
-        "SK8 the Infinity",
+        "SK8",
         "SK∞ エスケーエイト"
       ],
       "type": "TV",
@@ -12570,9 +12650,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kiznaiver",
+      "title": "KIZNAIVER",
       "altTitles": [
-        "KIZNAIVER",
+        "Kiznaiver",
         "キズナイーバー"
       ],
       "type": "TV",
@@ -12651,9 +12731,9 @@
       "gdrive_slug": "goblin-slayer"
     },
     {
-      "title": "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
+      "title": "SHIMONETA: A Boring World Where the Concept of Dirty Jokes Doesn't Exist",
       "altTitles": [
-        "SHIMONETA: A Boring World Where the Concept of Dirty Jokes Doesn't Exist",
+        "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
         "下ネタという概念が存在しない退屈な世界"
       ],
       "type": "TV",
@@ -12944,9 +13024,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Koutetsujou no Kabaneri",
+      "title": "Kabaneri of the Iron Fortress",
       "altTitles": [
-        "Kabaneri of the Iron Fortress",
+        "Koutetsujou no Kabaneri",
         "甲鉄城のカバネリ"
       ],
       "type": "TV",
@@ -13035,9 +13115,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Chuunibyou demo Koi ga Shitai! Ren",
+      "title": "Love, Chunibyo & Other Delusions!: Heart Throb",
       "altTitles": [
-        "Love, Chunibyo & Other Delusions!: Heart Throb",
+        "Chuunibyou demo Koi ga Shitai! Ren",
         "中二病でも恋がしたい！戀"
       ],
       "type": "TV",
@@ -13080,9 +13160,9 @@
       "gdrive_slug": "chuunibyou-demo-koi-ga-shitai-ren"
     },
     {
-      "title": "Nagi no Asukara",
+      "title": "A Lull in the Sea",
       "altTitles": [
-        "A Lull in the Sea",
+        "Nagi no Asukara",
         "凪のあすから"
       ],
       "type": "TV",
@@ -13169,9 +13249,9 @@
       "gdrive_slug": "overlord-ii"
     },
     {
-      "title": "Yamada-kun to 7-nin no Majo (TV)",
+      "title": "Yamada-kun and the Seven Witches",
       "altTitles": [
-        "Yamada-kun and the Seven Witches",
+        "Yamada-kun to 7-nin no Majo (TV)",
         "山田くんと7人の魔女"
       ],
       "type": "TV",
@@ -13215,9 +13295,9 @@
       "gdrive_slug": "yamada-kun-to-7-nin-no-majo-tv-"
     },
     {
-      "title": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+      "title": "Mushoku Tensei: Jobless Reincarnation",
       "altTitles": [
-        "Mushoku Tensei: Jobless Reincarnation",
+        "Mushoku Tensei: Isekai Ittara Honki Dasu",
         "無職転生 ～異世界行ったら本気だす～"
       ],
       "type": "TV",
@@ -13382,9 +13462,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Baka to Test to Shoukanjuu",
+      "title": "Baka & Test - Summon the Beasts",
       "altTitles": [
-        "Baka & Test - Summon the Beasts",
+        "Baka to Test to Shoukanjuu",
         "バカとテストと召喚獣"
       ],
       "type": "TV",
@@ -13426,9 +13506,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Toaru Kagaku no Railgun",
+      "title": "A Certain Scientific Railgun",
       "altTitles": [
-        "A Certain Scientific Railgun",
+        "Toaru Kagaku no Railgun",
         "とある科学の超電磁砲"
       ],
       "type": "TV",
@@ -13470,9 +13550,9 @@
       "gdrive_slug": "toaru-kagaku-no-railgun-dub"
     },
     {
-      "title": "Gintama°",
+      "title": "Gintama Season 4",
       "altTitles": [
-        "Gintama Season 4",
+        "Gintama°",
         "銀魂°"
       ],
       "type": "TV",
@@ -13540,9 +13620,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2",
+      "title": "Re:ZERO -Starting Life in Another World- Season 2",
       "altTitles": [
-        "Re:ZERO -Starting Life in Another World- Season 2",
+        "Re:Zero kara Hajimeru Isekai Seikatsu 2",
         "Re:ゼロから始める異世界生活２"
       ],
       "type": "TV",
@@ -13654,9 +13734,9 @@
       "gdrive_slug": "dragon-ball-super"
     },
     {
-      "title": "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
+      "title": "Rascal Does Not Dream of a Dreaming Girl",
       "altTitles": [
-        "Rascal Does Not Dream of a Dreaming Girl",
+        "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
         "青春ブタ野郎はゆめみる少女の夢を見ない"
       ],
       "type": "Movie",
@@ -13780,9 +13860,9 @@
       "gdrive_slug": "claymore"
     },
     {
-      "title": "Tensei shitara Slime Datta Ken 2",
+      "title": "That Time I Got Reincarnated as a Slime 2",
       "altTitles": [
-        "That Time I Got Reincarnated as a Slime 2",
+        "Tensei shitara Slime Datta Ken 2",
         "転生したらスライムだった件2"
       ],
       "type": "TV",
@@ -13819,9 +13899,9 @@
       "gdrive_slug": "tensei-shitara-slime-datta-ken-2nd-season"
     },
     {
-      "title": "Ore Monogatari!!",
+      "title": "My Love Story!!",
       "altTitles": [
-        "My Love Story!!",
+        "Ore Monogatari!!",
         "俺物語!!"
       ],
       "type": "TV",
@@ -14014,9 +14094,9 @@
       "gdrive_slug": "d-gray-man-dub"
     },
     {
-      "title": "Sakamoto desu ga?",
+      "title": "Haven't You Heard? I'm Sakamoto",
       "altTitles": [
-        "Haven't You Heard? I'm Sakamoto",
+        "Sakamoto desu ga?",
         "坂本ですが？"
       ],
       "type": "TV",
@@ -14057,9 +14137,9 @@
       "gdrive_slug": "sakamoto-desu-ga"
     },
     {
-      "title": "Sukitte Ii na yo.",
+      "title": "Say \"I Love You\".",
       "altTitles": [
-        "Say \"I Love You\".",
+        "Sukitte Ii na yo.",
         "好きっていいなよ。"
       ],
       "type": "TV",
@@ -14100,9 +14180,9 @@
       "gdrive_slug": "sukitte-ii-na-yo-dub"
     },
     {
-      "title": "Natsume Yuujinchou",
+      "title": "Natsume's Book of Friends",
       "altTitles": [
-        "Natsume's Book of Friends",
+        "Natsume Yuujinchou",
         "夏目友人帳"
       ],
       "type": "TV",
@@ -14144,9 +14224,9 @@
       "gdrive_slug": "natsume-yuujinchou"
     },
     {
-      "title": "Hai to Gensou no Grimgar",
+      "title": "Grimgar, Ashes and Illusions",
       "altTitles": [
-        "Grimgar, Ashes and Illusions",
+        "Hai to Gensou no Grimgar",
         "Grimgar: Ashes and Illusions",
         "灰と幻想のグリムガル"
       ],
@@ -14189,9 +14269,9 @@
       "gdrive_slug": "hai-to-gensou-no-grimgar"
     },
     {
-      "title": "Magi: Sinbad no Bouken (TV)",
+      "title": "Magi: Adventure of Sinbad (TV)",
       "altTitles": [
-        "Magi: Adventure of Sinbad (TV)",
+        "Magi: Sinbad no Bouken (TV)",
         "Magi: Adventure of Sinbad",
         "マギ シンドバッドの冒険"
       ],
@@ -14234,9 +14314,9 @@
       "gdrive_slug": "magi-sinbad-no-bouken-tv"
     },
     {
-      "title": "Kore wa Zombie Desu ka?",
+      "title": "Is This a Zombie?",
       "altTitles": [
-        "Is This a Zombie?",
+        "Kore wa Zombie Desu ka?",
         "これはゾンビですか?"
       ],
       "type": "TV",
@@ -14324,9 +14404,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Zetsuen no Tempest",
+      "title": "Blast of Tempest",
       "altTitles": [
-        "Blast of Tempest",
+        "Zetsuen no Tempest",
         "絶園のテンペスト"
       ],
       "type": "TV",
@@ -14370,9 +14450,9 @@
       "gdrive_slug": "zetsuen-no-tempest"
     },
     {
-      "title": "Rosario to Vampire",
+      "title": "Rosario + Vampire",
       "altTitles": [
-        "Rosario + Vampire",
+        "Rosario to Vampire",
         "ロザリオとバンパイア"
       ],
       "type": "TV",
@@ -14417,9 +14497,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Usagi Drop",
+      "title": "Bunny Drop",
       "altTitles": [
-        "Bunny Drop",
+        "Usagi Drop",
         "うさぎドロップ"
       ],
       "type": "TV",
@@ -14459,9 +14539,9 @@
       "gdrive_slug": "usagi-drop"
     },
     {
-      "title": "Masamune-kun no Revenge",
+      "title": "Masamune-kun's Revenge",
       "altTitles": [
-        "Masamune-kun's Revenge",
+        "Masamune-kun no Revenge",
         "政宗くんのリベンジ"
       ],
       "type": "TV",
@@ -14503,9 +14583,9 @@
       "gdrive_slug": "masamune-kun-no-revenge"
     },
     {
-      "title": "Rurouni Kenshin: Meiji Kenkaku Romantan",
+      "title": "Rurouni Kenshin",
       "altTitles": [
-        "Rurouni Kenshin",
+        "Rurouni Kenshin: Meiji Kenkaku Romantan",
         "るろうに剣心 -明治剣客浪漫譚-"
       ],
       "type": "TV",
@@ -14591,9 +14671,9 @@
       "gdrive_slug": "rurouni-kenshin-meiji-kenkaku-romantan-2023"
     },
     {
-      "title": "Sankarea",
+      "title": "Sankarea: Undying Love",
       "altTitles": [
-        "Sankarea: Undying Love",
+        "Sankarea",
         "さんかれあ"
       ],
       "type": "TV",
@@ -14637,9 +14717,9 @@
       "gdrive_slug": "sankarea"
     },
     {
-      "title": "Bakemono no Ko",
+      "title": "The Boy and the Beast",
       "altTitles": [
-        "The Boy and the Beast",
+        "Bakemono no Ko",
         "バケモノの子"
       ],
       "type": "Movie",
@@ -14681,9 +14761,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Little Witch Academia (TV)",
+      "title": "Little Witch Academia",
       "altTitles": [
-        "Little Witch Academia",
+        "Little Witch Academia (TV)",
         "リトルウィッチアカデミア"
       ],
       "type": "TV",
@@ -14726,9 +14806,9 @@
       "gdrive_slug": "little-witch-academia-tv"
     },
     {
-      "title": "Owari no Seraph: Nagoya Kessen-hen",
+      "title": "Seraph of the End: Battle in Nagoya",
       "altTitles": [
-        "Seraph of the End: Battle in Nagoya",
+        "Owari no Seraph: Nagoya Kessen-hen",
         "終わりのセラフ　名古屋決戦編"
       ],
       "type": "TV",
@@ -14771,9 +14851,9 @@
       "gdrive_slug": "owari-no-seraph-nagoya-kessen-hen"
     },
     {
-      "title": "Nekomonogatari: Kuro",
+      "title": "Nekomonogatari Black",
       "altTitles": [
-        "Nekomonogatari Black",
+        "Nekomonogatari: Kuro",
         "猫物語（黒）"
       ],
       "type": "TV",
@@ -15031,9 +15111,9 @@
       "gdrive_slug": "haikyuu-movie-3-sainou-to-sense"
     },
     {
-      "title": "Monster Musume no Iru Nichijou",
+      "title": "Monster Musume: Everyday Life with Monster Girls",
       "altTitles": [
-        "Monster Musume: Everyday Life with Monster Girls",
+        "Monster Musume no Iru Nichijou",
         "モンスター娘のいる日常"
       ],
       "type": "TV",
@@ -15076,9 +15156,9 @@
       "gdrive_slug": "monster-musume-no-iru-nichijou"
     },
     {
-      "title": "3-gatsu no Lion",
+      "title": "March comes in like a lion",
       "altTitles": [
-        "March comes in like a lion",
+        "3-gatsu no Lion",
         "3月のライオン"
       ],
       "type": "TV",
@@ -15119,9 +15199,9 @@
       "gdrive_slug": "3-gatsu-no-lion"
     },
     {
-      "title": "IS: Infinite Stratos",
+      "title": "Infinite Stratos",
       "altTitles": [
-        "Infinite Stratos",
+        "IS: Infinite Stratos",
         "IS 〈インフィニット・ストラトス〉"
       ],
       "type": "TV",
@@ -15165,9 +15245,9 @@
       "gdrive_slug": "is-infinite-stratos-dub"
     },
     {
-      "title": "Sword Art Online Movie: Ordinal Scale",
+      "title": "Sword Art Online the Movie -Ordinal Scale-",
       "altTitles": [
-        "Sword Art Online the Movie -Ordinal Scale-",
+        "Sword Art Online Movie: Ordinal Scale",
         "劇場版 ソードアート・オンライン -オーディナル・スケール-"
       ],
       "type": "Movie",
@@ -15492,9 +15572,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kizumonogatari I: Tekketsu-hen",
+      "title": "Kizumonogatari Part 1: Tekketsu",
       "altTitles": [
-        "Kizumonogatari Part 1: Tekketsu",
+        "Kizumonogatari I: Tekketsu-hen",
         "傷物語〈Ⅰ鉄血篇〉"
       ],
       "type": "Movie",
@@ -15717,9 +15797,9 @@
       "gdrive_slug": "ghost-in-the-shell-stand-alone-complex-dub"
     },
     {
-      "title": "Ao no Exorcist: Kyoto Fujouou-hen",
+      "title": "Blue Exorcist: Kyoto Saga",
       "altTitles": [
-        "Blue Exorcist: Kyoto Saga",
+        "Ao no Exorcist: Kyoto Fujouou-hen",
         "青の祓魔師 京都不浄王篇"
       ],
       "type": "TV",
@@ -15761,9 +15841,9 @@
       "gdrive_slug": "ao-no-exorcist-kyoto-fujouou-hen"
     },
     {
-      "title": "Hajime no Ippo",
+      "title": "Fighting Spirit",
       "altTitles": [
-        "Fighting Spirit",
+        "Hajime no Ippo",
         "はじめの一歩 THE FIGHTING!"
       ],
       "type": "TV",
@@ -16036,9 +16116,9 @@
       "gdrive_slug": "hellsing"
     },
     {
-      "title": "Log Horizon 2nd Season",
+      "title": "Log Horizon 2",
       "altTitles": [
-        "Log Horizon 2",
+        "Log Horizon 2nd Season",
         "ログ・ホライズン 第2シリーズ"
       ],
       "type": "TV",
@@ -16082,9 +16162,9 @@
       "gdrive_slug": "log-horizon-2nd-season-dub"
     },
     {
-      "title": "Rokka no Yuusha",
+      "title": "Rokka -Braves of the Six Flowers-",
       "altTitles": [
-        "Rokka -Braves of the Six Flowers-",
+        "Rokka no Yuusha",
         "Rokka: Braves of the Six Flowers",
         "六花の勇者"
       ],
@@ -16128,9 +16208,9 @@
       "gdrive_slug": "rokka-no-yuusha"
     },
     {
-      "title": "To LOVE-Ru",
+      "title": "To LOVE Ru",
       "altTitles": [
-        "To LOVE Ru",
+        "To LOVE-Ru",
         "To LOVEる -とらぶる-"
       ],
       "type": "TV",
@@ -16174,9 +16254,9 @@
       "gdrive_slug": "to-love-ru"
     },
     {
-      "title": "Saenai Heroine no Sodatekata",
+      "title": "Saekano: How to Raise a Boring Girlfriend",
       "altTitles": [
-        "Saekano: How to Raise a Boring Girlfriend",
+        "Saenai Heroine no Sodatekata",
         "冴えない彼女〈ヒロイン〉の育てかた"
       ],
       "type": "TV",
@@ -16219,9 +16299,9 @@
       "gdrive_slug": "saenai-heroine-no-sodatekata"
     },
     {
-      "title": "Akagami no Shirayuki-hime 2nd Season",
+      "title": "Snow White with the Red Hair 2",
       "altTitles": [
-        "Snow White with the Red Hair 2",
+        "Akagami no Shirayuki-hime 2nd Season",
         "赤髪の白雪姫"
       ],
       "type": "TV",
@@ -16262,9 +16342,9 @@
       "gdrive_slug": "akagami-no-shirayuki-hime-2nd-season"
     },
     {
-      "title": "Tsurezure Children",
+      "title": "Tsuredure Children",
       "altTitles": [
-        "Tsuredure Children",
+        "Tsurezure Children",
         "徒然チルドレン"
       ],
       "type": "TV",
@@ -16344,9 +16424,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Bungou Stray Dogs 3",
+      "title": "Bungo Stray Dogs 3",
       "altTitles": [
-        "Bungo Stray Dogs 3",
+        "Bungou Stray Dogs 3",
         "文豪ストレイドッグス 第3期"
       ],
       "type": "TV",
@@ -16383,9 +16463,9 @@
       "gdrive_slug": "bungou-stray-dogs-3rd-season"
     },
     {
-      "title": "Mahoutsukai no Yome: Hoshi Matsu Hito",
+      "title": "The Ancient Magus' Bride: Those Awaiting a Star",
       "altTitles": [
-        "The Ancient Magus' Bride: Those Awaiting a Star",
+        "Mahoutsukai no Yome: Hoshi Matsu Hito",
         "魔法使いの嫁 星待つひと"
       ],
       "type": "OVA",
@@ -16427,9 +16507,9 @@
       "gdrive_slug": "mahoutsukai-no-yome-hoshi-matsu-hito"
     },
     {
-      "title": "Cowboy Bebop: Knockin' on Heaven's Door",
+      "title": "Cowboy Bebop: The Movie",
       "altTitles": [
-        "Cowboy Bebop: The Movie",
+        "Cowboy Bebop: Knockin' on Heaven's Door",
         "Cowboy Bebop: Tengoku no Tobira",
         "カウボーイビバップ天国の扉"
       ],
@@ -16517,9 +16597,9 @@
       "gdrive_slug": "chihayafuru"
     },
     {
-      "title": "Shakugan no Shana",
+      "title": "Shakugan no Shana: Season I",
       "altTitles": [
-        "Shakugan no Shana: Season I",
+        "Shakugan no Shana",
         "灼眼のシャナ"
       ],
       "type": "TV",
@@ -16563,9 +16643,9 @@
       "gdrive_slug": "shakugan-no-shana"
     },
     {
-      "title": "Nisekoi:",
+      "title": "Nisekoi: False Love",
       "altTitles": [
-        "Nisekoi: False Love",
+        "Nisekoi:",
         "ニセコイ:"
       ],
       "type": "TV",
@@ -16607,9 +16687,9 @@
       "gdrive_slug": "nisekoi-"
     },
     {
-      "title": "Nanatsu no Taizai: Seisen no Shirushi",
+      "title": "The Seven Deadly Sins: Signs of Holy War",
       "altTitles": [
-        "The Seven Deadly Sins: Signs of Holy War",
+        "Nanatsu no Taizai: Seisen no Shirushi",
         "七つの大罪 聖戦の予兆"
       ],
       "type": "TV",
@@ -16653,9 +16733,9 @@
       "gdrive_slug": "nanatsu-no-taizai-seisen-no-shirushi"
     },
     {
-      "title": "Pocket Monsters",
+      "title": "Pokémon",
       "altTitles": [
-        "Pokémon",
+        "Pocket Monsters",
         "ポケットモンスター"
       ],
       "type": "TV",
@@ -16806,11 +16886,11 @@
       "gdrive_slug": "evangelion-1-0-you-are-not-alone-dub"
     },
     {
-      "title": "Durarara!!x2 Shou",
+      "title": "Durarara!! x2",
       "altTitles": [
-        "Durarara!! x2",
-        "Durarara!! x2 Shou",
-        "デュラララ!!×２ 承"
+        "Durarara!!x2 Shou",
+        "デュラララ!!×２ 承",
+        "Durarara!! x2 Shou"
       ],
       "type": "TV",
       "status": "Finished",
@@ -16896,9 +16976,9 @@
       "gdrive_slug": "paprika"
     },
     {
-      "title": "Boku wa Tomodachi ga Sukunai Next",
+      "title": "Haganai: I don't have many friends NEXT",
       "altTitles": [
-        "Haganai: I don't have many friends NEXT",
+        "Boku wa Tomodachi ga Sukunai Next",
         "僕は友達が少ない NEXT"
       ],
       "type": "TV",
@@ -16985,9 +17065,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Eromanga-sensei",
+      "title": "Eromanga Sensei",
       "altTitles": [
-        "Eromanga Sensei",
+        "Eromanga-sensei",
         "エロマンガ先生"
       ],
       "type": "TV",
@@ -17072,9 +17152,9 @@
       "gdrive_slug": "haikyuu-movie-1-owari-to-hajimari"
     },
     {
-      "title": "Kuzu no Honkai",
+      "title": "Scum's Wish",
       "altTitles": [
-        "Scum's Wish",
+        "Kuzu no Honkai",
         "クズの本懐"
       ],
       "type": "TV",
@@ -17116,9 +17196,9 @@
       "gdrive_slug": "kuzu-no-honkai"
     },
     {
-      "title": "Gake no Ue no Ponyo",
+      "title": "Ponyo",
       "altTitles": [
-        "Ponyo",
+        "Gake no Ue no Ponyo",
         "崖の上のポニョ"
       ],
       "type": "Movie",
@@ -17246,9 +17326,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Katekyo Hitman Reborn!",
+      "title": "Reborn!",
       "altTitles": [
-        "Reborn!",
+        "Katekyo Hitman Reborn!",
         "家庭教師ヒットマンREBORN!"
       ],
       "type": "TV",
@@ -17420,9 +17500,9 @@
       "gdrive_slug": "shirobako"
     },
     {
-      "title": "Yakusoku no Neverland 2nd Season",
+      "title": "The Promised Neverland Season 2",
       "altTitles": [
-        "The Promised Neverland Season 2",
+        "Yakusoku no Neverland 2nd Season",
         "約束のネバーランド 第2期"
       ],
       "type": "TV",
@@ -17459,9 +17539,9 @@
       "gdrive_slug": "yakusoku-no-neverland-2nd-season"
     },
     {
-      "title": "Haikyuu!! Movie 4: Concept no Tatakai",
+      "title": "Haikyu!! The Movie: Battle of Concepts!!",
       "altTitles": [
-        "Haikyu!! The Movie: Battle of Concepts!!",
+        "Haikyuu!! Movie 4: Concept no Tatakai",
         "ハイキュー!! コンセプトの戦い"
       ],
       "type": "Movie",
@@ -17503,9 +17583,9 @@
       "gdrive_slug": "haikyuu-movie-4-concept-no-tatakai"
     },
     {
-      "title": "Lovely★Complex",
+      "title": "Lovely Complex",
       "altTitles": [
-        "Lovely Complex",
+        "Lovely★Complex",
         "ラブ★コン"
       ],
       "type": "TV",
@@ -17545,9 +17625,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Grisaia no Kajitsu",
+      "title": "The Fruit of Grisaia",
       "altTitles": [
-        "The Fruit of Grisaia",
+        "Grisaia no Kajitsu",
         "グリザイアの果実"
       ],
       "type": "TV",
@@ -17590,9 +17670,9 @@
       "gdrive_slug": "grisaia-no-kajitsu"
     },
     {
-      "title": "Shinmai Maou no Testament",
+      "title": "The Testament of Sister New Devil",
       "altTitles": [
-        "The Testament of Sister New Devil",
+        "Shinmai Maou no Testament",
         "新妹魔王の契約者〈テスタメント〉"
       ],
       "type": "TV",
@@ -17842,9 +17922,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Ajin",
+      "title": "Ajin: Demi-Human",
       "altTitles": [
-        "Ajin: Demi-Human",
+        "Ajin",
         "亜人"
       ],
       "type": "TV",
@@ -17886,9 +17966,9 @@
       "gdrive_slug": "ajin"
     },
     {
-      "title": "InuYasha: Kanketsu-hen",
+      "title": "InuYasha: The Final Act",
       "altTitles": [
-        "InuYasha: The Final Act",
+        "InuYasha: Kanketsu-hen",
         "犬夜叉 完結編"
       ],
       "type": "TV",
@@ -17978,9 +18058,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Gakusen Toshi Asterisk",
+      "title": "The Asterisk War: The Academy City on the Water",
       "altTitles": [
-        "The Asterisk War: The Academy City on the Water",
+        "Gakusen Toshi Asterisk",
         "The Asterisk War",
         "学戦都市アスタリスク"
       ],
@@ -18028,9 +18108,9 @@
       "gdrive_slug": "gakusen-toshi-asterisk"
     },
     {
-      "title": "Satsuriku no Tenshi",
+      "title": "Angels of Death",
       "altTitles": [
-        "Angels of Death",
+        "Satsuriku no Tenshi",
         "殺戮の天使"
       ],
       "type": "TV",
@@ -18072,9 +18152,9 @@
       "gdrive_slug": "satsuriku-no-tenshi"
     },
     {
-      "title": "Nanatsu no Taizai: Imashime no Fukkatsu OVA",
+      "title": "The Seven Deadly Sins: Revival of the Commandments OVA",
       "altTitles": [
-        "The Seven Deadly Sins: Revival of the Commandments OVA",
+        "Nanatsu no Taizai: Imashime no Fukkatsu OVA",
         "七つの大罪 戒めの復活 OVA"
       ],
       "type": "OVA",
@@ -18111,9 +18191,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Hataraku Saibou",
+      "title": "Cells at Work!",
       "altTitles": [
-        "Cells at Work!",
+        "Hataraku Saibou",
         "はたらく細胞"
       ],
       "type": "TV",
@@ -18152,9 +18232,9 @@
       "gdrive_slug": "hataraku-saibou-tv"
     },
     {
-      "title": "Grand Blue",
+      "title": "Grand Blue Dreaming",
       "altTitles": [
-        "Grand Blue Dreaming",
+        "Grand Blue",
         "ぐらんぶる"
       ],
       "type": "TV",
@@ -18194,9 +18274,9 @@
       "gdrive_slug": "grand-blue"
     },
     {
-      "title": "Kizumonogatari III: Reiketsu-hen",
+      "title": "Kizumonogatari Part 3: Reiketsu",
       "altTitles": [
-        "Kizumonogatari Part 3: Reiketsu",
+        "Kizumonogatari III: Reiketsu-hen",
         "傷物語〈Ⅲ冷血篇〉"
       ],
       "type": "Movie",
@@ -18238,9 +18318,9 @@
       "gdrive_slug": "kizumonogatari-iii-reiketsu-hen"
     },
     {
-      "title": "Hentai Ouji to Warawanai Neko.",
+      "title": "The \"Hentai\" Prince and the Stony Cat.",
       "altTitles": [
-        "The \"Hentai\" Prince and the Stony Cat.",
+        "Hentai Ouji to Warawanai Neko.",
         "変態王子と笑わない猫。"
       ],
       "type": "TV",
@@ -18283,9 +18363,9 @@
       "gdrive_slug": "hentai-ouji-to-warawanai-neko-specials"
     },
     {
-      "title": "Mekakucity Actors",
+      "title": "MEKAKUCITY ACTORS",
       "altTitles": [
-        "MEKAKUCITY ACTORS",
+        "Mekakucity Actors",
         "メカクシティアクターズ"
       ],
       "type": "TV",
@@ -18415,9 +18495,9 @@
       "gdrive_slug": "little-witch-academia"
     },
     {
-      "title": "Inu x Boku SS",
+      "title": "Inu X Boku Secret Service",
       "altTitles": [
-        "Inu X Boku Secret Service",
+        "Inu x Boku SS",
         "妖狐×僕SS"
       ],
       "type": "TV",
@@ -18534,9 +18614,9 @@
       "gdrive_slug": "dragon-ball-gt"
     },
     {
-      "title": "Rokudenashi Majutsu Koushi to Akashic Records",
+      "title": "Akashic Records of Bastard Magic Instructor",
       "altTitles": [
-        "Akashic Records of Bastard Magic Instructor",
+        "Rokudenashi Majutsu Koushi to Akashic Records",
         "ロクでなし魔術講師と禁忌教典"
       ],
       "type": "TV",
@@ -18578,9 +18658,9 @@
       "gdrive_slug": "rokudenashi-majutsu-koushi-to-akashic-records"
     },
     {
-      "title": "Higurashi no Naku Koro ni Kai",
+      "title": "When They Cry: Kai",
       "altTitles": [
-        "When They Cry: Kai",
+        "Higurashi no Naku Koro ni Kai",
         "ひぐらしのなく頃に解"
       ],
       "type": "TV",
@@ -18660,9 +18740,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kara no Kyoukai 1: Fukan Fuukei",
+      "title": "the Garden of sinners Chapter 1: Overlooking View",
       "altTitles": [
-        "the Garden of sinners Chapter 1: Overlooking View",
+        "Kara no Kyoukai 1: Fukan Fuukei",
         "劇場版 空の境界 the Garden of sinners 第一章『俯瞰風景』"
       ],
       "type": "Movie",
@@ -18898,9 +18978,9 @@
       "gdrive_slug": "god-eater"
     },
     {
-      "title": "Yosuga no Sora: In Solitude, Where We Are Least Alone.",
+      "title": "Yosuga no Sora",
       "altTitles": [
-        "Yosuga no Sora",
+        "Yosuga no Sora: In Solitude, Where We Are Least Alone.",
         "ヨスガノソラ In solitude, where we are least alone."
       ],
       "type": "TV",
@@ -19161,9 +19241,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuioku-hen",
+      "title": "Samurai X: Trust and Betrayal",
       "altTitles": [
-        "Samurai X: Trust and Betrayal",
+        "Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuioku-hen",
         "るろうに剣心―明治剣客浪漫譚―追憶編"
       ],
       "type": "OVA",
@@ -19207,9 +19287,9 @@
       "gdrive_slug": "rurouni-kenshin-meiji-kenkaku-romantan-tsuioku-hen"
     },
     {
-      "title": "Gintama': Enchousen",
+      "title": "Gintama: Enchousen",
       "altTitles": [
-        "Gintama: Enchousen",
+        "Gintama': Enchousen",
         "銀魂' 延長戦"
       ],
       "type": "TV",
@@ -19602,9 +19682,9 @@
       "gdrive_slug": "drifters"
     },
     {
-      "title": "Kimi ni Todoke 2nd Season",
+      "title": "Kimi ni Todoke: From Me To You 2",
       "altTitles": [
-        "Kimi ni Todoke: From Me To You 2",
+        "Kimi ni Todoke 2nd Season",
         "君に届け 2ND SEASON"
       ],
       "type": "TV",
@@ -19690,9 +19770,9 @@
       "gdrive_slug": "mayo-chiki-dub"
     },
     {
-      "title": "Mousou Dairinin",
+      "title": "Paranoia Agent",
       "altTitles": [
-        "Paranoia Agent",
+        "Mousou Dairinin",
         "妄想代理人"
       ],
       "type": "TV",
@@ -19737,9 +19817,9 @@
       "gdrive_slug": "mousou-dairinin-dub"
     },
     {
-      "title": "Musaigen no Phantom World",
+      "title": "Myriad Colors Phantom World",
       "altTitles": [
-        "Myriad Colors Phantom World",
+        "Musaigen no Phantom World",
         "無彩限のファントム・ワールド"
       ],
       "type": "TV",
@@ -19782,9 +19862,9 @@
       "gdrive_slug": "musaigen-no-phantom-world"
     },
     {
-      "title": "Toaru Kagaku no Railgun S",
+      "title": "A Certain Scientific Railgun S",
       "altTitles": [
-        "A Certain Scientific Railgun S",
+        "Toaru Kagaku no Railgun S",
         "とある科学の超電磁砲S"
       ],
       "type": "TV",
@@ -19871,9 +19951,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Toaru Majutsu no Index II",
+      "title": "A Certain Magical Index II",
       "altTitles": [
-        "A Certain Magical Index II",
+        "Toaru Majutsu no Index II",
         "とある魔術の禁書目録II"
       ],
       "type": "TV",
@@ -19918,8 +19998,8 @@
       "title": "A Place Further Than the Universe",
       "altTitles": [
         "Sora yori mo Tooi Basho",
-        "A Place Further Than The Universe",
-        "宇宙よりも遠い場所"
+        "宇宙よりも遠い場所",
+        "A Place Further Than The Universe"
       ],
       "type": "TV",
       "status": "Finished",
@@ -19996,9 +20076,9 @@
       "gdrive_slug": "wonder-egg-priority"
     },
     {
-      "title": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka II",
+      "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon? II",
       "altTitles": [
-        "Is It Wrong to Try to Pick Up Girls in a Dungeon? II",
+        "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka II",
         "ダンジョンに出会いを求めるのは間違っているだろうかII"
       ],
       "type": "TV",
@@ -20041,9 +20121,9 @@
       "gdrive_slug": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-ii"
     },
     {
-      "title": "5-toubun no Hanayome",
+      "title": "The Quintessential Quintuplets",
       "altTitles": [
-        "The Quintessential Quintuplets",
+        "5-toubun no Hanayome",
         "五等分の花嫁"
       ],
       "type": "TV",
@@ -20168,9 +20248,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Blend S",
+      "title": "BLEND-S",
       "altTitles": [
-        "BLEND-S",
+        "Blend S",
         "ブレンド・S"
       ],
       "type": "TV",
@@ -20254,9 +20334,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Hibike! Euphonium",
+      "title": "Sound! Euphonium",
       "altTitles": [
-        "Sound! Euphonium",
+        "Hibike! Euphonium",
         "響け！ユーフォニアム"
       ],
       "type": "TV",
@@ -20297,9 +20377,9 @@
       "gdrive_slug": "hibike-euphonium"
     },
     {
-      "title": "Working!!",
+      "title": "Wagnaria!!",
       "altTitles": [
-        "Wagnaria!!",
+        "Working!!",
         "ワーキング!!"
       ],
       "type": "TV",
@@ -20341,9 +20421,9 @@
       "gdrive_slug": "working-"
     },
     {
-      "title": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu",
+      "title": "How Not to Summon a Demon Lord",
       "altTitles": [
-        "How Not to Summon a Demon Lord",
+        "Isekai Maou to Shoukan Shoujo no Dorei Majutsu",
         "異世界魔王と召喚少女の奴隷魔術"
       ],
       "type": "TV",
@@ -20429,9 +20509,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Suisei no Gargantia",
+      "title": "Gargantia on the Verdurous Planet",
       "altTitles": [
-        "Gargantia on the Verdurous Planet",
+        "Suisei no Gargantia",
         "翠星のガルガンティア"
       ],
       "type": "TV",
@@ -20473,9 +20553,9 @@
       "gdrive_slug": "suisei-no-gargantia"
     },
     {
-      "title": "Mahou Shoujo Madoka★Magica Movie 3: Hangyaku no Monogatari",
+      "title": "Puella Magi Madoka Magica the Movie: Rebellion",
       "altTitles": [
-        "Puella Magi Madoka Magica the Movie: Rebellion",
+        "Mahou Shoujo Madoka★Magica Movie 3: Hangyaku no Monogatari",
         "劇場版 魔法少女まどか☆マギカ 叛逆の物語"
       ],
       "type": "Movie",
@@ -20519,9 +20599,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Kizumonogatari II: Nekketsu-hen",
+      "title": "Kizumonogatari Part 2: Nekketsu",
       "altTitles": [
-        "Kizumonogatari Part 2: Nekketsu",
+        "Kizumonogatari II: Nekketsu-hen",
         "傷物語〈Ⅱ熱血篇〉"
       ],
       "type": "Movie",
@@ -20601,9 +20681,9 @@
       "gdrive_slug": "non-non-biyori"
     },
     {
-      "title": "Inuyashiki",
+      "title": "Inuyashiki: Last Hero",
       "altTitles": [
-        "Inuyashiki: Last Hero",
+        "Inuyashiki",
         "いぬやしき"
       ],
       "type": "TV",
@@ -20645,9 +20725,9 @@
       "gdrive_slug": "inuyashiki"
     },
     {
-      "title": "Ichiban Ushiro no Daimaou",
+      "title": "Demon King Daimao",
       "altTitles": [
-        "Demon King Daimao",
+        "Ichiban Ushiro no Daimaou",
         "いちばんうしろの大魔王"
       ],
       "type": "TV",
@@ -20775,9 +20855,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Boku no Hero Academia the Movie: World Heroes' Mission",
+      "title": "My Hero Academia the Movie 3: World Heroes' Mission",
       "altTitles": [
-        "My Hero Academia the Movie 3: World Heroes' Mission",
+        "Boku no Hero Academia the Movie: World Heroes' Mission",
         "My Hero Academia: World Heroes' Mission",
         "僕のヒーローアカデミア THE MOVIE ワールド ヒーローズ ミッション"
       ],
@@ -20815,9 +20895,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Hinamatsuri",
+      "title": "HINAMATSURI",
       "altTitles": [
-        "HINAMATSURI",
+        "Hinamatsuri",
         "ヒナまつり"
       ],
       "type": "TV",
@@ -20981,9 +21061,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Kan",
+      "title": "My Teen Romantic Comedy SNAFU Climax",
       "altTitles": [
-        "My Teen Romantic Comedy SNAFU Climax",
+        "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Kan",
         "やはり俺の青春ラブコメはまちがっている。完"
       ],
       "type": "TV",
@@ -21020,9 +21100,9 @@
       "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-kan"
     },
     {
-      "title": "Gakkou Gurashi!",
+      "title": "School-Live!",
       "altTitles": [
-        "School-Live!",
+        "Gakkou Gurashi!",
         "がっこうぐらし！"
       ],
       "type": "TV",
@@ -21066,9 +21146,9 @@
       "gdrive_slug": "gakkou-gurashi-"
     },
     {
-      "title": "Zero no Tsukaima: Futatsuki no Kishi",
+      "title": "The Familiar of Zero: Knight of the Twin Moons",
       "altTitles": [
-        "The Familiar of Zero: Knight of the Twin Moons",
+        "Zero no Tsukaima: Futatsuki no Kishi",
         "ゼロの使い魔 ～双月の騎士～"
       ],
       "type": "TV",
@@ -21204,9 +21284,9 @@
       "gdrive_slug": "redline"
     },
     {
-      "title": "K-On! Movie",
+      "title": "K-ON! The Movie",
       "altTitles": [
-        "K-ON! The Movie",
+        "K-On! Movie",
         "映画 けいおん！"
       ],
       "type": "Movie",
@@ -21380,9 +21460,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Netoge no Yome wa Onnanoko ja Nai to Omotta?",
+      "title": "And you thought there is never a girl online?",
       "altTitles": [
-        "And you thought there is never a girl online?",
+        "Netoge no Yome wa Onnanoko ja Nai to Omotta?",
         "ネトゲの嫁は女の子じゃないと思った？"
       ],
       "type": "TV",
@@ -21633,9 +21713,9 @@
       "gdrive_slug": "the-god-of-high-school-dub"
     },
     {
-      "title": "Gate: Jieitai Kanochi nite, Kaku Tatakaeri Part 2",
+      "title": "GATE Part 2",
       "altTitles": [
-        "GATE Part 2",
+        "Gate: Jieitai Kanochi nite, Kaku Tatakaeri Part 2",
         "GATE 自衛隊 彼の地にて、斯く戦えり 第2クール"
       ],
       "type": "TV",
@@ -21677,9 +21757,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Shingeki no Bahamut: Genesis",
+      "title": "Rage of Bahamut: Genesis",
       "altTitles": [
-        "Rage of Bahamut: Genesis",
+        "Shingeki no Bahamut: Genesis",
         "神撃のバハムート GENESIS"
       ],
       "type": "TV",
@@ -21809,9 +21889,9 @@
       "gdrive_slug": "tamako-love-story"
     },
     {
-      "title": "Ano Natsu de Matteru",
+      "title": "Waiting in the Summer",
       "altTitles": [
-        "Waiting in the Summer",
+        "Ano Natsu de Matteru",
         "あの夏で待ってる"
       ],
       "type": "TV",
@@ -21855,9 +21935,9 @@
       "gdrive_slug": "ano-natsu-de-matteru"
     },
     {
-      "title": "Yuru Camp△",
+      "title": "Laid-Back Camp",
       "altTitles": [
-        "Laid-Back Camp",
+        "Yuru Camp△",
         "ゆるキャン△"
       ],
       "type": "TV",
@@ -21897,9 +21977,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Tanaka-kun wa Itsumo Kedaruge",
+      "title": "Tanaka-kun is Always Listless",
       "altTitles": [
-        "Tanaka-kun is Always Listless",
+        "Tanaka-kun wa Itsumo Kedaruge",
         "田中くんはいつもけだるげ"
       ],
       "type": "TV",
@@ -21940,9 +22020,9 @@
       "gdrive_slug": "tanaka-kun-wa-itsumo-kedaruge"
     },
     {
-      "title": "Hunter x Hunter: Yorkshin City Kanketsu-hen",
+      "title": "Hunter x Hunter OVA",
       "altTitles": [
-        "Hunter x Hunter OVA",
+        "Hunter x Hunter: Yorkshin City Kanketsu-hen",
         "ハンターｘハンター ヨークシンシティー完結編"
       ],
       "type": "OVA",
@@ -22072,9 +22152,9 @@
       "gdrive_slug": "kaze-no-stigma"
     },
     {
-      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
+      "title": "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
       "altTitles": [
-        "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
+        "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
         "ゼロから始める異世界生活"
       ],
       "type": "TV",
@@ -22111,9 +22191,9 @@
       "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season-part-2"
     },
     {
-      "title": "Sousei no Onmyouji",
+      "title": "Twin Star Exorcists",
       "altTitles": [
-        "Twin Star Exorcists",
+        "Sousei no Onmyouji",
         "双星の陰陽師"
       ],
       "type": "TV",
@@ -22220,9 +22300,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Sono Bisque Doll wa Koi wo Suru",
+      "title": "My Dress-Up Darling",
       "altTitles": [
-        "My Dress-Up Darling",
+        "Sono Bisque Doll wa Koi wo Suru",
         "その着せ替え人形〈ビスク・ドール〉は恋をする"
       ],
       "type": "TV",
@@ -22259,9 +22339,9 @@
       "gdrive_slug": "sono-bisque-doll-wa-koi-wo-suru"
     },
     {
-      "title": "Fumetsu no Anata e",
+      "title": "To Your Eternity",
       "altTitles": [
-        "To Your Eternity",
+        "Fumetsu no Anata e",
         "不滅のあなたへ"
       ],
       "type": "TV",
@@ -22298,9 +22378,9 @@
       "gdrive_slug": "fumetsu-no-anata-e"
     },
     {
-      "title": "Tsuki ga Kirei",
+      "title": "Tsukigakirei",
       "altTitles": [
-        "Tsukigakirei",
+        "Tsuki ga Kirei",
         "月がきれい"
       ],
       "type": "TV",
@@ -22424,9 +22504,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Owarimonogatari 2nd Season",
+      "title": "Owarimonogatari Second Season",
       "altTitles": [
-        "Owarimonogatari Second Season",
+        "Owarimonogatari 2nd Season",
         "終物語"
       ],
       "type": "TV",
@@ -22512,9 +22592,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Re:Creators",
+      "title": "Re:CREATORS",
       "altTitles": [
-        "Re:CREATORS",
+        "Re:Creators",
         "Re:CREATORS 〈レクリエイターズ〉"
       ],
       "type": "TV",
@@ -22555,9 +22635,9 @@
       "gdrive_slug": "recreators"
     },
     {
-      "title": "Kanojo, Okarishimasu",
+      "title": "Rent-a-Girlfriend",
       "altTitles": [
-        "Rent-a-Girlfriend",
+        "Kanojo, Okarishimasu",
         "彼女, お借りします"
       ],
       "type": "TV",
@@ -22594,9 +22674,9 @@
       "gdrive_slug": "kanojo-okarishimasu"
     },
     {
-      "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+      "title": "Demon Slayer: Kimetsu no Yaiba - Swordsmith Village Arc",
       "altTitles": [
-        "Demon Slayer: Kimetsu no Yaiba - Swordsmith Village Arc",
+        "Kimetsu no Yaiba: Katanakaji no Sato-hen",
         "鬼滅の刃 刀鍛冶の里編"
       ],
       "type": "TV",
@@ -22633,9 +22713,9 @@
       "gdrive_slug": "kimetsu-no-yaiba-katanakaji-no-sato-hen"
     },
     {
-      "title": "Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou",
+      "title": "Violet Evergarden Side Story: Eternity and the Auto Memories Doll",
       "altTitles": [
-        "Violet Evergarden Side Story: Eternity and the Auto Memories Doll",
+        "Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou",
         "ヴァイオレット・エヴァーガーデン 外伝~永遠と自動手記人形~"
       ],
       "type": "Movie",
@@ -22710,9 +22790,9 @@
       "gdrive_slug": "fruits-basket-2nd-season"
     },
     {
-      "title": "Net-juu no Susume",
+      "title": "Recovery of an MMO Junkie",
       "altTitles": [
-        "Recovery of an MMO Junkie",
+        "Net-juu no Susume",
         "ネト充のススメ"
       ],
       "type": "TV",
@@ -22753,9 +22833,9 @@
       "gdrive_slug": "net-juu-no-susume"
     },
     {
-      "title": "Hitsugi no Chaika",
+      "title": "Chaika -The Coffin Princess-",
       "altTitles": [
-        "Chaika -The Coffin Princess-",
+        "Hitsugi no Chaika",
         "棺姫のチャイカ"
       ],
       "type": "TV",
@@ -22798,9 +22878,9 @@
       "gdrive_slug": "hitsugi-no-chaika"
     },
     {
-      "title": "Kino no Tabi: The Beautiful World",
+      "title": "Kino's Journey",
       "altTitles": [
-        "Kino's Journey",
+        "Kino no Tabi: The Beautiful World",
         "キノの旅 -the Beautiful World-"
       ],
       "type": "TV",
@@ -22911,9 +22991,9 @@
       "gdrive_slug": "blood-lad"
     },
     {
-      "title": "Houseki no Kuni (TV)",
+      "title": "Land of the Lustrous (TV)",
       "altTitles": [
-        "Land of the Lustrous (TV)",
+        "Houseki no Kuni (TV)",
         "Land of the Lustrous",
         "宝石の国"
       ],
@@ -22995,9 +23075,9 @@
       "gdrive_slug": "sword-of-the-stranger"
     },
     {
-      "title": "Tasogare Otome x Amnesia",
+      "title": "Dusk Maiden of Amnesia",
       "altTitles": [
-        "Dusk Maiden of Amnesia",
+        "Tasogare Otome x Amnesia",
         "黄昏乙女×アムネジア"
       ],
       "type": "TV",
@@ -23040,9 +23120,9 @@
       "gdrive_slug": "tasogare-otome-x-amnesia-"
     },
     {
-      "title": "Karakai Jouzu no Takagi-san",
+      "title": "Teasing Master Takagi-san",
       "altTitles": [
-        "Teasing Master Takagi-san",
+        "Karakai Jouzu no Takagi-san",
         "からかい上手の高木さん"
       ],
       "type": "TV",
@@ -23084,9 +23164,9 @@
       "gdrive_slug": "karakai-jouzu-no-takagi-san"
     },
     {
-      "title": "Inou-Battle wa Nichijou-kei no Naka de",
+      "title": "When Supernatural Battles Became Commonplace",
       "altTitles": [
-        "When Supernatural Battles Became Commonplace",
+        "Inou-Battle wa Nichijou-kei no Naka de",
         "異能バトルは日常系のなかで"
       ],
       "type": "TV",
@@ -23129,9 +23209,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Space☆Dandy",
+      "title": "Space Dandy",
       "altTitles": [
-        "Space Dandy",
+        "Space☆Dandy",
         "スペース☆ダンディ"
       ],
       "type": "TV",
@@ -23172,9 +23252,9 @@
       "gdrive_slug": ""
     },
     {
-      "title": "Mawaru Penguindrum",
+      "title": "Penguindrum",
       "altTitles": [
-        "Penguindrum",
+        "Mawaru Penguindrum",
         "輪るピングドラム"
       ],
       "type": "TV",
@@ -23218,11 +23298,11 @@
       "gdrive_slug": "mawaru-penguindrum"
     },
     {
-      "title": "Sayonara Zetsubou Sensei",
+      "title": "Sayonara",
       "altTitles": [
-        "Sayonara",
-        "Sayonara, Zetsubou-Sensei",
-        "さよなら絶望先生"
+        "Sayonara Zetsubou Sensei",
+        "さよなら絶望先生",
+        "Sayonara, Zetsubou-Sensei"
       ],
       "type": "TV",
       "status": "Finished",
@@ -23377,9 +23457,9 @@
       "gdrive_slug": "new-game-dub"
     },
     {
-      "title": "Megalo Box",
+      "title": "MEGALOBOX",
       "altTitles": [
-        "MEGALOBOX",
+        "Megalo Box",
         "メガロボクス"
       ],
       "type": "TV",
@@ -23466,9 +23546,9 @@
       "gdrive_slug": "citrus"
     },
     {
-      "title": "Yuru Yuri",
+      "title": "YuruYuri: Happy Go Lily",
       "altTitles": [
-        "YuruYuri: Happy Go Lily",
+        "Yuru Yuri",
         "ゆるゆり"
       ],
       "type": "TV",
@@ -23520,8 +23600,8 @@
     "naruto-shippuden",
     "bleach",
     "bleach-thousand-year-blood-war",
-    "attack-on-titan",
-    "boku-no-hero-academia"
+    "one-piece",
+    "attack-on-titan"
   ],
   "genres": [
     "Action",

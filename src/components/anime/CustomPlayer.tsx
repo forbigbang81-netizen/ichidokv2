@@ -35,6 +35,7 @@ import {
   Settings2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CastButton } from "./CastButton";
 
 type Props = {
   /** Unique key for storing the source URL (e.g. "anime-id:ep-1"). */
@@ -58,6 +59,11 @@ type Props = {
    * The user can click "Switch to manual" to override with their own URL.
    */
   embedUrl?: string | null;
+  /**
+   * URL for the Cast button (usually a share URL pointing back to this episode
+   * on our site). If omitted, the Cast button is hidden.
+   */
+  castUrl?: string;
 };
 
 const STORAGE_PREFIX = "ichidok:source:";
@@ -76,6 +82,7 @@ export function CustomPlayer({
   hasNext,
   hasPrev,
   embedUrl,
+  castUrl,
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -427,21 +434,16 @@ export function CustomPlayer({
             referrerPolicy="no-referrer"
             sandbox="allow-scripts allow-same-origin allow-presentation allow-forms allow-popups"
           />
-          {/* Embed mode badge */}
+          {/* Embed mode badge (top-left, subtle) */}
           <div className="pointer-events-none absolute left-3 top-3 z-20 border border-white/20 bg-black/60 px-2 py-1 font-mono text-[9px] uppercase tracking-wider text-white/70">
             gdriveplayer
           </div>
-          {/* Switch-to-manual button (bottom-right, always visible in embed mode) */}
-          <button
-            onClick={() => {
-              setMode("manual");
-              setShowSourceInput(true);
-            }}
-            className="absolute bottom-3 right-3 z-30 inline-flex items-center gap-1 border border-white/20 bg-black/60 px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-white/80 hover:bg-white/20 hover:text-white"
-            title="Use a different video URL"
-          >
-            <Link2 className="h-3 w-3" /> Use my own URL
-          </button>
+          {/* Cast button (top-right, inside the player in embed mode) */}
+          {castUrl && (
+            <div className="absolute right-3 top-3 z-30">
+              <CastButton url={castUrl} title={title} compact />
+            </div>
+          )}
         </>
       )}
 
@@ -765,6 +767,11 @@ export function CustomPlayer({
             >
               <Settings2 className="h-4 w-4" />
             </button>
+
+            {/* Cast (inside the player) */}
+            {castUrl && (
+              <CastButton url={castUrl} title={title} compact />
+            )}
 
             {/* Fullscreen */}
             <button

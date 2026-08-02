@@ -52,9 +52,6 @@ export function Navbar() {
             <span className="text-base font-black tracking-tight">
               ichidok
             </span>
-            <span className="hidden text-[9px] font-semibold uppercase tracking-[0.2em] text-muted-foreground sm:inline">
-              · anime
-            </span>
           </button>
         </div>
 

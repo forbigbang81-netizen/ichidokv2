@@ -16,7 +16,6 @@ import {
   gdriveEmbedUrl,
   type Episode,
 } from "@/lib/anime";
-import { CastButton } from "./CastButton";
 import { CustomPlayer } from "./CustomPlayer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
@@ -140,10 +139,9 @@ export function WatchPage({
               <ArrowLeft className="h-3.5 w-3.5" /> Details
             </button>
           )}
-          <span className="line-clamp-1 max-w-[60%] text-center text-[11px] uppercase tracking-wider text-muted-foreground">
+          <span className="line-clamp-1 max-w-[80%] text-center text-[11px] uppercase tracking-wider text-muted-foreground">
             {anime.title} · {currentEp.seasonName} · Ep {currentEp.episodeInSeason}
           </span>
-          <CastButton url={castTargetUrl} title={playerTitle} />
         </div>
       </div>
 
@@ -157,6 +155,7 @@ export function WatchPage({
               subtitle={playerSubtitle}
               poster={anime.image_url}
               embedUrl={playerEmbedUrl}
+              castUrl={castTargetUrl}
               onNext={() => hasNext && navigateTo(currentEp.number + 1)}
               onPrev={() => hasPrev && navigateTo(currentEp.number - 1)}
               hasNext={hasNext}

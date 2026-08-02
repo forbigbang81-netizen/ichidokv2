@@ -25,9 +25,14 @@ import {
 type Props = {
   url: string;
   title?: string;
+  /**
+   * Compact mode: just the cast icon (used inside the player controls bar).
+   * Default mode: full button with "Cast" label (used in the watch page top bar).
+   */
+  compact?: boolean;
 };
 
-export function CastButton({ url, title }: Props) {
+export function CastButton({ url, title, compact = false }: Props) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -52,14 +57,25 @@ export function CastButton({ url, title }: Props) {
 
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-1.5 border border-border bg-background/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-foreground hover:text-background"
-        aria-label="Send to device"
-      >
-        <Cast className="h-3.5 w-3.5" />
-        Cast
-      </button>
+      {compact ? (
+        <button
+          onClick={() => setOpen(true)}
+          className="p-1.5 text-white/80 hover:text-white"
+          aria-label="Send to device"
+          title="Send to device"
+        >
+          <Cast className="h-4 w-4" />
+        </button>
+      ) : (
+        <button
+          onClick={() => setOpen(true)}
+          className="inline-flex items-center gap-1.5 border border-border bg-background/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-foreground transition-colors hover:bg-foreground hover:text-background"
+          aria-label="Send to device"
+        >
+          <Cast className="h-3.5 w-3.5" />
+          Cast
+        </button>
+      )}
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-[360px] border-border bg-card p-0">

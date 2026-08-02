@@ -14,17 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ichidok — anime, undiluted",
-  description:
-    "Stream anime with a clean black & white interface. Browse the catalog, dive into seasons, and watch episodes via gdriveplayer.",
-  keywords: ["anime", "streaming", "ichidok", "gdriveplayer", "watch anime"],
+  title: "ichidok",
+  description: "Stream anime — clean, simple, black & white.",
+  keywords: ["anime", "streaming", "ichidok", "watch anime"],
   authors: [{ name: "ichidok" }],
   icons: {
     icon: "/logo.svg",
   },
   openGraph: {
     title: "ichidok",
-    description: "Anime, undiluted. Black & white streaming experience.",
+    description: "Stream anime — clean, simple, black & white.",
     siteName: "ichidok",
     type: "website",
   },
