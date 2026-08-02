@@ -380,7 +380,6 @@ export function CustomPlayer({
           poster={poster}
           className="absolute inset-0 h-full w-full object-contain"
           playsInline
-          onClick={togglePlay}
           onDoubleClick={toggleFullscreen}
         />
       )}
