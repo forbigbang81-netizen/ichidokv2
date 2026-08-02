@@ -18,6 +18,7 @@ import {
   type Episode,
   type PlayerLang,
 } from "@/lib/anime";
+import { getGdriveEpisode } from "@/lib/gdrive-sources";
 import { CustomPlayer } from "./CustomPlayer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
@@ -109,7 +110,18 @@ export function WatchPage({
   const playerStorageKey = `${anime.id}:ep:${currentEp.number}`;
   const playerTitle = `${anime.title} — Episode ${currentEp.episodeInSeason}`;
   const playerSubtitle = `${currentEp.seasonName} · Ep ${currentEp.number} / ${allEpisodes.length}`;
-  const playerEmbedUrl = gdriveEmbedUrl(anime, currentEp, lang);
+
+  // Look up a Google Drive source for this episode (preferred — works reliably)
+  const gdriveSource = getGdriveEpisode(
+    anime.id,
+    currentEp.seasonIndex,
+    currentEp.episodeInSeason,
+  );
+  // Fall back to the gdriveplayer embed URL (for anime without Drive sources)
+  const gdriveplayerEmbedUrl = gdriveEmbedUrl(anime, currentEp, lang);
+
+  // Use the Google Drive source if available, else fall back to gdriveplayer
+  const playerEmbedUrl = gdriveSource?.embedUrl || gdriveplayerEmbedUrl;
 
   const switchLang = (newLang: PlayerLang) => {
     if (newLang === lang) return;
