@@ -52,6 +52,12 @@ type Props = {
   /** Whether there's a next/prev episode available. */
   hasNext?: boolean;
   hasPrev?: boolean;
+  /**
+   * If provided, the player loads this URL in an iframe (instead of using
+   * the manual-source HTML5 player). Used for gdriveplayer embeds.
+   * The user can click "Switch to manual" to override with their own URL.
+   */
+  embedUrl?: string | null;
 };
 
 const STORAGE_PREFIX = "ichidok:source:";
@@ -69,6 +75,7 @@ export function CustomPlayer({
   onPrev,
   hasNext,
   hasPrev,
+  embedUrl,
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -81,7 +88,7 @@ export function CustomPlayer({
     return localStorage.getItem(STORAGE_PREFIX + storageKey) || "";
   });
   const [sourceInput, setSourceInput] = useState<string>(sourceUrl);
-  const [showSourceInput, setShowSourceInput] = useState<boolean>(!sourceUrl);
+  const [showSourceInput, setShowSourceInput] = useState<boolean>(!sourceUrl && !embedUrl);
 
   // Player state
   const [state, setState] = useState<PlayerState>("idle");
@@ -95,6 +102,13 @@ export function CustomPlayer({
   const [speed, setSpeed] = useState(1);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
 
+  // Mode: "embed" (use embedUrl in iframe) or "manual" (use HTML5 video with sourceUrl).
+  // User can switch to manual by clicking "Use my own URL" — once they do, embed mode
+  // is disabled for this episode unless they clear the source.
+  const [mode, setMode] = useState<"embed" | "manual">(
+    sourceUrl ? "manual" : embedUrl ? "embed" : "manual",
+  );
+
   // Reset source-related state when storageKey changes (new episode selected).
   // This block runs AFTER all the useState declarations above so the setters exist.
   const [prevStorageKey, setPrevStorageKey] = useState(storageKey);
@@ -106,9 +120,10 @@ export function CustomPlayer({
         : "";
     setSourceUrl(saved);
     setSourceInput(saved);
-    setShowSourceInput(!saved);
-    setState(saved ? "loading" : "idle");
+    setShowSourceInput(!saved && !embedUrl);
+    setState(saved || embedUrl ? "loading" : "idle");
     setErrorMessage("");
+    setMode(saved ? "manual" : embedUrl ? "embed" : "manual");
   }
 
   // When sourceUrl changes (e.g. user pasted a new URL via the input),
@@ -358,18 +373,26 @@ export function CustomPlayer({
     setSourceUrl(url);
     setErrorMessage("");
     setShowSourceInput(false);
+    setMode("manual");  // user pasted a URL — switch to manual HTML5 player
   };
 
   const clearSource = () => {
     localStorage.removeItem(STORAGE_PREFIX + storageKey);
     setSourceUrl("");
     setSourceInput("");
-    setState("idle");
-    setShowSourceInput(true);
+    setShowSourceInput(!embedUrl);  // if embed available, hide input; else show it
     const v = videoRef.current;
     if (v) {
       v.removeAttribute("src");
       v.load();
+    }
+    // Switch back to embed mode if we have an embed URL, else idle
+    if (embedUrl) {
+      setMode("embed");
+      setState("loading");
+    } else {
+      setMode("manual");
+      setState("idle");
     }
   };
 
@@ -391,18 +414,52 @@ export function CustomPlayer({
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
     >
-      {/* Video element (always rendered so refs work) */}
+      {/* === EMBED MODE: iframe with gdriveplayer === */}
+      {mode === "embed" && embedUrl && !showSourceInput && (
+        <>
+          <iframe
+            key={embedUrl}
+            src={embedUrl}
+            title={title}
+            className="absolute inset-0 h-full w-full"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowFullScreen
+            referrerPolicy="no-referrer"
+            sandbox="allow-scripts allow-same-origin allow-presentation allow-forms allow-popups"
+          />
+          {/* Embed mode badge */}
+          <div className="pointer-events-none absolute left-3 top-3 z-20 border border-white/20 bg-black/60 px-2 py-1 font-mono text-[9px] uppercase tracking-wider text-white/70">
+            gdriveplayer
+          </div>
+          {/* Switch-to-manual button (bottom-right, always visible in embed mode) */}
+          <button
+            onClick={() => {
+              setMode("manual");
+              setShowSourceInput(true);
+            }}
+            className="absolute bottom-3 right-3 z-30 inline-flex items-center gap-1 border border-white/20 bg-black/60 px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-white/80 hover:bg-white/20 hover:text-white"
+            title="Use a different video URL"
+          >
+            <Link2 className="h-3 w-3" /> Use my own URL
+          </button>
+        </>
+      )}
+
+      {/* Video element (always rendered so refs work, but hidden in embed mode) */}
       <video
         ref={videoRef}
         poster={poster}
-        className="absolute inset-0 h-full w-full object-contain"
+        className={cn(
+          "absolute inset-0 h-full w-full object-contain",
+          mode === "embed" && "hidden",
+        )}
         playsInline
         onClick={togglePlay}
         onDoubleClick={toggleFullscreen}
       />
 
-      {/* === Source input overlay === */}
-      {(!sourceUrl || showSourceInput) && state !== "playing" && (
+      {/* === Source input overlay (manual mode only) === */}
+      {mode === "manual" && (!sourceUrl || showSourceInput) && state !== "playing" && (
         <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/95 p-6">
           <div className="w-full max-w-lg">
             <div className="mb-4 flex items-center gap-2 text-foreground">
@@ -461,15 +518,15 @@ export function CustomPlayer({
         </div>
       )}
 
-      {/* === Loading spinner === */}
-      {state === "loading" && sourceUrl && !showSourceInput && (
+      {/* === Loading spinner (manual mode only) === */}
+      {mode === "manual" && state === "loading" && sourceUrl && !showSourceInput && (
         <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center">
           <Loader2 className="h-10 w-10 animate-spin text-foreground" />
         </div>
       )}
 
-      {/* === Error state === */}
-      {state === "error" && !showSourceInput && (
+      {/* === Error state (manual mode only) === */}
+      {mode === "manual" && state === "error" && !showSourceInput && (
         <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/85 p-6">
           <div className="max-w-md text-center">
             <AlertCircle className="mx-auto mb-3 h-8 w-8 text-foreground" />
@@ -502,8 +559,8 @@ export function CustomPlayer({
         </div>
       )}
 
-      {/* === Idle hint (source loaded but not yet played) === */}
-      {state === "paused" && !showSourceInput && (
+      {/* === Idle hint (source loaded but not yet played; manual mode only) === */}
+      {mode === "manual" && state === "paused" && !showSourceInput && (
         <button
           onClick={togglePlay}
           className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 transition-opacity hover:bg-black/40"
@@ -515,8 +572,8 @@ export function CustomPlayer({
         </button>
       )}
 
-      {/* === Top chrome (title) === */}
-      {sourceUrl && controlsVisible && !showSourceInput && (
+      {/* === Top chrome (title; manual mode only) === */}
+      {mode === "manual" && sourceUrl && controlsVisible && !showSourceInput && (
         <div
           className={cn(
           "absolute inset-x-0 top-0 z-20 bg-gradient-to-b from-black/80 to-transparent p-4 transition-opacity",
@@ -531,8 +588,8 @@ export function CustomPlayer({
         </div>
       )}
 
-      {/* === Bottom controls === */}
-      {sourceUrl && controlsVisible && !showSourceInput && (
+      {/* === Bottom controls (manual mode only) === */}
+      {mode === "manual" && sourceUrl && controlsVisible && !showSourceInput && (
         <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/85 to-transparent px-4 pb-3 pt-12 transition-opacity">
           {/* Seek bar */}
           <div className="group/seek mb-2 flex items-center gap-2">
@@ -726,8 +783,8 @@ export function CustomPlayer({
         </div>
       )}
 
-      {/* Clear source button (small, top-right, when source is set) */}
-      {sourceUrl && !showSourceInput && state !== "playing" && (
+      {/* Clear source button (small, top-right, when source is set; manual mode only) */}
+      {mode === "manual" && sourceUrl && !showSourceInput && state !== "playing" && (
         <button
           onClick={clearSource}
           className="absolute right-3 top-3 z-30 inline-flex items-center gap-1 border border-white/20 bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white/80 hover:bg-white/20 hover:text-white"

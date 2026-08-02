@@ -40,7 +40,8 @@
       ],
       "image_url": "https://media.kitsu.app/anime/poster_images/8270/large.jpg",
       "kitsu_id": "8270",
-      "kitsu_url": "https://kitsu.io/anime/akame-ga-kill"
+      "kitsu_url": "https://kitsu.io/anime/akame-ga-kill",
+      "gdrive_slug": "akame-ga-kill"
     },
     {
       "id": "hunter-x-hunter-2011",
@@ -107,7 +108,8 @@
       ],
       "image_url": "https://media.kitsu.app/anime/poster_images/6448/large.jpg",
       "kitsu_id": "6448",
-      "kitsu_url": "https://kitsu.io/anime/hunter-x-hunter-2011"
+      "kitsu_url": "https://kitsu.io/anime/hunter-x-hunter-2011",
+      "gdrive_slug": "hunter-x-hunter-2011"
     },
     {
       "id": "jujutsu-kaisen",
@@ -156,7 +158,8 @@
       ],
       "image_url": "https://media.kitsu.app/anime/42765/poster_image/large-5ce19551c1a6cf995b378205b9149b5c.jpeg",
       "kitsu_id": "42765",
-      "kitsu_url": "https://kitsu.io/anime/jujutsu-kaisen"
+      "kitsu_url": "https://kitsu.io/anime/jujutsu-kaisen",
+      "gdrive_slug": "jujutsu-kaisen"
     },
     {
       "id": "highschool-dxd",
@@ -218,7 +221,8 @@
       ],
       "image_url": "https://media.kitsu.app/anime/6550/poster_image/large-9a9352a43891fd441c0b82734ade67cc.jpeg",
       "kitsu_id": "6550",
-      "kitsu_url": "https://kitsu.io/anime/high-school-dxd"
+      "kitsu_url": "https://kitsu.io/anime/high-school-dxd",
+      "gdrive_slug": "high-school-dxd"
     },
     {
       "id": "naruto",
@@ -284,7 +288,8 @@
       ],
       "image_url": "https://media.kitsu.app/anime/11/poster_image/large-5e901605066f7f2727f49d01859bbfe4.jpeg",
       "kitsu_id": "11",
-      "kitsu_url": "https://kitsu.io/anime/naruto"
+      "kitsu_url": "https://kitsu.io/anime/naruto",
+      "gdrive_slug": "naruto"
     },
     {
       "id": "naruto-shippuden",
@@ -418,7 +423,8 @@
       ],
       "image_url": "https://media.kitsu.app/anime/poster_images/1555/large.jpg",
       "kitsu_id": "1555",
-      "kitsu_url": "https://kitsu.io/anime/naruto-shippuden"
+      "kitsu_url": "https://kitsu.io/anime/naruto-shippuden",
+      "gdrive_slug": "naruto-shippuden"
     },
     {
       "id": "bleach",
@@ -553,7 +559,8 @@
       ],
       "image_url": "https://media.kitsu.app/anime/poster_images/244/large.jpg",
       "kitsu_id": "244",
-      "kitsu_url": "https://kitsu.io/anime/bleach"
+      "kitsu_url": "https://kitsu.io/anime/bleach",
+      "gdrive_slug": "bleach"
     },
     {
       "id": "bleach-thousand-year-blood-war",
@@ -609,7 +616,8 @@
       ],
       "image_url": "https://media.kitsu.app/anime/43078/poster_image/large-bf36dc3ed0097c8b8c49e064bf0eaa79.jpeg",
       "kitsu_id": "43078",
-      "kitsu_url": "https://kitsu.io/anime/bleach-sennen-kessen-hen"
+      "kitsu_url": "https://kitsu.io/anime/bleach-sennen-kessen-hen",
+      "gdrive_slug": "bleach-sennen-kessen-hen"
     },
     {
       "title": "Attack on Titan",
@@ -654,7 +662,8 @@
         }
       ],
       "id": "attack-on-titan",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Boku no Hero Academia",
@@ -697,7 +706,8 @@
         }
       ],
       "id": "boku-no-hero-academia",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-no-hero-academia-dub"
     },
     {
       "title": "Boku no Hero Academia 2",
@@ -740,7 +750,8 @@
         }
       ],
       "id": "boku-no-hero-academia-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-no-hero-academia-2nd-season"
     },
     {
       "title": "One Punch Man",
@@ -784,7 +795,8 @@
         }
       ],
       "id": "one-punch-man",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "one-punch-man"
     },
     {
       "title": "Boku no Hero Academia 3",
@@ -827,7 +839,8 @@
         }
       ],
       "id": "boku-no-hero-academia-3",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-no-hero-academia-3rd-season"
     },
     {
       "title": "Death Note",
@@ -888,7 +901,8 @@
         }
       ],
       "id": "death-note",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Fullmetal Alchemist: Brotherhood",
@@ -964,7 +978,8 @@
         }
       ],
       "id": "fullmetal-alchemist-brotherhood",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "fullmetal-alchemist-brotherhood"
     },
     {
       "title": "Kimi no Na wa.",
@@ -1008,7 +1023,8 @@
         }
       ],
       "id": "kimi-no-na-wa",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kimi-no-na-wa"
     },
     {
       "title": "Kimetsu no Yaiba",
@@ -1046,7 +1062,8 @@
         }
       ],
       "id": "kimetsu-no-yaiba",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kimetsu-no-yaiba"
     },
     {
       "title": "Nanatsu no Taizai",
@@ -1091,7 +1108,8 @@
         }
       ],
       "id": "nanatsu-no-taizai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nanatsu-no-taizai"
     },
     {
       "title": "Koe no Katachi",
@@ -1133,7 +1151,8 @@
         }
       ],
       "id": "koe-no-katachi",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "koe-no-katachi-movie"
     },
     {
       "title": "Attack on Titan Season 2",
@@ -1178,7 +1197,8 @@
         }
       ],
       "id": "attack-on-titan-season-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "One Piece",
@@ -1223,7 +1243,8 @@
         }
       ],
       "id": "one-piece",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "one-piece"
     },
     {
       "title": "Attack on Titan Season 3",
@@ -1261,7 +1282,8 @@
         }
       ],
       "id": "attack-on-titan-season-3",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Spirited Away",
@@ -1303,7 +1325,8 @@
         }
       ],
       "id": "spirited-away",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "spirited-away"
     },
     {
       "title": "Attack on Titan Season 3 Part 2",
@@ -1341,7 +1364,8 @@
         }
       ],
       "id": "attack-on-titan-season-3-part-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Ansatsu Kyoushitsu 2nd Season",
@@ -1383,7 +1407,8 @@
         }
       ],
       "id": "ansatsu-kyoushitsu-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Haikyuu!!",
@@ -1426,7 +1451,8 @@
         }
       ],
       "id": "haikyuu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "haikyuu"
     },
     {
       "title": "Ansatsu Kyoushitsu",
@@ -1468,7 +1494,8 @@
         }
       ],
       "id": "ansatsu-kyoushitsu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ansatsu-kyoushitsu-tv-"
     },
     {
       "title": "Nanatsu no Taizai: Imashime no Fukkatsu",
@@ -1514,7 +1541,8 @@
         }
       ],
       "id": "nanatsu-no-taizai-imashime-no-fukkatsu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nanatsu-no-taizai-imashime-no-fukkatsu"
     },
     {
       "title": "No Game No Life",
@@ -1559,7 +1587,8 @@
         }
       ],
       "id": "no-game-no-life",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "no-game-no-life"
     },
     {
       "title": "Kimetsu no Yaiba: Mugen Ressha-hen",
@@ -1597,7 +1626,8 @@
         }
       ],
       "id": "kimetsu-no-yaiba-mugen-ressha-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kimetsu-no-yaiba-mugen-ressha-hen"
     },
     {
       "title": "Steins;Gate",
@@ -1637,7 +1667,8 @@
         }
       ],
       "id": "steinsgate",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "steinsgate"
     },
     {
       "title": "Shigatsu wa Kimi no Uso",
@@ -1681,7 +1712,8 @@
         }
       ],
       "id": "shigatsu-wa-kimi-no-uso",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shigatsu-wa-kimi-no-uso-dub"
     },
     {
       "title": "Attack on Titan: The Final Season",
@@ -1719,7 +1751,8 @@
         }
       ],
       "id": "attack-on-titan-the-final-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Yakusoku no Neverland",
@@ -1761,7 +1794,8 @@
         }
       ],
       "id": "yakusoku-no-neverland",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "yakusoku-no-neverland"
     },
     {
       "title": "Toradora!",
@@ -1803,7 +1837,8 @@
         }
       ],
       "id": "toradora",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "toradora"
     },
     {
       "title": "Haikyuu!! Second Season",
@@ -1846,7 +1881,8 @@
         }
       ],
       "id": "haikyuu-second-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "haikyuu-second-season"
     },
     {
       "title": "Sword Art Online",
@@ -1889,7 +1925,8 @@
         }
       ],
       "id": "sword-art-online",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sword-art-online"
     },
     {
       "title": "Code Geass: Lelouch of the Rebellion",
@@ -1936,7 +1973,8 @@
         }
       ],
       "id": "code-geass-lelouch-of-the-rebellion",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "code-geass-lelouch-of-the-rebellion"
     },
     {
       "title": "Tokyo Ghoul",
@@ -1981,7 +2019,8 @@
         }
       ],
       "id": "tokyo-ghoul",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tokyo-ghoul-dub"
     },
     {
       "title": "Noragami",
@@ -2024,7 +2063,8 @@
         }
       ],
       "id": "noragami",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "noragami"
     },
     {
       "title": "Howl's Moving Castle",
@@ -2067,7 +2107,8 @@
         }
       ],
       "id": "howls-moving-castle",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Shokugeki no Souma",
@@ -2109,7 +2150,8 @@
         }
       ],
       "id": "shokugeki-no-souma",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shokugeki-no-souma"
     },
     {
       "title": "Boku dake ga Inai Machi",
@@ -2151,7 +2193,8 @@
         }
       ],
       "id": "boku-dake-ga-inai-machi",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-dake-ga-inai-machi"
     },
     {
       "title": "Noragami Aragoto",
@@ -2193,7 +2236,8 @@
         }
       ],
       "id": "noragami-aragoto",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "noragami-aragoto"
     },
     {
       "title": "Haikyuu!!: Karasuno Koukou VS Shiratorizawa Gakuen Koukou",
@@ -2236,7 +2280,8 @@
         }
       ],
       "id": "haikyuu-karasuno-koukou-vs-shiratorizawa-gakuen-koukou",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "haikyuu-karasuno-koukou-vs-shiratorizawa-gakuen-koukou"
     },
     {
       "title": "Kiseijuu: Sei no Kakuritsu",
@@ -2280,7 +2325,8 @@
         }
       ],
       "id": "kiseijuu-sei-no-kakuritsu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kiseijuu-sei-no-kakuritsu"
     },
     {
       "title": "Mob Psycho 100",
@@ -2322,7 +2368,8 @@
         }
       ],
       "id": "mob-psycho-100",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mob-psycho-100"
     },
     {
       "title": "Cowboy Bebop",
@@ -2366,7 +2413,8 @@
         }
       ],
       "id": "cowboy-bebop",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "cowboy-bebop"
     },
     {
       "title": "Boku no Hero Academia 5",
@@ -2404,7 +2452,8 @@
         }
       ],
       "id": "boku-no-hero-academia-5",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-no-hero-academia-5th-season"
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu",
@@ -2447,7 +2496,8 @@
         }
       ],
       "id": "rezero-kara-hajimeru-isekai-seikatsu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu"
     },
     {
       "title": "Code Geass: Lelouch of the Rebellion R2",
@@ -2493,7 +2543,8 @@
         }
       ],
       "id": "code-geass-lelouch-of-the-rebellion-r2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "-code-geass-lelouch-of-the-rebellion-r2"
     },
     {
       "title": "Violet Evergarden",
@@ -2534,7 +2585,8 @@
         }
       ],
       "id": "violet-evergarden",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "violet-evergarden"
     },
     {
       "title": "Fullmetal Alchemist",
@@ -2604,7 +2656,8 @@
         }
       ],
       "id": "fullmetal-alchemist",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "fullmetal-alchemist"
     },
     {
       "title": "Fate/Zero",
@@ -2646,7 +2699,8 @@
         }
       ],
       "id": "fatezero",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Princess Mononoke",
@@ -2688,7 +2742,8 @@
         }
       ],
       "id": "princess-mononoke",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "princess-mononoke"
     },
     {
       "title": "Angel Beats!",
@@ -2732,7 +2787,8 @@
         }
       ],
       "id": "angel-beats",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "angel-beats-dub"
     },
     {
       "title": "Tengen Toppa Gurren Lagann",
@@ -2788,7 +2844,8 @@
         }
       ],
       "id": "tengen-toppa-gurren-lagann",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tengen-toppa-gurren-lagann-"
     },
     {
       "title": "Avatar: The Last Airbender Book 3: Fire",
@@ -2832,7 +2889,8 @@
         }
       ],
       "id": "avatar-the-last-airbender-book-3-fire",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
@@ -2875,7 +2933,8 @@
         }
       ],
       "id": "ano-hi-mita-hana-no-namae-wo-bokutachi-wa-mada-shiranai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ano-hi-mita-hana-no-namae-wo-bokutachi-wa-mada-shiranai-menma-e-no-tegami"
     },
     {
       "title": "My Neighbor Totoro",
@@ -2917,7 +2976,8 @@
         }
       ],
       "id": "my-neighbor-totoro",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "my-neighbor-totoro"
     },
     {
       "title": "Psycho-Pass",
@@ -2959,7 +3019,8 @@
         }
       ],
       "id": "psycho-pass",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "psycho-pass"
     },
     {
       "title": "One Punch Man 2",
@@ -3004,7 +3065,8 @@
         }
       ],
       "id": "one-punch-man-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "one-punch-man-2nd-season"
     },
     {
       "title": "Death Parade",
@@ -3047,7 +3109,8 @@
         }
       ],
       "id": "death-parade",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "FAIRY TAIL (2018)",
@@ -3114,7 +3177,8 @@
         }
       ],
       "id": "fairy-tail-2018",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Mirai Nikki (TV)",
@@ -3158,7 +3222,8 @@
         }
       ],
       "id": "mirai-nikki-tv",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mirai-nikki-tv-dub"
     },
     {
       "title": "Kill la Kill",
@@ -3201,7 +3266,8 @@
         }
       ],
       "id": "kill-la-kill",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kill-la-kill"
     },
     {
       "title": "Kimetsu no Yaiba: Yuukaku-hen",
@@ -3239,7 +3305,8 @@
         }
       ],
       "id": "kimetsu-no-yaiba-yuukaku-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kimetsu-no-yaiba-yuukaku-hen"
     },
     {
       "title": "Wolf Children",
@@ -3281,7 +3348,8 @@
         }
       ],
       "id": "wolf-children",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Ao no Exorcist",
@@ -3324,7 +3392,8 @@
         }
       ],
       "id": "ao-no-exorcist",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ao-no-exorcist-"
     },
     {
       "title": "Dr. Stone",
@@ -3362,7 +3431,8 @@
         }
       ],
       "id": "dr-stone",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "dr-stone"
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo!",
@@ -3407,7 +3477,8 @@
         }
       ],
       "id": "kono-subarashii-sekai-ni-shukufuku-wo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-"
     },
     {
       "title": "Fate/Zero 2nd Season",
@@ -3451,7 +3522,8 @@
         }
       ],
       "id": "fatezero-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Bakemonogatari",
@@ -3493,7 +3565,8 @@
         }
       ],
       "id": "bakemonogatari",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Attack on Titan: No Regrets",
@@ -3535,7 +3608,8 @@
         }
       ],
       "id": "attack-on-titan-no-regrets",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Ansatsu Kyoushitsu 2nd Season: Kagaijugyou-hen",
@@ -3576,7 +3650,8 @@
         }
       ],
       "id": "ansatsu-kyoushitsu-2nd-season-kagaijugyou-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Ouran High School Host Club",
@@ -3620,7 +3695,8 @@
         }
       ],
       "id": "ouran-high-school-host-club",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ouran-high-school-host-club"
     },
     {
       "title": "Clannad: After Story",
@@ -3666,7 +3742,8 @@
         }
       ],
       "id": "clannad-after-story",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Neon Genesis Evangelion",
@@ -3711,7 +3788,8 @@
         }
       ],
       "id": "neon-genesis-evangelion",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "neon-genesis-evangelion-"
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo! 2",
@@ -3756,7 +3834,8 @@
         }
       ],
       "id": "kono-subarashii-sekai-ni-shukufuku-wo-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-2"
     },
     {
       "title": "Avatar: The Last Airbender Book 2: Earth",
@@ -3800,7 +3879,8 @@
         }
       ],
       "id": "avatar-the-last-airbender-book-2-earth",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Shokugeki no Souma: Ni no Sara",
@@ -3842,7 +3922,8 @@
         }
       ],
       "id": "shokugeki-no-souma-ni-no-sara",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shokugeki-no-souma-ni-no-sara"
     },
     {
       "title": "Sword Art Online II",
@@ -3885,7 +3966,8 @@
         }
       ],
       "id": "sword-art-online-ii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sword-art-online-ii-dub"
     },
     {
       "title": "Fairy Tail",
@@ -3965,7 +4047,8 @@
         }
       ],
       "id": "fairy-tail",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
@@ -4003,7 +4086,8 @@
         }
       ],
       "id": "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen"
     },
     {
       "title": "Kimetsu no Yaiba: Natagumo Yama Hen",
@@ -4041,7 +4125,8 @@
         }
       ],
       "id": "kimetsu-no-yaiba-natagumo-yama-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "The Devil is a Part-Timer!",
@@ -4086,7 +4171,8 @@
         }
       ],
       "id": "the-devil-is-a-part-timer",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Soul Eater",
@@ -4153,7 +4239,8 @@
         }
       ],
       "id": "soul-eater",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "soul-eater-"
     },
     {
       "title": "Durarara!!",
@@ -4194,7 +4281,8 @@
         }
       ],
       "id": "durarara",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "durarara"
     },
     {
       "title": "Hunter x Hunter",
@@ -4266,7 +4354,8 @@
         }
       ],
       "id": "hunter-x-hunter",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hunter-x-hunter"
     },
     {
       "title": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
@@ -4308,7 +4397,8 @@
         }
       ],
       "id": "seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai"
     },
     {
       "title": "Another",
@@ -4351,7 +4441,8 @@
         }
       ],
       "id": "another",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "another-anime"
     },
     {
       "title": "Mahou Shoujo Madoka★Magica",
@@ -4395,7 +4486,8 @@
         }
       ],
       "id": "mahou-shoujo-madokamagica",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "No Game No Life: Zero",
@@ -4441,7 +4533,8 @@
         }
       ],
       "id": "no-game-no-life-zero",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "no-game-no-life-zero"
     },
     {
       "title": "Saiki Kusuo no Ψ-nan (TV)",
@@ -4508,7 +4601,8 @@
         }
       ],
       "id": "saiki-kusuo-no-ψ-nan-tv",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Hotarubi no Mori e",
@@ -4550,7 +4644,8 @@
         }
       ],
       "id": "hotarubi-no-mori-e",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hotarubi-no-mori-e-2011"
     },
     {
       "title": "Mob Psycho 100 II",
@@ -4592,7 +4687,8 @@
         }
       ],
       "id": "mob-psycho-100-ii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mob-psycho-100-ii"
     },
     {
       "title": "Tokyo Ghoul √A",
@@ -4637,7 +4733,8 @@
         }
       ],
       "id": "tokyo-ghoul-a",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Attack on Titan Season 3 Specials",
@@ -4675,7 +4772,8 @@
         }
       ],
       "id": "attack-on-titan-season-3-specials",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Samurai Champloo",
@@ -4718,7 +4816,8 @@
         }
       ],
       "id": "samurai-champloo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "samurai-champloo"
     },
     {
       "title": "Hyouka",
@@ -4759,7 +4858,8 @@
         }
       ],
       "id": "hyouka",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hyouka"
     },
     {
       "title": "Elfen Lied",
@@ -4804,7 +4904,8 @@
         }
       ],
       "id": "elfen-lied",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "elfen-lied"
     },
     {
       "title": "Clannad",
@@ -4849,7 +4950,8 @@
         }
       ],
       "id": "clannad",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "clannad"
     },
     {
       "title": "Shokugeki no Souma: San no Sara",
@@ -4890,7 +4992,8 @@
         }
       ],
       "id": "shokugeki-no-souma-san-no-sara",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shokugeki-no-souma-san-no-sara-dub"
     },
     {
       "title": "Chuunibyou demo Koi ga Shitai!",
@@ -4934,7 +5037,8 @@
         }
       ],
       "id": "chuunibyou-demo-koi-ga-shitai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "chuunibyou-demo-koi-ga-shitai"
     },
     {
       "title": "Made in Abyss",
@@ -4977,7 +5081,8 @@
         }
       ],
       "id": "made-in-abyss",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "made-in-abyss"
     },
     {
       "title": "Kuroko no Basket",
@@ -5019,7 +5124,8 @@
         }
       ],
       "id": "kuroko-no-basket",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kuroko-no-basket-ova"
     },
     {
       "title": "Avatar: The Last Airbender Book 1: Water",
@@ -5063,7 +5169,8 @@
         }
       ],
       "id": "avatar-the-last-airbender-book-1-water",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kaichou wa Maid-sama!",
@@ -5105,7 +5212,8 @@
         }
       ],
       "id": "kaichou-wa-maid-sama",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kaichou-wa-maid-sama-dub"
     },
     {
       "title": "Haikyuu!!: To the Top",
@@ -5142,7 +5250,8 @@
         }
       ],
       "id": "haikyuu-to-the-top",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "haikyuu-to-the-top"
     },
     {
       "title": "Tensei shitara Slime Datta Ken",
@@ -5187,7 +5296,8 @@
         }
       ],
       "id": "tensei-shitara-slime-datta-ken",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tensei-shitara-slime-datta-ken"
     },
     {
       "title": "Sakurasou no Pet na Kanojo",
@@ -5231,7 +5341,8 @@
         }
       ],
       "id": "sakurasou-no-pet-na-kanojo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sakurasou-no-pet-na-kanojo"
     },
     {
       "title": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka",
@@ -5275,7 +5386,8 @@
         }
       ],
       "id": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-gaiden-sword-oratoria"
     },
     {
       "title": "Tate no Yuusha no Nariagari",
@@ -5320,7 +5432,8 @@
         }
       ],
       "id": "tate-no-yuusha-no-nariagari",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tate-no-yuusha-no-nariagari"
     },
     {
       "title": "JoJo no Kimyou na Bouken (TV)",
@@ -5364,7 +5477,8 @@
         }
       ],
       "id": "jojo-no-kimyou-na-bouken-tv",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Highschool of the Dead",
@@ -5408,7 +5522,8 @@
         }
       ],
       "id": "highschool-of-the-dead",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "highschool-of-the-dead"
     },
     {
       "title": "Kimetsu no Yaiba: Hashira Gou Kaigi - Chouyashiki Hen",
@@ -5446,7 +5561,8 @@
         }
       ],
       "id": "kimetsu-no-yaiba-hashira-gou-kaigi-chouyashiki-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "The Girl Who Leapt Through Time",
@@ -5489,7 +5605,8 @@
         }
       ],
       "id": "the-girl-who-leapt-through-time",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "the-girl-who-leapt-through-time"
     },
     {
       "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
@@ -5533,7 +5650,8 @@
         }
       ],
       "id": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru"
     },
     {
       "title": "Gintama",
@@ -5625,7 +5743,8 @@
         }
       ],
       "id": "gintama",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "gintama"
     },
     {
       "title": "Black Clover",
@@ -5703,7 +5822,8 @@
         }
       ],
       "id": "black-clover",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "black-clover"
     },
     {
       "title": "Kobayashi-san Chi no Maid Dragon",
@@ -5745,7 +5865,8 @@
         }
       ],
       "id": "kobayashi-san-chi-no-maid-dragon",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kobayashi-san-chi-no-maid-dragon"
     },
     {
       "title": "Charlotte",
@@ -5786,7 +5907,8 @@
         }
       ],
       "id": "charlotte",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "charlotte"
     },
     {
       "title": "Fairy Tail Series 2",
@@ -5855,7 +5977,8 @@
         }
       ],
       "id": "fairy-tail-series-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Haikyuu!! TO THE TOP 2",
@@ -5895,7 +6018,8 @@
         }
       ],
       "id": "haikyuu-to-the-top-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Magi: The Kingdom of Magic",
@@ -5937,7 +6061,8 @@
         }
       ],
       "id": "magi-the-kingdom-of-magic",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "magi-the-kingdom-of-magic-dub"
     },
     {
       "title": "Nichijou",
@@ -5979,7 +6104,8 @@
         }
       ],
       "id": "nichijou",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nichijou"
     },
     {
       "title": "Baccano!",
@@ -6022,7 +6148,8 @@
         }
       ],
       "id": "baccano",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Attack on Titan: Roar of Awakening",
@@ -6065,7 +6192,8 @@
         }
       ],
       "id": "attack-on-titan-roar-of-awakening",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Darling in the FranXX",
@@ -6109,7 +6237,8 @@
         }
       ],
       "id": "darling-in-the-franxx",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Dragon Ball Z",
@@ -6219,7 +6348,8 @@
         }
       ],
       "id": "dragon-ball-z",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "dragon-ball-z"
     },
     {
       "title": "Tokyo Ghoul:re",
@@ -6263,7 +6393,8 @@
         }
       ],
       "id": "tokyo-ghoulre",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tokyo-ghoulre"
     },
     {
       "title": "Hunter x Hunter: Greed Island",
@@ -6305,7 +6436,8 @@
         }
       ],
       "id": "hunter-x-hunter-greed-island",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Log Horizon",
@@ -6349,7 +6481,8 @@
         }
       ],
       "id": "log-horizon",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "log-horizon"
     },
     {
       "title": "Deadman Wonderland",
@@ -6390,7 +6523,8 @@
         }
       ],
       "id": "deadman-wonderland",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kyoukai no Kanata",
@@ -6432,7 +6566,8 @@
         }
       ],
       "id": "kyoukai-no-kanata",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kyoukai-no-kanata"
     },
     {
       "title": "Overlord",
@@ -6476,7 +6611,8 @@
         }
       ],
       "id": "overlord",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "overlord"
     },
     {
       "title": "Tokyo Revengers",
@@ -6513,7 +6649,8 @@
         }
       ],
       "id": "tokyo-revengers",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tokyo-revengers"
     },
     {
       "title": "Hellsing Ultimate",
@@ -6556,7 +6693,8 @@
         }
       ],
       "id": "hellsing-ultimate",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hellsing-ultimate"
     },
     {
       "title": "Spice and Wolf",
@@ -6599,7 +6737,8 @@
         }
       ],
       "id": "spice-and-wolf",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "spice-and-wolf"
     },
     {
       "title": "Fate/stay night: Unlimited Blade Works",
@@ -6641,7 +6780,8 @@
         }
       ],
       "id": "fatestay-night-unlimited-blade-works",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Guilty Crown",
@@ -6684,7 +6824,8 @@
         }
       ],
       "id": "guilty-crown",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "guilty-crown"
     },
     {
       "title": "Black Butler",
@@ -6729,7 +6870,8 @@
         }
       ],
       "id": "black-butler",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "SPY×FAMILY",
@@ -6766,7 +6908,8 @@
         }
       ],
       "id": "spyfamily",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kaguya-sama wa Kokurasetai?: Tensaitachi no Renai Zunousen",
@@ -6804,7 +6947,8 @@
         }
       ],
       "id": "kaguya-sama-wa-kokurasetai-tensaitachi-no-renai-zunousen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Zankyou no Terror",
@@ -6846,7 +6990,8 @@
         }
       ],
       "id": "zankyou-no-terror",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "zankyou-no-terror-dub"
     },
     {
       "title": "Nanatsu no Taizai Movie: Tenkuu no Torawarebito",
@@ -6890,7 +7035,8 @@
         }
       ],
       "id": "nanatsu-no-taizai-movie-tenkuu-no-torawarebito",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nanatsu-no-taizai-movie-tenkuu-no-torawarebito"
     },
     {
       "title": "The Disappearance of Haruhi Suzumiya",
@@ -6935,7 +7081,8 @@
         }
       ],
       "id": "the-disappearance-of-haruhi-suzumiya",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "the-disappearance-of-haruhi-suzumiya"
     },
     {
       "title": "Attack on Titan: Wings of Freedom",
@@ -6978,7 +7125,8 @@
         }
       ],
       "id": "attack-on-titan-wings-of-freedom",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Mahoutsukai no Yome",
@@ -7020,7 +7168,8 @@
         }
       ],
       "id": "mahoutsukai-no-yome",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mahoutsukai-no-yome"
     },
     {
       "title": "Owari no Seraph",
@@ -7064,7 +7213,8 @@
         }
       ],
       "id": "owari-no-seraph",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "owari-no-seraph-dub"
     },
     {
       "title": "My Little Monster",
@@ -7107,7 +7257,8 @@
         }
       ],
       "id": "my-little-monster",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Magi: The Labyrinth of Magic",
@@ -7149,7 +7300,8 @@
         }
       ],
       "id": "magi-the-labyrinth-of-magic",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "magi-the-labyrinth-of-magic-dub"
     },
     {
       "title": "Bungou Stray Dogs",
@@ -7192,7 +7344,8 @@
         }
       ],
       "id": "bungou-stray-dogs",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "bungou-stray-dogs"
     },
     {
       "title": "The Melancholy of Haruhi Suzumiya",
@@ -7237,7 +7390,8 @@
         }
       ],
       "id": "the-melancholy-of-haruhi-suzumiya",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "the-melancholy-of-haruhi-suzumiya"
     },
     {
       "title": "Nisekoi",
@@ -7280,7 +7434,8 @@
         }
       ],
       "id": "nisekoi",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nisekoi"
     },
     {
       "title": "Kakegurui",
@@ -7324,7 +7479,8 @@
         }
       ],
       "id": "kakegurui",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kakegurui"
     },
     {
       "title": "Darker than Black",
@@ -7367,7 +7523,8 @@
         }
       ],
       "id": "darker-than-black",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Mushishi",
@@ -7412,7 +7569,8 @@
         }
       ],
       "id": "mushishi",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mushishi"
     },
     {
       "title": "deleted",
@@ -7451,7 +7609,8 @@
         }
       ],
       "id": "deleted",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Neon Genesis Evangelion: The End of Evangelion",
@@ -7495,7 +7654,8 @@
         }
       ],
       "id": "neon-genesis-evangelion-the-end-of-evangelion",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kimi no Suizou wo Tabetai",
@@ -7535,7 +7695,8 @@
         }
       ],
       "id": "kimi-no-suizou-wo-tabetai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kimi-no-suizou-wo-tabetai"
     },
     {
       "title": "5 Centimeters Per Second",
@@ -7577,7 +7738,8 @@
         }
       ],
       "id": "5-centimeters-per-second",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "5-centimeters-per-second"
     },
     {
       "title": "Kuroko no Basket 2nd Season",
@@ -7619,7 +7781,8 @@
         }
       ],
       "id": "kuroko-no-basket-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kuroko-no-basket-2nd-season-ng-shuu"
     },
     {
       "title": "Dororo",
@@ -7660,7 +7823,8 @@
         }
       ],
       "id": "dororo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "dororo"
     },
     {
       "title": "Tenki no Ko",
@@ -7698,7 +7862,8 @@
         }
       ],
       "id": "tenki-no-ko",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tenki-no-ko"
     },
     {
       "title": "K-On!",
@@ -7741,7 +7906,8 @@
         }
       ],
       "id": "k-on",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "k-on"
     },
     {
       "title": "Black Lagoon",
@@ -7780,7 +7946,8 @@
         }
       ],
       "id": "black-lagoon",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "black-lagoon"
     },
     {
       "title": "Gekkan Shoujo Nozaki-kun",
@@ -7822,7 +7989,8 @@
         }
       ],
       "id": "gekkan-shoujo-nozaki-kun",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "gekkan-shoujo-nozaki-kun"
     },
     {
       "title": "JoJo no Kimyou na Bouken: Stardust Crusaders 2nd Season",
@@ -7865,7 +8033,8 @@
         }
       ],
       "id": "jojo-no-kimyou-na-bouken-stardust-crusaders-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Banana Fish",
@@ -7907,7 +8076,8 @@
         }
       ],
       "id": "banana-fish",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Monster",
@@ -7987,7 +8157,8 @@
         }
       ],
       "id": "monster",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "monster"
     },
     {
       "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku",
@@ -8032,7 +8203,8 @@
         }
       ],
       "id": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-zoku",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-zoku"
     },
     {
       "title": "Monogatari Series: Second Season",
@@ -8075,7 +8247,8 @@
         }
       ],
       "id": "monogatari-series-second-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "monogatari-series-second-season"
     },
     {
       "title": "Dragon Ball",
@@ -8154,7 +8327,8 @@
         }
       ],
       "id": "dragon-ball",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "dragon-ball"
     },
     {
       "title": "Saiki Kusuo no Ψ-nan (TV) 2",
@@ -8197,7 +8371,8 @@
         }
       ],
       "id": "saiki-kusuo-no-ψ-nan-tv-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "JoJo no Kimyou na Bouken: Diamond wa Kudakenai",
@@ -8259,7 +8434,8 @@
         }
       ],
       "id": "jojo-no-kimyou-na-bouken-diamond-wa-kudakenai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "jojo-no-kimyou-na-bouken-diamond-wa-kudakenai"
     },
     {
       "title": "Majo no Takkyuubin",
@@ -8304,7 +8480,8 @@
         }
       ],
       "id": "majo-no-takkyuubin",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "majo-no-takkyuubin"
     },
     {
       "title": "Yuri!!! on Ice",
@@ -8346,7 +8523,8 @@
         }
       ],
       "id": "yuri-on-ice",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "yuri-on-ice"
     },
     {
       "title": "Boku no Hero Academia 4",
@@ -8384,7 +8562,8 @@
         }
       ],
       "id": "boku-no-hero-academia-4",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-no-hero-academia-4th-season"
     },
     {
       "title": "Shinsekai yori",
@@ -8429,7 +8608,8 @@
         }
       ],
       "id": "shinsekai-yori",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shinsekai-yori"
     },
     {
       "title": "Danshi Koukousei no Nichijou",
@@ -8471,7 +8651,8 @@
         }
       ],
       "id": "danshi-koukousei-no-nichijou",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kuroko no Basket 3rd Season",
@@ -8513,7 +8694,8 @@
         }
       ],
       "id": "kuroko-no-basket-3rd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kuroko-no-basket-3rd-season"
     },
     {
       "title": "Mahouka Koukou no Rettousei",
@@ -8558,7 +8740,8 @@
         }
       ],
       "id": "mahouka-koukou-no-rettousei",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mahouka-koukou-no-rettousei"
     },
     {
       "title": "Shokugeki no Souma: San no Sara - Toutsuki Ressha-hen",
@@ -8600,7 +8783,8 @@
         }
       ],
       "id": "shokugeki-no-souma-san-no-sara-toutsuki-ressha-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shokugeki-no-souma-san-no-sara-toutsuki-ressha-hen"
     },
     {
       "title": "Fate/stay night: Unlimited Blade Works 2nd Season",
@@ -8643,7 +8827,8 @@
         }
       ],
       "id": "fatestay-night-unlimited-blade-works-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Golden Time",
@@ -8684,7 +8869,8 @@
         }
       ],
       "id": "golden-time",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "golden-time"
     },
     {
       "title": "The Garden of Words",
@@ -8727,7 +8913,8 @@
         }
       ],
       "id": "the-garden-of-words",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "the-garden-of-words-dub"
     },
     {
       "title": "Kimi ni Todoke",
@@ -8770,7 +8957,8 @@
         }
       ],
       "id": "kimi-ni-todoke",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kimi-ni-todoke"
     },
     {
       "title": "Welcome to the N.H.K.",
@@ -8813,7 +9001,8 @@
         }
       ],
       "id": "welcome-to-the-nhk",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "welcome-to-the-n-h-k-dub"
     },
     {
       "title": "Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation",
@@ -8857,7 +9046,8 @@
         }
       ],
       "id": "danganronpa-kibou-no-gakuen-to-zetsubou-no-koukousei-the-animation",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Boruto: Naruto Next Generations",
@@ -8965,7 +9155,8 @@
         }
       ],
       "id": "boruto-naruto-next-generations",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boruto-naruto-next-generations"
     },
     {
       "title": "Vinland Saga",
@@ -9007,7 +9198,8 @@
         }
       ],
       "id": "vinland-saga",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "vinland-saga-dub"
     },
     {
       "title": "Peace Sign",
@@ -9044,7 +9236,8 @@
         }
       ],
       "id": "peace-sign",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Akatsuki no Yona",
@@ -9089,7 +9282,8 @@
         }
       ],
       "id": "akatsuki-no-yona",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "akatsuki-no-yona"
     },
     {
       "title": "Grave of the Fireflies",
@@ -9130,7 +9324,8 @@
         }
       ],
       "id": "grave-of-the-fireflies",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "grave-of-the-fireflies"
     },
     {
       "title": "JoJo no Kimyou na Bouken: Stardust Crusaders",
@@ -9173,7 +9368,8 @@
         }
       ],
       "id": "jojo-no-kimyou-na-bouken-stardust-crusaders",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "jojo-no-kimyou-na-bouken-stardust-crusaders"
     },
     {
       "title": "FLCL",
@@ -9218,7 +9414,8 @@
         }
       ],
       "id": "flcl",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "flcl-dub"
     },
     {
       "title": "Date A Live",
@@ -9262,7 +9459,8 @@
         }
       ],
       "id": "date-a-live",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Ghost in the Shell",
@@ -9305,7 +9503,8 @@
         }
       ],
       "id": "ghost-in-the-shell",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ghost-in-the-shell"
     },
     {
       "title": "Toaru Majutsu no Index",
@@ -9348,7 +9547,8 @@
         }
       ],
       "id": "toaru-majutsu-no-index",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "toaru-majutsu-no-index-dub"
     },
     {
       "title": "Kimetsu no Yaiba: Kyoudai no Kizuna",
@@ -9386,7 +9586,8 @@
         }
       ],
       "id": "kimetsu-no-yaiba-kyoudai-no-kizuna",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "ReLIFE",
@@ -9425,7 +9626,8 @@
         }
       ],
       "id": "relife",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "relife-dub"
     },
     {
       "title": "Jibaku Shounen Hanako-kun",
@@ -9463,7 +9665,8 @@
         }
       ],
       "id": "jibaku-shounen-hanako-kun",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "jibaku-shounen-hanako-kun"
     },
     {
       "title": "Kimetsu no Yaiba: Tsuzumi Yashiki Hen",
@@ -9500,7 +9703,8 @@
         }
       ],
       "id": "kimetsu-no-yaiba-tsuzumi-yashiki-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kimetsu-no-yaiba-tsuzumi-yashiki-hen"
     },
     {
       "title": "Black Bullet",
@@ -9541,7 +9745,8 @@
         }
       ],
       "id": "black-bullet",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "black-bullet-dub"
     },
     {
       "title": "Great Teacher Onizuka",
@@ -9601,7 +9806,8 @@
         }
       ],
       "id": "great-teacher-onizuka",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "great-teacher-onizuka"
     },
     {
       "title": "Trigun",
@@ -9642,7 +9848,8 @@
         }
       ],
       "id": "trigun",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "trigun"
     },
     {
       "title": "Gintama'",
@@ -9711,7 +9918,8 @@
         }
       ],
       "id": "gintama-1",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Black Butler: Book of Circus",
@@ -9755,7 +9963,8 @@
         }
       ],
       "id": "black-butler-book-of-circus",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Bungou Stray Dogs 2nd Season",
@@ -9797,7 +10006,8 @@
         }
       ],
       "id": "bungou-stray-dogs-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "bungou-stray-dogs-2nd-season"
     },
     {
       "title": "Kokoro Connect",
@@ -9841,7 +10051,8 @@
         }
       ],
       "id": "kokoro-connect",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kokoro-connect"
     },
     {
       "title": "Kimetsu no Yaiba: Asakusa Hen",
@@ -9879,7 +10090,8 @@
         }
       ],
       "id": "kimetsu-no-yaiba-asakusa-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kimetsu-no-yaiba-asakusa-hen"
     },
     {
       "title": "Fate/stay night",
@@ -9920,7 +10132,8 @@
         }
       ],
       "id": "fatestay-night",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kekkai Sensen",
@@ -9965,7 +10178,8 @@
         }
       ],
       "id": "kekkai-sensen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kekkai-sensen"
     },
     {
       "title": "Horimiya",
@@ -10002,7 +10216,8 @@
         }
       ],
       "id": "horimiya",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "horimiya"
     },
     {
       "title": "Fairy Tail Movie 2: Dragon Cry",
@@ -10046,7 +10261,8 @@
         }
       ],
       "id": "fairy-tail-movie-2-dragon-cry",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Black Butler: Book of the Atlantic",
@@ -10091,7 +10307,8 @@
         }
       ],
       "id": "black-butler-book-of-the-atlantic",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Nisemonogatari",
@@ -10133,7 +10350,8 @@
         }
       ],
       "id": "nisemonogatari",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nisemonogatari"
     },
     {
       "title": "Barakamon",
@@ -10174,7 +10392,8 @@
         }
       ],
       "id": "barakamon",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Boku wa Tomodachi ga Sukunai",
@@ -10219,7 +10438,8 @@
         }
       ],
       "id": "boku-wa-tomodachi-ga-sukunai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-wa-tomodachi-ga-sukunai"
     },
     {
       "title": "Boku no Hero Academia the Movie: Futari no Hero",
@@ -10263,7 +10483,8 @@
         }
       ],
       "id": "boku-no-hero-academia-the-movie-futari-no-hero",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-no-hero-academia-the-movie-futari-no-hero"
     },
     {
       "title": "Btooom!",
@@ -10304,7 +10525,8 @@
         }
       ],
       "id": "btooom",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "btooom"
     },
     {
       "title": "Higurashi no Naku Koro ni",
@@ -10348,7 +10570,8 @@
         }
       ],
       "id": "higurashi-no-naku-koro-ni",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "higurashi-no-naku-koro-ni-"
     },
     {
       "title": "Prison School",
@@ -10390,7 +10613,8 @@
         }
       ],
       "id": "prison-school",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "prison-school-dub"
     },
     {
       "title": "Wotaku ni Koi wa Muzukashii",
@@ -10431,7 +10655,8 @@
         }
       ],
       "id": "wotaku-ni-koi-wa-muzukashii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "wotaku-ni-koi-wa-muzukashii"
     },
     {
       "title": "Akira",
@@ -10476,7 +10701,8 @@
         }
       ],
       "id": "akira",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "akira"
     },
     {
       "title": "K",
@@ -10515,7 +10741,8 @@
         }
       ],
       "id": "k",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "k-k-project-dub"
     },
     {
       "title": "Oreimo",
@@ -10556,7 +10783,8 @@
         }
       ],
       "id": "oreimo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "oreimo"
     },
     {
       "title": "Kamisama Hajimemashita",
@@ -10600,7 +10828,8 @@
         }
       ],
       "id": "kamisama-hajimemashita",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kamisama-hajimemashita"
     },
     {
       "title": "Devilman: Crybaby",
@@ -10642,7 +10871,8 @@
         }
       ],
       "id": "devilman-crybaby",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Plastic Memories",
@@ -10683,7 +10913,8 @@
         }
       ],
       "id": "plastic-memories",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "plastic-memories"
     },
     {
       "title": "Steins;Gate 0",
@@ -10723,7 +10954,8 @@
         }
       ],
       "id": "steinsgate-0",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "steinsgate-0"
     },
     {
       "title": "Enen no Shouboutai",
@@ -10761,7 +10993,8 @@
         }
       ],
       "id": "enen-no-shouboutai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "enen-no-shouboutai"
     },
     {
       "title": "Fruits Basket (2019)",
@@ -10798,7 +11031,8 @@
         }
       ],
       "id": "fruits-basket-2019",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "fruits-basket-2019"
     },
     {
       "title": "Kamisama Hajimemashita◎",
@@ -10843,7 +11077,8 @@
         }
       ],
       "id": "kamisama-hajimemashita-1",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Free!",
@@ -10886,7 +11121,8 @@
         }
       ],
       "id": "free",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "free-dub"
     },
     {
       "title": "One Piece: Episode of East Blue - Luffy to 4-nin no Nakama no Daibouken",
@@ -10931,7 +11167,8 @@
         }
       ],
       "id": "one-piece-episode-of-east-blue-luffy-to-4-nin-no-nakama-no-daibouken",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Given",
@@ -10969,7 +11206,8 @@
         }
       ],
       "id": "given",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "given"
     },
     {
       "title": "Yuu☆Yuu☆Hakusho",
@@ -11038,7 +11276,8 @@
         }
       ],
       "id": "yuuyuuhakusho",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "High School DxD New",
@@ -11083,7 +11322,8 @@
         }
       ],
       "id": "high-school-dxd-new",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "highschool-dxd-new"
     },
     {
       "title": "Serial Experiments Lain",
@@ -11127,7 +11367,8 @@
         }
       ],
       "id": "serial-experiments-lain",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "serial-experiments-lain"
     },
     {
       "title": "Ao Haru Ride",
@@ -11171,7 +11412,8 @@
         }
       ],
       "id": "ao-haru-ride",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ao-haru-ride"
     },
     {
       "title": "Boku no Hero Academia: All Might - Rising The Animation",
@@ -11209,7 +11451,8 @@
         }
       ],
       "id": "boku-no-hero-academia-all-might-rising-the-animation",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-no-hero-academia-all-might-rising-the-animation"
     },
     {
       "title": "Zero no Tsukaima",
@@ -11257,7 +11500,8 @@
         }
       ],
       "id": "zero-no-tsukaima",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "zero-no-tsukaima"
     },
     {
       "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
@@ -11302,7 +11546,8 @@
         }
       ],
       "id": "youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv"
     },
     {
       "title": "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
@@ -11344,7 +11589,8 @@
         }
       ],
       "id": "steinsgate-movie-fuka-ryouiki-no-déjà-vu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Summer Wars",
@@ -11385,7 +11631,8 @@
         }
       ],
       "id": "summer-wars",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "summer-wars"
     },
     {
       "title": "Spice and Wolf II",
@@ -11428,7 +11675,8 @@
         }
       ],
       "id": "spice-and-wolf-ii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "spice-and-wolf-ii-dub"
     },
     {
       "title": "Sword Art Online: Alicization",
@@ -11470,7 +11718,8 @@
         }
       ],
       "id": "sword-art-online-alicization",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sword-art-online-alicization"
     },
     {
       "title": "Kenpuu Denki Berserk",
@@ -11519,7 +11768,8 @@
         }
       ],
       "id": "kenpuu-denki-berserk",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Chainsaw Man",
@@ -11556,7 +11806,8 @@
         }
       ],
       "id": "chainsaw-man",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "chainsaw-man"
     },
     {
       "title": "InuYasha",
@@ -11638,7 +11889,8 @@
         }
       ],
       "id": "inuyasha",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "inuyasha"
     },
     {
       "title": "The World God Only Knows",
@@ -11681,7 +11933,8 @@
         }
       ],
       "id": "the-world-god-only-knows",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "the-world-god-only-knows"
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo!: Kurenai Densetsu",
@@ -11726,7 +11979,8 @@
         }
       ],
       "id": "kono-subarashii-sekai-ni-shukufuku-wo-kurenai-densetsu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-kurenai-densetsu"
     },
     {
       "title": "Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!",
@@ -11768,7 +12022,8 @@
         }
       ],
       "id": "watashi-ga-motenai-no-wa-dou-kangaetemo-omaera-ga-warui",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "watashi-ga-motenai-no-wa-dou-kangaetemo-omaera-ga-warui-dub"
     },
     {
       "title": "Katanagatari",
@@ -11811,7 +12066,8 @@
         }
       ],
       "id": "katanagatari",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "katanagatari"
     },
     {
       "title": "Accel World",
@@ -11855,7 +12111,8 @@
         }
       ],
       "id": "accel-world",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "JoJo's Bizarre Adventure: Golden Wind",
@@ -11911,7 +12168,8 @@
         }
       ],
       "id": "jojos-bizarre-adventure-golden-wind",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Castle in the Sky",
@@ -11954,7 +12212,8 @@
         }
       ],
       "id": "castle-in-the-sky",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Eden of the East",
@@ -12001,7 +12260,8 @@
         }
       ],
       "id": "eden-of-the-east",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Gate: Jieitai Kanochi nite, Kaku Tatakaeri",
@@ -12044,7 +12304,8 @@
         }
       ],
       "id": "gate-jieitai-kanochi-nite-kaku-tatakaeri",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "gate-jieitai-kanochi-nite-kaku-tatakaeri"
     },
     {
       "title": "Youjo Senki",
@@ -12086,7 +12347,8 @@
         }
       ],
       "id": "youjo-senki",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "youjo-senki"
     },
     {
       "title": "Rakudai Kishi no Cavalry",
@@ -12130,7 +12392,8 @@
         }
       ],
       "id": "rakudai-kishi-no-cavalry",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "rakudai-kishi-no-cavalry"
     },
     {
       "title": "Akagami no Shirayuki-hime",
@@ -12172,7 +12435,8 @@
         }
       ],
       "id": "akagami-no-shirayuki-hime",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "akagami-no-shirayuki-hime-dub"
     },
     {
       "title": "Trinity Seven",
@@ -12219,7 +12483,8 @@
         }
       ],
       "id": "trinity-seven",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "trinity-seven"
     },
     {
       "title": "K-On!!",
@@ -12262,7 +12527,8 @@
         }
       ],
       "id": "k-on-1",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "k-on-2"
     },
     {
       "title": "SK8",
@@ -12300,7 +12566,8 @@
         }
       ],
       "id": "sk8",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kiznaiver",
@@ -12342,7 +12609,8 @@
         }
       ],
       "id": "kiznaiver",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kiznaiver"
     },
     {
       "title": "Goblin Slayer",
@@ -12379,7 +12647,8 @@
         }
       ],
       "id": "goblin-slayer",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "goblin-slayer"
     },
     {
       "title": "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
@@ -12421,7 +12690,8 @@
         }
       ],
       "id": "shimoneta-to-iu-gainen-ga-sonzai-shinai-taikutsu-na-sekai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shimoneta-to-iu-gainen-ga-sonzai-shinai-taikutsu-na-sekai"
     },
     {
       "title": "Blood Lad",
@@ -12464,7 +12734,8 @@
         }
       ],
       "id": "blood-lad",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "blood-lad"
     },
     {
       "title": "Perfect Blue",
@@ -12506,7 +12777,8 @@
         }
       ],
       "id": "perfect-blue",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "perfect-blue"
     },
     {
       "title": "Haikyuu!! Movie 2: Shousha to Haisha",
@@ -12548,7 +12820,8 @@
         }
       ],
       "id": "haikyuu-movie-2-shousha-to-haisha",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "haikyuu-movie-2-shousha-to-haisha"
     },
     {
       "title": "Orange",
@@ -12590,7 +12863,8 @@
         }
       ],
       "id": "orange",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "orange"
     },
     {
       "title": "Dr. Stone: Stone Wars",
@@ -12627,7 +12901,8 @@
         }
       ],
       "id": "dr-stone-stone-wars",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "dr-stone-stone-wars"
     },
     {
       "title": "Attack on Titan: The Final Season Part 2",
@@ -12665,7 +12940,8 @@
         }
       ],
       "id": "attack-on-titan-the-final-season-part-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Koutetsujou no Kabaneri",
@@ -12709,7 +12985,8 @@
         }
       ],
       "id": "koutetsujou-no-kabaneri",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "koutetsujou-no-kabaneri"
     },
     {
       "title": "Black Butler: Book of Murder",
@@ -12754,7 +13031,8 @@
         }
       ],
       "id": "black-butler-book-of-murder",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Chuunibyou demo Koi ga Shitai! Ren",
@@ -12798,7 +13076,8 @@
         }
       ],
       "id": "chuunibyou-demo-koi-ga-shitai-ren",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "chuunibyou-demo-koi-ga-shitai-ren"
     },
     {
       "title": "Nagi no Asukara",
@@ -12841,7 +13120,8 @@
         }
       ],
       "id": "nagi-no-asukara",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nagi-asukara"
     },
     {
       "title": "Overlord II",
@@ -12885,7 +13165,8 @@
         }
       ],
       "id": "overlord-ii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "overlord-ii"
     },
     {
       "title": "Yamada-kun to 7-nin no Majo (TV)",
@@ -12930,7 +13211,8 @@
         }
       ],
       "id": "yamada-kun-to-7-nin-no-majo-tv",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "yamada-kun-to-7-nin-no-majo-tv-"
     },
     {
       "title": "Mushoku Tensei: Isekai Ittara Honki Dasu",
@@ -12968,7 +13250,8 @@
         }
       ],
       "id": "mushoku-tensei-isekai-ittara-honki-dasu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mushoku-tensei-isekai-ittara-honki-dasu"
     },
     {
       "title": "Black Lagoon: The Second Barrage",
@@ -13007,7 +13290,8 @@
         }
       ],
       "id": "black-lagoon-the-second-barrage",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Overlord III",
@@ -13051,7 +13335,8 @@
         }
       ],
       "id": "overlord-iii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "overlord-iii"
     },
     {
       "title": "Lucky☆Star",
@@ -13093,7 +13378,8 @@
         }
       ],
       "id": "luckystar",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Baka to Test to Shoukanjuu",
@@ -13136,7 +13422,8 @@
         }
       ],
       "id": "baka-to-test-to-shoukanjuu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Toaru Kagaku no Railgun",
@@ -13179,7 +13466,8 @@
         }
       ],
       "id": "toaru-kagaku-no-railgun",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "toaru-kagaku-no-railgun-dub"
     },
     {
       "title": "Gintama°",
@@ -13248,7 +13536,8 @@
         }
       ],
       "id": "gintama-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2",
@@ -13286,7 +13575,8 @@
         }
       ],
       "id": "rezero-kara-hajimeru-isekai-seikatsu-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season"
     },
     {
       "title": "Dragon Ball Super",
@@ -13360,7 +13650,8 @@
         }
       ],
       "id": "dragon-ball-super",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "dragon-ball-super"
     },
     {
       "title": "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
@@ -13398,7 +13689,8 @@
         }
       ],
       "id": "seishun-buta-yarou-wa-yumemiru-shoujo-no-yume-wo-minai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "seishun-buta-yarou-wa-yumemiru-shoujo-no-yume-wo-minai"
     },
     {
       "title": "Evangelion: 2.0 You Can (Not) Advance",
@@ -13439,7 +13731,8 @@
         }
       ],
       "id": "evangelion-20-you-can-not-advance",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "evangelion-2-0-you-can-not-advance-dub"
     },
     {
       "title": "Claymore",
@@ -13483,7 +13776,8 @@
         }
       ],
       "id": "claymore",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "claymore"
     },
     {
       "title": "Tensei shitara Slime Datta Ken 2",
@@ -13521,7 +13815,8 @@
         }
       ],
       "id": "tensei-shitara-slime-datta-ken-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tensei-shitara-slime-datta-ken-2nd-season"
     },
     {
       "title": "Ore Monogatari!!",
@@ -13562,7 +13857,8 @@
         }
       ],
       "id": "ore-monogatari",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ore-monogatari-"
     },
     {
       "title": "Amagi Brilliant Park",
@@ -13604,7 +13900,8 @@
         }
       ],
       "id": "amagi-brilliant-park",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "amagi-brilliant-park"
     },
     {
       "title": "Ergo Proxy",
@@ -13645,7 +13942,8 @@
         }
       ],
       "id": "ergo-proxy",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ergo-proxy"
     },
     {
       "title": "D.Gray-man",
@@ -13712,7 +14010,8 @@
         }
       ],
       "id": "dgray-man",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "d-gray-man-dub"
     },
     {
       "title": "Sakamoto desu ga?",
@@ -13754,7 +14053,8 @@
         }
       ],
       "id": "sakamoto-desu-ga",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sakamoto-desu-ga"
     },
     {
       "title": "Sukitte Ii na yo.",
@@ -13796,7 +14096,8 @@
         }
       ],
       "id": "sukitte-ii-na-yo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sukitte-ii-na-yo-dub"
     },
     {
       "title": "Natsume Yuujinchou",
@@ -13839,7 +14140,8 @@
         }
       ],
       "id": "natsume-yuujinchou",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "natsume-yuujinchou"
     },
     {
       "title": "Hai to Gensou no Grimgar",
@@ -13883,7 +14185,8 @@
         }
       ],
       "id": "hai-to-gensou-no-grimgar",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hai-to-gensou-no-grimgar"
     },
     {
       "title": "Magi: Sinbad no Bouken (TV)",
@@ -13927,7 +14230,8 @@
         }
       ],
       "id": "magi-sinbad-no-bouken-tv",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "magi-sinbad-no-bouken-tv"
     },
     {
       "title": "Kore wa Zombie Desu ka?",
@@ -13974,7 +14278,8 @@
         }
       ],
       "id": "kore-wa-zombie-desu-ka",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kore-wa-zombie-desu-ka-ova"
     },
     {
       "title": "Bakuman.",
@@ -14015,7 +14320,8 @@
         }
       ],
       "id": "bakuman",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Zetsuen no Tempest",
@@ -14060,7 +14366,8 @@
         }
       ],
       "id": "zetsuen-no-tempest",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "zetsuen-no-tempest"
     },
     {
       "title": "Rosario to Vampire",
@@ -14106,7 +14413,8 @@
         }
       ],
       "id": "rosario-to-vampire",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Usagi Drop",
@@ -14147,7 +14455,8 @@
         }
       ],
       "id": "usagi-drop",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "usagi-drop"
     },
     {
       "title": "Masamune-kun no Revenge",
@@ -14190,7 +14499,8 @@
         }
       ],
       "id": "masamune-kun-no-revenge",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "masamune-kun-no-revenge"
     },
     {
       "title": "Rurouni Kenshin: Meiji Kenkaku Romantan",
@@ -14277,7 +14587,8 @@
         }
       ],
       "id": "rurouni-kenshin-meiji-kenkaku-romantan",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "rurouni-kenshin-meiji-kenkaku-romantan-2023"
     },
     {
       "title": "Sankarea",
@@ -14322,7 +14633,8 @@
         }
       ],
       "id": "sankarea",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sankarea"
     },
     {
       "title": "Bakemono no Ko",
@@ -14365,7 +14677,8 @@
         }
       ],
       "id": "bakemono-no-ko",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Little Witch Academia (TV)",
@@ -14409,7 +14722,8 @@
         }
       ],
       "id": "little-witch-academia-tv",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "little-witch-academia-tv"
     },
     {
       "title": "Owari no Seraph: Nagoya Kessen-hen",
@@ -14453,7 +14767,8 @@
         }
       ],
       "id": "owari-no-seraph-nagoya-kessen-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "owari-no-seraph-nagoya-kessen-hen"
     },
     {
       "title": "Nekomonogatari: Kuro",
@@ -14496,7 +14811,8 @@
         }
       ],
       "id": "nekomonogatari-kuro",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nekomonogatari-kuro"
     },
     {
       "title": "Psycho-Pass 2",
@@ -14538,7 +14854,8 @@
         }
       ],
       "id": "psycho-pass-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "psycho-pass-2-dub"
     },
     {
       "title": "Aldnoah.Zero",
@@ -14581,7 +14898,8 @@
         }
       ],
       "id": "aldnoahzero",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "aldnoahzero"
     },
     {
       "title": "Hunter x Hunter: Greed Island Final",
@@ -14623,7 +14941,8 @@
         }
       ],
       "id": "hunter-x-hunter-greed-island-final",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Steins;Gate: Egoistic Poriomania",
@@ -14665,7 +14984,8 @@
         }
       ],
       "id": "steinsgate-egoistic-poriomania",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Haikyuu!! Movie 3: Sainou to Sense",
@@ -14707,7 +15027,8 @@
         }
       ],
       "id": "haikyuu-movie-3-sainou-to-sense",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "haikyuu-movie-3-sainou-to-sense"
     },
     {
       "title": "Monster Musume no Iru Nichijou",
@@ -14751,7 +15072,8 @@
         }
       ],
       "id": "monster-musume-no-iru-nichijou",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "monster-musume-no-iru-nichijou"
     },
     {
       "title": "3-gatsu no Lion",
@@ -14793,7 +15115,8 @@
         }
       ],
       "id": "3-gatsu-no-lion",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "3-gatsu-no-lion"
     },
     {
       "title": "IS: Infinite Stratos",
@@ -14838,7 +15161,8 @@
         }
       ],
       "id": "is-infinite-stratos",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "is-infinite-stratos-dub"
     },
     {
       "title": "Sword Art Online Movie: Ordinal Scale",
@@ -14882,7 +15206,8 @@
         }
       ],
       "id": "sword-art-online-movie-ordinal-scale",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sword-art-online-movie-ordinal-scale"
     },
     {
       "title": "Strike the Blood",
@@ -14927,7 +15252,8 @@
         }
       ],
       "id": "strike-the-blood",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "strike-blood"
     },
     {
       "title": "Shiki",
@@ -14970,7 +15296,8 @@
         }
       ],
       "id": "shiki",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shiki-dub"
     },
     {
       "title": "Nana",
@@ -15033,7 +15360,8 @@
         }
       ],
       "id": "nana",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nana"
     },
     {
       "title": "91 Days",
@@ -15075,7 +15403,8 @@
         }
       ],
       "id": "91-days",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "School Days",
@@ -15117,7 +15446,8 @@
         }
       ],
       "id": "school-days",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "school-days-"
     },
     {
       "title": "Nausicaä of the Valley of the Wind",
@@ -15158,7 +15488,8 @@
         }
       ],
       "id": "nausicaä-of-the-valley-of-the-wind",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kizumonogatari I: Tekketsu-hen",
@@ -15200,7 +15531,8 @@
         }
       ],
       "id": "kizumonogatari-i-tekketsu-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kizumonogatari-i-tekketsu-hen"
     },
     {
       "title": "High School DxD BorN",
@@ -15245,7 +15577,8 @@
         }
       ],
       "id": "high-school-dxd-born",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "high-school-dxd-born"
     },
     {
       "title": "Problem children are coming from another world, aren't they?",
@@ -15288,7 +15621,8 @@
         }
       ],
       "id": "problem-children-are-coming-from-another-world-arent-they",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "The Melancholy of Haruhi Suzumiya Season 2",
@@ -15334,7 +15668,8 @@
         }
       ],
       "id": "the-melancholy-of-haruhi-suzumiya-season-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Ghost in the Shell: Stand Alone Complex",
@@ -15378,7 +15713,8 @@
         }
       ],
       "id": "ghost-in-the-shell-stand-alone-complex",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ghost-in-the-shell-stand-alone-complex-dub"
     },
     {
       "title": "Ao no Exorcist: Kyoto Fujouou-hen",
@@ -15421,7 +15757,8 @@
         }
       ],
       "id": "ao-no-exorcist-kyoto-fujouou-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ao-no-exorcist-kyoto-fujouou-hen"
     },
     {
       "title": "Hajime no Ippo",
@@ -15499,7 +15836,8 @@
         }
       ],
       "id": "hajime-no-ippo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hajime-no-ippo-"
     },
     {
       "title": "Eureka Seven",
@@ -15566,7 +15904,8 @@
         }
       ],
       "id": "eureka-seven",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "eureka-seven"
     },
     {
       "title": "Gosick",
@@ -15608,7 +15947,8 @@
         }
       ],
       "id": "gosick",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "gosick"
     },
     {
       "title": "Himouto! Umaru-chan",
@@ -15649,7 +15989,8 @@
         }
       ],
       "id": "himouto-umaru-chan",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "himouto-umaru-chan"
     },
     {
       "title": "Hellsing",
@@ -15691,7 +16032,8 @@
         }
       ],
       "id": "hellsing",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hellsing"
     },
     {
       "title": "Log Horizon 2nd Season",
@@ -15736,7 +16078,8 @@
         }
       ],
       "id": "log-horizon-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "log-horizon-2nd-season-dub"
     },
     {
       "title": "Rokka no Yuusha",
@@ -15781,7 +16124,8 @@
         }
       ],
       "id": "rokka-no-yuusha",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "rokka-no-yuusha"
     },
     {
       "title": "To LOVE-Ru",
@@ -15826,7 +16170,8 @@
         }
       ],
       "id": "to-love-ru",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "to-love-ru"
     },
     {
       "title": "Saenai Heroine no Sodatekata",
@@ -15870,7 +16215,8 @@
         }
       ],
       "id": "saenai-heroine-no-sodatekata",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "saenai-heroine-no-sodatekata"
     },
     {
       "title": "Akagami no Shirayuki-hime 2nd Season",
@@ -15912,7 +16258,8 @@
         }
       ],
       "id": "akagami-no-shirayuki-hime-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "akagami-no-shirayuki-hime-2nd-season"
     },
     {
       "title": "Tsurezure Children",
@@ -15954,7 +16301,8 @@
         }
       ],
       "id": "tsurezure-children",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tsurezure-children"
     },
     {
       "title": "Violet Evergarden the Movie",
@@ -15992,7 +16340,8 @@
         }
       ],
       "id": "violet-evergarden-the-movie",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Bungou Stray Dogs 3",
@@ -16030,7 +16379,8 @@
         }
       ],
       "id": "bungou-stray-dogs-3",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "bungou-stray-dogs-3rd-season"
     },
     {
       "title": "Mahoutsukai no Yome: Hoshi Matsu Hito",
@@ -16073,7 +16423,8 @@
         }
       ],
       "id": "mahoutsukai-no-yome-hoshi-matsu-hito",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mahoutsukai-no-yome-hoshi-matsu-hito"
     },
     {
       "title": "Cowboy Bebop: Knockin' on Heaven's Door",
@@ -16118,7 +16469,8 @@
         }
       ],
       "id": "cowboy-bebop-knockin-on-heavens-door",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Chihayafuru",
@@ -16161,7 +16513,8 @@
         }
       ],
       "id": "chihayafuru",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "chihayafuru"
     },
     {
       "title": "Shakugan no Shana",
@@ -16206,7 +16559,8 @@
         }
       ],
       "id": "shakugan-no-shana",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shakugan-no-shana"
     },
     {
       "title": "Nisekoi:",
@@ -16249,7 +16603,8 @@
         }
       ],
       "id": "nisekoi-1",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nisekoi-"
     },
     {
       "title": "Nanatsu no Taizai: Seisen no Shirushi",
@@ -16294,7 +16649,8 @@
         }
       ],
       "id": "nanatsu-no-taizai-seisen-no-shirushi",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "nanatsu-no-taizai-seisen-no-shirushi"
     },
     {
       "title": "Pocket Monsters",
@@ -16404,7 +16760,8 @@
         }
       ],
       "id": "pocket-monsters",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Evangelion: 1.0 You Are (Not) Alone",
@@ -16445,7 +16802,8 @@
         }
       ],
       "id": "evangelion-10-you-are-not-alone",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "evangelion-1-0-you-are-not-alone-dub"
     },
     {
       "title": "Durarara!!x2 Shou",
@@ -16488,7 +16846,8 @@
         }
       ],
       "id": "durararax2-shou",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "durarara-x2-shou"
     },
     {
       "title": "Paprika",
@@ -16533,7 +16892,8 @@
         }
       ],
       "id": "paprika",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "paprika"
     },
     {
       "title": "Boku wa Tomodachi ga Sukunai Next",
@@ -16577,7 +16937,8 @@
         }
       ],
       "id": "boku-wa-tomodachi-ga-sukunai-next",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "boku-wa-tomodachi-ga-sukunai-next"
     },
     {
       "title": "The Tatami Galaxy",
@@ -16620,7 +16981,8 @@
         }
       ],
       "id": "the-tatami-galaxy",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Eromanga-sensei",
@@ -16663,7 +17025,8 @@
         }
       ],
       "id": "eromanga-sensei",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "eromanga-sensei"
     },
     {
       "title": "Haikyuu!! Movie 1: Owari to Hajimari",
@@ -16705,7 +17068,8 @@
         }
       ],
       "id": "haikyuu-movie-1-owari-to-hajimari",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "haikyuu-movie-1-owari-to-hajimari"
     },
     {
       "title": "Kuzu no Honkai",
@@ -16748,7 +17112,8 @@
         }
       ],
       "id": "kuzu-no-honkai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kuzu-no-honkai"
     },
     {
       "title": "Gake no Ue no Ponyo",
@@ -16789,7 +17154,8 @@
         }
       ],
       "id": "gake-no-ue-no-ponyo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Full Metal Panic!",
@@ -16832,7 +17198,8 @@
         }
       ],
       "id": "full-metal-panic",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "full-metal-panic-dub"
     },
     {
       "title": "Fate/stay night: Heaven's Feel I. Presage Flower",
@@ -16875,7 +17242,8 @@
         }
       ],
       "id": "fatestay-night-heavens-feel-i-presage-flower",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Katekyo Hitman Reborn!",
@@ -16965,7 +17333,8 @@
         }
       ],
       "id": "katekyo-hitman-reborn",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "katekyo-hitman-reborn"
     },
     {
       "title": "Gangsta.",
@@ -17005,7 +17374,8 @@
         }
       ],
       "id": "gangsta",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "gangsta-"
     },
     {
       "title": "Shirobako",
@@ -17046,7 +17416,8 @@
         }
       ],
       "id": "shirobako",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shirobako"
     },
     {
       "title": "Yakusoku no Neverland 2nd Season",
@@ -17084,7 +17455,8 @@
         }
       ],
       "id": "yakusoku-no-neverland-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "yakusoku-no-neverland-2nd-season"
     },
     {
       "title": "Haikyuu!! Movie 4: Concept no Tatakai",
@@ -17127,7 +17499,8 @@
         }
       ],
       "id": "haikyuu-movie-4-concept-no-tatakai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "haikyuu-movie-4-concept-no-tatakai"
     },
     {
       "title": "Lovely★Complex",
@@ -17168,7 +17541,8 @@
         }
       ],
       "id": "lovelycomplex",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Grisaia no Kajitsu",
@@ -17212,7 +17586,8 @@
         }
       ],
       "id": "grisaia-no-kajitsu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "grisaia-no-kajitsu"
     },
     {
       "title": "Shinmai Maou no Testament",
@@ -17257,7 +17632,8 @@
         }
       ],
       "id": "shinmai-maou-no-testament",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shinmai-maou-no-testament"
     },
     {
       "title": "Spider-Man: Into The Spider-Verse",
@@ -17292,7 +17668,8 @@
         }
       ],
       "id": "spider-man-into-the-spider-verse",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Seitokai Yakuindomo",
@@ -17333,7 +17710,8 @@
         }
       ],
       "id": "seitokai-yakuindomo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "seitokai-yakuindomo"
     },
     {
       "title": "SPY x FAMILY Part 2",
@@ -17370,7 +17748,8 @@
         }
       ],
       "id": "spy-x-family-part-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "spy-x-family-part-2"
     },
     {
       "title": "Kamisama Hajimemashita: Kako-hen",
@@ -17413,7 +17792,8 @@
         }
       ],
       "id": "kamisama-hajimemashita-kako-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kamisama-hajimemashita-kako-hen"
     },
     {
       "title": "One Piece Film: Z",
@@ -17458,7 +17838,8 @@
         }
       ],
       "id": "one-piece-film-z",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Ajin",
@@ -17501,7 +17882,8 @@
         }
       ],
       "id": "ajin",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ajin"
     },
     {
       "title": "InuYasha: Kanketsu-hen",
@@ -17549,7 +17931,8 @@
         }
       ],
       "id": "inuyasha-kanketsu-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "inuyasha-kanketsu-hen-dub"
     },
     {
       "title": "The Last: Naruto the Movie",
@@ -17591,7 +17974,8 @@
         }
       ],
       "id": "the-last-naruto-the-movie",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Gakusen Toshi Asterisk",
@@ -17640,7 +18024,8 @@
         }
       ],
       "id": "gakusen-toshi-asterisk",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "gakusen-toshi-asterisk"
     },
     {
       "title": "Satsuriku no Tenshi",
@@ -17683,7 +18068,8 @@
         }
       ],
       "id": "satsuriku-no-tenshi",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "satsuriku-no-tenshi"
     },
     {
       "title": "Nanatsu no Taizai: Imashime no Fukkatsu OVA",
@@ -17721,7 +18107,8 @@
         }
       ],
       "id": "nanatsu-no-taizai-imashime-no-fukkatsu-ova",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Hataraku Saibou",
@@ -17761,7 +18148,8 @@
         }
       ],
       "id": "hataraku-saibou",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hataraku-saibou-tv"
     },
     {
       "title": "Grand Blue",
@@ -17802,7 +18190,8 @@
         }
       ],
       "id": "grand-blue",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "grand-blue"
     },
     {
       "title": "Kizumonogatari III: Reiketsu-hen",
@@ -17845,7 +18234,8 @@
         }
       ],
       "id": "kizumonogatari-iii-reiketsu-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kizumonogatari-iii-reiketsu-hen"
     },
     {
       "title": "Hentai Ouji to Warawanai Neko.",
@@ -17889,7 +18279,8 @@
         }
       ],
       "id": "hentai-ouji-to-warawanai-neko",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hentai-ouji-to-warawanai-neko-specials"
     },
     {
       "title": "Mekakucity Actors",
@@ -17933,7 +18324,8 @@
         }
       ],
       "id": "mekakucity-actors",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mekaku-city-actors"
     },
     {
       "title": "Oreimo 2",
@@ -17975,7 +18367,8 @@
         }
       ],
       "id": "oreimo-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "oreimo-2"
     },
     {
       "title": "Little Witch Academia",
@@ -18018,7 +18411,8 @@
         }
       ],
       "id": "little-witch-academia",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "little-witch-academia"
     },
     {
       "title": "Inu x Boku SS",
@@ -18060,7 +18454,8 @@
         }
       ],
       "id": "inu-x-boku-ss",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "inu-x-boku-ss"
     },
     {
       "title": "Dragon Ball GT",
@@ -18135,7 +18530,8 @@
         }
       ],
       "id": "dragon-ball-gt",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "dragon-ball-gt"
     },
     {
       "title": "Rokudenashi Majutsu Koushi to Akashic Records",
@@ -18178,7 +18574,8 @@
         }
       ],
       "id": "rokudenashi-majutsu-koushi-to-akashic-records",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "rokudenashi-majutsu-koushi-to-akashic-records"
     },
     {
       "title": "Higurashi no Naku Koro ni Kai",
@@ -18221,7 +18618,8 @@
         }
       ],
       "id": "higurashi-no-naku-koro-ni-kai",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "higurashi-no-naku-koro-ni"
     },
     {
       "title": "BEASTARS",
@@ -18258,7 +18656,8 @@
         }
       ],
       "id": "beastars",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kara no Kyoukai 1: Fukan Fuukei",
@@ -18301,7 +18700,8 @@
         }
       ],
       "id": "kara-no-kyoukai-1-fukan-fuukei",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Tower of God",
@@ -18339,7 +18739,8 @@
         }
       ],
       "id": "tower-of-god",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Fruits Basket",
@@ -18382,7 +18783,8 @@
         }
       ],
       "id": "fruits-basket",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "fruits-basket"
     },
     {
       "title": "Beelzebub",
@@ -18449,7 +18851,8 @@
         }
       ],
       "id": "beelzebub",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "God Eater",
@@ -18491,7 +18894,8 @@
         }
       ],
       "id": "god-eater",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "god-eater"
     },
     {
       "title": "Yosuga no Sora: In Solitude, Where We Are Least Alone.",
@@ -18534,7 +18938,8 @@
         }
       ],
       "id": "yosuga-no-sora-in-solitude-where-we-are-least-alone",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "The World God Only Knows II",
@@ -18577,7 +18982,8 @@
         }
       ],
       "id": "the-world-god-only-knows-ii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Vampire Knight",
@@ -18620,7 +19026,8 @@
         }
       ],
       "id": "vampire-knight",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "vampire-knight"
     },
     {
       "title": "Violet Evergarden Special",
@@ -18661,7 +19068,8 @@
         }
       ],
       "id": "violet-evergarden-special",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Date A Live II",
@@ -18705,7 +19113,8 @@
         }
       ],
       "id": "date-a-live-ii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kids on the Slope",
@@ -18748,7 +19157,8 @@
         }
       ],
       "id": "kids-on-the-slope",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Rurouni Kenshin: Meiji Kenkaku Romantan - Tsuioku-hen",
@@ -18793,7 +19203,8 @@
         }
       ],
       "id": "rurouni-kenshin-meiji-kenkaku-romantan-tsuioku-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "rurouni-kenshin-meiji-kenkaku-romantan-tsuioku-hen"
     },
     {
       "title": "Gintama': Enchousen",
@@ -18838,7 +19249,8 @@
         }
       ],
       "id": "gintama-enchousen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Maoyu ~ Archenemy & Hero",
@@ -18882,7 +19294,8 @@
         }
       ],
       "id": "maoyu-archenemy-hero",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Gamers!",
@@ -18923,7 +19336,8 @@
         }
       ],
       "id": "gamers",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "gamers"
     },
     {
       "title": "Oreshura",
@@ -18966,7 +19380,8 @@
         }
       ],
       "id": "oreshura",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "oreshura"
     },
     {
       "title": "Attack on Titan: Chronicle",
@@ -19004,7 +19419,8 @@
         }
       ],
       "id": "attack-on-titan-chronicle",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Heaven's Lost Property",
@@ -19049,7 +19465,8 @@
         }
       ],
       "id": "heavens-lost-property",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Owarimonogatari",
@@ -19091,7 +19508,8 @@
         }
       ],
       "id": "owarimonogatari",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "owarimonogatari"
     },
     {
       "title": "Tokyo Ghoul:re 2",
@@ -19135,7 +19553,8 @@
         }
       ],
       "id": "tokyo-ghoulre-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tokyo-ghoulre-2nd-season"
     },
     {
       "title": "Drifters",
@@ -19179,7 +19598,8 @@
         }
       ],
       "id": "drifters",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "drifters"
     },
     {
       "title": "Kimi ni Todoke 2nd Season",
@@ -19222,7 +19642,8 @@
         }
       ],
       "id": "kimi-ni-todoke-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Mayo Chiki!",
@@ -19265,7 +19686,8 @@
         }
       ],
       "id": "mayo-chiki",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mayo-chiki-dub"
     },
     {
       "title": "Mousou Dairinin",
@@ -19311,7 +19733,8 @@
         }
       ],
       "id": "mousou-dairinin",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mousou-dairinin-dub"
     },
     {
       "title": "Musaigen no Phantom World",
@@ -19355,7 +19778,8 @@
         }
       ],
       "id": "musaigen-no-phantom-world",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "musaigen-no-phantom-world"
     },
     {
       "title": "Toaru Kagaku no Railgun S",
@@ -19398,7 +19822,8 @@
         }
       ],
       "id": "toaru-kagaku-no-railgun-s",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "toaru-kagaku-no-railgun-s"
     },
     {
       "title": "Avatar: The Legend So Far",
@@ -19442,7 +19867,8 @@
         }
       ],
       "id": "avatar-the-legend-so-far",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Toaru Majutsu no Index II",
@@ -19485,7 +19911,8 @@
         }
       ],
       "id": "toaru-majutsu-no-index-ii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "toaru-majutsu-no-index-ii-dub"
     },
     {
       "title": "A Place Further Than the Universe",
@@ -19527,7 +19954,8 @@
         }
       ],
       "id": "a-place-further-than-the-universe",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Wonder Egg Priority",
@@ -19564,7 +19992,8 @@
         }
       ],
       "id": "wonder-egg-priority",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "wonder-egg-priority"
     },
     {
       "title": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka II",
@@ -19608,7 +20037,8 @@
         }
       ],
       "id": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-ii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-ii"
     },
     {
       "title": "5-toubun no Hanayome",
@@ -19646,7 +20076,8 @@
         }
       ],
       "id": "5-toubun-no-hanayome",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "5-toubun-no-hanayome"
     },
     {
       "title": "Chobits",
@@ -19689,7 +20120,8 @@
         }
       ],
       "id": "chobits",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "chobits"
     },
     {
       "title": "Kakegurui××",
@@ -19732,7 +20164,8 @@
         }
       ],
       "id": "kakegurui-1",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Blend S",
@@ -19773,7 +20206,8 @@
         }
       ],
       "id": "blend-s",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "blend-s"
     },
     {
       "title": "Kiss x Sis (TV)",
@@ -19816,7 +20250,8 @@
         }
       ],
       "id": "kiss-x-sis-tv",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Hibike! Euphonium",
@@ -19858,7 +20293,8 @@
         }
       ],
       "id": "hibike-euphonium",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hibike-euphonium"
     },
     {
       "title": "Working!!",
@@ -19901,7 +20337,8 @@
         }
       ],
       "id": "working",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "working-"
     },
     {
       "title": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu",
@@ -19943,7 +20380,8 @@
         }
       ],
       "id": "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu"
     },
     {
       "title": "Detective Conan",
@@ -19987,7 +20425,8 @@
         }
       ],
       "id": "detective-conan",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Suisei no Gargantia",
@@ -20030,7 +20469,8 @@
         }
       ],
       "id": "suisei-no-gargantia",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "suisei-no-gargantia"
     },
     {
       "title": "Mahou Shoujo Madoka★Magica Movie 3: Hangyaku no Monogatari",
@@ -20075,7 +20515,8 @@
         }
       ],
       "id": "mahou-shoujo-madokamagica-movie-3-hangyaku-no-monogatari",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Kizumonogatari II: Nekketsu-hen",
@@ -20118,7 +20559,8 @@
         }
       ],
       "id": "kizumonogatari-ii-nekketsu-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kizumonogatari-ii-nekketsu-hen"
     },
     {
       "title": "Non Non Biyori",
@@ -20155,7 +20597,8 @@
         }
       ],
       "id": "non-non-biyori",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "non-non-biyori"
     },
     {
       "title": "Inuyashiki",
@@ -20198,7 +20641,8 @@
         }
       ],
       "id": "inuyashiki",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "inuyashiki"
     },
     {
       "title": "Ichiban Ushiro no Daimaou",
@@ -20244,7 +20688,8 @@
         }
       ],
       "id": "ichiban-ushiro-no-daimaou",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ichiban-ushiro-no-daimaou"
     },
     {
       "title": "Jujutsu Kaisen 0",
@@ -20281,7 +20726,8 @@
         }
       ],
       "id": "jujutsu-kaisen-0",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "jujutsu-kaisen-0"
     },
     {
       "title": "Absolute Duo",
@@ -20325,7 +20771,8 @@
         }
       ],
       "id": "absolute-duo",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Boku no Hero Academia the Movie: World Heroes' Mission",
@@ -20364,7 +20811,8 @@
         }
       ],
       "id": "boku-no-hero-academia-the-movie-world-heroes-mission",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Hinamatsuri",
@@ -20407,7 +20855,8 @@
         }
       ],
       "id": "hinamatsuri",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hinamatsuri"
     },
     {
       "title": "Dragon Ball Super: Broly",
@@ -20451,7 +20900,8 @@
         }
       ],
       "id": "dragon-ball-super-broly",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Cardcaptor Sakura",
@@ -20527,7 +20977,8 @@
         }
       ],
       "id": "cardcaptor-sakura",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Kan",
@@ -20565,7 +21016,8 @@
         }
       ],
       "id": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-kan",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-kan"
     },
     {
       "title": "Gakkou Gurashi!",
@@ -20610,7 +21062,8 @@
         }
       ],
       "id": "gakkou-gurashi",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "gakkou-gurashi-"
     },
     {
       "title": "Zero no Tsukaima: Futatsuki no Kishi",
@@ -20658,7 +21111,8 @@
         }
       ],
       "id": "zero-no-tsukaima-futatsuki-no-kishi",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "-zero-no-tsukaima-futatsuki-no-kishi"
     },
     {
       "title": "Tokyo Ravens",
@@ -20702,7 +21156,8 @@
         }
       ],
       "id": "tokyo-ravens",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tokyo-ravens"
     },
     {
       "title": "Redline",
@@ -20745,7 +21200,8 @@
         }
       ],
       "id": "redline",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "redline"
     },
     {
       "title": "K-On! Movie",
@@ -20787,7 +21243,8 @@
         }
       ],
       "id": "k-on-movie",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "k-on-movie"
     },
     {
       "title": "Whisper of the Heart",
@@ -20831,7 +21288,8 @@
         }
       ],
       "id": "whisper-of-the-heart",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "whisper-of-the-heart"
     },
     {
       "title": "Hanamonogatari",
@@ -20872,7 +21330,8 @@
         }
       ],
       "id": "hanamonogatari",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hanamonogatari"
     },
     {
       "title": "Black Butler II",
@@ -20917,7 +21376,8 @@
         }
       ],
       "id": "black-butler-ii",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Netoge no Yome wa Onnanoko ja Nai to Omotta?",
@@ -20961,7 +21421,8 @@
         }
       ],
       "id": "netoge-no-yome-wa-onnanoko-ja-nai-to-omotta",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "netoge-no-yome-wa-onnanoko-ja-nai-to-omotta"
     },
     {
       "title": "Sword Art Online Alternative: Gun Gale Online",
@@ -21004,7 +21465,8 @@
         }
       ],
       "id": "sword-art-online-alternative-gun-gale-online",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sword-art-online-alternative-gun-gale-online"
     },
     {
       "title": "Tamako Market",
@@ -21044,7 +21506,8 @@
         }
       ],
       "id": "tamako-market",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tamako-market-"
     },
     {
       "title": "Love Live! School Idol Project",
@@ -21085,7 +21548,8 @@
         }
       ],
       "id": "love-live-school-idol-project",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "love-live-school-idol-project-dub"
     },
     {
       "title": "My Mental Choices Are Completely Interfering With My School Romantic Comedy",
@@ -21127,7 +21591,8 @@
         }
       ],
       "id": "my-mental-choices-are-completely-interfering-with-my-school-romantic-comedy",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "The God of High School",
@@ -21164,7 +21629,8 @@
         }
       ],
       "id": "the-god-of-high-school",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "the-god-of-high-school-dub"
     },
     {
       "title": "Gate: Jieitai Kanochi nite, Kaku Tatakaeri Part 2",
@@ -21207,7 +21673,8 @@
         }
       ],
       "id": "gate-jieitai-kanochi-nite-kaku-tatakaeri-part-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Shingeki no Bahamut: Genesis",
@@ -21252,7 +21719,8 @@
         }
       ],
       "id": "shingeki-no-bahamut-genesis",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "shingeki-no-bahamut-genesis-dub"
     },
     {
       "title": "Panty & Stocking with Garterbelt",
@@ -21295,7 +21763,8 @@
         }
       ],
       "id": "panty-stocking-with-garterbelt",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "panty-stocking-with-garterbelt-dub"
     },
     {
       "title": "Tamako Love Story",
@@ -21336,7 +21805,8 @@
         }
       ],
       "id": "tamako-love-story",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tamako-love-story"
     },
     {
       "title": "Ano Natsu de Matteru",
@@ -21381,7 +21851,8 @@
         }
       ],
       "id": "ano-natsu-de-matteru",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ano-natsu-de-matteru"
     },
     {
       "title": "Yuru Camp△",
@@ -21422,7 +21893,8 @@
         }
       ],
       "id": "yuru-camp",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Tanaka-kun wa Itsumo Kedaruge",
@@ -21464,7 +21936,8 @@
         }
       ],
       "id": "tanaka-kun-wa-itsumo-kedaruge",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tanaka-kun-wa-itsumo-kedaruge"
     },
     {
       "title": "Hunter x Hunter: Yorkshin City Kanketsu-hen",
@@ -21506,7 +21979,8 @@
         }
       ],
       "id": "hunter-x-hunter-yorkshin-city-kanketsu-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Ghost in the Shell: Stand Alone Complex 2nd GIG",
@@ -21551,7 +22025,8 @@
         }
       ],
       "id": "ghost-in-the-shell-stand-alone-complex-2nd-gig",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "ghost-in-the-shell-stand-alone-complex-2nd-gig-dub"
     },
     {
       "title": "Kaze no Stigma",
@@ -21593,7 +22068,8 @@
         }
       ],
       "id": "kaze-no-stigma",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kaze-no-stigma"
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
@@ -21631,7 +22107,8 @@
         }
       ],
       "id": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season-part-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season-part-2"
     },
     {
       "title": "Sousei no Onmyouji",
@@ -21698,7 +22175,8 @@
         }
       ],
       "id": "sousei-no-onmyouji",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sousei-no-onmyouji"
     },
     {
       "title": "Dagashi Kashi",
@@ -21738,7 +22216,8 @@
         }
       ],
       "id": "dagashi-kashi",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Sono Bisque Doll wa Koi wo Suru",
@@ -21776,7 +22255,8 @@
         }
       ],
       "id": "sono-bisque-doll-wa-koi-wo-suru",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sono-bisque-doll-wa-koi-wo-suru"
     },
     {
       "title": "Fumetsu no Anata e",
@@ -21814,7 +22294,8 @@
         }
       ],
       "id": "fumetsu-no-anata-e",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "fumetsu-no-anata-e"
     },
     {
       "title": "Tsuki ga Kirei",
@@ -21855,7 +22336,8 @@
         }
       ],
       "id": "tsuki-ga-kirei",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tsuki-ga-kirei"
     },
     {
       "title": "Jujutsu Kaisen Season 2",
@@ -21892,7 +22374,8 @@
         }
       ],
       "id": "jujutsu-kaisen-season-2",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "One Piece Film: Strong World",
@@ -21937,7 +22420,8 @@
         }
       ],
       "id": "one-piece-film-strong-world",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Owarimonogatari 2nd Season",
@@ -21980,7 +22464,8 @@
         }
       ],
       "id": "owarimonogatari-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "owarimonogatari-2nd-season"
     },
     {
       "title": "The World God Only Knows: Goddesses",
@@ -22023,7 +22508,8 @@
         }
       ],
       "id": "the-world-god-only-knows-goddesses",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Re:Creators",
@@ -22065,7 +22551,8 @@
         }
       ],
       "id": "recreators",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "recreators"
     },
     {
       "title": "Kanojo, Okarishimasu",
@@ -22103,7 +22590,8 @@
         }
       ],
       "id": "kanojo-okarishimasu",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kanojo-okarishimasu"
     },
     {
       "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -22141,7 +22629,8 @@
         }
       ],
       "id": "kimetsu-no-yaiba-katanakaji-no-sato-hen",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kimetsu-no-yaiba-katanakaji-no-sato-hen"
     },
     {
       "title": "Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou",
@@ -22179,7 +22668,8 @@
         }
       ],
       "id": "violet-evergarden-gaiden-eien-to-jidou-shuki-ningyou",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "violet-evergarden-gaiden-eien-to-jidou-shuki-ningyou"
     },
     {
       "title": "Fruits Basket 2nd Season",
@@ -22216,7 +22706,8 @@
         }
       ],
       "id": "fruits-basket-2nd-season",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "fruits-basket-2nd-season"
     },
     {
       "title": "Net-juu no Susume",
@@ -22258,7 +22749,8 @@
         }
       ],
       "id": "net-juu-no-susume",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "net-juu-no-susume"
     },
     {
       "title": "Hitsugi no Chaika",
@@ -22302,7 +22794,8 @@
         }
       ],
       "id": "hitsugi-no-chaika",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "hitsugi-no-chaika"
     },
     {
       "title": "Kino no Tabi: The Beautiful World",
@@ -22344,7 +22837,8 @@
         }
       ],
       "id": "kino-no-tabi-the-beautiful-world",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "kino-no-tabi-the-beautiful-world"
     },
     {
       "title": "Blood+",
@@ -22413,7 +22907,8 @@
         }
       ],
       "id": "blood",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "blood-lad"
     },
     {
       "title": "Houseki no Kuni (TV)",
@@ -22452,7 +22947,8 @@
         }
       ],
       "id": "houseki-no-kuni-tv",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "houseki-no-kuni-tv"
     },
     {
       "title": "Sword of the Stranger",
@@ -22495,7 +22991,8 @@
         }
       ],
       "id": "sword-of-the-stranger",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sword-of-the-stranger"
     },
     {
       "title": "Tasogare Otome x Amnesia",
@@ -22539,7 +23036,8 @@
         }
       ],
       "id": "tasogare-otome-x-amnesia",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "tasogare-otome-x-amnesia-"
     },
     {
       "title": "Karakai Jouzu no Takagi-san",
@@ -22582,7 +23080,8 @@
         }
       ],
       "id": "karakai-jouzu-no-takagi-san",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "karakai-jouzu-no-takagi-san"
     },
     {
       "title": "Inou-Battle wa Nichijou-kei no Naka de",
@@ -22626,7 +23125,8 @@
         }
       ],
       "id": "inou-battle-wa-nichijou-kei-no-naka-de",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Space☆Dandy",
@@ -22668,7 +23168,8 @@
         }
       ],
       "id": "spacedandy",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "Mawaru Penguindrum",
@@ -22713,7 +23214,8 @@
         }
       ],
       "id": "mawaru-penguindrum",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "mawaru-penguindrum"
     },
     {
       "title": "Sayonara Zetsubou Sensei",
@@ -22756,7 +23258,8 @@
         }
       ],
       "id": "sayonara-zetsubou-sensei",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "sayonara-zetsubou-sensei-"
     },
     {
       "title": "Teen Titans",
@@ -22827,7 +23330,8 @@
         }
       ],
       "id": "teen-titans",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": ""
     },
     {
       "title": "New Game!",
@@ -22869,7 +23373,8 @@
         }
       ],
       "id": "new-game",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "new-game-dub"
     },
     {
       "title": "Megalo Box",
@@ -22913,7 +23418,8 @@
         }
       ],
       "id": "megalo-box",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "megalo-box"
     },
     {
       "title": "Citrus",
@@ -22956,7 +23462,8 @@
         }
       ],
       "id": "citrus",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "citrus"
     },
     {
       "title": "Yuru Yuri",
@@ -23000,7 +23507,8 @@
         }
       ],
       "id": "yuru-yuri",
-      "featured": false
+      "featured": false,
+      "gdrive_slug": "yuru-yuri"
     }
   ],
   "top10": [

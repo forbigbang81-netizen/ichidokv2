@@ -13,6 +13,7 @@ import { useApp } from "@/lib/store";
 import {
   getAnimeById,
   buildEpisodeList,
+  gdriveEmbedUrl,
   type Episode,
 } from "@/lib/anime";
 import { CastButton } from "./CastButton";
@@ -87,6 +88,7 @@ export function WatchPage({
   const playerStorageKey = `${anime.id}:ep:${currentEp.number}`;
   const playerTitle = `${anime.title} — Episode ${currentEp.episodeInSeason}`;
   const playerSubtitle = `${currentEp.seasonName} · Ep ${currentEp.number} / ${allEpisodes.length}`;
+  const playerEmbedUrl = gdriveEmbedUrl(anime, currentEp);
 
   // Build a "shareable" URL for the CastButton — points to the current
   // watch page on our site, not the source URL (which may be ephemeral).
@@ -154,6 +156,7 @@ export function WatchPage({
               title={playerTitle}
               subtitle={playerSubtitle}
               poster={anime.image_url}
+              embedUrl={playerEmbedUrl}
               onNext={() => hasNext && navigateTo(currentEp.number + 1)}
               onPrev={() => hasPrev && navigateTo(currentEp.number - 1)}
               hasNext={hasNext}

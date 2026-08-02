@@ -39,6 +39,7 @@ export type Anime = {
   kitsu_url?: string;
   mal_id?: number;
   mal_url?: string;
+  gdrive_slug?: string;     // gdriveplayer.biz slug — used to build the embed URL
   poster: AnimePoster;       // SVG fallback config (used if image fails to load)
   seasons: AnimeSeason[];
 };
@@ -124,6 +125,29 @@ export function shareUrlForEpisode(
 ): string {
   if (typeof window === "undefined") return "";
   return `${window.location.origin}/#/watch/${encodeURIComponent(anime.id)}?ep=${episode.number}&s=${episode.seasonIndex}`;
+}
+
+/**
+ * Build the gdriveplayer embed URL for an episode.
+ *
+ * gdriveplayer's database has a slug per anime (e.g. "naruto", "bleach",
+ * "jujutsu-kaisen"). The embed endpoint is:
+ *   https://database.gdriveplayer.me/embed.php?type=anime&slug=<slug>&episode=<N>
+ *
+ * Returns null if the anime doesn't have a gdrive_slug (the WatchPage will
+ * fall back to the manual URL input in that case).
+ *
+ * Episode number here is the episode within the SEASON (not the global
+ * episode number) — that's how gdriveplayer indexes their episodes.
+ */
+export function gdriveEmbedUrl(
+  anime: Anime,
+  episode: Episode,
+): string | null {
+  if (!anime.gdrive_slug) return null;
+  const slug = encodeURIComponent(anime.gdrive_slug);
+  const ep = episode.episodeInSeason;
+  return `https://database.gdriveplayer.me/embed.php?type=anime&slug=${slug}&episode=${ep}`;
 }
 
 export type Filters = {
