@@ -143,7 +143,8 @@ export function WatchPage({
               className="absolute inset-0 h-full w-full"
               allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
               allowFullScreen
-              referrerPolicy="origin"
+              referrerPolicy="no-referrer"
+              sandbox="allow-scripts allow-same-origin allow-presentation allow-forms allow-popups"
             />
           </div>
         </div>

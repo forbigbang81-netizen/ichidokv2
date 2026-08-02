@@ -115,8 +115,15 @@ export function buildEpisodeList(anime: Anime): Episode[] {
 }
 
 /**
- * Build the gdriveplayer embed URL for an episode.
- * gdriveplayer.biz exposes a search-based embed that takes a title + episode.
+ * Build the player URL for an episode.
+ *
+ * We route through our own /api/player endpoint (server-side proxy) so that:
+ *   - the user's browser only talks to our domain
+ *   - we can rotate gdriveplayer mirrors (gdriveplayer.biz is dead;
+ *     we use .us / .to / .me) without changing client code
+ *   - we control headers (Referer, User-Agent) so the mirror doesn't see
+ *     anything suspicious
+ *   - DNS issues on the user's end don't matter — our server resolves the mirror
  */
 export function gdrivePlayerUrl(
   anime: Anime,
@@ -124,8 +131,7 @@ export function gdrivePlayerUrl(
 ): string {
   const title = encodeURIComponent(anime.title);
   const ep = episode.episodeInSeason;
-  // gdriveplayer's anime embed endpoint
-  return `https://gdriveplayer.biz/embed.php?title=${title}&episode=${ep}`;
+  return `/api/player?title=${title}&episode=${ep}`;
 }
 
 export type Filters = {
