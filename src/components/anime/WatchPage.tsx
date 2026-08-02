@@ -8,6 +8,7 @@ import {
   ChevronRight,
   ListVideo,
   X,
+  Languages,
 } from "lucide-react";
 import { useApp } from "@/lib/store";
 import {
@@ -15,10 +16,32 @@ import {
   buildEpisodeList,
   gdrivePlayerUrl,
   type Episode,
+  type PlayerLang,
 } from "@/lib/anime";
 import { CastButton } from "./CastButton";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+
+const LANG_STORAGE_KEY = "ichidok:player-lang";
+
+function readStoredLang(): PlayerLang {
+  if (typeof window === "undefined") return "sub";
+  try {
+    const v = window.localStorage.getItem(LANG_STORAGE_KEY);
+    return v === "dub" ? "dub" : "sub";
+  } catch {
+    return "sub";
+  }
+}
+
+function writeStoredLang(lang: PlayerLang) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(LANG_STORAGE_KEY, lang);
+  } catch {
+    // ignore
+  }
+}
 
 export function WatchPage({
   animeId,
@@ -54,6 +77,7 @@ export function WatchPage({
 
   const [activeSeason, setActiveSeason] = useState(resolvedSeasonIndex);
   const [search, setSearch] = useState("");
+  const [lang, setLang] = useState<PlayerLang>(readStoredLang);
 
   // When the URL episode changes (browser back/forward), keep season tab in sync.
   // Uses the "adjust state during render" pattern.
@@ -81,7 +105,14 @@ export function WatchPage({
     );
   }
 
-  const playerUrl = gdrivePlayerUrl(anime, currentEp);
+  const playerUrl = gdrivePlayerUrl(anime, currentEp, lang);
+
+  const switchLang = (newLang: PlayerLang) => {
+    if (newLang === lang) return;
+    setLang(newLang);
+    writeStoredLang(newLang);
+    // iframe `key` includes lang, so changing it forces a fresh load
+  };
   const seasonEpisodes = allEpisodes.filter((e) => e.seasonIndex === activeSeason);
   const filteredSeason = search.trim()
     ? seasonEpisodes.filter((e) =>
@@ -128,7 +159,42 @@ export function WatchPage({
           <span className="line-clamp-1 max-w-[60%] text-center text-[11px] uppercase tracking-wider text-muted-foreground">
             {anime.title} · {currentEp.seasonName} · Ep {currentEp.episodeInSeason}
           </span>
-          <CastButton url={playerUrl} title={currentEp.title} />
+          <div className="flex items-center gap-2">
+            {/* Sub / Dub toggle */}
+            <div
+              role="group"
+              aria-label="Audio language"
+              className="flex items-center border border-border bg-background/80"
+            >
+              <button
+                onClick={() => switchLang("sub")}
+                aria-pressed={lang === "sub"}
+                className={cn(
+                  "inline-flex items-center gap-1 px-2 py-1.5 text-[10px] font-bold uppercase tracking-wider transition-colors",
+                  lang === "sub"
+                    ? "bg-foreground text-background"
+                    : "text-muted-foreground hover:text-foreground",
+                )}
+                title="Japanese audio with English subtitles"
+              >
+                <Languages className="h-3 w-3" /> Sub
+              </button>
+              <button
+                onClick={() => switchLang("dub")}
+                aria-pressed={lang === "dub"}
+                className={cn(
+                  "inline-flex items-center gap-1 px-2 py-1.5 text-[10px] font-bold uppercase tracking-wider transition-colors",
+                  lang === "dub"
+                    ? "bg-foreground text-background"
+                    : "text-muted-foreground hover:text-foreground",
+                )}
+                title="English dubbed audio"
+              >
+                Dub
+              </button>
+            </div>
+            <CastButton url={playerUrl} title={currentEp.title} />
+          </div>
         </div>
       </div>
 
@@ -137,9 +203,9 @@ export function WatchPage({
         <div className="overflow-hidden border border-border bg-black">
           <div className="relative aspect-video w-full">
             <iframe
-              key={playerUrl}
+              key={`${playerUrl}|${lang}`}
               src={playerUrl}
-              title={`${anime.title} — Episode ${currentEp.episodeInSeason}`}
+              title={`${anime.title} — Episode ${currentEp.episodeInSeason} (${lang === "dub" ? "Dub" : "Sub"})`}
               className="absolute inset-0 h-full w-full"
               allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
               allowFullScreen
@@ -153,7 +219,7 @@ export function WatchPage({
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-b border-border pb-4">
           <div className="min-w-0 flex-1">
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground">
-              Now playing · {currentEp.seasonName}
+              Now playing · {currentEp.seasonName} · {lang === "dub" ? "Dub" : "Sub"}
             </p>
             <h1 className="mt-0.5 truncate text-lg font-bold tracking-tight md:text-xl">
               {anime.title} — Episode {currentEp.episodeInSeason}

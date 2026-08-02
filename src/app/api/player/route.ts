@@ -48,16 +48,26 @@ export async function GET(req: NextRequest) {
   const url = new URL(req.url);
   const title = url.searchParams.get("title");
   const episode = url.searchParams.get("episode") || "1";
+  // "sub" (default) = Japanese audio + English subs.
+  // "dub" = English dubbed audio. We forward both styles to the mirror:
+  //   - &dub=1      (older gdriveplayer param)
+  //   - &language=dub (newer gdriveplayer param)
+  // The mirror may or may not have a dub version; if it doesn't, the
+  // player falls back to sub silently.
+  const lang = url.searchParams.get("lang") === "dub" ? "dub" : "sub";
 
   if (!title) {
     return new NextResponse("Missing title", { status: 400 });
   }
 
+  // Build the mirror query string — sub and dub use the same endpoint,
+  // we just append extra params for the dub case.
+  const dubParams = lang === "dub" ? "&dub=1&language=dub" : "";
   let lastError: string | null = null;
 
   for (const mirror of MIRRORS) {
     try {
-      const targetUrl = `${mirror}?title=${encodeURIComponent(title)}&episode=${encodeURIComponent(episode)}`;
+      const targetUrl = `${mirror}?title=${encodeURIComponent(title)}&episode=${encodeURIComponent(episode)}${dubParams}`;
       const response = await fetch(targetUrl, {
         headers: BROWSER_HEADERS,
         redirect: "follow",
@@ -85,7 +95,7 @@ export async function GET(req: NextRequest) {
       }
 
       const mirrorOrigin = new URL(mirror).origin;
-      const proxiedHtml = rewriteHtml(html, mirrorOrigin);
+      const proxiedHtml = rewriteHtml(html, mirrorOrigin, lang);
 
       return new NextResponse(proxiedHtml, {
         status: 200,
@@ -100,8 +110,9 @@ export async function GET(req: NextRequest) {
             "script-src 'unsafe-inline' 'unsafe-eval' https:; " +
             "style-src 'unsafe-inline' https:; " +
             "connect-src *;",
-          // Tell the client which mirror served the request (useful for debugging)
+          // Tell the client which mirror + language served the request
           "X-Player-Source": new URL(mirror).hostname,
+          "X-Player-Lang": lang,
         },
       });
     } catch (e: unknown) {
@@ -147,23 +158,69 @@ export async function GET(req: NextRequest) {
  *      relative URLs (CSS, JS, images, video) resolve to the mirror.
  *   2. Add <meta name="referrer" content="no-referrer"> so the mirror doesn't
  *      see our domain as the Referer when the browser fetches resources.
- *   3. Pass through everything else unchanged.
+ *   3. If lang="dub", inject a small script that listens for JW Player
+ *      initialization and auto-selects the English audio track once it
+ *      becomes available. If lang="sub", the script forces Japanese audio
+ *      + English subtitles. This is best-effort — if the source only has
+ *      one audio track, the script is a no-op.
+ *   4. Pass through everything else unchanged.
  */
-function rewriteHtml(html: string, mirrorOrigin: string): string {
+function rewriteHtml(html: string, mirrorOrigin: string, lang: "sub" | "dub"): string {
   const baseTag = `<base href="${mirrorOrigin}/">`;
   const referrerMeta = `<meta name="referrer" content="no-referrer">`;
+
+  // JW Player audio track auto-selector.
+  // The player exposes `jwplayer().getAudioTracks()` once initialized; we poll
+  // for it and pick the track whose label matches "eng" / "english" (for dub)
+  // or "jpn" / "japanese" (for sub). If no match, we leave it alone.
+  const audioSelectorScript = `<script>
+(function(){
+  var WANT = ${lang === "dub" ? '"eng"' : '"jpn"'};
+  var tries = 0;
+  function pickTrack(){
+    tries++;
+    if (tries > 40) return; // give up after ~20s
+    try {
+      var p = window.jwplayer && window.jwplayer();
+      if (!p || typeof p.getAudioTracks !== "function") {
+        setTimeout(pickTrack, 500);
+        return;
+      }
+      var tracks = p.getAudioTracks();
+      if (!tracks || tracks.length < 2) {
+        setTimeout(pickTrack, 500);
+        return;
+      }
+      var match = tracks.find(function(t){
+        var name = ((t.name || "") + " " + (t.language || "")).toLowerCase();
+        return name.indexOf(WANT) >= 0 || name.indexOf(${lang === "dub" ? '"english"' : '"japanese"'}) >= 0;
+      });
+      if (match && typeof p.setCurrentAudioTrack === "function") {
+        p.setCurrentAudioTrack(match.index !== undefined ? match.index : tracks.indexOf(match));
+      }
+    } catch (e) {
+      setTimeout(pickTrack, 500);
+    }
+  }
+  if (document.readyState === "complete") pickTrack();
+  else window.addEventListener("load", pickTrack);
+})();
+</script>`;
 
   // Try to inject right after <head ...>
   const headMatch = html.match(/<head([^>]*)>/i);
   if (headMatch) {
     return html.replace(
+      /<\/head>/i,
+      `${audioSelectorScript}</head>`,
+    ).replace(
       /<head([^>]*)>/i,
       `<head$1>${baseTag}${referrerMeta}`,
     );
   }
 
   // No <head> tag — wrap the whole thing
-  return `<!DOCTYPE html><html><head>${baseTag}${referrerMeta}</head><body>${html}</body></html>`;
+  return `<!DOCTYPE html><html><head>${baseTag}${referrerMeta}${audioSelectorScript}</head><body>${html}</body></html>`;
 }
 
 function escapeHtml(s: string): string {

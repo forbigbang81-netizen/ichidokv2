@@ -124,14 +124,20 @@ export function buildEpisodeList(anime: Anime): Episode[] {
  *   - we control headers (Referer, User-Agent) so the mirror doesn't see
  *     anything suspicious
  *   - DNS issues on the user's end don't matter — our server resolves the mirror
+ *
+ * `lang` selects the audio track: "sub" (Japanese audio + English subs, default)
+ * or "dub" (English dubbed audio).
  */
+export type PlayerLang = "sub" | "dub";
+
 export function gdrivePlayerUrl(
   anime: Anime,
   episode: Episode,
+  lang: PlayerLang = "sub",
 ): string {
   const title = encodeURIComponent(anime.title);
   const ep = episode.episodeInSeason;
-  return `/api/player?title=${title}&episode=${ep}`;
+  return `/api/player?title=${title}&episode=${ep}&lang=${lang}`;
 }
 
 export type Filters = {
