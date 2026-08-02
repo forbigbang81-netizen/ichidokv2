@@ -1,6 +1,6 @@
 "use client";
-import { useMemo, useState } from "react";
-import { Search, ArrowRight, TrendingUp, Star, Flame, Clock } from "lucide-react";
+import { useMemo } from "react";
+import { ArrowRight, TrendingUp, Star, Flame, Clock } from "lucide-react";
 import { useApp } from "@/lib/store";
 import { getAllAnime, getTop10, filterAnime } from "@/lib/anime";
 import { AnimeCard } from "./AnimeCard";
@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 
 export function HomePage() {
   const go = useApp((s) => s.go);
-  const [query, setQuery] = useState("");
   const all = getAllAnime();
   const top10 = getTop10();
 
@@ -19,13 +18,6 @@ export function HomePage() {
     const day = new Date().getDate();
     return featured[day % featured.length] ?? top10[0] ?? all[0];
   }, [all, top10]);
-
-  // Live search dropdown
-  const liveSearch = useMemo(() => {
-    const q = query.trim();
-    if (!q) return [];
-    return filterAnime({ query: q, sort: "popularity" }).slice(0, 8);
-  }, [query]);
 
   const popular = useMemo(
     () =>
@@ -47,32 +39,27 @@ export function HomePage() {
     [all],
   );
 
-  const onSubmitSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    go({ name: "catalog", initialQuery: query });
-  };
-
   return (
     <div className="view-enter">
       {/* ===== Hero — single anime, clean, full-bleed ===== */}
       {hero && (
         <section className="relative">
-          {/* Backdrop: blurred poster */}
+          {/* Backdrop: poster image with subtle blur and gradient fade */}
           <div className="absolute inset-0 overflow-hidden">
             <AnimePoster
               title={hero.title}
               poster={hero.poster}
               imageUrl={hero.image_url}
-              className="h-full w-full scale-125 blur-2xl"
+              className="h-full w-full scale-110 blur-md"
               showTitle={false}
             />
-            <div className="absolute inset-0 bg-background/70" />
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+            {/* Side gradient for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
           </div>
 
           {/* Content */}
-          <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 gap-8 px-6 py-10 md:grid-cols-[1fr_300px] md:px-10 md:py-16">
+          <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 gap-6 px-6 py-12 md:grid-cols-[1fr_260px] md:px-10 md:py-16">
             <div className="flex flex-col justify-end">
               <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
                 Now streaming
@@ -133,69 +120,6 @@ export function HomePage() {
           </div>
         </section>
       )}
-
-      {/* ===== Dedicated search bar (sticky, centered) ===== */}
-      <section className="sticky top-14 z-20 border-y border-border bg-background/95 backdrop-blur">
-        <div className="mx-auto max-w-[1400px] px-6 py-3 md:px-10">
-          <form onSubmit={onSubmitSearch} className="relative mx-auto max-w-2xl">
-            <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search for an anime — title, genre, studio..."
-              className="w-full border border-border bg-card py-3 pl-11 pr-24 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-              autoComplete="off"
-            />
-            <button
-              type="submit"
-              className="absolute right-1.5 top-1/2 -translate-y-1/2 inline-flex items-center gap-1 bg-foreground px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-background hover:opacity-90"
-            >
-              Search <ArrowRight className="h-3 w-3" />
-            </button>
-
-            {/* Live results dropdown */}
-            {liveSearch.length > 0 && (
-              <div className="absolute z-30 mt-2 w-full border border-border bg-card shadow-2xl">
-                {liveSearch.map((a) => (
-                  <button
-                    key={a.id}
-                    onClick={() => go({ name: "details", animeId: a.id })}
-                    className="flex w-full items-center gap-3 px-3 py-2 text-left hover:bg-accent"
-                  >
-                    <div className="h-12 w-9 shrink-0 overflow-hidden border border-border">
-                      <AnimePoster
-                        title={a.title}
-                        poster={a.poster}
-                        imageUrl={a.image_url}
-                        className="h-full w-full"
-                        showTitle={false}
-                      />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="line-clamp-1 text-sm font-semibold">
-                        {a.title}
-                      </p>
-                      <p className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                        {a.year} · {a.studio}
-                      </p>
-                    </div>
-                    <span className="text-[10px] tabular-nums text-muted-foreground">
-                      {a.rating.toFixed(1)}
-                    </span>
-                  </button>
-                ))}
-                <button
-                  onClick={() => go({ name: "catalog", initialQuery: query })}
-                  className="w-full border-t border-border px-3 py-2 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hover:bg-accent hover:text-foreground"
-                >
-                  See all results for "{query}" →
-                </button>
-              </div>
-            )}
-          </form>
-        </div>
-      </section>
 
       {/* ===== Top 10 ===== */}
       <section className="mx-auto max-w-[1400px] px-6 py-10 md:px-10">

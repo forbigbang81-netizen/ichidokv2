@@ -3,12 +3,16 @@ import { useEffect, useState } from "react";
 import { useApp } from "@/lib/store";
 import { Search, Home, LayoutGrid, ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SearchOverlay } from "./SearchOverlay";
 
 export function Navbar() {
   const view = useApp((s) => s.view);
   const go = useApp((s) => s.go);
   const back = useApp((s) => s.back);
   const canGoBack = useApp((s) => s.canGoBack());
+
+  // Search overlay state — opens when user clicks the search button
+  const [searchOpen, setSearchOpen] = useState(false);
 
   // detect scroll for sticky shadow
   const [scrolled, setScrolled] = useState(false);
@@ -22,70 +26,78 @@ export function Navbar() {
   const isHome = view.name === "home";
   const isCatalog = view.name === "catalog";
 
+  const openSearch = () => setSearchOpen(true);
+  const closeSearch = () => setSearchOpen(false);
+
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur transition-shadow",
-        scrolled && "shadow-[0_1px_0_0_var(--border)]",
-      )}
-    >
-      <div className="mx-auto flex h-14 max-w-[1600px] items-center justify-between gap-4 px-4 md:px-8">
-        {/* Left: logo + back */}
-        <div className="flex items-center gap-4">
-          {canGoBack && (
+    <>
+      <header
+        className={cn(
+          "sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur transition-shadow",
+          scrolled && "shadow-[0_1px_0_0_var(--border)]",
+        )}
+      >
+        <div className="mx-auto flex h-14 max-w-[1600px] items-center justify-between gap-4 px-4 md:px-8">
+          {/* Left: logo + back */}
+          <div className="flex items-center gap-4">
+            {canGoBack && (
+              <button
+                onClick={back}
+                className="hidden items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground md:inline-flex"
+                aria-label="Go back"
+              >
+                <ArrowLeft className="h-3.5 w-3.5" /> Back
+              </button>
+            )}
             <button
-              onClick={back}
-              className="hidden items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground md:inline-flex"
-              aria-label="Go back"
+              onClick={() => go({ name: "home" })}
+              className="group flex items-center gap-2"
+              aria-label="ichidok home"
             >
-              <ArrowLeft className="h-3.5 w-3.5" /> Back
+              <span className="flex h-7 w-7 items-center justify-center bg-foreground text-background">
+                <span className="text-sm font-black leading-none">i</span>
+              </span>
+              <span className="text-base font-black tracking-tight">
+                ichidok
+              </span>
             </button>
-          )}
+          </div>
+
+          {/* Center: nav */}
+          <nav className="flex items-center gap-1">
+            <NavLink
+              active={isHome}
+              onClick={() => go({ name: "home" })}
+              icon={<Home className="h-3.5 w-3.5" />}
+              label="Home"
+            />
+            <NavLink
+              active={isCatalog}
+              onClick={() => go({ name: "catalog" })}
+              icon={<LayoutGrid className="h-3.5 w-3.5" />}
+              label="Catalog"
+            />
+          </nav>
+
+          {/* Right: search button — opens the search overlay */}
           <button
-            onClick={() => go({ name: "home" })}
-            className="group flex items-center gap-2"
-            aria-label="ichidok home"
+            onClick={openSearch}
+            className="inline-flex items-center gap-1.5 border border-border bg-card px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hover:bg-foreground hover:text-background transition-colors"
+            aria-label="Search"
           >
-            <span className="flex h-7 w-7 items-center justify-center bg-foreground text-background">
-              <span className="text-sm font-black leading-none">i</span>
-            </span>
-            <span className="text-base font-black tracking-tight">
-              ichidok
-            </span>
+            <Search className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">Search</span>
+            <kbd className="hidden border border-border px-1 text-[9px] sm:inline">/</kbd>
           </button>
         </div>
+      </header>
 
-        {/* Center: nav */}
-        <nav className="flex items-center gap-1">
-          <NavLink
-            active={isHome}
-            onClick={() => go({ name: "home" })}
-            icon={<Home className="h-3.5 w-3.5" />}
-            label="Home"
-          />
-          <NavLink
-            active={isCatalog}
-            onClick={() => go({ name: "catalog" })}
-            icon={<LayoutGrid className="h-3.5 w-3.5" />}
-            label="Catalog"
-          />
-        </nav>
-
-        {/* Right: search shortcut */}
-        <button
-          onClick={() => go({ name: "catalog" })}
-          className="inline-flex items-center gap-1.5 border border-border bg-card px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hover:bg-foreground hover:text-background transition-colors"
-          aria-label="Search"
-        >
-          <Search className="h-3.5 w-3.5" />
-          <span className="hidden sm:inline">Search</span>
-          <kbd className="hidden border border-border px-1 text-[9px] sm:inline">/</kbd>
-        </button>
-      </div>
+      {/* Search overlay — only visible when search button is clicked */}
+      <SearchOverlay open={searchOpen} onClose={closeSearch} />
 
       {/* keyboard shortcut for search */}
-      <KeyboardShortcuts />
-    </header>
+      <KeyboardShortcuts onOpenSearch={openSearch} />
+    </>
   );
 }
 
@@ -116,7 +128,7 @@ function NavLink({
   );
 }
 
-function KeyboardShortcuts() {
+function KeyboardShortcuts({ onOpenSearch }: { onOpenSearch: () => void }) {
   const go = useApp((s) => s.go);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -125,7 +137,7 @@ function KeyboardShortcuts() {
       if (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable) return;
       if (e.key === "/") {
         e.preventDefault();
-        go({ name: "catalog" });
+        onOpenSearch();
       }
       if (e.key === "Escape") {
         go({ name: "home" });
@@ -133,6 +145,6 @@ function KeyboardShortcuts() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [go]);
+  }, [go, onOpenSearch]);
   return null;
 }
