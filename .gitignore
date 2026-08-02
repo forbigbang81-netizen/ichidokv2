@@ -52,3 +52,17 @@ prompt
 server.log
 # Skills directory
 /skills/
+# Private — don't push to GitHub
+/upload/
+/scripts/kitsu_cache.json
+/scripts/jikan_cache.json
+/scripts/gdrive_slug_cache.json
+/download/
+/dev.log
+/server.log
+/.zscripts/
+/.z-ai-config/
+/.claude/
+/skills/
+/tests/
+/examples/
