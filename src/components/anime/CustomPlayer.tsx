@@ -40,10 +40,17 @@ type Props = {
   onPrev?: () => void;
   hasNext?: boolean;
   hasPrev?: boolean;
-  /** gdriveplayer embed URL (for the iframe). */
+  /** gdriveplayer embed URL (for the iframe fallback). */
   embedUrl?: string | null;
   /** URL for the Cast button. */
   castUrl?: string;
+  /**
+   * A direct video stream URL to play in our HTML5 player (no iframe).
+   * When provided, the player auto-loads this URL instead of showing the
+   * "paste a source" input or the iframe embed. Used for Google Drive
+   * proxy streams.
+   */
+  directSourceUrl?: string | null;
 };
 
 const STORAGE_PREFIX = "ichidok:source:";
@@ -62,21 +69,25 @@ export function CustomPlayer({
   hasPrev,
   embedUrl,
   castUrl,
+  directSourceUrl,
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const hlsRef = useRef<Hls | null>(null);
 
   // Source URL state (for manual mode)
-  const [sourceUrl, setSourceUrl] = useState<string>(() => {
-    if (typeof window === "undefined") return "";
-    return localStorage.getItem(STORAGE_PREFIX + storageKey) || "";
-  });
+  // If directSourceUrl is provided (Google Drive proxy), use that instead
+  // of any saved manual source.
+  const [sourceUrl, setSourceUrl] = useState<string>(
+    directSourceUrl || (typeof window !== "undefined" ? localStorage.getItem(STORAGE_PREFIX + storageKey) || "" : ""),
+  );
   const [sourceInput, setSourceInput] = useState<string>(sourceUrl);
-  const [showSourceInput, setShowSourceInput] = useState<boolean>(!sourceUrl && !embedUrl);
+  const [showSourceInput, setShowSourceInput] = useState<boolean>(
+    !sourceUrl && !embedUrl && !directSourceUrl,
+  );
 
   // Player state
-  const [state, setState] = useState<PlayerState>("idle");
+  const [state, setState] = useState<PlayerState>(sourceUrl ? "loading" : "idle");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [duration, setDuration] = useState(0);
@@ -88,6 +99,7 @@ export function CustomPlayer({
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
 
   // Mode: "embed" (iframe) or "manual" (HTML5 video with sourceUrl)
+  // If directSourceUrl is provided, always use manual mode (our HTML5 player).
   const [mode, setMode] = useState<"embed" | "manual">(
     sourceUrl ? "manual" : embedUrl ? "embed" : "manual",
   );
@@ -96,16 +108,13 @@ export function CustomPlayer({
   const [prevStorageKey, setPrevStorageKey] = useState(storageKey);
   if (prevStorageKey !== storageKey) {
     setPrevStorageKey(storageKey);
-    const saved =
-      typeof window !== "undefined"
-        ? localStorage.getItem(STORAGE_PREFIX + storageKey) || ""
-        : "";
-    setSourceUrl(saved);
-    setSourceInput(saved);
-    setShowSourceInput(!saved && !embedUrl);
-    setState("idle");
+    const newSource = directSourceUrl || (typeof window !== "undefined" ? localStorage.getItem(STORAGE_PREFIX + storageKey) || "" : "");
+    setSourceUrl(newSource);
+    setSourceInput(newSource);
+    setShowSourceInput(!newSource && !embedUrl && !directSourceUrl);
+    setState(newSource ? "loading" : "idle");
     setErrorMessage("");
-    setMode(saved ? "manual" : embedUrl ? "embed" : "manual");
+    setMode(newSource ? "manual" : embedUrl ? "embed" : "manual");
   }
 
   // Track sourceUrl changes

@@ -117,11 +117,16 @@ export function WatchPage({
     currentEp.seasonIndex,
     currentEp.episodeInSeason,
   );
-  // Fall back to the gdriveplayer embed URL (for anime without Drive sources)
-  const gdriveplayerEmbedUrl = gdriveEmbedUrl(anime, currentEp, lang);
 
-  // Use the Google Drive source if available, else fall back to gdriveplayer
-  const playerEmbedUrl = gdriveSource?.embedUrl || gdriveplayerEmbedUrl;
+  // Use the Google Drive stream URL (our server-side proxy) if available.
+  // This plays the video in our own HTML5 player — no Google Drive iframe.
+  // Falls back to gdriveplayer embed if no Drive source exists.
+  const playerEmbedUrl = gdriveSource?.streamUrl || gdriveEmbedUrl(anime, currentEp, lang);
+
+  // If we have a Drive stream URL, force manual mode (our HTML5 player)
+  // instead of embed mode (iframe). The streamUrl goes into the "source URL"
+  // field that our CustomPlayer uses for direct video playback.
+  const driveStreamUrl = gdriveSource?.streamUrl || null;
 
   const switchLang = (newLang: PlayerLang) => {
     if (newLang === lang) return;
@@ -231,6 +236,7 @@ export function WatchPage({
               poster={anime.image_url}
               embedUrl={playerEmbedUrl}
               castUrl={castTargetUrl}
+              directSourceUrl={driveStreamUrl}
               onNext={() => hasNext && navigateTo(currentEp.number + 1)}
               onPrev={() => hasPrev && navigateTo(currentEp.number - 1)}
               hasNext={hasNext}

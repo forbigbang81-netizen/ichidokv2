@@ -13,6 +13,8 @@ export type GdriveEpisode = {
   fileId: string;
   resourceKey: string;
   embedUrl: string;
+  /** Our server-side proxy URL that streams the video bytes (bypasses virus scan + CORS). */
+  streamUrl: string;
   title?: string;
 };
 
@@ -24,6 +26,7 @@ function ep(fileId: string, resourceKey: string, title: string): GdriveEpisode {
     embedUrl: resourceKey
       ? `https://drive.google.com/file/d/${fileId}/preview?resourcekey=${resourceKey}`
       : `https://drive.google.com/file/d/${fileId}/preview`,
+    streamUrl: `/api/drive-stream?id=${fileId}${resourceKey ? `&resourcekey=${resourceKey}` : ""}`,
     title,
   };
 }
