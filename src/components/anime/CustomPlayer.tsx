@@ -116,6 +116,54 @@ export function CustomPlayer({
     sourceUrl ? "manual" : embedUrl ? "embed" : "manual",
   );
 
+  // === AUTO-EXTRACT MODE ===
+  // When embedUrl is available and no manual source is set, try to extract the
+  // real video URL server-side and play it in our custom HTML5 player (no iframe).
+  // This gives us our own player UI + controls, with the video source proxied
+  // through our server so gdriveplayer can't detect the user's origin.
+  const [autoStreamUrl, setAutoStreamUrl] = useState<string | null>(null);
+  const [autoError, setAutoError] = useState<string>("");
+
+  useEffect(() => {
+    // Only try auto-extraction in "embed" mode (when no manual source is set)
+    if (mode !== "embed" || !embedUrl) {
+      return;
+    }
+
+    let cancelled = false;
+
+    // Parse the embedUrl to extract slug and episode
+    const embedParams = new URL(embedUrl);
+    const slug = embedParams.searchParams.get("slug");
+    const episode = embedParams.searchParams.get("episode") || "1";
+
+    if (!slug) {
+      return;
+    }
+
+    // Fetch the video source from our proxy
+    fetch(`/api/video-source?slug=${encodeURIComponent(slug)}&episode=${encodeURIComponent(episode)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (cancelled) return;
+        if (data.streamUrls && data.streamUrls.length > 0) {
+          // Pick the first available quality (usually 360p — most reliable)
+          const best = data.streamUrls[0];
+          setAutoStreamUrl(best.url);
+        } else {
+          setAutoError(data.error || "No video sources found");
+        }
+      })
+      .catch((e) => {
+        if (cancelled) return;
+        setAutoError(`Failed to extract video: ${e.message}`);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [embedUrl, mode]);
+
   // Reset source-related state when storageKey changes (new episode selected).
   // This block runs AFTER all the useState declarations above so the setters exist.
   const [prevStorageKey, setPrevStorageKey] = useState(storageKey);
@@ -131,6 +179,8 @@ export function CustomPlayer({
     setState(saved || embedUrl ? "loading" : "idle");
     setErrorMessage("");
     setMode(saved ? "manual" : embedUrl ? "embed" : "manual");
+    setAutoStreamUrl(null);
+    setAutoError("");
   }
 
   // When sourceUrl changes (e.g. user pasted a new URL via the input),
@@ -144,10 +194,14 @@ export function CustomPlayer({
     }
   }
 
-  // --- Set up video + HLS when sourceUrl changes ---
+  // --- Set up video + HLS when sourceUrl or autoStreamUrl changes ---
+  // In "manual" mode, sourceUrl is used. In "embed" mode, autoStreamUrl is used
+  // (extracted from gdriveplayer server-side and proxied through /api/stream).
+  const activeSourceUrl = mode === "manual" ? sourceUrl : autoStreamUrl;
+
   useEffect(() => {
     const video = videoRef.current;
-    if (!video || !sourceUrl) return;
+    if (!video || !activeSourceUrl) return;
 
     // State transitions are driven by video/HLS events (not direct setState
     // calls) — the lint rule allows setState inside event callbacks.
@@ -158,7 +212,7 @@ export function CustomPlayer({
       hlsRef.current = null;
     }
 
-    const isHls = /\.m3u8(\?|$)/i.test(sourceUrl);
+    const isHls = /\.m3u8(\?|$)/i.test(activeSourceUrl);
 
     // Helper: when the video is ready to play, transition to "paused" state
     const onReady = () => setState("paused");
@@ -168,7 +222,7 @@ export function CustomPlayer({
       if (Hls.isSupported()) {
         const hls = new Hls({ enableWorker: true });
         hlsRef.current = hls;
-        hls.loadSource(sourceUrl);
+        hls.loadSource(activeSourceUrl);
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED, () => setState("paused"));
         hls.on(Hls.Events.ERROR, (_event, data) => {
@@ -183,7 +237,7 @@ export function CustomPlayer({
         });
       } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
         // Safari supports HLS natively
-        video.src = sourceUrl;
+        video.src = activeSourceUrl;
       } else {
         // Defer the error state so we're not calling setState synchronously
         queueMicrotask(() => {
@@ -192,8 +246,8 @@ export function CustomPlayer({
         });
       }
     } else {
-      // Direct video file (mp4, webm, etc.)
-      video.src = sourceUrl;
+      // Direct video file (mp4, webm, etc.) — including our /api/stream proxy
+      video.src = activeSourceUrl;
     }
 
     return () => {
@@ -203,7 +257,7 @@ export function CustomPlayer({
         hlsRef.current = null;
       }
     };
-  }, [sourceUrl]);
+  }, [activeSourceUrl]);
 
   // --- Sync volume / muted / speed to video element ---
   useEffect(() => {
@@ -421,22 +475,58 @@ export function CustomPlayer({
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
     >
-      {/* === EMBED MODE: iframe with gdriveplayer === */}
+      {/* === EMBED MODE: our custom player with proxied video stream === */}
       {mode === "embed" && embedUrl && !showSourceInput && (
         <>
-          <iframe
-            key={embedUrl}
-            src={embedUrl}
-            title={title}
-            className="absolute inset-0 h-full w-full"
-            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-            allowFullScreen
-            referrerPolicy="no-referrer"
-            sandbox="allow-scripts allow-same-origin allow-presentation allow-forms allow-popups"
+          {/* Video element (visible in embed mode when we have a stream URL) */}
+          <video
+            ref={videoRef}
+            poster={poster}
+            className={cn(
+              "absolute inset-0 h-full w-full object-contain",
+              !autoStreamUrl && "hidden",
+            )}
+            playsInline
+            onClick={togglePlay}
+            onDoubleClick={toggleFullscreen}
           />
+
+          {/* Loading state while extracting video source */}
+          {mode === "embed" && !autoStreamUrl && !autoError && (
+            <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center">
+              <Loader2 className="h-10 w-10 animate-spin text-foreground" />
+            </div>
+          )}
+
+          {/* Error state — extraction failed, show fallback message */}
+          {mode === "embed" && autoError && !autoStreamUrl && (
+            <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/85 p-6">
+              <div className="max-w-md text-center">
+                <AlertCircle className="mx-auto mb-3 h-8 w-8 text-foreground" />
+                <h3 className="mb-1 text-sm font-bold uppercase tracking-wider">
+                  Source unavailable
+                </h3>
+                <p className="mb-4 text-xs text-muted-foreground">
+                  {autoError}
+                </p>
+                <div className="flex justify-center gap-2">
+                  <button
+                    onClick={() => {
+                      setMode("manual");
+                      setShowSourceInput(true);
+                    }}
+                    className="bg-foreground px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-background hover:opacity-90"
+                  >
+                    Paste own URL
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Embed mode badge (top-left, subtle) */}
           <div className="pointer-events-none absolute left-3 top-3 z-20 border border-white/20 bg-black/60 px-2 py-1 font-mono text-[9px] uppercase tracking-wider text-white/70">
-            gdriveplayer
+            ichidok
           </div>
           {/* Cast button (top-right, inside the player in embed mode) */}
           {castUrl && (
@@ -447,18 +537,17 @@ export function CustomPlayer({
         </>
       )}
 
-      {/* Video element (always rendered so refs work, but hidden in embed mode) */}
-      <video
-        ref={videoRef}
-        poster={poster}
-        className={cn(
-          "absolute inset-0 h-full w-full object-contain",
-          mode === "embed" && "hidden",
-        )}
-        playsInline
-        onClick={togglePlay}
-        onDoubleClick={toggleFullscreen}
-      />
+      {/* Video element for MANUAL mode (always rendered so refs work, hidden in embed mode) */}
+      {mode !== "embed" && (
+        <video
+          ref={videoRef}
+          poster={poster}
+          className="absolute inset-0 h-full w-full object-contain"
+          playsInline
+          onClick={togglePlay}
+          onDoubleClick={toggleFullscreen}
+        />
+      )}
 
       {/* === Source input overlay (manual mode only) === */}
       {mode === "manual" && (!sourceUrl || showSourceInput) && state !== "playing" && (
@@ -521,14 +610,14 @@ export function CustomPlayer({
       )}
 
       {/* === Loading spinner (manual mode only) === */}
-      {mode === "manual" && state === "loading" && sourceUrl && !showSourceInput && (
+      {(mode === "manual" ? sourceUrl : autoStreamUrl) && state === "loading" && !showSourceInput && (
         <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center">
           <Loader2 className="h-10 w-10 animate-spin text-foreground" />
         </div>
       )}
 
       {/* === Error state (manual mode only) === */}
-      {mode === "manual" && state === "error" && !showSourceInput && (
+      {(mode === "manual" ? sourceUrl : autoStreamUrl) && state === "error" && !showSourceInput && (
         <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/85 p-6">
           <div className="max-w-md text-center">
             <AlertCircle className="mx-auto mb-3 h-8 w-8 text-foreground" />
@@ -562,7 +651,7 @@ export function CustomPlayer({
       )}
 
       {/* === Idle hint (source loaded but not yet played; manual mode only) === */}
-      {mode === "manual" && state === "paused" && !showSourceInput && (
+      {(mode === "manual" ? sourceUrl : autoStreamUrl) && state === "paused" && !showSourceInput && (
         <button
           onClick={togglePlay}
           className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 transition-opacity hover:bg-black/40"
@@ -575,7 +664,7 @@ export function CustomPlayer({
       )}
 
       {/* === Top chrome (title; manual mode only) === */}
-      {mode === "manual" && sourceUrl && controlsVisible && !showSourceInput && (
+      {(mode === "manual" ? sourceUrl : autoStreamUrl) && controlsVisible && !showSourceInput && (
         <div
           className={cn(
           "absolute inset-x-0 top-0 z-20 bg-gradient-to-b from-black/80 to-transparent p-4 transition-opacity",
@@ -591,7 +680,7 @@ export function CustomPlayer({
       )}
 
       {/* === Bottom controls (manual mode only) === */}
-      {mode === "manual" && sourceUrl && controlsVisible && !showSourceInput && (
+      {(mode === "manual" ? sourceUrl : autoStreamUrl) && controlsVisible && !showSourceInput && (
         <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/85 to-transparent px-4 pb-3 pt-12 transition-opacity">
           {/* Seek bar */}
           <div className="group/seek mb-2 flex items-center gap-2">
@@ -791,7 +880,7 @@ export function CustomPlayer({
       )}
 
       {/* Clear source button (small, top-right, when source is set; manual mode only) */}
-      {mode === "manual" && sourceUrl && !showSourceInput && state !== "playing" && (
+      {(mode === "manual" ? sourceUrl : autoStreamUrl) && !showSourceInput && state !== "playing" && (
         <button
           onClick={clearSource}
           className="absolute right-3 top-3 z-30 inline-flex items-center gap-1 border border-white/20 bg-black/60 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-white/80 hover:bg-white/20 hover:text-white"
