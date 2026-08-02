@@ -134,13 +134,6 @@ export function WatchPage({
     writeStoredLang(newLang);
   };
 
-  // Build a "shareable" URL for the CastButton — points to the current
-  // watch page on our site, not the source URL (which may be ephemeral).
-  const castTargetUrl =
-    typeof window !== "undefined"
-      ? `${window.location.origin}/#/watch/${encodeURIComponent(anime.id)}?ep=${currentEp.number}&s=${currentEp.seasonIndex}`
-      : "";
-
   const seasonEpisodes = allEpisodes.filter((e) => e.seasonIndex === activeSeason);
   const filteredSeason = search.trim()
     ? seasonEpisodes.filter((e) =>
@@ -235,7 +228,6 @@ export function WatchPage({
               subtitle={playerSubtitle}
               poster={anime.image_url}
               embedUrl={playerEmbedUrl}
-              castUrl={castTargetUrl}
               directSourceUrl={driveStreamUrl}
               onNext={() => hasNext && navigateTo(currentEp.number + 1)}
               onPrev={() => hasPrev && navigateTo(currentEp.number - 1)}

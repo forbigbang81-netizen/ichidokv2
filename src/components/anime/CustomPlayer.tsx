@@ -26,10 +26,8 @@ import {
   Link2,
   X,
   Gauge,
-  Settings2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { CastButton } from "./CastButton";
 
 type Props = {
   storageKey: string;
@@ -42,8 +40,6 @@ type Props = {
   hasPrev?: boolean;
   /** gdriveplayer embed URL (for the iframe fallback). */
   embedUrl?: string | null;
-  /** URL for the Cast button. */
-  castUrl?: string;
   /**
    * A direct video stream URL to play in our HTML5 player (no iframe).
    * When provided, the player auto-loads this URL instead of showing the
@@ -68,7 +64,6 @@ export function CustomPlayer({
   hasNext,
   hasPrev,
   embedUrl,
-  castUrl,
   directSourceUrl,
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -375,12 +370,6 @@ export function CustomPlayer({
           <div className="pointer-events-none absolute left-3 top-3 z-20 border border-white/20 bg-black/60 px-2 py-1 font-mono text-[9px] uppercase tracking-wider text-white/70">
             ichidok
           </div>
-          {/* Cast button (top-right) */}
-          {castUrl && (
-            <div className="absolute right-3 top-3 z-30">
-              <CastButton url={castUrl} title={title} compact />
-            </div>
-          )}
         </>
       )}
 
@@ -583,12 +572,6 @@ export function CustomPlayer({
                 </div>
               )}
             </div>
-
-            <button onClick={() => setShowSourceInput(true)} className="p-1.5 text-white/80 hover:text-white" title="Change source URL" aria-label="Change source URL">
-              <Settings2 className="h-4 w-4" />
-            </button>
-
-            {castUrl && <CastButton url={castUrl} title={title} compact />}
 
             <button onClick={toggleFullscreen} className="p-1.5 text-white/80 hover:text-white" title="Fullscreen (F)" aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}>
               {isFullscreen ? <Minimize className="h-4 w-4" /> : <Maximize className="h-4 w-4" />}
