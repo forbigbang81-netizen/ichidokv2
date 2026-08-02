@@ -94,6 +94,7 @@ export function DetailsPage({ animeId }: { animeId: string }) {
               <AnimePoster
                 title={anime.title}
                 poster={anime.poster}
+                imageUrl={anime.image_url}
                 className="h-full w-full"
               />
             </div>

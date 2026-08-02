@@ -34,7 +34,12 @@ export type Anime = {
   duration: number;
   totalEpisodes: number;
   featured: boolean;
-  poster: AnimePoster;
+  image_url?: string;       // Kitsu poster image (large)
+  kitsu_id?: string;
+  kitsu_url?: string;
+  mal_id?: number;
+  mal_url?: string;
+  poster: AnimePoster;       // SVG fallback config (used if image fails to load)
   seasons: AnimeSeason[];
 };
 

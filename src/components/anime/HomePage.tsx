@@ -104,6 +104,7 @@ export function HomePage() {
                         <AnimePoster
                           title={a.title}
                           poster={a.poster}
+                          imageUrl={a.image_url}
                           className="h-full w-full"
                           showTitle={false}
                         />
@@ -160,6 +161,7 @@ export function HomePage() {
               <AnimePoster
                 title={hero.title}
                 poster={hero.poster}
+                imageUrl={hero.image_url}
                 className="h-full w-full transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/80 to-transparent p-6 md:p-8">

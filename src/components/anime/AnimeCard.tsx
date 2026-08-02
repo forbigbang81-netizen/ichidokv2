@@ -32,6 +32,7 @@ export function AnimeCard({ anime, index, className }: Props) {
         <AnimePoster
           title={anime.title}
           poster={anime.poster}
+          imageUrl={anime.image_url}
           className="h-full w-full transition-transform duration-500 group-hover:scale-[1.04]"
         />
 

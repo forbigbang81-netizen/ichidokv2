@@ -1,31 +1,73 @@
 "use client";
-/**
- * AnimePoster — renders a deterministic black & white SVG poster based on
- * the anime's title and `poster` config (variant/l1/l2/angle/hash).
- * No external images — keeps the site self-contained and on-theme.
- */
+import { useState } from "react";
 import { AnimePoster as PosterConfig } from "@/lib/anime";
+import { cn } from "@/lib/utils";
 
 type Props = {
   title: string;
   poster: PosterConfig;
+  imageUrl?: string;
   className?: string;
   showTitle?: boolean;
 };
 
-export function AnimePoster({ title, poster, className, showTitle = true }: Props) {
+/**
+ * AnimePoster — renders a real anime poster image when available (Kitsu/MAL),
+ * with a deterministic SVG poster as fallback (when no image_url is set or
+ * the image fails to load).
+ */
+export function AnimePoster({ title, poster, imageUrl, className, showTitle = true }: Props) {
+  const [imageError, setImageError] = useState(false);
+  const hasImage = imageUrl && !imageError;
+
+  if (hasImage) {
+    return (
+      <div className={cn("relative h-full w-full overflow-hidden bg-card", className)}>
+        <img
+          src={imageUrl}
+          alt={`${title} poster`}
+          loading="lazy"
+          onError={() => setImageError(true)}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        {showTitle && (
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/60 to-transparent p-3 pt-10">
+            <div className="mb-1.5 h-px w-6 bg-white/70" />
+            <h3 className="line-clamp-2 text-xs font-bold leading-tight tracking-tight text-white">
+              {title}
+            </h3>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return <SvgPoster title={title} poster={poster} className={className} showTitle={showTitle} />;
+}
+
+/**
+ * SvgPoster — deterministic black & white SVG poster used as fallback.
+ * Generated from the title hash so each anime gets a unique-looking poster.
+ */
+function SvgPoster({
+  title,
+  poster,
+  className,
+  showTitle = true,
+}: {
+  title: string;
+  poster: PosterConfig;
+  className?: string;
+  showTitle?: boolean;
+}) {
   const { variant, l1, l2, angle, hash } = poster;
   const id = `pg-${hash}`;
-
-  // Split title for layout
   const words = title.split(/\s+/).filter(Boolean);
   const long = words.length > 4 || title.length > 22;
 
-  // Pick a layout variant based on the seed
   const renderPattern = () => {
     switch (variant) {
       case 0:
-        // diagonal split
         return (
           <polygon
             points={`0,0 200,0 200,${100 + (angle % 80)} 0,${200 - (angle % 80)}`}
@@ -33,7 +75,6 @@ export function AnimePoster({ title, poster, className, showTitle = true }: Prop
           />
         );
       case 1:
-        // two bands
         return (
           <>
             <rect x="0" y={40 + (angle % 30)} width="200" height="35" fill={`hsl(0 0% ${l2}%)`} />
@@ -41,17 +82,10 @@ export function AnimePoster({ title, poster, className, showTitle = true }: Prop
           </>
         );
       case 2:
-        // large circle
         return (
-          <circle
-            cx={100}
-            cy={100}
-            r={70 + (angle % 20)}
-            fill={`hsl(0 0% ${l2}%)`}
-          />
+          <circle cx={100} cy={100} r={70 + (angle % 20)} fill={`hsl(0 0% ${l2}%)`} />
         );
       case 3:
-        // chevrons
         return (
           <g fill={`hsl(0 0% ${l2}%)`}>
             <polygon points="0,200 100,120 200,200" />
@@ -59,7 +93,6 @@ export function AnimePoster({ title, poster, className, showTitle = true }: Prop
           </g>
         );
       case 4:
-        // grid blocks
         return (
           <g fill={`hsl(0 0% ${l2}%)`}>
             <rect x="20" y="20" width="60" height="60" />
@@ -70,7 +103,6 @@ export function AnimePoster({ title, poster, className, showTitle = true }: Prop
         );
       case 5:
       default:
-        // diagonal stripes
         return (
           <g>
             <rect x="0" y="0" width="200" height="200" fill={`hsl(0 0% ${l1 + 8}%)`} />
@@ -110,17 +142,12 @@ export function AnimePoster({ title, poster, className, showTitle = true }: Prop
         </pattern>
       </defs>
 
-      {/* background */}
       <rect width="200" height="280" fill={`url(#${id}-bg)`} />
       {renderPattern()}
       <rect width="200" height="280" fill={`url(#${id}-noise)`} opacity="0.6" />
 
-      {/* subtle vignette */}
-      <rect width="200" height="280" fill="url(#vg)" opacity="0" />
-
       {showTitle && (
         <>
-          {/* divider line */}
           <line
             x1="14"
             y1={long ? 200 : 210}
@@ -147,7 +174,6 @@ export function AnimePoster({ title, poster, className, showTitle = true }: Prop
         </>
       )}
 
-      {/* hash signature in corner */}
       <text
         x="186"
         y="270"
@@ -177,6 +203,5 @@ function wrapTitle(title: string, maxChars: number): string[] {
     }
   }
   if (cur) lines.push(cur.trim());
-  // cap at 3 lines
   return lines.slice(0, 3);
 }
