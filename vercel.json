@@ -5,7 +5,7 @@
   "devCommand": "next dev",
   "installCommand": "bun install",
   "outputDirectory": ".next",
-  "name": "ichidokV2",
+  "name": "ichidokv2",
   "regions": ["iad1"],
   "headers": [
     {
