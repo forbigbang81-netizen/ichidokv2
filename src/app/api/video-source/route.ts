@@ -1,20 +1,8 @@
 /**
  * /api/video-source — extracts the actual video stream URL from a gdriveplayer
- * embed page, server-side.
+ * embed page, server-side. Used as a fallback when the iframe doesn't work.
  *
- * Flow:
- *   1. Fetch https://database.gdriveplayer.me/embed.php?type=anime&slug=<slug>&episode=<N>
- *   2. Find the eval'd JS packer in the HTML
- *   3. Decode it (base-62 packer unpacker)
- *   4. Extract the video source URL from the decoded JW Player setup
- *   5. Return the URL (or URLs) as JSON
- *
- * The client (our CustomPlayer) then loads this URL through /api/stream
- * to avoid CORS issues and to hide the gdriveplayer origin from the user's
- * browser.
- *
- * All fetching happens server-side, so gdriveplayer only ever sees a request
- * from our Vercel server — never from the user's browser.
+ * Kept for the "manual source" fallback flow.
  */
 import { NextRequest, NextResponse } from "next/server";
 
@@ -63,8 +51,6 @@ export async function GET(req: NextRequest) {
     }
 
     const html = await response.text();
-
-    // Decode the eval'd JS packer to extract video source URLs
     const sources = extractVideoSources(html);
 
     if (sources.length === 0) {
@@ -81,10 +67,6 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(
       {
         sources,
-        // The stream URL our player should use — points to our own /api/stream
-        // endpoint which proxies the actual video bytes.
-        // Pick the FIRST real video source (gdriveplayer lists 360 first, then 480, 720).
-        // Skip subtitle tracks and error fallbacks.
         streamUrls: sources
           .filter((s) => !s.file.includes("subtitle") && !s.file.includes("error.php"))
           .map((s) => ({
@@ -108,26 +90,13 @@ export async function GET(req: NextRequest) {
   }
 }
 
-/**
- * Extract video source URLs from the gdriveplayer embed HTML.
- *
- * The HTML contains an eval'd JS packer like:
- *   eval(function(p,a,c,k,e,d){...}('payload',62,count,'token1|token2|...'.split('|'),0,{}))
- *
- * We decode it by:
- *   1. Extracting the payload string and token list
- *   2. Replacing each base-62 number in the payload with the corresponding token
- *   3. Finding all `file:'...'` entries in the decoded JS
- */
 function extractVideoSources(html: string): Array<{ file: string; type: string; label: string }> {
-  // Find the eval'd JS packer
   const evalMatch = html.match(
     /eval\(function\(p,a,c,k,e,d\).*?return p\}\((.*?)\)\)/s,
   );
   if (!evalMatch) return [];
 
   const argsStr = evalMatch[1];
-  // Extract all single-quoted strings from the args
   const quotedStrings: string[] = [];
   const regex = /'((?:[^'\\]|\\.)*)'/g;
   let m;
@@ -140,10 +109,8 @@ function extractVideoSources(html: string): Array<{ file: string; type: string; 
   const payload = quotedStrings[0];
   const tokens = quotedStrings[1].split("|");
 
-  // Decode: replace each base-62 word in the payload with tokens[base62(word)]
   const decoded = decodePacker(payload, tokens);
 
-  // Extract all file:'...' entries from the decoded JS
   const sources: Array<{ file: string; type: string; label: string }> = [];
   const fileRegex = /file:\s*'([^']+)'/g;
   const typeRegex = /type:\s*'([^']+)'/g;
@@ -153,25 +120,14 @@ function extractVideoSources(html: string): Array<{ file: string; type: string; 
   const types: string[] = [];
   const labels: string[] = [];
 
-  while ((m = fileRegex.exec(decoded)) !== null) {
-    files.push(m[1]);
-  }
-  while ((m = typeRegex.exec(decoded)) !== null) {
-    types.push(m[1]);
-  }
-  while ((m = labelRegex.exec(decoded)) !== null) {
-    labels.push(m[1]);
-  }
+  while ((m = fileRegex.exec(decoded)) !== null) files.push(m[1]);
+  while ((m = typeRegex.exec(decoded)) !== null) types.push(m[1]);
+  while ((m = labelRegex.exec(decoded)) !== null) labels.push(m[1]);
 
-  // Combine into source objects — the sources array has file/type/label in order
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
-    // Skip error/placeholder sources
     if (file.startsWith("error.php") || file === "P") continue;
-    // Normalize protocol-relative URLs
-    const normalizedFile = file.startsWith("//")
-      ? `https:${file}`
-      : file;
+    const normalizedFile = file.startsWith("//") ? `https:${file}` : file;
     sources.push({
       file: normalizedFile,
       type: types[i] || "mp4",
@@ -179,7 +135,6 @@ function extractVideoSources(html: string): Array<{ file: string; type: string; 
     });
   }
 
-  // Deduplicate by file URL (gdriveplayer often lists the same URL for 360/480/720)
   const seen = new Set<string>();
   return sources.filter((s) => {
     if (seen.has(s.file)) return false;
@@ -188,11 +143,6 @@ function extractVideoSources(html: string): Array<{ file: string; type: string; 
   });
 }
 
-/**
- * Decode a base-62 packer payload.
- * Each word in the payload that is a valid base-62 number gets replaced with
- * tokens[base62(word)] if that token exists and is non-empty.
- */
 function decodePacker(payload: string, tokens: string[]): string {
   function base62ToNum(s: string): number | null {
     if (!s || !/^[0-9a-zA-Z]+$/.test(s)) return null;

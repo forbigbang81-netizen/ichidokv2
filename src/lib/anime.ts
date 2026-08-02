@@ -39,7 +39,8 @@ export type Anime = {
   kitsu_url?: string;
   mal_id?: number;
   mal_url?: string;
-  gdrive_slug?: string;     // gdriveplayer.biz slug — used to build the embed URL
+  gdrive_slug?: string;     // gdriveplayer slug for subbed version
+  gdrive_slug_dub?: string; // gdriveplayer slug for dubbed version (falls back to gdrive_slug)
   poster: AnimePoster;       // SVG fallback config (used if image fails to load)
   seasons: AnimeSeason[];
 };
@@ -134,20 +135,29 @@ export function shareUrlForEpisode(
  * "jujutsu-kaisen"). The embed endpoint is:
  *   https://database.gdriveplayer.me/embed.php?type=anime&slug=<slug>&episode=<N>
  *
- * Returns null if the anime doesn't have a gdrive_slug (the WatchPage will
- * fall back to the manual URL input in that case).
+ * Returns null if the anime doesn't have a gdrive_slug.
  *
- * Episode number here is the episode within the SEASON (not the global
- * episode number) — that's how gdriveplayer indexes their episodes.
+ * `lang` selects sub (Japanese audio + English subs) or dub (English dubbed).
+ * For dub, we use the `gdrive_slug_dub` field if available, else fall back to
+ * the sub slug.
+ *
+ * Episode number here is the episode within the SEASON.
  */
+export type PlayerLang = "sub" | "dub";
+
 export function gdriveEmbedUrl(
   anime: Anime,
   episode: Episode,
+  lang: PlayerLang = "sub",
 ): string | null {
-  if (!anime.gdrive_slug) return null;
-  const slug = encodeURIComponent(anime.gdrive_slug);
+  const slug =
+    lang === "dub"
+      ? anime.gdrive_slug_dub || anime.gdrive_slug
+      : anime.gdrive_slug;
+  if (!slug) return null;
+  const encodedSlug = encodeURIComponent(slug);
   const ep = episode.episodeInSeason;
-  return `https://database.gdriveplayer.me/embed.php?type=anime&slug=${slug}&episode=${ep}`;
+  return `https://database.gdriveplayer.me/embed.php?type=anime&slug=${encodedSlug}&episode=${ep}`;
 }
 
 export type Filters = {

@@ -8,6 +8,7 @@ import {
   ChevronRight,
   ListVideo,
   X,
+  Languages,
 } from "lucide-react";
 import { useApp } from "@/lib/store";
 import {
@@ -15,10 +16,30 @@ import {
   buildEpisodeList,
   gdriveEmbedUrl,
   type Episode,
+  type PlayerLang,
 } from "@/lib/anime";
 import { CustomPlayer } from "./CustomPlayer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+
+const LANG_STORAGE_KEY = "ichidok:player-lang";
+
+function readStoredLang(): PlayerLang {
+  if (typeof window === "undefined") return "sub";
+  try {
+    const v = window.localStorage.getItem(LANG_STORAGE_KEY);
+    return v === "dub" ? "dub" : "sub";
+  } catch {
+    return "sub";
+  }
+}
+
+function writeStoredLang(lang: PlayerLang) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(LANG_STORAGE_KEY, lang);
+  } catch {}
+}
 
 // (sub/dub toggle removed — our custom player plays whatever source URL the
 // user pastes. Audio language is controlled inside the source itself.)
@@ -57,6 +78,7 @@ export function WatchPage({
 
   const [activeSeason, setActiveSeason] = useState(resolvedSeasonIndex);
   const [search, setSearch] = useState("");
+  const [lang, setLang] = useState<PlayerLang>(readStoredLang);
 
   // When the URL episode changes (browser back/forward), keep season tab in sync.
   // Uses the "adjust state during render" pattern.
@@ -87,7 +109,13 @@ export function WatchPage({
   const playerStorageKey = `${anime.id}:ep:${currentEp.number}`;
   const playerTitle = `${anime.title} — Episode ${currentEp.episodeInSeason}`;
   const playerSubtitle = `${currentEp.seasonName} · Ep ${currentEp.number} / ${allEpisodes.length}`;
-  const playerEmbedUrl = gdriveEmbedUrl(anime, currentEp);
+  const playerEmbedUrl = gdriveEmbedUrl(anime, currentEp, lang);
+
+  const switchLang = (newLang: PlayerLang) => {
+    if (newLang === lang) return;
+    setLang(newLang);
+    writeStoredLang(newLang);
+  };
 
   // Build a "shareable" URL for the CastButton — points to the current
   // watch page on our site, not the source URL (which may be ephemeral).
@@ -139,9 +167,44 @@ export function WatchPage({
               <ArrowLeft className="h-3.5 w-3.5" /> Details
             </button>
           )}
-          <span className="line-clamp-1 max-w-[80%] text-center text-[11px] uppercase tracking-wider text-muted-foreground">
+          <span className="line-clamp-1 max-w-[50%] text-center text-[11px] uppercase tracking-wider text-muted-foreground">
             {anime.title} · {currentEp.seasonName} · Ep {currentEp.episodeInSeason}
           </span>
+          <div className="flex items-center gap-2">
+            {/* Sub / Dub toggle */}
+            <div
+              role="group"
+              aria-label="Audio language"
+              className="flex items-center border border-border bg-background/80"
+            >
+              <button
+                onClick={() => switchLang("sub")}
+                aria-pressed={lang === "sub"}
+                className={cn(
+                  "inline-flex items-center gap-1 px-2 py-1.5 text-[10px] font-bold uppercase tracking-wider transition-colors",
+                  lang === "sub"
+                    ? "bg-foreground text-background"
+                    : "text-muted-foreground hover:text-foreground",
+                )}
+                title="Japanese audio with English subtitles"
+              >
+                <Languages className="h-3 w-3" /> Sub
+              </button>
+              <button
+                onClick={() => switchLang("dub")}
+                aria-pressed={lang === "dub"}
+                className={cn(
+                  "inline-flex items-center gap-1 px-2 py-1.5 text-[10px] font-bold uppercase tracking-wider transition-colors",
+                  lang === "dub"
+                    ? "bg-foreground text-background"
+                    : "text-muted-foreground hover:text-foreground",
+                )}
+                title="English dubbed audio"
+              >
+                Dub
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 

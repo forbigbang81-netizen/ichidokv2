@@ -41,7 +41,8 @@
       "image_url": "https://media.kitsu.app/anime/poster_images/8270/large.jpg",
       "kitsu_id": "8270",
       "kitsu_url": "https://kitsu.io/anime/akame-ga-kill",
-      "gdrive_slug": "akame-ga-kill"
+      "gdrive_slug": "akame-ga-kill",
+      "gdrive_slug_dub": "akame-ga-kill-dub"
     },
     {
       "id": "hunter-x-hunter-2011",
@@ -109,7 +110,8 @@
       "image_url": "https://media.kitsu.app/anime/poster_images/6448/large.jpg",
       "kitsu_id": "6448",
       "kitsu_url": "https://kitsu.io/anime/hunter-x-hunter-2011",
-      "gdrive_slug": "hunter-x-hunter-2011"
+      "gdrive_slug": "hunter-x-hunter-2011",
+      "gdrive_slug_dub": "hunter-x-hunter-2011-dub"
     },
     {
       "id": "jujutsu-kaisen",
@@ -159,7 +161,8 @@
       "image_url": "https://media.kitsu.app/anime/42765/poster_image/large-5ce19551c1a6cf995b378205b9149b5c.jpeg",
       "kitsu_id": "42765",
       "kitsu_url": "https://kitsu.io/anime/jujutsu-kaisen",
-      "gdrive_slug": "jujutsu-kaisen"
+      "gdrive_slug": "jujutsu-kaisen",
+      "gdrive_slug_dub": "jujutsu-kaisen-dub"
     },
     {
       "id": "highschool-dxd",
@@ -222,7 +225,8 @@
       "image_url": "https://media.kitsu.app/anime/6550/poster_image/large-9a9352a43891fd441c0b82734ade67cc.jpeg",
       "kitsu_id": "6550",
       "kitsu_url": "https://kitsu.io/anime/high-school-dxd",
-      "gdrive_slug": "high-school-dxd"
+      "gdrive_slug": "high-school-dxd",
+      "gdrive_slug_dub": "high-school-dxd-dub"
     },
     {
       "id": "naruto",
@@ -289,7 +293,8 @@
       "image_url": "https://media.kitsu.app/anime/11/poster_image/large-5e901605066f7f2727f49d01859bbfe4.jpeg",
       "kitsu_id": "11",
       "kitsu_url": "https://kitsu.io/anime/naruto",
-      "gdrive_slug": "naruto"
+      "gdrive_slug": "naruto",
+      "gdrive_slug_dub": "naruto-dub"
     },
     {
       "id": "naruto-shippuden",
@@ -424,7 +429,8 @@
       "image_url": "https://media.kitsu.app/anime/poster_images/1555/large.jpg",
       "kitsu_id": "1555",
       "kitsu_url": "https://kitsu.io/anime/naruto-shippuden",
-      "gdrive_slug": "naruto-shippuden"
+      "gdrive_slug": "naruto-shippuden",
+      "gdrive_slug_dub": "naruto-shippuuden-dub"
     },
     {
       "id": "bleach",
@@ -560,7 +566,8 @@
       "image_url": "https://media.kitsu.app/anime/poster_images/244/large.jpg",
       "kitsu_id": "244",
       "kitsu_url": "https://kitsu.io/anime/bleach",
-      "gdrive_slug": "bleach"
+      "gdrive_slug": "bleach",
+      "gdrive_slug_dub": "bleach-dub"
     },
     {
       "id": "bleach-thousand-year-blood-war",
@@ -618,7 +625,8 @@
       "image_url": "https://media.kitsu.app/anime/43078/poster_image/large-bf36dc3ed0097c8b8c49e064bf0eaa79.jpeg",
       "kitsu_id": "43078",
       "kitsu_url": "https://kitsu.io/anime/bleach-sennen-kessen-hen",
-      "gdrive_slug": "bleach-sennen-kessen-hen"
+      "gdrive_slug": "bleach-sennen-kessen-hen",
+      "gdrive_slug_dub": "bleach-sennen-kessen-hen-dub"
     },
     {
       "id": "one-piece",
@@ -743,7 +751,8 @@
           "year": 2023,
           "synopsis": "The crew arrives at Egghead Island and meets Dr. Vegapunk as the World Government closes in."
         }
-      ]
+      ],
+      "gdrive_slug_dub": "one-piece-dub"
     },
     {
       "title": "Attack on Titan",
@@ -877,7 +886,8 @@
       ],
       "id": "boku-no-hero-academia-2",
       "featured": false,
-      "gdrive_slug": "boku-no-hero-academia-2nd-season"
+      "gdrive_slug": "boku-no-hero-academia-2nd-season",
+      "gdrive_slug_dub": "boku-no-hero-academia-2nd-season-dub"
     },
     {
       "title": "One Punch Man",
@@ -922,7 +932,8 @@
       ],
       "id": "one-punch-man",
       "featured": false,
-      "gdrive_slug": "one-punch-man"
+      "gdrive_slug": "one-punch-man",
+      "gdrive_slug_dub": "one-punch-man-dub"
     },
     {
       "title": "My Hero Academia Season 3",
@@ -966,7 +977,8 @@
       ],
       "id": "boku-no-hero-academia-3",
       "featured": false,
-      "gdrive_slug": "boku-no-hero-academia-3rd-season"
+      "gdrive_slug": "boku-no-hero-academia-3rd-season",
+      "gdrive_slug_dub": "boku-no-hero-academia-3rd-season-dub"
     },
     {
       "title": "Death Note",
@@ -1105,7 +1117,8 @@
       ],
       "id": "fullmetal-alchemist-brotherhood",
       "featured": false,
-      "gdrive_slug": "fullmetal-alchemist-brotherhood"
+      "gdrive_slug": "fullmetal-alchemist-brotherhood",
+      "gdrive_slug_dub": "fullmetal-alchemist-brotherhood-dub"
     },
     {
       "title": "Your Name.",
@@ -1150,7 +1163,8 @@
       ],
       "id": "kimi-no-na-wa",
       "featured": false,
-      "gdrive_slug": "kimi-no-na-wa"
+      "gdrive_slug": "kimi-no-na-wa",
+      "gdrive_slug_dub": "kimi-no-na-wa-dub"
     },
     {
       "title": "Demon Slayer: Kimetsu no Yaiba",
@@ -1189,7 +1203,8 @@
       ],
       "id": "kimetsu-no-yaiba",
       "featured": false,
-      "gdrive_slug": "kimetsu-no-yaiba"
+      "gdrive_slug": "kimetsu-no-yaiba",
+      "gdrive_slug_dub": "kimetsu-no-yaiba-dub"
     },
     {
       "title": "The Seven Deadly Sins",
@@ -1235,7 +1250,8 @@
       ],
       "id": "nanatsu-no-taizai",
       "featured": false,
-      "gdrive_slug": "nanatsu-no-taizai"
+      "gdrive_slug": "nanatsu-no-taizai",
+      "gdrive_slug_dub": "nanatsu-no-taizai-dub"
     },
     {
       "title": "A Silent Voice",
@@ -1278,7 +1294,8 @@
       ],
       "id": "koe-no-katachi",
       "featured": false,
-      "gdrive_slug": "koe-no-katachi-movie"
+      "gdrive_slug": "koe-no-katachi-movie",
+      "gdrive_slug_dub": "koe-no-katachi-movie-dub"
     },
     {
       "title": "Attack on Titan Season 2",
@@ -1406,7 +1423,8 @@
       ],
       "id": "spirited-away",
       "featured": false,
-      "gdrive_slug": "spirited-away"
+      "gdrive_slug": "spirited-away",
+      "gdrive_slug_dub": "spirited-away-dub"
     },
     {
       "title": "Attack on Titan Season 3 Part 2",
@@ -1532,7 +1550,8 @@
       ],
       "id": "haikyuu",
       "featured": false,
-      "gdrive_slug": "haikyuu"
+      "gdrive_slug": "haikyuu",
+      "gdrive_slug_dub": "haikyuu-dub"
     },
     {
       "title": "Assassination Classroom",
@@ -1575,7 +1594,8 @@
       ],
       "id": "ansatsu-kyoushitsu",
       "featured": false,
-      "gdrive_slug": "ansatsu-kyoushitsu-tv-"
+      "gdrive_slug": "ansatsu-kyoushitsu-tv-",
+      "gdrive_slug_dub": "ansatsu-kyoushitsu-tv--dub"
     },
     {
       "title": "The Seven Deadly Sins: Revival of the Commandments",
@@ -1622,7 +1642,8 @@
       ],
       "id": "nanatsu-no-taizai-imashime-no-fukkatsu",
       "featured": false,
-      "gdrive_slug": "nanatsu-no-taizai-imashime-no-fukkatsu"
+      "gdrive_slug": "nanatsu-no-taizai-imashime-no-fukkatsu",
+      "gdrive_slug_dub": "nanatsu-no-taizai-imashime-no-fukkatsu-dub"
     },
     {
       "title": "No Game, No Life",
@@ -1668,7 +1689,8 @@
       ],
       "id": "no-game-no-life",
       "featured": false,
-      "gdrive_slug": "no-game-no-life"
+      "gdrive_slug": "no-game-no-life",
+      "gdrive_slug_dub": "no-game-no-life-dub"
     },
     {
       "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
@@ -1707,7 +1729,8 @@
       ],
       "id": "kimetsu-no-yaiba-mugen-ressha-hen",
       "featured": false,
-      "gdrive_slug": "kimetsu-no-yaiba-mugen-ressha-hen"
+      "gdrive_slug": "kimetsu-no-yaiba-mugen-ressha-hen",
+      "gdrive_slug_dub": "kimetsu-no-yaiba-mugen-ressha-hen-dub"
     },
     {
       "title": "Steins;Gate",
@@ -1748,7 +1771,8 @@
       ],
       "id": "steinsgate",
       "featured": false,
-      "gdrive_slug": "steinsgate"
+      "gdrive_slug": "steinsgate",
+      "gdrive_slug_dub": "steinsgate-dub"
     },
     {
       "title": "Your Lie in April",
@@ -1875,7 +1899,8 @@
       ],
       "id": "yakusoku-no-neverland",
       "featured": false,
-      "gdrive_slug": "yakusoku-no-neverland"
+      "gdrive_slug": "yakusoku-no-neverland",
+      "gdrive_slug_dub": "yakusoku-no-neverland-dub"
     },
     {
       "title": "Toradora!",
@@ -1918,7 +1943,8 @@
       ],
       "id": "toradora",
       "featured": false,
-      "gdrive_slug": "toradora"
+      "gdrive_slug": "toradora",
+      "gdrive_slug_dub": "toradora-dub"
     },
     {
       "title": "Haikyu!! 2nd Season",
@@ -1962,7 +1988,8 @@
       ],
       "id": "haikyuu-second-season",
       "featured": false,
-      "gdrive_slug": "haikyuu-second-season"
+      "gdrive_slug": "haikyuu-second-season",
+      "gdrive_slug_dub": "haikyuu-second-season-dub"
     },
     {
       "title": "Sword Art Online",
@@ -2006,7 +2033,8 @@
       ],
       "id": "sword-art-online",
       "featured": false,
-      "gdrive_slug": "sword-art-online"
+      "gdrive_slug": "sword-art-online",
+      "gdrive_slug_dub": "sword-art-online-dub"
     },
     {
       "title": "Code Geass: Lelouch of the Rebellion",
@@ -2054,7 +2082,8 @@
       ],
       "id": "code-geass-lelouch-of-the-rebellion",
       "featured": false,
-      "gdrive_slug": "code-geass-lelouch-of-the-rebellion"
+      "gdrive_slug": "code-geass-lelouch-of-the-rebellion",
+      "gdrive_slug_dub": "code-geass-lelouch-of-the-rebellion-dub"
     },
     {
       "title": "Tokyo Ghoul",
@@ -2144,7 +2173,8 @@
       ],
       "id": "noragami",
       "featured": false,
-      "gdrive_slug": "noragami"
+      "gdrive_slug": "noragami",
+      "gdrive_slug_dub": "noragami-dub"
     },
     {
       "title": "Howl's Moving Castle",
@@ -2231,7 +2261,8 @@
       ],
       "id": "shokugeki-no-souma",
       "featured": false,
-      "gdrive_slug": "shokugeki-no-souma"
+      "gdrive_slug": "shokugeki-no-souma",
+      "gdrive_slug_dub": "shokugeki-no-souma-dub"
     },
     {
       "title": "ERASED",
@@ -2274,7 +2305,8 @@
       ],
       "id": "boku-dake-ga-inai-machi",
       "featured": false,
-      "gdrive_slug": "boku-dake-ga-inai-machi"
+      "gdrive_slug": "boku-dake-ga-inai-machi",
+      "gdrive_slug_dub": "boku-dake-ga-inai-machi-dub"
     },
     {
       "title": "Noragami Aragoto",
@@ -2317,7 +2349,8 @@
       ],
       "id": "noragami-aragoto",
       "featured": false,
-      "gdrive_slug": "noragami-aragoto"
+      "gdrive_slug": "noragami-aragoto",
+      "gdrive_slug_dub": "noragami-aragoto-dub"
     },
     {
       "title": "Haikyu!! 3rd Season",
@@ -2361,7 +2394,8 @@
       ],
       "id": "haikyuu-karasuno-koukou-vs-shiratorizawa-gakuen-koukou",
       "featured": false,
-      "gdrive_slug": "haikyuu-karasuno-koukou-vs-shiratorizawa-gakuen-koukou"
+      "gdrive_slug": "haikyuu-karasuno-koukou-vs-shiratorizawa-gakuen-koukou",
+      "gdrive_slug_dub": "haikyuu-karasuno-koukou-vs-shiratorizawa-gakuen-koukou-dub"
     },
     {
       "title": "Parasyte -the maxim-",
@@ -2406,7 +2440,8 @@
       ],
       "id": "kiseijuu-sei-no-kakuritsu",
       "featured": false,
-      "gdrive_slug": "kiseijuu-sei-no-kakuritsu"
+      "gdrive_slug": "kiseijuu-sei-no-kakuritsu",
+      "gdrive_slug_dub": "kiseijuu-sei-no-kakuritsu-dub"
     },
     {
       "title": "Mob Psycho 100",
@@ -2449,7 +2484,8 @@
       ],
       "id": "mob-psycho-100",
       "featured": false,
-      "gdrive_slug": "mob-psycho-100"
+      "gdrive_slug": "mob-psycho-100",
+      "gdrive_slug_dub": "mob-psycho-100-dub"
     },
     {
       "title": "Cowboy Bebop",
@@ -2494,7 +2530,8 @@
       ],
       "id": "cowboy-bebop",
       "featured": false,
-      "gdrive_slug": "cowboy-bebop"
+      "gdrive_slug": "cowboy-bebop",
+      "gdrive_slug_dub": "cowboy-bebop-dub"
     },
     {
       "title": "My Hero Academia Season 5",
@@ -2533,7 +2570,8 @@
       ],
       "id": "boku-no-hero-academia-5",
       "featured": false,
-      "gdrive_slug": "boku-no-hero-academia-5th-season"
+      "gdrive_slug": "boku-no-hero-academia-5th-season",
+      "gdrive_slug_dub": "boku-no-hero-academia-5th-season-dub"
     },
     {
       "title": "Re:ZERO -Starting Life in Another World-",
@@ -2577,7 +2615,8 @@
       ],
       "id": "rezero-kara-hajimeru-isekai-seikatsu",
       "featured": false,
-      "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu"
+      "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu",
+      "gdrive_slug_dub": "rezero-kara-hajimeru-isekai-seikatsu-dub"
     },
     {
       "title": "Code Geass: Lelouch of the Rebellion R2",
@@ -2624,7 +2663,8 @@
       ],
       "id": "code-geass-lelouch-of-the-rebellion-r2",
       "featured": false,
-      "gdrive_slug": "-code-geass-lelouch-of-the-rebellion-r2"
+      "gdrive_slug": "-code-geass-lelouch-of-the-rebellion-r2",
+      "gdrive_slug_dub": "-code-geass-lelouch-of-the-rebellion-r2-dub"
     },
     {
       "title": "Violet Evergarden",
@@ -2666,7 +2706,8 @@
       ],
       "id": "violet-evergarden",
       "featured": false,
-      "gdrive_slug": "violet-evergarden"
+      "gdrive_slug": "violet-evergarden",
+      "gdrive_slug_dub": "violet-evergarden-dub"
     },
     {
       "title": "Fullmetal Alchemist",
@@ -2737,7 +2778,8 @@
       ],
       "id": "fullmetal-alchemist",
       "featured": false,
-      "gdrive_slug": "fullmetal-alchemist"
+      "gdrive_slug": "fullmetal-alchemist",
+      "gdrive_slug_dub": "fullmetal-alchemist-dub"
     },
     {
       "title": "Fate/Zero",
@@ -2823,7 +2865,8 @@
       ],
       "id": "princess-mononoke",
       "featured": false,
-      "gdrive_slug": "princess-mononoke"
+      "gdrive_slug": "princess-mononoke",
+      "gdrive_slug_dub": "princess-mononoke-dub"
     },
     {
       "title": "Angel Beats!",
@@ -2925,7 +2968,8 @@
       ],
       "id": "tengen-toppa-gurren-lagann",
       "featured": false,
-      "gdrive_slug": "tengen-toppa-gurren-lagann-"
+      "gdrive_slug": "tengen-toppa-gurren-lagann-",
+      "gdrive_slug_dub": "tengen-toppa-gurren-lagann--dub"
     },
     {
       "title": "Avatar: The Last Airbender Book 3: Fire",
@@ -3014,7 +3058,8 @@
       ],
       "id": "ano-hi-mita-hana-no-namae-wo-bokutachi-wa-mada-shiranai",
       "featured": false,
-      "gdrive_slug": "ano-hi-mita-hana-no-namae-wo-bokutachi-wa-mada-shiranai-menma-e-no-tegami"
+      "gdrive_slug": "ano-hi-mita-hana-no-namae-wo-bokutachi-wa-mada-shiranai-menma-e-no-tegami",
+      "gdrive_slug_dub": "ano-hi-mita-hana-no-namae-wo-bokutachi-wa-mada-shiranai-menma-e-no-tegami-dub"
     },
     {
       "title": "My Neighbor Totoro",
@@ -3057,7 +3102,8 @@
       ],
       "id": "my-neighbor-totoro",
       "featured": false,
-      "gdrive_slug": "my-neighbor-totoro"
+      "gdrive_slug": "my-neighbor-totoro",
+      "gdrive_slug_dub": "my-neighbor-totoro-dub"
     },
     {
       "title": "Psycho-Pass",
@@ -3100,7 +3146,8 @@
       ],
       "id": "psycho-pass",
       "featured": false,
-      "gdrive_slug": "psycho-pass"
+      "gdrive_slug": "psycho-pass",
+      "gdrive_slug_dub": "psycho-pass-dub"
     },
     {
       "title": "One-Punch Man 2",
@@ -3146,7 +3193,8 @@
       ],
       "id": "one-punch-man-2",
       "featured": false,
-      "gdrive_slug": "one-punch-man-2nd-season"
+      "gdrive_slug": "one-punch-man-2nd-season",
+      "gdrive_slug_dub": "one-punch-man-2nd-season-dub"
     },
     {
       "title": "Death Parade",
@@ -3347,7 +3395,8 @@
       ],
       "id": "kill-la-kill",
       "featured": false,
-      "gdrive_slug": "kill-la-kill"
+      "gdrive_slug": "kill-la-kill",
+      "gdrive_slug_dub": "kill-la-kill-dub"
     },
     {
       "title": "Demon Slayer: Kimetsu no Yaiba - Entertainment District Arc",
@@ -3386,7 +3435,8 @@
       ],
       "id": "kimetsu-no-yaiba-yuukaku-hen",
       "featured": false,
-      "gdrive_slug": "kimetsu-no-yaiba-yuukaku-hen"
+      "gdrive_slug": "kimetsu-no-yaiba-yuukaku-hen",
+      "gdrive_slug_dub": "kimetsu-no-yaiba-yuukaku-hen-dub"
     },
     {
       "title": "Wolf Children",
@@ -3473,7 +3523,8 @@
       ],
       "id": "ao-no-exorcist",
       "featured": false,
-      "gdrive_slug": "ao-no-exorcist-"
+      "gdrive_slug": "ao-no-exorcist-",
+      "gdrive_slug_dub": "ao-no-exorcist--dub"
     },
     {
       "title": "Dr. STONE",
@@ -3512,7 +3563,8 @@
       ],
       "id": "dr-stone",
       "featured": false,
-      "gdrive_slug": "dr-stone"
+      "gdrive_slug": "dr-stone",
+      "gdrive_slug_dub": "dr-stone-dub"
     },
     {
       "title": "KonoSuba: God's Blessing on This Wonderful World!",
@@ -3558,7 +3610,8 @@
       ],
       "id": "kono-subarashii-sekai-ni-shukufuku-wo",
       "featured": false,
-      "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-"
+      "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-",
+      "gdrive_slug_dub": "kono-subarashii-sekai-ni-shukufuku-wo--dub"
     },
     {
       "title": "Fate/Zero Season 2",
@@ -3776,7 +3829,8 @@
       ],
       "id": "ouran-high-school-host-club",
       "featured": false,
-      "gdrive_slug": "ouran-high-school-host-club"
+      "gdrive_slug": "ouran-high-school-host-club",
+      "gdrive_slug_dub": "ouran-high-school-host-club-dub"
     },
     {
       "title": "Clannad ~After Story~",
@@ -3869,7 +3923,8 @@
       ],
       "id": "neon-genesis-evangelion",
       "featured": false,
-      "gdrive_slug": "neon-genesis-evangelion-"
+      "gdrive_slug": "neon-genesis-evangelion-",
+      "gdrive_slug_dub": "neon-genesis-evangelion--dub"
     },
     {
       "title": "KonoSuba: God's Blessing on This Wonderful World! 2",
@@ -3915,7 +3970,8 @@
       ],
       "id": "kono-subarashii-sekai-ni-shukufuku-wo-2",
       "featured": false,
-      "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-2"
+      "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-2",
+      "gdrive_slug_dub": "kono-subarashii-sekai-ni-shukufuku-wo-2-dub"
     },
     {
       "title": "Avatar: The Last Airbender Book 2: Earth",
@@ -4003,7 +4059,8 @@
       ],
       "id": "shokugeki-no-souma-ni-no-sara",
       "featured": false,
-      "gdrive_slug": "shokugeki-no-souma-ni-no-sara"
+      "gdrive_slug": "shokugeki-no-souma-ni-no-sara",
+      "gdrive_slug_dub": "shokugeki-no-souma-ni-no-sara-dub"
     },
     {
       "title": "Sword Art Online II",
@@ -4167,7 +4224,8 @@
       ],
       "id": "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen",
       "featured": false,
-      "gdrive_slug": "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen"
+      "gdrive_slug": "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen",
+      "gdrive_slug_dub": "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen-dub"
     },
     {
       "title": "Demon Slayer: Kimetsu no Yaiba - Mt. Natagumo Arc",
@@ -4320,7 +4378,8 @@
       ],
       "id": "soul-eater",
       "featured": false,
-      "gdrive_slug": "soul-eater-"
+      "gdrive_slug": "soul-eater-",
+      "gdrive_slug_dub": "soul-eater--dub"
     },
     {
       "title": "Durarara!!",
@@ -4362,7 +4421,8 @@
       ],
       "id": "durarara",
       "featured": false,
-      "gdrive_slug": "durarara"
+      "gdrive_slug": "durarara",
+      "gdrive_slug_dub": "durarara-dub"
     },
     {
       "title": "Hunter x Hunter",
@@ -4435,7 +4495,8 @@
       ],
       "id": "hunter-x-hunter",
       "featured": false,
-      "gdrive_slug": "hunter-x-hunter"
+      "gdrive_slug": "hunter-x-hunter",
+      "gdrive_slug_dub": "hunter-x-hunter-dub"
     },
     {
       "title": "Rascal Does Not Dream of Bunny Girl Senpai",
@@ -4478,7 +4539,8 @@
       ],
       "id": "seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai",
       "featured": false,
-      "gdrive_slug": "seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai"
+      "gdrive_slug": "seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai",
+      "gdrive_slug_dub": "seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai-dub"
     },
     {
       "title": "Another",
@@ -4522,7 +4584,8 @@
       ],
       "id": "another",
       "featured": false,
-      "gdrive_slug": "another-anime"
+      "gdrive_slug": "another-anime",
+      "gdrive_slug_dub": "another-anime-dub"
     },
     {
       "title": "Puella Magi Madoka Magica",
@@ -4614,7 +4677,8 @@
       ],
       "id": "no-game-no-life-zero",
       "featured": false,
-      "gdrive_slug": "no-game-no-life-zero"
+      "gdrive_slug": "no-game-no-life-zero",
+      "gdrive_slug_dub": "no-game-no-life-zero-dub"
     },
     {
       "title": "The Disastrous Life of Saiki K.",
@@ -4725,7 +4789,8 @@
       ],
       "id": "hotarubi-no-mori-e",
       "featured": false,
-      "gdrive_slug": "hotarubi-no-mori-e-2011"
+      "gdrive_slug": "hotarubi-no-mori-e-2011",
+      "gdrive_slug_dub": "hotarubi-no-mori-e-2011-dub"
     },
     {
       "title": "Mob Psycho 100 II",
@@ -4768,7 +4833,8 @@
       ],
       "id": "mob-psycho-100-ii",
       "featured": false,
-      "gdrive_slug": "mob-psycho-100-ii"
+      "gdrive_slug": "mob-psycho-100-ii",
+      "gdrive_slug_dub": "mob-psycho-100-ii-dub"
     },
     {
       "title": "Tokyo Ghoul √A",
@@ -4897,7 +4963,8 @@
       ],
       "id": "samurai-champloo",
       "featured": false,
-      "gdrive_slug": "samurai-champloo"
+      "gdrive_slug": "samurai-champloo",
+      "gdrive_slug_dub": "samurai-champloo-dub"
     },
     {
       "title": "Hyouka",
@@ -4939,7 +5006,8 @@
       ],
       "id": "hyouka",
       "featured": false,
-      "gdrive_slug": "hyouka"
+      "gdrive_slug": "hyouka",
+      "gdrive_slug_dub": "hyouka-dub"
     },
     {
       "title": "Elfen Lied",
@@ -4985,7 +5053,8 @@
       ],
       "id": "elfen-lied",
       "featured": false,
-      "gdrive_slug": "elfen-lied"
+      "gdrive_slug": "elfen-lied",
+      "gdrive_slug_dub": "elfen-lied-dub"
     },
     {
       "title": "Clannad",
@@ -5031,7 +5100,8 @@
       ],
       "id": "clannad",
       "featured": false,
-      "gdrive_slug": "clannad"
+      "gdrive_slug": "clannad",
+      "gdrive_slug_dub": "clannad-dub"
     },
     {
       "title": "Food Wars! The Third Plate",
@@ -5118,7 +5188,8 @@
       ],
       "id": "chuunibyou-demo-koi-ga-shitai",
       "featured": false,
-      "gdrive_slug": "chuunibyou-demo-koi-ga-shitai"
+      "gdrive_slug": "chuunibyou-demo-koi-ga-shitai",
+      "gdrive_slug_dub": "chuunibyou-demo-koi-ga-shitai-dub"
     },
     {
       "title": "Made in Abyss",
@@ -5162,7 +5233,8 @@
       ],
       "id": "made-in-abyss",
       "featured": false,
-      "gdrive_slug": "made-in-abyss"
+      "gdrive_slug": "made-in-abyss",
+      "gdrive_slug_dub": "made-in-abyss-dub"
     },
     {
       "title": "Kuroko's Basketball",
@@ -5205,7 +5277,8 @@
       ],
       "id": "kuroko-no-basket",
       "featured": false,
-      "gdrive_slug": "kuroko-no-basket-ova"
+      "gdrive_slug": "kuroko-no-basket-ova",
+      "gdrive_slug_dub": "kuroko-no-basket-ova-dub"
     },
     {
       "title": "Avatar: The Last Airbender Book 1: Water",
@@ -5331,7 +5404,8 @@
       ],
       "id": "haikyuu-to-the-top",
       "featured": false,
-      "gdrive_slug": "haikyuu-to-the-top"
+      "gdrive_slug": "haikyuu-to-the-top",
+      "gdrive_slug_dub": "haikyuu-to-the-top-dub"
     },
     {
       "title": "That Time I Got Reincarnated as a Slime",
@@ -5377,7 +5451,8 @@
       ],
       "id": "tensei-shitara-slime-datta-ken",
       "featured": false,
-      "gdrive_slug": "tensei-shitara-slime-datta-ken"
+      "gdrive_slug": "tensei-shitara-slime-datta-ken",
+      "gdrive_slug_dub": "tensei-shitara-slime-datta-ken-dub"
     },
     {
       "title": "The Pet Girl of Sakurasou",
@@ -5422,7 +5497,8 @@
       ],
       "id": "sakurasou-no-pet-na-kanojo",
       "featured": false,
-      "gdrive_slug": "sakurasou-no-pet-na-kanojo"
+      "gdrive_slug": "sakurasou-no-pet-na-kanojo",
+      "gdrive_slug_dub": "sakurasou-no-pet-na-kanojo-dub"
     },
     {
       "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon?",
@@ -5467,7 +5543,8 @@
       ],
       "id": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka",
       "featured": false,
-      "gdrive_slug": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-gaiden-sword-oratoria"
+      "gdrive_slug": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-gaiden-sword-oratoria",
+      "gdrive_slug_dub": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-gaiden-sword-oratoria-dub"
     },
     {
       "title": "The Rising of the Shield Hero",
@@ -5513,7 +5590,8 @@
       ],
       "id": "tate-no-yuusha-no-nariagari",
       "featured": false,
-      "gdrive_slug": "tate-no-yuusha-no-nariagari"
+      "gdrive_slug": "tate-no-yuusha-no-nariagari",
+      "gdrive_slug_dub": "tate-no-yuusha-no-nariagari-dub"
     },
     {
       "title": "JoJo's Bizarre Adventure (2012)",
@@ -5603,7 +5681,8 @@
       ],
       "id": "highschool-of-the-dead",
       "featured": false,
-      "gdrive_slug": "highschool-of-the-dead"
+      "gdrive_slug": "highschool-of-the-dead",
+      "gdrive_slug_dub": "highschool-of-the-dead-dub"
     },
     {
       "title": "Demon Slayer: Kimetsu no Yaiba - The Hashira Meeting Arc",
@@ -5686,7 +5765,8 @@
       ],
       "id": "the-girl-who-leapt-through-time",
       "featured": false,
-      "gdrive_slug": "the-girl-who-leapt-through-time"
+      "gdrive_slug": "the-girl-who-leapt-through-time",
+      "gdrive_slug_dub": "the-girl-who-leapt-through-time-dub"
     },
     {
       "title": "My Teen Romantic Comedy SNAFU",
@@ -5731,7 +5811,8 @@
       ],
       "id": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru",
       "featured": false,
-      "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru"
+      "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru",
+      "gdrive_slug_dub": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-dub"
     },
     {
       "title": "Gintama",
@@ -5824,7 +5905,8 @@
       ],
       "id": "gintama",
       "featured": false,
-      "gdrive_slug": "gintama"
+      "gdrive_slug": "gintama",
+      "gdrive_slug_dub": "gintama-dub"
     },
     {
       "title": "Black Clover",
@@ -5903,7 +5985,8 @@
       ],
       "id": "black-clover",
       "featured": false,
-      "gdrive_slug": "black-clover"
+      "gdrive_slug": "black-clover",
+      "gdrive_slug_dub": "black-clover-dub"
     },
     {
       "title": "Miss Kobayashi's Dragon Maid",
@@ -5946,7 +6029,8 @@
       ],
       "id": "kobayashi-san-chi-no-maid-dragon",
       "featured": false,
-      "gdrive_slug": "kobayashi-san-chi-no-maid-dragon"
+      "gdrive_slug": "kobayashi-san-chi-no-maid-dragon",
+      "gdrive_slug_dub": "kobayashi-san-chi-no-maid-dragon-dub"
     },
     {
       "title": "Charlotte",
@@ -5988,7 +6072,8 @@
       ],
       "id": "charlotte",
       "featured": false,
-      "gdrive_slug": "charlotte"
+      "gdrive_slug": "charlotte",
+      "gdrive_slug_dub": "charlotte-dub"
     },
     {
       "title": "Fairy Tail Season 2",
@@ -6185,7 +6270,8 @@
       ],
       "id": "nichijou",
       "featured": false,
-      "gdrive_slug": "nichijou"
+      "gdrive_slug": "nichijou",
+      "gdrive_slug_dub": "nichijou-dub"
     },
     {
       "title": "Baccano!",
@@ -6429,7 +6515,8 @@
       ],
       "id": "dragon-ball-z",
       "featured": false,
-      "gdrive_slug": "dragon-ball-z"
+      "gdrive_slug": "dragon-ball-z",
+      "gdrive_slug_dub": "dragon-ball-z-dub"
     },
     {
       "title": "Tokyo Ghoul:re",
@@ -6474,7 +6561,8 @@
       ],
       "id": "tokyo-ghoulre",
       "featured": false,
-      "gdrive_slug": "tokyo-ghoulre"
+      "gdrive_slug": "tokyo-ghoulre",
+      "gdrive_slug_dub": "tokyo-ghoulre-dub"
     },
     {
       "title": "Hunter x Hunter: Greed Island",
@@ -6562,7 +6650,8 @@
       ],
       "id": "log-horizon",
       "featured": false,
-      "gdrive_slug": "log-horizon"
+      "gdrive_slug": "log-horizon",
+      "gdrive_slug_dub": "log-horizon-dub"
     },
     {
       "title": "Deadman Wonderland",
@@ -6647,7 +6736,8 @@
       ],
       "id": "kyoukai-no-kanata",
       "featured": false,
-      "gdrive_slug": "kyoukai-no-kanata"
+      "gdrive_slug": "kyoukai-no-kanata",
+      "gdrive_slug_dub": "kyoukai-no-kanata-dub"
     },
     {
       "title": "Overlord",
@@ -6692,7 +6782,8 @@
       ],
       "id": "overlord",
       "featured": false,
-      "gdrive_slug": "overlord"
+      "gdrive_slug": "overlord",
+      "gdrive_slug_dub": "overlord-dub"
     },
     {
       "title": "Tokyo Revengers",
@@ -6730,7 +6821,8 @@
       ],
       "id": "tokyo-revengers",
       "featured": false,
-      "gdrive_slug": "tokyo-revengers"
+      "gdrive_slug": "tokyo-revengers",
+      "gdrive_slug_dub": "tokyo-revengers-dub"
     },
     {
       "title": "Hellsing Ultimate",
@@ -6774,7 +6866,8 @@
       ],
       "id": "hellsing-ultimate",
       "featured": false,
-      "gdrive_slug": "hellsing-ultimate"
+      "gdrive_slug": "hellsing-ultimate",
+      "gdrive_slug_dub": "hellsing-ultimate-dub"
     },
     {
       "title": "Spice and Wolf",
@@ -6818,7 +6911,8 @@
       ],
       "id": "spice-and-wolf",
       "featured": false,
-      "gdrive_slug": "spice-and-wolf"
+      "gdrive_slug": "spice-and-wolf",
+      "gdrive_slug_dub": "spice-and-wolf-dub"
     },
     {
       "title": "Fate/stay night [Unlimited Blade Works]",
@@ -6905,7 +6999,8 @@
       ],
       "id": "guilty-crown",
       "featured": false,
-      "gdrive_slug": "guilty-crown"
+      "gdrive_slug": "guilty-crown",
+      "gdrive_slug_dub": "guilty-crown-dub"
     },
     {
       "title": "Black Butler",
@@ -7116,7 +7211,8 @@
       ],
       "id": "nanatsu-no-taizai-movie-tenkuu-no-torawarebito",
       "featured": false,
-      "gdrive_slug": "nanatsu-no-taizai-movie-tenkuu-no-torawarebito"
+      "gdrive_slug": "nanatsu-no-taizai-movie-tenkuu-no-torawarebito",
+      "gdrive_slug_dub": "nanatsu-no-taizai-movie-tenkuu-no-torawarebito-dub"
     },
     {
       "title": "The Disappearance of Haruhi Suzumiya",
@@ -7162,7 +7258,8 @@
       ],
       "id": "the-disappearance-of-haruhi-suzumiya",
       "featured": false,
-      "gdrive_slug": "the-disappearance-of-haruhi-suzumiya"
+      "gdrive_slug": "the-disappearance-of-haruhi-suzumiya",
+      "gdrive_slug_dub": "the-disappearance-of-haruhi-suzumiya-dub"
     },
     {
       "title": "Attack on Titan: Wings of Freedom",
@@ -7249,7 +7346,8 @@
       ],
       "id": "mahoutsukai-no-yome",
       "featured": false,
-      "gdrive_slug": "mahoutsukai-no-yome"
+      "gdrive_slug": "mahoutsukai-no-yome",
+      "gdrive_slug_dub": "mahoutsukai-no-yome-dub"
     },
     {
       "title": "Seraph of the End: Vampire Reign",
@@ -7425,7 +7523,8 @@
       ],
       "id": "bungou-stray-dogs",
       "featured": false,
-      "gdrive_slug": "bungou-stray-dogs"
+      "gdrive_slug": "bungou-stray-dogs",
+      "gdrive_slug_dub": "bungou-stray-dogs-dub"
     },
     {
       "title": "The Melancholy of Haruhi Suzumiya",
@@ -7471,7 +7570,8 @@
       ],
       "id": "the-melancholy-of-haruhi-suzumiya",
       "featured": false,
-      "gdrive_slug": "the-melancholy-of-haruhi-suzumiya"
+      "gdrive_slug": "the-melancholy-of-haruhi-suzumiya",
+      "gdrive_slug_dub": "the-melancholy-of-haruhi-suzumiya-dub"
     },
     {
       "title": "Nisekoi: False Love",
@@ -7515,7 +7615,8 @@
       ],
       "id": "nisekoi",
       "featured": false,
-      "gdrive_slug": "nisekoi"
+      "gdrive_slug": "nisekoi",
+      "gdrive_slug_dub": "nisekoi-dub"
     },
     {
       "title": "Kakegurui: Compulsive Gambler",
@@ -7560,7 +7661,8 @@
       ],
       "id": "kakegurui",
       "featured": false,
-      "gdrive_slug": "kakegurui"
+      "gdrive_slug": "kakegurui",
+      "gdrive_slug_dub": "kakegurui-dub"
     },
     {
       "title": "Darker than Black",
@@ -7650,7 +7752,8 @@
       ],
       "id": "mushishi",
       "featured": false,
-      "gdrive_slug": "mushishi"
+      "gdrive_slug": "mushishi",
+      "gdrive_slug_dub": "mushishi-dub"
     },
     {
       "title": "deleted",
@@ -7776,7 +7879,8 @@
       ],
       "id": "kimi-no-suizou-wo-tabetai",
       "featured": false,
-      "gdrive_slug": "kimi-no-suizou-wo-tabetai"
+      "gdrive_slug": "kimi-no-suizou-wo-tabetai",
+      "gdrive_slug_dub": "kimi-no-suizou-wo-tabetai-dub"
     },
     {
       "title": "5 Centimeters Per Second",
@@ -7819,7 +7923,8 @@
       ],
       "id": "5-centimeters-per-second",
       "featured": false,
-      "gdrive_slug": "5-centimeters-per-second"
+      "gdrive_slug": "5-centimeters-per-second",
+      "gdrive_slug_dub": "5-centimeters-per-second-dub"
     },
     {
       "title": "Kuroko's Basketball 2",
@@ -7862,7 +7967,8 @@
       ],
       "id": "kuroko-no-basket-2nd-season",
       "featured": false,
-      "gdrive_slug": "kuroko-no-basket-2nd-season-ng-shuu"
+      "gdrive_slug": "kuroko-no-basket-2nd-season-ng-shuu",
+      "gdrive_slug_dub": "kuroko-no-basket-2nd-season-ng-shuu-dub"
     },
     {
       "title": "Dororo",
@@ -7904,7 +8010,8 @@
       ],
       "id": "dororo",
       "featured": false,
-      "gdrive_slug": "dororo"
+      "gdrive_slug": "dororo",
+      "gdrive_slug_dub": "dororo-dub"
     },
     {
       "title": "Weathering with You",
@@ -7943,7 +8050,8 @@
       ],
       "id": "tenki-no-ko",
       "featured": false,
-      "gdrive_slug": "tenki-no-ko"
+      "gdrive_slug": "tenki-no-ko",
+      "gdrive_slug_dub": "tenki-no-ko-dub"
     },
     {
       "title": "K-ON!",
@@ -7987,7 +8095,8 @@
       ],
       "id": "k-on",
       "featured": false,
-      "gdrive_slug": "k-on"
+      "gdrive_slug": "k-on",
+      "gdrive_slug_dub": "k-on-dub"
     },
     {
       "title": "Black Lagoon",
@@ -8027,7 +8136,8 @@
       ],
       "id": "black-lagoon",
       "featured": false,
-      "gdrive_slug": "black-lagoon"
+      "gdrive_slug": "black-lagoon",
+      "gdrive_slug_dub": "black-lagoon-dub"
     },
     {
       "title": "Monthly Girls' Nozaki-kun",
@@ -8070,7 +8180,8 @@
       ],
       "id": "gekkan-shoujo-nozaki-kun",
       "featured": false,
-      "gdrive_slug": "gekkan-shoujo-nozaki-kun"
+      "gdrive_slug": "gekkan-shoujo-nozaki-kun",
+      "gdrive_slug_dub": "gekkan-shoujo-nozaki-kun-dub"
     },
     {
       "title": "JoJo's Bizarre Adventure: Stardust Crusaders - Battle in Egypt",
@@ -8238,7 +8349,8 @@
       ],
       "id": "monster",
       "featured": false,
-      "gdrive_slug": "monster"
+      "gdrive_slug": "monster",
+      "gdrive_slug_dub": "monster-dub"
     },
     {
       "title": "My Teen Romantic Comedy SNAFU TOO!",
@@ -8284,7 +8396,8 @@
       ],
       "id": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-zoku",
       "featured": false,
-      "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-zoku"
+      "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-zoku",
+      "gdrive_slug_dub": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-zoku-dub"
     },
     {
       "title": "Monogatari Series: Second Season",
@@ -8328,7 +8441,8 @@
       ],
       "id": "monogatari-series-second-season",
       "featured": false,
-      "gdrive_slug": "monogatari-series-second-season"
+      "gdrive_slug": "monogatari-series-second-season",
+      "gdrive_slug_dub": "monogatari-series-second-season-dub"
     },
     {
       "title": "Dragon Ball",
@@ -8408,7 +8522,8 @@
       ],
       "id": "dragon-ball",
       "featured": false,
-      "gdrive_slug": "dragon-ball"
+      "gdrive_slug": "dragon-ball",
+      "gdrive_slug_dub": "dragon-ball-dub"
     },
     {
       "title": "The Disastrous Life of Saiki K. 2",
@@ -8515,7 +8630,8 @@
       ],
       "id": "jojo-no-kimyou-na-bouken-diamond-wa-kudakenai",
       "featured": false,
-      "gdrive_slug": "jojo-no-kimyou-na-bouken-diamond-wa-kudakenai"
+      "gdrive_slug": "jojo-no-kimyou-na-bouken-diamond-wa-kudakenai",
+      "gdrive_slug_dub": "jojo-no-kimyou-na-bouken-diamond-wa-kudakenai-dub"
     },
     {
       "title": "Kiki's Delivery Service",
@@ -8561,7 +8677,8 @@
       ],
       "id": "majo-no-takkyuubin",
       "featured": false,
-      "gdrive_slug": "majo-no-takkyuubin"
+      "gdrive_slug": "majo-no-takkyuubin",
+      "gdrive_slug_dub": "majo-no-takkyuubin-dub"
     },
     {
       "title": "Yuri!!! On ICE",
@@ -8604,7 +8721,8 @@
       ],
       "id": "yuri-on-ice",
       "featured": false,
-      "gdrive_slug": "yuri-on-ice"
+      "gdrive_slug": "yuri-on-ice",
+      "gdrive_slug_dub": "yuri-on-ice-dub"
     },
     {
       "title": "My Hero Academia Season 4",
@@ -8643,7 +8761,8 @@
       ],
       "id": "boku-no-hero-academia-4",
       "featured": false,
-      "gdrive_slug": "boku-no-hero-academia-4th-season"
+      "gdrive_slug": "boku-no-hero-academia-4th-season",
+      "gdrive_slug_dub": "boku-no-hero-academia-4th-season-dub"
     },
     {
       "title": "From the New World",
@@ -8689,7 +8808,8 @@
       ],
       "id": "shinsekai-yori",
       "featured": false,
-      "gdrive_slug": "shinsekai-yori"
+      "gdrive_slug": "shinsekai-yori",
+      "gdrive_slug_dub": "shinsekai-yori-dub"
     },
     {
       "title": "Daily Lives of High School Boys",
@@ -8775,7 +8895,8 @@
       ],
       "id": "kuroko-no-basket-3rd-season",
       "featured": false,
-      "gdrive_slug": "kuroko-no-basket-3rd-season"
+      "gdrive_slug": "kuroko-no-basket-3rd-season",
+      "gdrive_slug_dub": "kuroko-no-basket-3rd-season-dub"
     },
     {
       "title": "The Irregular at Magic High School",
@@ -8821,7 +8942,8 @@
       ],
       "id": "mahouka-koukou-no-rettousei",
       "featured": false,
-      "gdrive_slug": "mahouka-koukou-no-rettousei"
+      "gdrive_slug": "mahouka-koukou-no-rettousei",
+      "gdrive_slug_dub": "mahouka-koukou-no-rettousei-dub"
     },
     {
       "title": "Food Wars! The Third Plate – Totsuki Railway Arc",
@@ -8864,7 +8986,8 @@
       ],
       "id": "shokugeki-no-souma-san-no-sara-toutsuki-ressha-hen",
       "featured": false,
-      "gdrive_slug": "shokugeki-no-souma-san-no-sara-toutsuki-ressha-hen"
+      "gdrive_slug": "shokugeki-no-souma-san-no-sara-toutsuki-ressha-hen",
+      "gdrive_slug_dub": "shokugeki-no-souma-san-no-sara-toutsuki-ressha-hen-dub"
     },
     {
       "title": "Fate/stay night [Unlimited Blade Works] Season 2",
@@ -8950,7 +9073,8 @@
       ],
       "id": "golden-time",
       "featured": false,
-      "gdrive_slug": "golden-time"
+      "gdrive_slug": "golden-time",
+      "gdrive_slug_dub": "golden-time-dub"
     },
     {
       "title": "The Garden of Words",
@@ -9038,7 +9162,8 @@
       ],
       "id": "kimi-ni-todoke",
       "featured": false,
-      "gdrive_slug": "kimi-ni-todoke"
+      "gdrive_slug": "kimi-ni-todoke",
+      "gdrive_slug_dub": "kimi-ni-todoke-dub"
     },
     {
       "title": "Welcome to the N.H.K.",
@@ -9236,7 +9361,8 @@
       ],
       "id": "boruto-naruto-next-generations",
       "featured": false,
-      "gdrive_slug": "boruto-naruto-next-generations"
+      "gdrive_slug": "boruto-naruto-next-generations",
+      "gdrive_slug_dub": "boruto-naruto-next-generations-dub"
     },
     {
       "title": "Vinland Saga",
@@ -9363,7 +9489,8 @@
       ],
       "id": "akatsuki-no-yona",
       "featured": false,
-      "gdrive_slug": "akatsuki-no-yona"
+      "gdrive_slug": "akatsuki-no-yona",
+      "gdrive_slug_dub": "akatsuki-no-yona-dub"
     },
     {
       "title": "Grave of the Fireflies",
@@ -9405,7 +9532,8 @@
       ],
       "id": "grave-of-the-fireflies",
       "featured": false,
-      "gdrive_slug": "grave-of-the-fireflies"
+      "gdrive_slug": "grave-of-the-fireflies",
+      "gdrive_slug_dub": "grave-of-the-fireflies-dub"
     },
     {
       "title": "JoJo's Bizarre Adventure: Stardust Crusaders",
@@ -9449,7 +9577,8 @@
       ],
       "id": "jojo-no-kimyou-na-bouken-stardust-crusaders",
       "featured": false,
-      "gdrive_slug": "jojo-no-kimyou-na-bouken-stardust-crusaders"
+      "gdrive_slug": "jojo-no-kimyou-na-bouken-stardust-crusaders",
+      "gdrive_slug_dub": "jojo-no-kimyou-na-bouken-stardust-crusaders-dub"
     },
     {
       "title": "FLCL",
@@ -9584,7 +9713,8 @@
       ],
       "id": "ghost-in-the-shell",
       "featured": false,
-      "gdrive_slug": "ghost-in-the-shell"
+      "gdrive_slug": "ghost-in-the-shell",
+      "gdrive_slug_dub": "ghost-in-the-shell-dub"
     },
     {
       "title": "A Certain Magical Index",
@@ -9746,7 +9876,8 @@
       ],
       "id": "jibaku-shounen-hanako-kun",
       "featured": false,
-      "gdrive_slug": "jibaku-shounen-hanako-kun"
+      "gdrive_slug": "jibaku-shounen-hanako-kun",
+      "gdrive_slug_dub": "jibaku-shounen-hanako-kun-dub"
     },
     {
       "title": "Demon Slayer: Kimetsu no Yaiba - Tsuzumi Mansion Arc",
@@ -9784,7 +9915,8 @@
       ],
       "id": "kimetsu-no-yaiba-tsuzumi-yashiki-hen",
       "featured": false,
-      "gdrive_slug": "kimetsu-no-yaiba-tsuzumi-yashiki-hen"
+      "gdrive_slug": "kimetsu-no-yaiba-tsuzumi-yashiki-hen",
+      "gdrive_slug_dub": "kimetsu-no-yaiba-tsuzumi-yashiki-hen-dub"
     },
     {
       "title": "Black Bullet",
@@ -9887,7 +10019,8 @@
       ],
       "id": "great-teacher-onizuka",
       "featured": false,
-      "gdrive_slug": "great-teacher-onizuka"
+      "gdrive_slug": "great-teacher-onizuka",
+      "gdrive_slug_dub": "great-teacher-onizuka-dub"
     },
     {
       "title": "Trigun",
@@ -9929,7 +10062,8 @@
       ],
       "id": "trigun",
       "featured": false,
-      "gdrive_slug": "trigun"
+      "gdrive_slug": "trigun",
+      "gdrive_slug_dub": "trigun-dub"
     },
     {
       "title": "Gintama Season 2",
@@ -10087,7 +10221,8 @@
       ],
       "id": "bungou-stray-dogs-2nd-season",
       "featured": false,
-      "gdrive_slug": "bungou-stray-dogs-2nd-season"
+      "gdrive_slug": "bungou-stray-dogs-2nd-season",
+      "gdrive_slug_dub": "bungou-stray-dogs-2nd-season-dub"
     },
     {
       "title": "Kokoro Connect",
@@ -10132,7 +10267,8 @@
       ],
       "id": "kokoro-connect",
       "featured": false,
-      "gdrive_slug": "kokoro-connect"
+      "gdrive_slug": "kokoro-connect",
+      "gdrive_slug_dub": "kokoro-connect-dub"
     },
     {
       "title": "Demon Slayer: Kimetsu no Yaiba - Asakusa Arc",
@@ -10171,7 +10307,8 @@
       ],
       "id": "kimetsu-no-yaiba-asakusa-hen",
       "featured": false,
-      "gdrive_slug": "kimetsu-no-yaiba-asakusa-hen"
+      "gdrive_slug": "kimetsu-no-yaiba-asakusa-hen",
+      "gdrive_slug_dub": "kimetsu-no-yaiba-asakusa-hen-dub"
     },
     {
       "title": "Fate/stay night",
@@ -10259,7 +10396,8 @@
       ],
       "id": "kekkai-sensen",
       "featured": false,
-      "gdrive_slug": "kekkai-sensen"
+      "gdrive_slug": "kekkai-sensen",
+      "gdrive_slug_dub": "kekkai-sensen-dub"
     },
     {
       "title": "Horimiya",
@@ -10297,7 +10435,8 @@
       ],
       "id": "horimiya",
       "featured": false,
-      "gdrive_slug": "horimiya"
+      "gdrive_slug": "horimiya",
+      "gdrive_slug_dub": "horimiya-dub"
     },
     {
       "title": "Fairy Tail Movie 2: Dragon Cry",
@@ -10431,7 +10570,8 @@
       ],
       "id": "nisemonogatari",
       "featured": false,
-      "gdrive_slug": "nisemonogatari"
+      "gdrive_slug": "nisemonogatari",
+      "gdrive_slug_dub": "nisemonogatari-dub"
     },
     {
       "title": "Barakamon",
@@ -10519,7 +10659,8 @@
       ],
       "id": "boku-wa-tomodachi-ga-sukunai",
       "featured": false,
-      "gdrive_slug": "boku-wa-tomodachi-ga-sukunai"
+      "gdrive_slug": "boku-wa-tomodachi-ga-sukunai",
+      "gdrive_slug_dub": "boku-wa-tomodachi-ga-sukunai-dub"
     },
     {
       "title": "My Hero Academia the Movie: Two Heroes",
@@ -10564,7 +10705,8 @@
       ],
       "id": "boku-no-hero-academia-the-movie-futari-no-hero",
       "featured": false,
-      "gdrive_slug": "boku-no-hero-academia-the-movie-futari-no-hero"
+      "gdrive_slug": "boku-no-hero-academia-the-movie-futari-no-hero",
+      "gdrive_slug_dub": "boku-no-hero-academia-the-movie-futari-no-hero-dub"
     },
     {
       "title": "BTOOOM!",
@@ -10606,7 +10748,8 @@
       ],
       "id": "btooom",
       "featured": false,
-      "gdrive_slug": "btooom"
+      "gdrive_slug": "btooom",
+      "gdrive_slug_dub": "btooom-dub"
     },
     {
       "title": "When They Cry",
@@ -10651,7 +10794,8 @@
       ],
       "id": "higurashi-no-naku-koro-ni",
       "featured": false,
-      "gdrive_slug": "higurashi-no-naku-koro-ni-"
+      "gdrive_slug": "higurashi-no-naku-koro-ni-",
+      "gdrive_slug_dub": "higurashi-no-naku-koro-ni--dub"
     },
     {
       "title": "Prison School",
@@ -10736,7 +10880,8 @@
       ],
       "id": "wotaku-ni-koi-wa-muzukashii",
       "featured": false,
-      "gdrive_slug": "wotaku-ni-koi-wa-muzukashii"
+      "gdrive_slug": "wotaku-ni-koi-wa-muzukashii",
+      "gdrive_slug_dub": "wotaku-ni-koi-wa-muzukashii-dub"
     },
     {
       "title": "Akira",
@@ -10782,7 +10927,8 @@
       ],
       "id": "akira",
       "featured": false,
-      "gdrive_slug": "akira"
+      "gdrive_slug": "akira",
+      "gdrive_slug_dub": "akira-dub"
     },
     {
       "title": "K",
@@ -10864,7 +11010,8 @@
       ],
       "id": "oreimo",
       "featured": false,
-      "gdrive_slug": "oreimo"
+      "gdrive_slug": "oreimo",
+      "gdrive_slug_dub": "oreimo-dub"
     },
     {
       "title": "Kamisama Kiss",
@@ -10909,7 +11056,8 @@
       ],
       "id": "kamisama-hajimemashita",
       "featured": false,
-      "gdrive_slug": "kamisama-hajimemashita"
+      "gdrive_slug": "kamisama-hajimemashita",
+      "gdrive_slug_dub": "kamisama-hajimemashita-dub"
     },
     {
       "title": "Devilman: Crybaby",
@@ -10994,7 +11142,8 @@
       ],
       "id": "plastic-memories",
       "featured": false,
-      "gdrive_slug": "plastic-memories"
+      "gdrive_slug": "plastic-memories",
+      "gdrive_slug_dub": "plastic-memories-dub"
     },
     {
       "title": "Steins;Gate 0",
@@ -11035,7 +11184,8 @@
       ],
       "id": "steinsgate-0",
       "featured": false,
-      "gdrive_slug": "steinsgate-0"
+      "gdrive_slug": "steinsgate-0",
+      "gdrive_slug_dub": "steinsgate-0-dub"
     },
     {
       "title": "Fire Force",
@@ -11074,7 +11224,8 @@
       ],
       "id": "enen-no-shouboutai",
       "featured": false,
-      "gdrive_slug": "enen-no-shouboutai"
+      "gdrive_slug": "enen-no-shouboutai",
+      "gdrive_slug_dub": "enen-no-shouboutai-dub"
     },
     {
       "title": "Fruits Basket (2019)",
@@ -11112,7 +11263,8 @@
       ],
       "id": "fruits-basket-2019",
       "featured": false,
-      "gdrive_slug": "fruits-basket-2019"
+      "gdrive_slug": "fruits-basket-2019",
+      "gdrive_slug_dub": "fruits-basket-2019-dub"
     },
     {
       "title": "Kamisama Kiss: Season 2",
@@ -11287,7 +11439,8 @@
       ],
       "id": "given",
       "featured": false,
-      "gdrive_slug": "given"
+      "gdrive_slug": "given",
+      "gdrive_slug_dub": "given-dub"
     },
     {
       "title": "Yu Yu Hakusho: Ghost Files",
@@ -11403,7 +11556,8 @@
       ],
       "id": "high-school-dxd-new",
       "featured": false,
-      "gdrive_slug": "highschool-dxd-new"
+      "gdrive_slug": "highschool-dxd-new",
+      "gdrive_slug_dub": "highschool-dxd-new-dub"
     },
     {
       "title": "Serial Experiments Lain",
@@ -11448,7 +11602,8 @@
       ],
       "id": "serial-experiments-lain",
       "featured": false,
-      "gdrive_slug": "serial-experiments-lain"
+      "gdrive_slug": "serial-experiments-lain",
+      "gdrive_slug_dub": "serial-experiments-lain-dub"
     },
     {
       "title": "Blue Spring Ride",
@@ -11493,7 +11648,8 @@
       ],
       "id": "ao-haru-ride",
       "featured": false,
-      "gdrive_slug": "ao-haru-ride"
+      "gdrive_slug": "ao-haru-ride",
+      "gdrive_slug_dub": "ao-haru-ride-dub"
     },
     {
       "title": "My Hero Academia: All Might Rising",
@@ -11532,7 +11688,8 @@
       ],
       "id": "boku-no-hero-academia-all-might-rising-the-animation",
       "featured": false,
-      "gdrive_slug": "boku-no-hero-academia-all-might-rising-the-animation"
+      "gdrive_slug": "boku-no-hero-academia-all-might-rising-the-animation",
+      "gdrive_slug_dub": "boku-no-hero-academia-all-might-rising-the-animation-dub"
     },
     {
       "title": "The Familiar of Zero",
@@ -11581,7 +11738,8 @@
       ],
       "id": "zero-no-tsukaima",
       "featured": false,
-      "gdrive_slug": "zero-no-tsukaima"
+      "gdrive_slug": "zero-no-tsukaima",
+      "gdrive_slug_dub": "zero-no-tsukaima-dub"
     },
     {
       "title": "Classroom of the Elite",
@@ -11627,7 +11785,8 @@
       ],
       "id": "youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e",
       "featured": false,
-      "gdrive_slug": "youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv"
+      "gdrive_slug": "youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv",
+      "gdrive_slug_dub": "youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv-dub"
     },
     {
       "title": "Steins;Gate: The Movie − Load Region of Déjà Vu",
@@ -11712,7 +11871,8 @@
       ],
       "id": "summer-wars",
       "featured": false,
-      "gdrive_slug": "summer-wars"
+      "gdrive_slug": "summer-wars",
+      "gdrive_slug_dub": "summer-wars-dub"
     },
     {
       "title": "Spice and Wolf II",
@@ -11799,7 +11959,8 @@
       ],
       "id": "sword-art-online-alicization",
       "featured": false,
-      "gdrive_slug": "sword-art-online-alicization"
+      "gdrive_slug": "sword-art-online-alicization",
+      "gdrive_slug_dub": "sword-art-online-alicization-dub"
     },
     {
       "title": "Berserk",
@@ -11887,7 +12048,8 @@
       ],
       "id": "chainsaw-man",
       "featured": false,
-      "gdrive_slug": "chainsaw-man"
+      "gdrive_slug": "chainsaw-man",
+      "gdrive_slug_dub": "chainsaw-man-dub"
     },
     {
       "title": "InuYasha",
@@ -11970,7 +12132,8 @@
       ],
       "id": "inuyasha",
       "featured": false,
-      "gdrive_slug": "inuyasha"
+      "gdrive_slug": "inuyasha",
+      "gdrive_slug_dub": "inuyasha-dub"
     },
     {
       "title": "The World God Only Knows",
@@ -12014,7 +12177,8 @@
       ],
       "id": "the-world-god-only-knows",
       "featured": false,
-      "gdrive_slug": "the-world-god-only-knows"
+      "gdrive_slug": "the-world-god-only-knows",
+      "gdrive_slug_dub": "the-world-god-only-knows-dub"
     },
     {
       "title": "KonoSuba: God's Blessing on This Wonderful World!: Legend of Crimson",
@@ -12060,7 +12224,8 @@
       ],
       "id": "kono-subarashii-sekai-ni-shukufuku-wo-kurenai-densetsu",
       "featured": false,
-      "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-kurenai-densetsu"
+      "gdrive_slug": "kono-subarashii-sekai-ni-shukufuku-wo-kurenai-densetsu",
+      "gdrive_slug_dub": "kono-subarashii-sekai-ni-shukufuku-wo-kurenai-densetsu-dub"
     },
     {
       "title": "WataMote: No Matter How I Look At It, It's You Guys' Fault I'm Unpopular!",
@@ -12147,7 +12312,8 @@
       ],
       "id": "katanagatari",
       "featured": false,
-      "gdrive_slug": "katanagatari"
+      "gdrive_slug": "katanagatari",
+      "gdrive_slug_dub": "katanagatari-dub"
     },
     {
       "title": "Accel World",
@@ -12385,7 +12551,8 @@
       ],
       "id": "gate-jieitai-kanochi-nite-kaku-tatakaeri",
       "featured": false,
-      "gdrive_slug": "gate-jieitai-kanochi-nite-kaku-tatakaeri"
+      "gdrive_slug": "gate-jieitai-kanochi-nite-kaku-tatakaeri",
+      "gdrive_slug_dub": "gate-jieitai-kanochi-nite-kaku-tatakaeri-dub"
     },
     {
       "title": "Saga of Tanya the Evil",
@@ -12428,7 +12595,8 @@
       ],
       "id": "youjo-senki",
       "featured": false,
-      "gdrive_slug": "youjo-senki"
+      "gdrive_slug": "youjo-senki",
+      "gdrive_slug_dub": "youjo-senki-dub"
     },
     {
       "title": "Chivalry of a Failed Knight",
@@ -12473,7 +12641,8 @@
       ],
       "id": "rakudai-kishi-no-cavalry",
       "featured": false,
-      "gdrive_slug": "rakudai-kishi-no-cavalry"
+      "gdrive_slug": "rakudai-kishi-no-cavalry",
+      "gdrive_slug_dub": "rakudai-kishi-no-cavalry-dub"
     },
     {
       "title": "Snow White with the Red Hair",
@@ -12564,7 +12733,8 @@
       ],
       "id": "trinity-seven",
       "featured": false,
-      "gdrive_slug": "trinity-seven"
+      "gdrive_slug": "trinity-seven",
+      "gdrive_slug_dub": "trinity-seven-dub"
     },
     {
       "title": "K-ON! Season 2",
@@ -12608,7 +12778,8 @@
       ],
       "id": "k-on-1",
       "featured": false,
-      "gdrive_slug": "k-on-2"
+      "gdrive_slug": "k-on-2",
+      "gdrive_slug_dub": "k-on-2-dub"
     },
     {
       "title": "SK8 the Infinity",
@@ -12690,7 +12861,8 @@
       ],
       "id": "kiznaiver",
       "featured": false,
-      "gdrive_slug": "kiznaiver"
+      "gdrive_slug": "kiznaiver",
+      "gdrive_slug_dub": "kiznaiver-dub"
     },
     {
       "title": "Goblin Slayer",
@@ -12728,7 +12900,8 @@
       ],
       "id": "goblin-slayer",
       "featured": false,
-      "gdrive_slug": "goblin-slayer"
+      "gdrive_slug": "goblin-slayer",
+      "gdrive_slug_dub": "goblin-slayer-dub"
     },
     {
       "title": "SHIMONETA: A Boring World Where the Concept of Dirty Jokes Doesn't Exist",
@@ -12771,7 +12944,8 @@
       ],
       "id": "shimoneta-to-iu-gainen-ga-sonzai-shinai-taikutsu-na-sekai",
       "featured": false,
-      "gdrive_slug": "shimoneta-to-iu-gainen-ga-sonzai-shinai-taikutsu-na-sekai"
+      "gdrive_slug": "shimoneta-to-iu-gainen-ga-sonzai-shinai-taikutsu-na-sekai",
+      "gdrive_slug_dub": "shimoneta-to-iu-gainen-ga-sonzai-shinai-taikutsu-na-sekai-dub"
     },
     {
       "title": "Blood Lad",
@@ -12815,7 +12989,8 @@
       ],
       "id": "blood-lad",
       "featured": false,
-      "gdrive_slug": "blood-lad"
+      "gdrive_slug": "blood-lad",
+      "gdrive_slug_dub": "blood-lad-dub"
     },
     {
       "title": "Perfect Blue",
@@ -12858,7 +13033,8 @@
       ],
       "id": "perfect-blue",
       "featured": false,
-      "gdrive_slug": "perfect-blue"
+      "gdrive_slug": "perfect-blue",
+      "gdrive_slug_dub": "perfect-blue-dub"
     },
     {
       "title": "Haikyuu!! Movie 2: Shousha to Haisha",
@@ -12901,7 +13077,8 @@
       ],
       "id": "haikyuu-movie-2-shousha-to-haisha",
       "featured": false,
-      "gdrive_slug": "haikyuu-movie-2-shousha-to-haisha"
+      "gdrive_slug": "haikyuu-movie-2-shousha-to-haisha",
+      "gdrive_slug_dub": "haikyuu-movie-2-shousha-to-haisha-dub"
     },
     {
       "title": "Orange",
@@ -12944,7 +13121,8 @@
       ],
       "id": "orange",
       "featured": false,
-      "gdrive_slug": "orange"
+      "gdrive_slug": "orange",
+      "gdrive_slug_dub": "orange-dub"
     },
     {
       "title": "Dr. Stone: Stone Wars",
@@ -12982,7 +13160,8 @@
       ],
       "id": "dr-stone-stone-wars",
       "featured": false,
-      "gdrive_slug": "dr-stone-stone-wars"
+      "gdrive_slug": "dr-stone-stone-wars",
+      "gdrive_slug_dub": "dr-stone-stone-wars-dub"
     },
     {
       "title": "Attack on Titan: The Final Season Part 2",
@@ -13066,7 +13245,8 @@
       ],
       "id": "koutetsujou-no-kabaneri",
       "featured": false,
-      "gdrive_slug": "koutetsujou-no-kabaneri"
+      "gdrive_slug": "koutetsujou-no-kabaneri",
+      "gdrive_slug_dub": "koutetsujou-no-kabaneri-dub"
     },
     {
       "title": "Black Butler: Book of Murder",
@@ -13157,7 +13337,8 @@
       ],
       "id": "chuunibyou-demo-koi-ga-shitai-ren",
       "featured": false,
-      "gdrive_slug": "chuunibyou-demo-koi-ga-shitai-ren"
+      "gdrive_slug": "chuunibyou-demo-koi-ga-shitai-ren",
+      "gdrive_slug_dub": "chuunibyou-demo-koi-ga-shitai-ren-dub"
     },
     {
       "title": "A Lull in the Sea",
@@ -13201,7 +13382,8 @@
       ],
       "id": "nagi-no-asukara",
       "featured": false,
-      "gdrive_slug": "nagi-asukara"
+      "gdrive_slug": "nagi-asukara",
+      "gdrive_slug_dub": "nagi-asukara-dub"
     },
     {
       "title": "Overlord II",
@@ -13246,7 +13428,8 @@
       ],
       "id": "overlord-ii",
       "featured": false,
-      "gdrive_slug": "overlord-ii"
+      "gdrive_slug": "overlord-ii",
+      "gdrive_slug_dub": "overlord-ii-dub"
     },
     {
       "title": "Yamada-kun and the Seven Witches",
@@ -13292,7 +13475,8 @@
       ],
       "id": "yamada-kun-to-7-nin-no-majo-tv",
       "featured": false,
-      "gdrive_slug": "yamada-kun-to-7-nin-no-majo-tv-"
+      "gdrive_slug": "yamada-kun-to-7-nin-no-majo-tv-",
+      "gdrive_slug_dub": "yamada-kun-to-7-nin-no-majo-tv--dub"
     },
     {
       "title": "Mushoku Tensei: Jobless Reincarnation",
@@ -13331,7 +13515,8 @@
       ],
       "id": "mushoku-tensei-isekai-ittara-honki-dasu",
       "featured": false,
-      "gdrive_slug": "mushoku-tensei-isekai-ittara-honki-dasu"
+      "gdrive_slug": "mushoku-tensei-isekai-ittara-honki-dasu",
+      "gdrive_slug_dub": "mushoku-tensei-isekai-ittara-honki-dasu-dub"
     },
     {
       "title": "Black Lagoon: The Second Barrage",
@@ -13416,7 +13601,8 @@
       ],
       "id": "overlord-iii",
       "featured": false,
-      "gdrive_slug": "overlord-iii"
+      "gdrive_slug": "overlord-iii",
+      "gdrive_slug_dub": "overlord-iii-dub"
     },
     {
       "title": "Lucky☆Star",
@@ -13656,7 +13842,8 @@
       ],
       "id": "rezero-kara-hajimeru-isekai-seikatsu-2",
       "featured": false,
-      "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season"
+      "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season",
+      "gdrive_slug_dub": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season-dub"
     },
     {
       "title": "Dragon Ball Super",
@@ -13731,7 +13918,8 @@
       ],
       "id": "dragon-ball-super",
       "featured": false,
-      "gdrive_slug": "dragon-ball-super"
+      "gdrive_slug": "dragon-ball-super",
+      "gdrive_slug_dub": "dragon-ball-super-dub"
     },
     {
       "title": "Rascal Does Not Dream of a Dreaming Girl",
@@ -13770,7 +13958,8 @@
       ],
       "id": "seishun-buta-yarou-wa-yumemiru-shoujo-no-yume-wo-minai",
       "featured": false,
-      "gdrive_slug": "seishun-buta-yarou-wa-yumemiru-shoujo-no-yume-wo-minai"
+      "gdrive_slug": "seishun-buta-yarou-wa-yumemiru-shoujo-no-yume-wo-minai",
+      "gdrive_slug_dub": "seishun-buta-yarou-wa-yumemiru-shoujo-no-yume-wo-minai-dub"
     },
     {
       "title": "Evangelion: 2.0 You Can (Not) Advance",
@@ -13857,7 +14046,8 @@
       ],
       "id": "claymore",
       "featured": false,
-      "gdrive_slug": "claymore"
+      "gdrive_slug": "claymore",
+      "gdrive_slug_dub": "claymore-dub"
     },
     {
       "title": "That Time I Got Reincarnated as a Slime 2",
@@ -13896,7 +14086,8 @@
       ],
       "id": "tensei-shitara-slime-datta-ken-2",
       "featured": false,
-      "gdrive_slug": "tensei-shitara-slime-datta-ken-2nd-season"
+      "gdrive_slug": "tensei-shitara-slime-datta-ken-2nd-season",
+      "gdrive_slug_dub": "tensei-shitara-slime-datta-ken-2nd-season-dub"
     },
     {
       "title": "My Love Story!!",
@@ -13938,7 +14129,8 @@
       ],
       "id": "ore-monogatari",
       "featured": false,
-      "gdrive_slug": "ore-monogatari-"
+      "gdrive_slug": "ore-monogatari-",
+      "gdrive_slug_dub": "ore-monogatari--dub"
     },
     {
       "title": "Amagi Brilliant Park",
@@ -13981,7 +14173,8 @@
       ],
       "id": "amagi-brilliant-park",
       "featured": false,
-      "gdrive_slug": "amagi-brilliant-park"
+      "gdrive_slug": "amagi-brilliant-park",
+      "gdrive_slug_dub": "amagi-brilliant-park-dub"
     },
     {
       "title": "Ergo Proxy",
@@ -14023,7 +14216,8 @@
       ],
       "id": "ergo-proxy",
       "featured": false,
-      "gdrive_slug": "ergo-proxy"
+      "gdrive_slug": "ergo-proxy",
+      "gdrive_slug_dub": "ergo-proxy-dub"
     },
     {
       "title": "D.Gray-man",
@@ -14134,7 +14328,8 @@
       ],
       "id": "sakamoto-desu-ga",
       "featured": false,
-      "gdrive_slug": "sakamoto-desu-ga"
+      "gdrive_slug": "sakamoto-desu-ga",
+      "gdrive_slug_dub": "sakamoto-desu-ga-dub"
     },
     {
       "title": "Say \"I Love You\".",
@@ -14221,7 +14416,8 @@
       ],
       "id": "natsume-yuujinchou",
       "featured": false,
-      "gdrive_slug": "natsume-yuujinchou"
+      "gdrive_slug": "natsume-yuujinchou",
+      "gdrive_slug_dub": "natsume-yuujinchou-dub"
     },
     {
       "title": "Grimgar, Ashes and Illusions",
@@ -14266,7 +14462,8 @@
       ],
       "id": "hai-to-gensou-no-grimgar",
       "featured": false,
-      "gdrive_slug": "hai-to-gensou-no-grimgar"
+      "gdrive_slug": "hai-to-gensou-no-grimgar",
+      "gdrive_slug_dub": "hai-to-gensou-no-grimgar-dub"
     },
     {
       "title": "Magi: Adventure of Sinbad (TV)",
@@ -14311,7 +14508,8 @@
       ],
       "id": "magi-sinbad-no-bouken-tv",
       "featured": false,
-      "gdrive_slug": "magi-sinbad-no-bouken-tv"
+      "gdrive_slug": "magi-sinbad-no-bouken-tv",
+      "gdrive_slug_dub": "magi-sinbad-no-bouken-tv-dub"
     },
     {
       "title": "Is This a Zombie?",
@@ -14359,7 +14557,8 @@
       ],
       "id": "kore-wa-zombie-desu-ka",
       "featured": false,
-      "gdrive_slug": "kore-wa-zombie-desu-ka-ova"
+      "gdrive_slug": "kore-wa-zombie-desu-ka-ova",
+      "gdrive_slug_dub": "kore-wa-zombie-desu-ka-ova-dub"
     },
     {
       "title": "Bakuman.",
@@ -14447,7 +14646,8 @@
       ],
       "id": "zetsuen-no-tempest",
       "featured": false,
-      "gdrive_slug": "zetsuen-no-tempest"
+      "gdrive_slug": "zetsuen-no-tempest",
+      "gdrive_slug_dub": "zetsuen-no-tempest-dub"
     },
     {
       "title": "Rosario + Vampire",
@@ -14536,7 +14736,8 @@
       ],
       "id": "usagi-drop",
       "featured": false,
-      "gdrive_slug": "usagi-drop"
+      "gdrive_slug": "usagi-drop",
+      "gdrive_slug_dub": "usagi-drop-dub"
     },
     {
       "title": "Masamune-kun's Revenge",
@@ -14580,7 +14781,8 @@
       ],
       "id": "masamune-kun-no-revenge",
       "featured": false,
-      "gdrive_slug": "masamune-kun-no-revenge"
+      "gdrive_slug": "masamune-kun-no-revenge",
+      "gdrive_slug_dub": "masamune-kun-no-revenge-dub"
     },
     {
       "title": "Rurouni Kenshin",
@@ -14668,7 +14870,8 @@
       ],
       "id": "rurouni-kenshin-meiji-kenkaku-romantan",
       "featured": false,
-      "gdrive_slug": "rurouni-kenshin-meiji-kenkaku-romantan-2023"
+      "gdrive_slug": "rurouni-kenshin-meiji-kenkaku-romantan-2023",
+      "gdrive_slug_dub": "rurouni-kenshin-meiji-kenkaku-romantan-2023-dub"
     },
     {
       "title": "Sankarea: Undying Love",
@@ -14714,7 +14917,8 @@
       ],
       "id": "sankarea",
       "featured": false,
-      "gdrive_slug": "sankarea"
+      "gdrive_slug": "sankarea",
+      "gdrive_slug_dub": "sankarea-dub"
     },
     {
       "title": "The Boy and the Beast",
@@ -14803,7 +15007,8 @@
       ],
       "id": "little-witch-academia-tv",
       "featured": false,
-      "gdrive_slug": "little-witch-academia-tv"
+      "gdrive_slug": "little-witch-academia-tv",
+      "gdrive_slug_dub": "little-witch-academia-tv-dub"
     },
     {
       "title": "Seraph of the End: Battle in Nagoya",
@@ -14848,7 +15053,8 @@
       ],
       "id": "owari-no-seraph-nagoya-kessen-hen",
       "featured": false,
-      "gdrive_slug": "owari-no-seraph-nagoya-kessen-hen"
+      "gdrive_slug": "owari-no-seraph-nagoya-kessen-hen",
+      "gdrive_slug_dub": "owari-no-seraph-nagoya-kessen-hen-dub"
     },
     {
       "title": "Nekomonogatari Black",
@@ -14892,7 +15098,8 @@
       ],
       "id": "nekomonogatari-kuro",
       "featured": false,
-      "gdrive_slug": "nekomonogatari-kuro"
+      "gdrive_slug": "nekomonogatari-kuro",
+      "gdrive_slug_dub": "nekomonogatari-kuro-dub"
     },
     {
       "title": "Psycho-Pass 2",
@@ -14979,7 +15186,8 @@
       ],
       "id": "aldnoahzero",
       "featured": false,
-      "gdrive_slug": "aldnoahzero"
+      "gdrive_slug": "aldnoahzero",
+      "gdrive_slug_dub": "aldnoahzero-dub"
     },
     {
       "title": "Hunter x Hunter: Greed Island Final",
@@ -15108,7 +15316,8 @@
       ],
       "id": "haikyuu-movie-3-sainou-to-sense",
       "featured": false,
-      "gdrive_slug": "haikyuu-movie-3-sainou-to-sense"
+      "gdrive_slug": "haikyuu-movie-3-sainou-to-sense",
+      "gdrive_slug_dub": "haikyuu-movie-3-sainou-to-sense-dub"
     },
     {
       "title": "Monster Musume: Everyday Life with Monster Girls",
@@ -15153,7 +15362,8 @@
       ],
       "id": "monster-musume-no-iru-nichijou",
       "featured": false,
-      "gdrive_slug": "monster-musume-no-iru-nichijou"
+      "gdrive_slug": "monster-musume-no-iru-nichijou",
+      "gdrive_slug_dub": "monster-musume-no-iru-nichijou-dub"
     },
     {
       "title": "March comes in like a lion",
@@ -15196,7 +15406,8 @@
       ],
       "id": "3-gatsu-no-lion",
       "featured": false,
-      "gdrive_slug": "3-gatsu-no-lion"
+      "gdrive_slug": "3-gatsu-no-lion",
+      "gdrive_slug_dub": "3-gatsu-no-lion-dub"
     },
     {
       "title": "Infinite Stratos",
@@ -15287,7 +15498,8 @@
       ],
       "id": "sword-art-online-movie-ordinal-scale",
       "featured": false,
-      "gdrive_slug": "sword-art-online-movie-ordinal-scale"
+      "gdrive_slug": "sword-art-online-movie-ordinal-scale",
+      "gdrive_slug_dub": "sword-art-online-movie-ordinal-scale-dub"
     },
     {
       "title": "Strike the Blood",
@@ -15333,7 +15545,8 @@
       ],
       "id": "strike-the-blood",
       "featured": false,
-      "gdrive_slug": "strike-blood"
+      "gdrive_slug": "strike-blood",
+      "gdrive_slug_dub": "strike-blood-dub"
     },
     {
       "title": "Shiki",
@@ -15441,7 +15654,8 @@
       ],
       "id": "nana",
       "featured": false,
-      "gdrive_slug": "nana"
+      "gdrive_slug": "nana",
+      "gdrive_slug_dub": "nana-dub"
     },
     {
       "title": "91 Days",
@@ -15527,7 +15741,8 @@
       ],
       "id": "school-days",
       "featured": false,
-      "gdrive_slug": "school-days-"
+      "gdrive_slug": "school-days-",
+      "gdrive_slug_dub": "school-days--dub"
     },
     {
       "title": "Nausicaä of the Valley of the Wind",
@@ -15612,7 +15827,8 @@
       ],
       "id": "kizumonogatari-i-tekketsu-hen",
       "featured": false,
-      "gdrive_slug": "kizumonogatari-i-tekketsu-hen"
+      "gdrive_slug": "kizumonogatari-i-tekketsu-hen",
+      "gdrive_slug_dub": "kizumonogatari-i-tekketsu-hen-dub"
     },
     {
       "title": "High School DxD BorN",
@@ -15658,7 +15874,8 @@
       ],
       "id": "high-school-dxd-born",
       "featured": false,
-      "gdrive_slug": "high-school-dxd-born"
+      "gdrive_slug": "high-school-dxd-born",
+      "gdrive_slug_dub": "high-school-dxd-born-dub"
     },
     {
       "title": "Problem children are coming from another world, aren't they?",
@@ -15838,7 +16055,8 @@
       ],
       "id": "ao-no-exorcist-kyoto-fujouou-hen",
       "featured": false,
-      "gdrive_slug": "ao-no-exorcist-kyoto-fujouou-hen"
+      "gdrive_slug": "ao-no-exorcist-kyoto-fujouou-hen",
+      "gdrive_slug_dub": "ao-no-exorcist-kyoto-fujouou-hen-dub"
     },
     {
       "title": "Fighting Spirit",
@@ -15917,7 +16135,8 @@
       ],
       "id": "hajime-no-ippo",
       "featured": false,
-      "gdrive_slug": "hajime-no-ippo-"
+      "gdrive_slug": "hajime-no-ippo-",
+      "gdrive_slug_dub": "hajime-no-ippo--dub"
     },
     {
       "title": "Eureka Seven",
@@ -15985,7 +16204,8 @@
       ],
       "id": "eureka-seven",
       "featured": false,
-      "gdrive_slug": "eureka-seven"
+      "gdrive_slug": "eureka-seven",
+      "gdrive_slug_dub": "eureka-seven-dub"
     },
     {
       "title": "Gosick",
@@ -16028,7 +16248,8 @@
       ],
       "id": "gosick",
       "featured": false,
-      "gdrive_slug": "gosick"
+      "gdrive_slug": "gosick",
+      "gdrive_slug_dub": "gosick-dub"
     },
     {
       "title": "Himouto! Umaru-chan",
@@ -16070,7 +16291,8 @@
       ],
       "id": "himouto-umaru-chan",
       "featured": false,
-      "gdrive_slug": "himouto-umaru-chan"
+      "gdrive_slug": "himouto-umaru-chan",
+      "gdrive_slug_dub": "himouto-umaru-chan-dub"
     },
     {
       "title": "Hellsing",
@@ -16113,7 +16335,8 @@
       ],
       "id": "hellsing",
       "featured": false,
-      "gdrive_slug": "hellsing"
+      "gdrive_slug": "hellsing",
+      "gdrive_slug_dub": "hellsing-dub"
     },
     {
       "title": "Log Horizon 2",
@@ -16205,7 +16428,8 @@
       ],
       "id": "rokka-no-yuusha",
       "featured": false,
-      "gdrive_slug": "rokka-no-yuusha"
+      "gdrive_slug": "rokka-no-yuusha",
+      "gdrive_slug_dub": "rokka-no-yuusha-dub"
     },
     {
       "title": "To LOVE Ru",
@@ -16251,7 +16475,8 @@
       ],
       "id": "to-love-ru",
       "featured": false,
-      "gdrive_slug": "to-love-ru"
+      "gdrive_slug": "to-love-ru",
+      "gdrive_slug_dub": "to-love-ru-dub"
     },
     {
       "title": "Saekano: How to Raise a Boring Girlfriend",
@@ -16296,7 +16521,8 @@
       ],
       "id": "saenai-heroine-no-sodatekata",
       "featured": false,
-      "gdrive_slug": "saenai-heroine-no-sodatekata"
+      "gdrive_slug": "saenai-heroine-no-sodatekata",
+      "gdrive_slug_dub": "saenai-heroine-no-sodatekata-dub"
     },
     {
       "title": "Snow White with the Red Hair 2",
@@ -16339,7 +16565,8 @@
       ],
       "id": "akagami-no-shirayuki-hime-2nd-season",
       "featured": false,
-      "gdrive_slug": "akagami-no-shirayuki-hime-2nd-season"
+      "gdrive_slug": "akagami-no-shirayuki-hime-2nd-season",
+      "gdrive_slug_dub": "akagami-no-shirayuki-hime-2nd-season-dub"
     },
     {
       "title": "Tsuredure Children",
@@ -16382,7 +16609,8 @@
       ],
       "id": "tsurezure-children",
       "featured": false,
-      "gdrive_slug": "tsurezure-children"
+      "gdrive_slug": "tsurezure-children",
+      "gdrive_slug_dub": "tsurezure-children-dub"
     },
     {
       "title": "Violet Evergarden the Movie",
@@ -16460,7 +16688,8 @@
       ],
       "id": "bungou-stray-dogs-3",
       "featured": false,
-      "gdrive_slug": "bungou-stray-dogs-3rd-season"
+      "gdrive_slug": "bungou-stray-dogs-3rd-season",
+      "gdrive_slug_dub": "bungou-stray-dogs-3rd-season-dub"
     },
     {
       "title": "The Ancient Magus' Bride: Those Awaiting a Star",
@@ -16504,7 +16733,8 @@
       ],
       "id": "mahoutsukai-no-yome-hoshi-matsu-hito",
       "featured": false,
-      "gdrive_slug": "mahoutsukai-no-yome-hoshi-matsu-hito"
+      "gdrive_slug": "mahoutsukai-no-yome-hoshi-matsu-hito",
+      "gdrive_slug_dub": "mahoutsukai-no-yome-hoshi-matsu-hito-dub"
     },
     {
       "title": "Cowboy Bebop: The Movie",
@@ -16594,7 +16824,8 @@
       ],
       "id": "chihayafuru",
       "featured": false,
-      "gdrive_slug": "chihayafuru"
+      "gdrive_slug": "chihayafuru",
+      "gdrive_slug_dub": "chihayafuru-dub"
     },
     {
       "title": "Shakugan no Shana: Season I",
@@ -16640,7 +16871,8 @@
       ],
       "id": "shakugan-no-shana",
       "featured": false,
-      "gdrive_slug": "shakugan-no-shana"
+      "gdrive_slug": "shakugan-no-shana",
+      "gdrive_slug_dub": "shakugan-no-shana-dub"
     },
     {
       "title": "Nisekoi: False Love",
@@ -16684,7 +16916,8 @@
       ],
       "id": "nisekoi-1",
       "featured": false,
-      "gdrive_slug": "nisekoi-"
+      "gdrive_slug": "nisekoi-",
+      "gdrive_slug_dub": "nisekoi--dub"
     },
     {
       "title": "The Seven Deadly Sins: Signs of Holy War",
@@ -16730,7 +16963,8 @@
       ],
       "id": "nanatsu-no-taizai-seisen-no-shirushi",
       "featured": false,
-      "gdrive_slug": "nanatsu-no-taizai-seisen-no-shirushi"
+      "gdrive_slug": "nanatsu-no-taizai-seisen-no-shirushi",
+      "gdrive_slug_dub": "nanatsu-no-taizai-seisen-no-shirushi-dub"
     },
     {
       "title": "Pokémon",
@@ -16927,7 +17161,8 @@
       ],
       "id": "durararax2-shou",
       "featured": false,
-      "gdrive_slug": "durarara-x2-shou"
+      "gdrive_slug": "durarara-x2-shou",
+      "gdrive_slug_dub": "durarara-x2-shou-dub"
     },
     {
       "title": "Paprika",
@@ -16973,7 +17208,8 @@
       ],
       "id": "paprika",
       "featured": false,
-      "gdrive_slug": "paprika"
+      "gdrive_slug": "paprika",
+      "gdrive_slug_dub": "paprika-dub"
     },
     {
       "title": "Haganai: I don't have many friends NEXT",
@@ -17018,7 +17254,8 @@
       ],
       "id": "boku-wa-tomodachi-ga-sukunai-next",
       "featured": false,
-      "gdrive_slug": "boku-wa-tomodachi-ga-sukunai-next"
+      "gdrive_slug": "boku-wa-tomodachi-ga-sukunai-next",
+      "gdrive_slug_dub": "boku-wa-tomodachi-ga-sukunai-next-dub"
     },
     {
       "title": "The Tatami Galaxy",
@@ -17106,7 +17343,8 @@
       ],
       "id": "eromanga-sensei",
       "featured": false,
-      "gdrive_slug": "eromanga-sensei"
+      "gdrive_slug": "eromanga-sensei",
+      "gdrive_slug_dub": "eromanga-sensei-dub"
     },
     {
       "title": "Haikyuu!! Movie 1: Owari to Hajimari",
@@ -17149,7 +17387,8 @@
       ],
       "id": "haikyuu-movie-1-owari-to-hajimari",
       "featured": false,
-      "gdrive_slug": "haikyuu-movie-1-owari-to-hajimari"
+      "gdrive_slug": "haikyuu-movie-1-owari-to-hajimari",
+      "gdrive_slug_dub": "haikyuu-movie-1-owari-to-hajimari-dub"
     },
     {
       "title": "Scum's Wish",
@@ -17193,7 +17432,8 @@
       ],
       "id": "kuzu-no-honkai",
       "featured": false,
-      "gdrive_slug": "kuzu-no-honkai"
+      "gdrive_slug": "kuzu-no-honkai",
+      "gdrive_slug_dub": "kuzu-no-honkai-dub"
     },
     {
       "title": "Ponyo",
@@ -17414,7 +17654,8 @@
       ],
       "id": "katekyo-hitman-reborn",
       "featured": false,
-      "gdrive_slug": "katekyo-hitman-reborn"
+      "gdrive_slug": "katekyo-hitman-reborn",
+      "gdrive_slug_dub": "katekyo-hitman-reborn-dub"
     },
     {
       "title": "Gangsta.",
@@ -17455,7 +17696,8 @@
       ],
       "id": "gangsta",
       "featured": false,
-      "gdrive_slug": "gangsta-"
+      "gdrive_slug": "gangsta-",
+      "gdrive_slug_dub": "gangsta--dub"
     },
     {
       "title": "Shirobako",
@@ -17497,7 +17739,8 @@
       ],
       "id": "shirobako",
       "featured": false,
-      "gdrive_slug": "shirobako"
+      "gdrive_slug": "shirobako",
+      "gdrive_slug_dub": "shirobako-dub"
     },
     {
       "title": "The Promised Neverland Season 2",
@@ -17536,7 +17779,8 @@
       ],
       "id": "yakusoku-no-neverland-2nd-season",
       "featured": false,
-      "gdrive_slug": "yakusoku-no-neverland-2nd-season"
+      "gdrive_slug": "yakusoku-no-neverland-2nd-season",
+      "gdrive_slug_dub": "yakusoku-no-neverland-2nd-season-dub"
     },
     {
       "title": "Haikyu!! The Movie: Battle of Concepts!!",
@@ -17580,7 +17824,8 @@
       ],
       "id": "haikyuu-movie-4-concept-no-tatakai",
       "featured": false,
-      "gdrive_slug": "haikyuu-movie-4-concept-no-tatakai"
+      "gdrive_slug": "haikyuu-movie-4-concept-no-tatakai",
+      "gdrive_slug_dub": "haikyuu-movie-4-concept-no-tatakai-dub"
     },
     {
       "title": "Lovely Complex",
@@ -17667,7 +17912,8 @@
       ],
       "id": "grisaia-no-kajitsu",
       "featured": false,
-      "gdrive_slug": "grisaia-no-kajitsu"
+      "gdrive_slug": "grisaia-no-kajitsu",
+      "gdrive_slug_dub": "grisaia-no-kajitsu-dub"
     },
     {
       "title": "The Testament of Sister New Devil",
@@ -17713,7 +17959,8 @@
       ],
       "id": "shinmai-maou-no-testament",
       "featured": false,
-      "gdrive_slug": "shinmai-maou-no-testament"
+      "gdrive_slug": "shinmai-maou-no-testament",
+      "gdrive_slug_dub": "shinmai-maou-no-testament-dub"
     },
     {
       "title": "Spider-Man: Into The Spider-Verse",
@@ -17791,7 +18038,8 @@
       ],
       "id": "seitokai-yakuindomo",
       "featured": false,
-      "gdrive_slug": "seitokai-yakuindomo"
+      "gdrive_slug": "seitokai-yakuindomo",
+      "gdrive_slug_dub": "seitokai-yakuindomo-dub"
     },
     {
       "title": "SPY x FAMILY Part 2",
@@ -17829,7 +18077,8 @@
       ],
       "id": "spy-x-family-part-2",
       "featured": false,
-      "gdrive_slug": "spy-x-family-part-2"
+      "gdrive_slug": "spy-x-family-part-2",
+      "gdrive_slug_dub": "spy-x-family-part-2-dub"
     },
     {
       "title": "Kamisama Hajimemashita: Kako-hen",
@@ -17873,7 +18122,8 @@
       ],
       "id": "kamisama-hajimemashita-kako-hen",
       "featured": false,
-      "gdrive_slug": "kamisama-hajimemashita-kako-hen"
+      "gdrive_slug": "kamisama-hajimemashita-kako-hen",
+      "gdrive_slug_dub": "kamisama-hajimemashita-kako-hen-dub"
     },
     {
       "title": "One Piece Film: Z",
@@ -17963,7 +18213,8 @@
       ],
       "id": "ajin",
       "featured": false,
-      "gdrive_slug": "ajin"
+      "gdrive_slug": "ajin",
+      "gdrive_slug_dub": "ajin-dub"
     },
     {
       "title": "InuYasha: The Final Act",
@@ -18105,7 +18356,8 @@
       ],
       "id": "gakusen-toshi-asterisk",
       "featured": false,
-      "gdrive_slug": "gakusen-toshi-asterisk"
+      "gdrive_slug": "gakusen-toshi-asterisk",
+      "gdrive_slug_dub": "gakusen-toshi-asterisk-dub"
     },
     {
       "title": "Angels of Death",
@@ -18149,7 +18401,8 @@
       ],
       "id": "satsuriku-no-tenshi",
       "featured": false,
-      "gdrive_slug": "satsuriku-no-tenshi"
+      "gdrive_slug": "satsuriku-no-tenshi",
+      "gdrive_slug_dub": "satsuriku-no-tenshi-dub"
     },
     {
       "title": "The Seven Deadly Sins: Revival of the Commandments OVA",
@@ -18229,7 +18482,8 @@
       ],
       "id": "hataraku-saibou",
       "featured": false,
-      "gdrive_slug": "hataraku-saibou-tv"
+      "gdrive_slug": "hataraku-saibou-tv",
+      "gdrive_slug_dub": "hataraku-saibou-tv-dub"
     },
     {
       "title": "Grand Blue Dreaming",
@@ -18271,7 +18525,8 @@
       ],
       "id": "grand-blue",
       "featured": false,
-      "gdrive_slug": "grand-blue"
+      "gdrive_slug": "grand-blue",
+      "gdrive_slug_dub": "grand-blue-dub"
     },
     {
       "title": "Kizumonogatari Part 3: Reiketsu",
@@ -18315,7 +18570,8 @@
       ],
       "id": "kizumonogatari-iii-reiketsu-hen",
       "featured": false,
-      "gdrive_slug": "kizumonogatari-iii-reiketsu-hen"
+      "gdrive_slug": "kizumonogatari-iii-reiketsu-hen",
+      "gdrive_slug_dub": "kizumonogatari-iii-reiketsu-hen-dub"
     },
     {
       "title": "The \"Hentai\" Prince and the Stony Cat.",
@@ -18360,7 +18616,8 @@
       ],
       "id": "hentai-ouji-to-warawanai-neko",
       "featured": false,
-      "gdrive_slug": "hentai-ouji-to-warawanai-neko-specials"
+      "gdrive_slug": "hentai-ouji-to-warawanai-neko-specials",
+      "gdrive_slug_dub": "hentai-ouji-to-warawanai-neko-specials-dub"
     },
     {
       "title": "MEKAKUCITY ACTORS",
@@ -18405,7 +18662,8 @@
       ],
       "id": "mekakucity-actors",
       "featured": false,
-      "gdrive_slug": "mekaku-city-actors"
+      "gdrive_slug": "mekaku-city-actors",
+      "gdrive_slug_dub": "mekaku-city-actors-dub"
     },
     {
       "title": "Oreimo 2",
@@ -18448,7 +18706,8 @@
       ],
       "id": "oreimo-2",
       "featured": false,
-      "gdrive_slug": "oreimo-2"
+      "gdrive_slug": "oreimo-2",
+      "gdrive_slug_dub": "oreimo-2-dub"
     },
     {
       "title": "Little Witch Academia",
@@ -18492,7 +18751,8 @@
       ],
       "id": "little-witch-academia",
       "featured": false,
-      "gdrive_slug": "little-witch-academia"
+      "gdrive_slug": "little-witch-academia",
+      "gdrive_slug_dub": "little-witch-academia-dub"
     },
     {
       "title": "Inu X Boku Secret Service",
@@ -18535,7 +18795,8 @@
       ],
       "id": "inu-x-boku-ss",
       "featured": false,
-      "gdrive_slug": "inu-x-boku-ss"
+      "gdrive_slug": "inu-x-boku-ss",
+      "gdrive_slug_dub": "inu-x-boku-ss-dub"
     },
     {
       "title": "Dragon Ball GT",
@@ -18611,7 +18872,8 @@
       ],
       "id": "dragon-ball-gt",
       "featured": false,
-      "gdrive_slug": "dragon-ball-gt"
+      "gdrive_slug": "dragon-ball-gt",
+      "gdrive_slug_dub": "dragon-ball-gt-dub"
     },
     {
       "title": "Akashic Records of Bastard Magic Instructor",
@@ -18655,7 +18917,8 @@
       ],
       "id": "rokudenashi-majutsu-koushi-to-akashic-records",
       "featured": false,
-      "gdrive_slug": "rokudenashi-majutsu-koushi-to-akashic-records"
+      "gdrive_slug": "rokudenashi-majutsu-koushi-to-akashic-records",
+      "gdrive_slug_dub": "rokudenashi-majutsu-koushi-to-akashic-records-dub"
     },
     {
       "title": "When They Cry: Kai",
@@ -18699,7 +18962,8 @@
       ],
       "id": "higurashi-no-naku-koro-ni-kai",
       "featured": false,
-      "gdrive_slug": "higurashi-no-naku-koro-ni"
+      "gdrive_slug": "higurashi-no-naku-koro-ni",
+      "gdrive_slug_dub": "higurashi-no-naku-koro-ni-dub"
     },
     {
       "title": "BEASTARS",
@@ -18864,7 +19128,8 @@
       ],
       "id": "fruits-basket",
       "featured": false,
-      "gdrive_slug": "fruits-basket"
+      "gdrive_slug": "fruits-basket",
+      "gdrive_slug_dub": "fruits-basket-dub"
     },
     {
       "title": "Beelzebub",
@@ -18975,7 +19240,8 @@
       ],
       "id": "god-eater",
       "featured": false,
-      "gdrive_slug": "god-eater"
+      "gdrive_slug": "god-eater",
+      "gdrive_slug_dub": "god-eater-dub"
     },
     {
       "title": "Yosuga no Sora",
@@ -19107,7 +19373,8 @@
       ],
       "id": "vampire-knight",
       "featured": false,
-      "gdrive_slug": "vampire-knight"
+      "gdrive_slug": "vampire-knight",
+      "gdrive_slug_dub": "vampire-knight-dub"
     },
     {
       "title": "Violet Evergarden Special",
@@ -19284,7 +19551,8 @@
       ],
       "id": "rurouni-kenshin-meiji-kenkaku-romantan-tsuioku-hen",
       "featured": false,
-      "gdrive_slug": "rurouni-kenshin-meiji-kenkaku-romantan-tsuioku-hen"
+      "gdrive_slug": "rurouni-kenshin-meiji-kenkaku-romantan-tsuioku-hen",
+      "gdrive_slug_dub": "rurouni-kenshin-meiji-kenkaku-romantan-tsuioku-hen-dub"
     },
     {
       "title": "Gintama: Enchousen",
@@ -19417,7 +19685,8 @@
       ],
       "id": "gamers",
       "featured": false,
-      "gdrive_slug": "gamers"
+      "gdrive_slug": "gamers",
+      "gdrive_slug_dub": "gamers-dub"
     },
     {
       "title": "Oreshura",
@@ -19461,7 +19730,8 @@
       ],
       "id": "oreshura",
       "featured": false,
-      "gdrive_slug": "oreshura"
+      "gdrive_slug": "oreshura",
+      "gdrive_slug_dub": "oreshura-dub"
     },
     {
       "title": "Attack on Titan: Chronicle",
@@ -19589,7 +19859,8 @@
       ],
       "id": "owarimonogatari",
       "featured": false,
-      "gdrive_slug": "owarimonogatari"
+      "gdrive_slug": "owarimonogatari",
+      "gdrive_slug_dub": "owarimonogatari-dub"
     },
     {
       "title": "Tokyo Ghoul:re 2",
@@ -19634,7 +19905,8 @@
       ],
       "id": "tokyo-ghoulre-2",
       "featured": false,
-      "gdrive_slug": "tokyo-ghoulre-2nd-season"
+      "gdrive_slug": "tokyo-ghoulre-2nd-season",
+      "gdrive_slug_dub": "tokyo-ghoulre-2nd-season-dub"
     },
     {
       "title": "Drifters",
@@ -19679,7 +19951,8 @@
       ],
       "id": "drifters",
       "featured": false,
-      "gdrive_slug": "drifters"
+      "gdrive_slug": "drifters",
+      "gdrive_slug_dub": "drifters-dub"
     },
     {
       "title": "Kimi ni Todoke: From Me To You 2",
@@ -19859,7 +20132,8 @@
       ],
       "id": "musaigen-no-phantom-world",
       "featured": false,
-      "gdrive_slug": "musaigen-no-phantom-world"
+      "gdrive_slug": "musaigen-no-phantom-world",
+      "gdrive_slug_dub": "musaigen-no-phantom-world-dub"
     },
     {
       "title": "A Certain Scientific Railgun S",
@@ -19903,7 +20177,8 @@
       ],
       "id": "toaru-kagaku-no-railgun-s",
       "featured": false,
-      "gdrive_slug": "toaru-kagaku-no-railgun-s"
+      "gdrive_slug": "toaru-kagaku-no-railgun-s",
+      "gdrive_slug_dub": "toaru-kagaku-no-railgun-s-dub"
     },
     {
       "title": "Avatar: The Legend So Far",
@@ -20073,7 +20348,8 @@
       ],
       "id": "wonder-egg-priority",
       "featured": false,
-      "gdrive_slug": "wonder-egg-priority"
+      "gdrive_slug": "wonder-egg-priority",
+      "gdrive_slug_dub": "wonder-egg-priority-dub"
     },
     {
       "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon? II",
@@ -20118,7 +20394,8 @@
       ],
       "id": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-ii",
       "featured": false,
-      "gdrive_slug": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-ii"
+      "gdrive_slug": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-ii",
+      "gdrive_slug_dub": "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-ii-dub"
     },
     {
       "title": "The Quintessential Quintuplets",
@@ -20157,7 +20434,8 @@
       ],
       "id": "5-toubun-no-hanayome",
       "featured": false,
-      "gdrive_slug": "5-toubun-no-hanayome"
+      "gdrive_slug": "5-toubun-no-hanayome",
+      "gdrive_slug_dub": "5-toubun-no-hanayome-dub"
     },
     {
       "title": "Chobits",
@@ -20201,7 +20479,8 @@
       ],
       "id": "chobits",
       "featured": false,
-      "gdrive_slug": "chobits"
+      "gdrive_slug": "chobits",
+      "gdrive_slug_dub": "chobits-dub"
     },
     {
       "title": "Kakegurui××",
@@ -20287,7 +20566,8 @@
       ],
       "id": "blend-s",
       "featured": false,
-      "gdrive_slug": "blend-s"
+      "gdrive_slug": "blend-s",
+      "gdrive_slug_dub": "blend-s-dub"
     },
     {
       "title": "Kiss x Sis (TV)",
@@ -20374,7 +20654,8 @@
       ],
       "id": "hibike-euphonium",
       "featured": false,
-      "gdrive_slug": "hibike-euphonium"
+      "gdrive_slug": "hibike-euphonium",
+      "gdrive_slug_dub": "hibike-euphonium-dub"
     },
     {
       "title": "Wagnaria!!",
@@ -20418,7 +20699,8 @@
       ],
       "id": "working",
       "featured": false,
-      "gdrive_slug": "working-"
+      "gdrive_slug": "working-",
+      "gdrive_slug_dub": "working--dub"
     },
     {
       "title": "How Not to Summon a Demon Lord",
@@ -20461,7 +20743,8 @@
       ],
       "id": "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu",
       "featured": false,
-      "gdrive_slug": "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu"
+      "gdrive_slug": "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu",
+      "gdrive_slug_dub": "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu-dub"
     },
     {
       "title": "Detective Conan",
@@ -20550,7 +20833,8 @@
       ],
       "id": "suisei-no-gargantia",
       "featured": false,
-      "gdrive_slug": "suisei-no-gargantia"
+      "gdrive_slug": "suisei-no-gargantia",
+      "gdrive_slug_dub": "suisei-no-gargantia-dub"
     },
     {
       "title": "Puella Magi Madoka Magica the Movie: Rebellion",
@@ -20640,7 +20924,8 @@
       ],
       "id": "kizumonogatari-ii-nekketsu-hen",
       "featured": false,
-      "gdrive_slug": "kizumonogatari-ii-nekketsu-hen"
+      "gdrive_slug": "kizumonogatari-ii-nekketsu-hen",
+      "gdrive_slug_dub": "kizumonogatari-ii-nekketsu-hen-dub"
     },
     {
       "title": "Non Non Biyori",
@@ -20678,7 +20963,8 @@
       ],
       "id": "non-non-biyori",
       "featured": false,
-      "gdrive_slug": "non-non-biyori"
+      "gdrive_slug": "non-non-biyori",
+      "gdrive_slug_dub": "non-non-biyori-dub"
     },
     {
       "title": "Inuyashiki: Last Hero",
@@ -20722,7 +21008,8 @@
       ],
       "id": "inuyashiki",
       "featured": false,
-      "gdrive_slug": "inuyashiki"
+      "gdrive_slug": "inuyashiki",
+      "gdrive_slug_dub": "inuyashiki-dub"
     },
     {
       "title": "Demon King Daimao",
@@ -20769,7 +21056,8 @@
       ],
       "id": "ichiban-ushiro-no-daimaou",
       "featured": false,
-      "gdrive_slug": "ichiban-ushiro-no-daimaou"
+      "gdrive_slug": "ichiban-ushiro-no-daimaou",
+      "gdrive_slug_dub": "ichiban-ushiro-no-daimaou-dub"
     },
     {
       "title": "Jujutsu Kaisen 0",
@@ -20807,7 +21095,8 @@
       ],
       "id": "jujutsu-kaisen-0",
       "featured": false,
-      "gdrive_slug": "jujutsu-kaisen-0"
+      "gdrive_slug": "jujutsu-kaisen-0",
+      "gdrive_slug_dub": "jujutsu-kaisen-0-dub"
     },
     {
       "title": "Absolute Duo",
@@ -20936,7 +21225,8 @@
       ],
       "id": "hinamatsuri",
       "featured": false,
-      "gdrive_slug": "hinamatsuri"
+      "gdrive_slug": "hinamatsuri",
+      "gdrive_slug_dub": "hinamatsuri-dub"
     },
     {
       "title": "Dragon Ball Super: Broly",
@@ -21097,7 +21387,8 @@
       ],
       "id": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-kan",
       "featured": false,
-      "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-kan"
+      "gdrive_slug": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-kan",
+      "gdrive_slug_dub": "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-kan-dub"
     },
     {
       "title": "School-Live!",
@@ -21143,7 +21434,8 @@
       ],
       "id": "gakkou-gurashi",
       "featured": false,
-      "gdrive_slug": "gakkou-gurashi-"
+      "gdrive_slug": "gakkou-gurashi-",
+      "gdrive_slug_dub": "gakkou-gurashi--dub"
     },
     {
       "title": "The Familiar of Zero: Knight of the Twin Moons",
@@ -21192,7 +21484,8 @@
       ],
       "id": "zero-no-tsukaima-futatsuki-no-kishi",
       "featured": false,
-      "gdrive_slug": "-zero-no-tsukaima-futatsuki-no-kishi"
+      "gdrive_slug": "-zero-no-tsukaima-futatsuki-no-kishi",
+      "gdrive_slug_dub": "-zero-no-tsukaima-futatsuki-no-kishi-dub"
     },
     {
       "title": "Tokyo Ravens",
@@ -21237,7 +21530,8 @@
       ],
       "id": "tokyo-ravens",
       "featured": false,
-      "gdrive_slug": "tokyo-ravens"
+      "gdrive_slug": "tokyo-ravens",
+      "gdrive_slug_dub": "tokyo-ravens-dub"
     },
     {
       "title": "Redline",
@@ -21281,7 +21575,8 @@
       ],
       "id": "redline",
       "featured": false,
-      "gdrive_slug": "redline"
+      "gdrive_slug": "redline",
+      "gdrive_slug_dub": "redline-dub"
     },
     {
       "title": "K-ON! The Movie",
@@ -21324,7 +21619,8 @@
       ],
       "id": "k-on-movie",
       "featured": false,
-      "gdrive_slug": "k-on-movie"
+      "gdrive_slug": "k-on-movie",
+      "gdrive_slug_dub": "k-on-movie-dub"
     },
     {
       "title": "Whisper of the Heart",
@@ -21369,7 +21665,8 @@
       ],
       "id": "whisper-of-the-heart",
       "featured": false,
-      "gdrive_slug": "whisper-of-the-heart"
+      "gdrive_slug": "whisper-of-the-heart",
+      "gdrive_slug_dub": "whisper-of-the-heart-dub"
     },
     {
       "title": "Hanamonogatari",
@@ -21411,7 +21708,8 @@
       ],
       "id": "hanamonogatari",
       "featured": false,
-      "gdrive_slug": "hanamonogatari"
+      "gdrive_slug": "hanamonogatari",
+      "gdrive_slug_dub": "hanamonogatari-dub"
     },
     {
       "title": "Black Butler II",
@@ -21502,7 +21800,8 @@
       ],
       "id": "netoge-no-yome-wa-onnanoko-ja-nai-to-omotta",
       "featured": false,
-      "gdrive_slug": "netoge-no-yome-wa-onnanoko-ja-nai-to-omotta"
+      "gdrive_slug": "netoge-no-yome-wa-onnanoko-ja-nai-to-omotta",
+      "gdrive_slug_dub": "netoge-no-yome-wa-onnanoko-ja-nai-to-omotta-dub"
     },
     {
       "title": "Sword Art Online Alternative: Gun Gale Online",
@@ -21546,7 +21845,8 @@
       ],
       "id": "sword-art-online-alternative-gun-gale-online",
       "featured": false,
-      "gdrive_slug": "sword-art-online-alternative-gun-gale-online"
+      "gdrive_slug": "sword-art-online-alternative-gun-gale-online",
+      "gdrive_slug_dub": "sword-art-online-alternative-gun-gale-online-dub"
     },
     {
       "title": "Tamako Market",
@@ -21587,7 +21887,8 @@
       ],
       "id": "tamako-market",
       "featured": false,
-      "gdrive_slug": "tamako-market-"
+      "gdrive_slug": "tamako-market-",
+      "gdrive_slug_dub": "tamako-market--dub"
     },
     {
       "title": "Love Live! School Idol Project",
@@ -21886,7 +22187,8 @@
       ],
       "id": "tamako-love-story",
       "featured": false,
-      "gdrive_slug": "tamako-love-story"
+      "gdrive_slug": "tamako-love-story",
+      "gdrive_slug_dub": "tamako-love-story-dub"
     },
     {
       "title": "Waiting in the Summer",
@@ -21932,7 +22234,8 @@
       ],
       "id": "ano-natsu-de-matteru",
       "featured": false,
-      "gdrive_slug": "ano-natsu-de-matteru"
+      "gdrive_slug": "ano-natsu-de-matteru",
+      "gdrive_slug_dub": "ano-natsu-de-matteru-dub"
     },
     {
       "title": "Laid-Back Camp",
@@ -22017,7 +22320,8 @@
       ],
       "id": "tanaka-kun-wa-itsumo-kedaruge",
       "featured": false,
-      "gdrive_slug": "tanaka-kun-wa-itsumo-kedaruge"
+      "gdrive_slug": "tanaka-kun-wa-itsumo-kedaruge",
+      "gdrive_slug_dub": "tanaka-kun-wa-itsumo-kedaruge-dub"
     },
     {
       "title": "Hunter x Hunter OVA",
@@ -22149,7 +22453,8 @@
       ],
       "id": "kaze-no-stigma",
       "featured": false,
-      "gdrive_slug": "kaze-no-stigma"
+      "gdrive_slug": "kaze-no-stigma",
+      "gdrive_slug_dub": "kaze-no-stigma-dub"
     },
     {
       "title": "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
@@ -22188,7 +22493,8 @@
       ],
       "id": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season-part-2",
       "featured": false,
-      "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season-part-2"
+      "gdrive_slug": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season-part-2",
+      "gdrive_slug_dub": "rezero-kara-hajimeru-isekai-seikatsu-2nd-season-part-2-dub"
     },
     {
       "title": "Twin Star Exorcists",
@@ -22256,7 +22562,8 @@
       ],
       "id": "sousei-no-onmyouji",
       "featured": false,
-      "gdrive_slug": "sousei-no-onmyouji"
+      "gdrive_slug": "sousei-no-onmyouji",
+      "gdrive_slug_dub": "sousei-no-onmyouji-dub"
     },
     {
       "title": "Dagashi Kashi",
@@ -22336,7 +22643,8 @@
       ],
       "id": "sono-bisque-doll-wa-koi-wo-suru",
       "featured": false,
-      "gdrive_slug": "sono-bisque-doll-wa-koi-wo-suru"
+      "gdrive_slug": "sono-bisque-doll-wa-koi-wo-suru",
+      "gdrive_slug_dub": "sono-bisque-doll-wa-koi-wo-suru-dub"
     },
     {
       "title": "To Your Eternity",
@@ -22375,7 +22683,8 @@
       ],
       "id": "fumetsu-no-anata-e",
       "featured": false,
-      "gdrive_slug": "fumetsu-no-anata-e"
+      "gdrive_slug": "fumetsu-no-anata-e",
+      "gdrive_slug_dub": "fumetsu-no-anata-e-dub"
     },
     {
       "title": "Tsukigakirei",
@@ -22417,7 +22726,8 @@
       ],
       "id": "tsuki-ga-kirei",
       "featured": false,
-      "gdrive_slug": "tsuki-ga-kirei"
+      "gdrive_slug": "tsuki-ga-kirei",
+      "gdrive_slug_dub": "tsuki-ga-kirei-dub"
     },
     {
       "title": "Jujutsu Kaisen Season 2",
@@ -22545,7 +22855,8 @@
       ],
       "id": "owarimonogatari-2nd-season",
       "featured": false,
-      "gdrive_slug": "owarimonogatari-2nd-season"
+      "gdrive_slug": "owarimonogatari-2nd-season",
+      "gdrive_slug_dub": "owarimonogatari-2nd-season-dub"
     },
     {
       "title": "The World God Only Knows: Goddesses",
@@ -22632,7 +22943,8 @@
       ],
       "id": "recreators",
       "featured": false,
-      "gdrive_slug": "recreators"
+      "gdrive_slug": "recreators",
+      "gdrive_slug_dub": "recreators-dub"
     },
     {
       "title": "Rent-a-Girlfriend",
@@ -22671,7 +22983,8 @@
       ],
       "id": "kanojo-okarishimasu",
       "featured": false,
-      "gdrive_slug": "kanojo-okarishimasu"
+      "gdrive_slug": "kanojo-okarishimasu",
+      "gdrive_slug_dub": "kanojo-okarishimasu-dub"
     },
     {
       "title": "Demon Slayer: Kimetsu no Yaiba - Swordsmith Village Arc",
@@ -22710,7 +23023,8 @@
       ],
       "id": "kimetsu-no-yaiba-katanakaji-no-sato-hen",
       "featured": false,
-      "gdrive_slug": "kimetsu-no-yaiba-katanakaji-no-sato-hen"
+      "gdrive_slug": "kimetsu-no-yaiba-katanakaji-no-sato-hen",
+      "gdrive_slug_dub": "kimetsu-no-yaiba-katanakaji-no-sato-hen-dub"
     },
     {
       "title": "Violet Evergarden Side Story: Eternity and the Auto Memories Doll",
@@ -22749,7 +23063,8 @@
       ],
       "id": "violet-evergarden-gaiden-eien-to-jidou-shuki-ningyou",
       "featured": false,
-      "gdrive_slug": "violet-evergarden-gaiden-eien-to-jidou-shuki-ningyou"
+      "gdrive_slug": "violet-evergarden-gaiden-eien-to-jidou-shuki-ningyou",
+      "gdrive_slug_dub": "violet-evergarden-gaiden-eien-to-jidou-shuki-ningyou-dub"
     },
     {
       "title": "Fruits Basket 2nd Season",
@@ -22787,7 +23102,8 @@
       ],
       "id": "fruits-basket-2nd-season",
       "featured": false,
-      "gdrive_slug": "fruits-basket-2nd-season"
+      "gdrive_slug": "fruits-basket-2nd-season",
+      "gdrive_slug_dub": "fruits-basket-2nd-season-dub"
     },
     {
       "title": "Recovery of an MMO Junkie",
@@ -22830,7 +23146,8 @@
       ],
       "id": "net-juu-no-susume",
       "featured": false,
-      "gdrive_slug": "net-juu-no-susume"
+      "gdrive_slug": "net-juu-no-susume",
+      "gdrive_slug_dub": "net-juu-no-susume-dub"
     },
     {
       "title": "Chaika -The Coffin Princess-",
@@ -22875,7 +23192,8 @@
       ],
       "id": "hitsugi-no-chaika",
       "featured": false,
-      "gdrive_slug": "hitsugi-no-chaika"
+      "gdrive_slug": "hitsugi-no-chaika",
+      "gdrive_slug_dub": "hitsugi-no-chaika-dub"
     },
     {
       "title": "Kino's Journey",
@@ -22918,7 +23236,8 @@
       ],
       "id": "kino-no-tabi-the-beautiful-world",
       "featured": false,
-      "gdrive_slug": "kino-no-tabi-the-beautiful-world"
+      "gdrive_slug": "kino-no-tabi-the-beautiful-world",
+      "gdrive_slug_dub": "kino-no-tabi-the-beautiful-world-dub"
     },
     {
       "title": "Blood+",
@@ -22988,7 +23307,8 @@
       ],
       "id": "blood",
       "featured": false,
-      "gdrive_slug": "blood-lad"
+      "gdrive_slug": "blood-lad",
+      "gdrive_slug_dub": "blood-lad-dub"
     },
     {
       "title": "Land of the Lustrous (TV)",
@@ -23028,7 +23348,8 @@
       ],
       "id": "houseki-no-kuni-tv",
       "featured": false,
-      "gdrive_slug": "houseki-no-kuni-tv"
+      "gdrive_slug": "houseki-no-kuni-tv",
+      "gdrive_slug_dub": "houseki-no-kuni-tv-dub"
     },
     {
       "title": "Sword of the Stranger",
@@ -23072,7 +23393,8 @@
       ],
       "id": "sword-of-the-stranger",
       "featured": false,
-      "gdrive_slug": "sword-of-the-stranger"
+      "gdrive_slug": "sword-of-the-stranger",
+      "gdrive_slug_dub": "sword-of-the-stranger-dub"
     },
     {
       "title": "Dusk Maiden of Amnesia",
@@ -23117,7 +23439,8 @@
       ],
       "id": "tasogare-otome-x-amnesia",
       "featured": false,
-      "gdrive_slug": "tasogare-otome-x-amnesia-"
+      "gdrive_slug": "tasogare-otome-x-amnesia-",
+      "gdrive_slug_dub": "tasogare-otome-x-amnesia--dub"
     },
     {
       "title": "Teasing Master Takagi-san",
@@ -23161,7 +23484,8 @@
       ],
       "id": "karakai-jouzu-no-takagi-san",
       "featured": false,
-      "gdrive_slug": "karakai-jouzu-no-takagi-san"
+      "gdrive_slug": "karakai-jouzu-no-takagi-san",
+      "gdrive_slug_dub": "karakai-jouzu-no-takagi-san-dub"
     },
     {
       "title": "When Supernatural Battles Became Commonplace",
@@ -23295,7 +23619,8 @@
       ],
       "id": "mawaru-penguindrum",
       "featured": false,
-      "gdrive_slug": "mawaru-penguindrum"
+      "gdrive_slug": "mawaru-penguindrum",
+      "gdrive_slug_dub": "mawaru-penguindrum-dub"
     },
     {
       "title": "Sayonara",
@@ -23339,7 +23664,8 @@
       ],
       "id": "sayonara-zetsubou-sensei",
       "featured": false,
-      "gdrive_slug": "sayonara-zetsubou-sensei-"
+      "gdrive_slug": "sayonara-zetsubou-sensei-",
+      "gdrive_slug_dub": "sayonara-zetsubou-sensei--dub"
     },
     {
       "title": "Teen Titans",
@@ -23499,7 +23825,8 @@
       ],
       "id": "megalo-box",
       "featured": false,
-      "gdrive_slug": "megalo-box"
+      "gdrive_slug": "megalo-box",
+      "gdrive_slug_dub": "megalo-box-dub"
     },
     {
       "title": "Citrus",
@@ -23543,7 +23870,8 @@
       ],
       "id": "citrus",
       "featured": false,
-      "gdrive_slug": "citrus"
+      "gdrive_slug": "citrus",
+      "gdrive_slug_dub": "citrus-dub"
     },
     {
       "title": "YuruYuri: Happy Go Lily",
@@ -23588,7 +23916,8 @@
       ],
       "id": "yuru-yuri",
       "featured": false,
-      "gdrive_slug": "yuru-yuri"
+      "gdrive_slug": "yuru-yuri",
+      "gdrive_slug_dub": "yuru-yuri-dub"
     }
   ],
   "top10": [
