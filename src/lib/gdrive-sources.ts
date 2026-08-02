@@ -21,12 +21,14 @@ function ep(fileId: string, resourceKey: string, title: string): GdriveEpisode {
   return {
     fileId,
     resourceKey,
-    embedUrl: `https://drive.google.com/file/d/${fileId}/preview?resourcekey=${resourceKey}`,
+    embedUrl: resourceKey
+      ? `https://drive.google.com/file/d/${fileId}/preview?resourcekey=${resourceKey}`
+      : `https://drive.google.com/file/d/${fileId}/preview`,
     title,
   };
 }
 
-export const gdriveEpisodes: Record<string, GdriveEpisode[][]> = {
+export const gdriveEpisodes: Record<string, (GdriveEpisode | null)[][]> = {
   // Attack on Titan Season 1 (Dub) — all 25 episodes
   // Source folder: https://drive.google.com/drive/folders/0BwNIVETrodXLQ3V1b083NmVQRk0
   "attack-on-titan": [
@@ -58,11 +60,33 @@ export const gdriveEpisodes: Record<string, GdriveEpisode[][]> = {
       ep("0BwNIVETrodXLaWFCTHpjTUstdG8", "0-Qt9_uv6kpDv0M_VyC5tXdg", "Attack on Titan S1 E25 (Dub)"),
     ],
   ],
+
+  // Tokyo Ghoul √A (Season 2) — episodes 7, 10, 11, 12
+  // Source folder: https://drive.google.com/drive/folders/1WJsrt0WiCV0sC19xIJSidQzkMJQtQHDN
+  // (only 4 of 12 episodes available; others fall back to gdriveplayer)
+  "tokyo-ghoul-a": [
+    [
+      null as any, // Ep 1 — no Drive source, falls back to gdriveplayer
+      null as any, // Ep 2
+      null as any, // Ep 3
+      null as any, // Ep 4
+      null as any, // Ep 5
+      null as any, // Ep 6
+      ep("1Z7vER03_xx306UrX8lEaXCZpN0WjYrka", "", "Tokyo Ghoul √A E07"), // Ep 7
+      null as any, // Ep 8
+      null as any, // Ep 9
+      ep("1Yon0zwzwlLzkmdr3ndWWsJQeYD7WwOwV", "", "Tokyo Ghoul √A E10"), // Ep 10
+      ep("19dozQoiKprOngPLSUwcR07r4GutKV2g1", "", "Tokyo Ghoul √A E11"), // Ep 11
+      ep("1eNNc6yhuwNXXg0sUtgrl9CEwOGYAXJRv", "", "Tokyo Ghoul √A E12"), // Ep 12
+    ],
+  ],
 };
 
 /**
  * Look up a Google Drive episode for a given anime + season + episode.
- * Returns null if we don't have a Google Drive source for this episode.
+ * Returns null if we don't have a Google Drive source for this episode
+ * (or if the episode slot exists but is null — meaning we only have
+ * partial coverage for that season).
  */
 export function getGdriveEpisode(
   animeId: string,
