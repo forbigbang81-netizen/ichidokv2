@@ -115,29 +115,15 @@ export function buildEpisodeList(anime: Anime): Episode[] {
 }
 
 /**
- * Build the player URL for an episode.
- *
- * We route through our own /api/player endpoint (server-side proxy) so that:
- *   - the user's browser only talks to our domain
- *   - we can rotate gdriveplayer mirrors (gdriveplayer.biz is dead;
- *     we use .us / .to / .me) without changing client code
- *   - we control headers (Referer, User-Agent) so the mirror doesn't see
- *     anything suspicious
- *   - DNS issues on the user's end don't matter — our server resolves the mirror
- *
- * `lang` selects the audio track: "sub" (Japanese audio + English subs, default)
- * or "dub" (English dubbed audio).
+ * Build a cast / share URL for an episode (points back at our own watch page,
+ * not at any external source).
  */
-export type PlayerLang = "sub" | "dub";
-
-export function gdrivePlayerUrl(
+export function shareUrlForEpisode(
   anime: Anime,
   episode: Episode,
-  lang: PlayerLang = "sub",
 ): string {
-  const title = encodeURIComponent(anime.title);
-  const ep = episode.episodeInSeason;
-  return `/api/player?title=${title}&episode=${ep}&lang=${lang}`;
+  if (typeof window === "undefined") return "";
+  return `${window.location.origin}/#/watch/${encodeURIComponent(anime.id)}?ep=${episode.number}&s=${episode.seasonIndex}`;
 }
 
 export type Filters = {
