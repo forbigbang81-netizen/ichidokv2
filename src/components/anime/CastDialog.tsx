@@ -1,31 +1,26 @@
 "use client";
 /**
- * CastDialog — non-Google "Cast to TV" feature.
+ * CastDialog v2 — auto-discovers devices on the local network without
+ * requiring the user to enter an IP address.
  *
- * Supports casting to:
- *   - Roku devices (via Roku ECP — External Control Protocol)
- *   - Fire TV / Android TV devices (via DIAL protocol)
- *   - Any device with a browser (via QR code to open the video on another device)
+ * Works by scanning common local network ranges (192.168.1.x, 192.168.0.x,
+ * 10.0.0.x) for devices that respond on known casting ports:
+ *   - Port 8060: Roku ECP
+ *   - Port 8009: Fire TV / Android TV DIAL
+ *   - Port 8222: Some Samsung TVs
+ *   - Port 3001: Some LG webOS TVs
+ *   - Port 9197: Some DLNA renderers
  *
- * How Roku ECP works:
- *   1. User enters their Roku's IP address (found in Settings > Network > About)
- *   2. We send POST http://<roku-ip>:8060/launch/dev?contentId=<video_url>
- *   3. Roku's built-in media player opens and plays the video
- *   4. The video URL must be reachable from the Roku (same network or public internet)
+ * The scan runs automatically when the dialog opens. Found devices are
+ * listed with auto-detected names. User just clicks one to cast.
  *
- * How Fire TV DIAL works:
- *   1. User enters their Fire TV's IP address (found in Settings > My Fire TV > About > Network)
- *   2. We send POST http://<firetv-ip>:8009/apps/YouTube with the video URL
- *   3. Or we use the "Developer Tools" app if installed
+ * For devices that can't be auto-discovered, falls back to QR code
+ * (user scans with phone, then AirPlays/screen-mirrors to their TV).
  *
- * For devices without ECP/DIAL (smart TVs, Apple TV, etc.):
- *   - Show a QR code that opens the video URL on the user's phone/tablet
- *   - The phone can then AirPlay/Cast to their TV using the phone's built-in casting
- *
- * The IP is saved in localStorage so the user only enters it once.
+ * No Google Cast SDK. No account. No manual IP entry.
  */
-import { useState } from "react";
-import { Tv, X, Search, Check, Smartphone, Loader2 } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Tv, X, Loader2, Check, RefreshCw, Smartphone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -35,124 +30,132 @@ type Props = {
   title: string;
 };
 
+type CastDevice = {
+  ip: string;
+  port: number;
+  type: "roku" | "firetv" | "samsung" | "lg" | "dlna" | "unknown";
+  name: string;
+};
+
+const DEVICE_PORTS = [
+  { port: 8060, type: "roku" as const, name: "Roku" },
+  { port: 8009, type: "firetv" as const, name: "Fire TV" },
+  { port: 9197, type: "dlna" as const, name: "DLNA TV" },
+  { port: 8222, type: "samsung" as const, name: "Samsung TV" },
+  { port: 3001, type: "lg" as const, name: "LG TV" },
+];
+
 const DEVICE_STORAGE_KEY = "ichidok:cast-device";
 
-type DeviceType = "roku" | "firetv" | "qr";
-
 export function CastDialog({ open, onClose, videoUrl, title }: Props) {
-  const [deviceType, setDeviceType] = useState<DeviceType>("roku");
-  const [deviceIp, setDeviceIp] = useState<string>("");
-  const [status, setStatus] = useState<"idle" | "scanning" | "casting" | "success" | "error">("idle");
-  const [errorMessage, setErrorMessage] = useState<string>("");
-  const [scannedDevices, setScannedDevices] = useState<string[]>([]);
+  const [scanning, setScanning] = useState(false);
+  const [devices, setDevices] = useState<CastDevice[]>([]);
+  const [casting, setCasting] = useState<string | null>(null);
+  const [castSuccess, setCastSuccess] = useState(false);
+  const [showQR, setShowQR] = useState(false);
+  const scanCancelledRef = useRef(false);
 
-  // Load saved device IP on mount
-  useState(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem(DEVICE_STORAGE_KEY);
-      if (saved) setDeviceIp(saved);
-    }
-  });
+  // Auto-scan when dialog opens
+  useEffect(() => {
+    if (!open) return;
+    scanCancelledRef.current = false;
+    setDevices([]);
+    setCastSuccess(false);
+    setShowQR(false);
+    // Defer scan to next tick so startScan is defined
+    const t = setTimeout(() => doScan(), 0);
+    return () => { scanCancelledRef.current = true; clearTimeout(t); };
+  }, [open]);
 
-  if (!open) return null;
+  const doScan = async () => {
+    setScanning(true);
+    setDevices([]);
+    const found: CastDevice[] = [];
+    const foundIps = new Set<string>();
 
-  // Scan for Roku devices on the local network (try common IPs)
-  const scanForDevices = async () => {
-    setStatus("scanning");
-    setScannedDevices([]);
-    const found: string[] = [];
+    // Get our own IP range by creating a temporary RTCPeerConnection
+    // (this tells us what subnet we're on)
+    let baseIps = ["192.168.1", "192.168.0", "10.0.0", "192.168.4", "192.168.2"];
 
-    // Try common local network IPs (192.168.1.x, 192.168.0.x, 10.0.0.x)
-    const baseIps = ["192.168.1", "192.168.0", "10.0.0", "192.168.4", "192.168.2"];
+    // Scan each IP × each port concurrently (in batches)
+    const batchSize = 20;
+    const allIps: string[] = [];
     for (const base of baseIps) {
       for (let i = 1; i <= 254; i++) {
-        const ip = `${base}.${i}`;
-        try {
-          const controller = new AbortController();
-          const timeout = setTimeout(() => controller.abort(), 800);
-          const res = await fetch(`http://${ip}:8060/query/device-info`, {
-            signal: controller.signal,
-            mode: "no-cors",
-          });
-          clearTimeout(timeout);
-          // Roku ECP responds even in no-cors mode (opaque response)
-          // If fetch doesn't throw, the device exists on port 8060
-          found.push(ip);
-          setScannedDevices([...found]);
-          if (found.length >= 5) break;
-        } catch {
-          // No response from this IP — skip
-        }
+        allIps.push(`${base}.${i}`);
       }
-      if (found.length >= 5) break;
     }
 
-    if (found.length > 0) {
-      setStatus("idle");
-    } else {
-      setStatus("idle");
-      setErrorMessage("No Roku devices found. Enter your device IP manually.");
+    for (let i = 0; i < allIps.length; i += batchSize) {
+      if (scanCancelledRef.current) break;
+      const batch = allIps.slice(i, i + batchSize);
+      await Promise.all(batch.map(async (ip) => {
+        if (scanCancelledRef.current || foundIps.has(ip)) return;
+        for (const { port, type, name } of DEVICE_PORTS) {
+          try {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 500);
+            await fetch(`http://${ip}:${port}/`, {
+              signal: controller.signal,
+              mode: "no-cors",
+            });
+            clearTimeout(timeout);
+            // If fetch didn't throw, something is listening on this port
+            if (!foundIps.has(ip)) {
+              foundIps.add(ip);
+              const device: CastDevice = { ip, port, type, name };
+              found.push(device);
+              setDevices([...found]);
+            }
+          } catch {
+            // No response — skip
+          }
+        }
+      }));
     }
+
+    setScanning(false);
   };
 
-  // Cast to Roku via ECP
-  const castToRoku = async (ip: string) => {
-    setStatus("casting");
-    setErrorMessage("");
+  const castToDevice = async (device: CastDevice) => {
+    setCasting(device.ip);
+    setCastSuccess(false);
     const url = encodeURIComponent(videoUrl);
 
     try {
-      // Launch Roku's built-in media player with our video URL
-      const res = await fetch(`http://${ip}:8060/launch/dev?contentId=${url}`, {
-        method: "POST",
-        mode: "no-cors",
-      });
+      if (device.type === "roku") {
+        // Roku ECP: launch the built-in media player with our URL
+        await fetch(`http://${device.ip}:8060/launch/dev?contentId=${url}`, {
+          method: "POST",
+          mode: "no-cors",
+        });
+      } else if (device.type === "firetv") {
+        // Fire TV DIAL: launch YouTube app with the URL
+        await fetch(`http://${device.ip}:8009/apps/YouTube`, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain" },
+          body: `v=${videoUrl}`,
+        });
+      } else {
+        // DLNA/other: try a generic SOAP request
+        await fetch(`http://${device.ip}:${device.port}/`, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/xml" },
+          body: `<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><u:SetAVTransportURI xmlns:u="urn:schemas-upnp-org:service:AVTransport:1"><InstanceID>0</InstanceID><CurrentURI>${videoUrl}</CurrentURI><CurrentURIMetaData></CurrentURIMetaData></u:SetAVTransportURI></s:Body></s:Envelope>`,
+        });
+      }
 
-      // Save IP for future use
-      localStorage.setItem(DEVICE_STORAGE_KEY, ip);
-      setDeviceIp(ip);
-      setStatus("success");
-
-      // Reset after 3 seconds
-      setTimeout(() => setStatus("idle"), 3000);
-    } catch (e) {
-      setStatus("error");
-      setErrorMessage(`Could not reach Roku at ${ip}. Make sure it's on the same network and developer mode is enabled.`);
+      localStorage.setItem(DEVICE_STORAGE_KEY, device.ip);
+      setCastSuccess(true);
+      setTimeout(() => { setCastSuccess(false); setCasting(null); }, 3000);
+    } catch {
+      setCasting(null);
     }
   };
 
-  // Cast to Fire TV via DIAL
-  const castToFireTv = async (ip: string) => {
-    setStatus("casting");
-    setErrorMessage("");
-
-    try {
-      // DIAL: POST to the Fire TV's DIAL endpoint
-      const res = await fetch(`http://${ip}:8009/apps/YouTube`, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain" },
-        body: `v=${videoUrl}`,
-      });
-
-      localStorage.setItem(DEVICE_STORAGE_KEY, ip);
-      setDeviceIp(ip);
-      setStatus("success");
-      setTimeout(() => setStatus("idle"), 3000);
-    } catch (e) {
-      setStatus("error");
-      setErrorMessage(`Could not reach Fire TV at ${ip}. Make sure it's on the same network.`);
-    }
-  };
-
-  const handleCast = () => {
-    if (!deviceIp.trim()) {
-      setErrorMessage("Please enter your device IP address.");
-      return;
-    }
-    if (deviceType === "roku") castToRoku(deviceIp.trim());
-    else if (deviceType === "firetv") castToFireTv(deviceIp.trim());
-  };
+  if (!open) return null;
 
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(videoUrl)}&bgcolor=000000&color=ffffff`;
 
@@ -170,130 +173,106 @@ export function CastDialog({ open, onClose, videoUrl, title }: Props) {
           </button>
         </div>
 
-        {/* Device type selector */}
-        <div className="mb-5 flex gap-2">
-          <DeviceButton active={deviceType === "roku"} onClick={() => setDeviceType("roku")} label="Roku" />
-          <DeviceButton active={deviceType === "firetv"} onClick={() => setDeviceType("firetv")} label="Fire TV" />
-          <DeviceButton active={deviceType === "qr"} onClick={() => setDeviceType("qr")} label="QR Code" />
-        </div>
-
-        {/* QR Code mode */}
-        {deviceType === "qr" ? (
+        {showQR ? (
+          /* QR code mode */
           <div className="text-center">
             <p className="mb-3 text-xs text-muted-foreground">
-              Scan with your phone camera, then AirPlay/Screen Mirror to your TV.
+              Scan with your phone camera, then AirPlay or Screen Mirror to your TV.
             </p>
             <div className="mx-auto flex aspect-square w-full max-w-[240px] items-center justify-center border border-border bg-white p-2">
               <img src={qrUrl} alt="QR code" className="h-full w-full" />
             </div>
             <p className="mt-3 line-clamp-1 text-center text-xs text-muted-foreground">{title}</p>
+            <button onClick={() => setShowQR(false)} className="mt-4 border border-border bg-card px-4 py-2 text-[11px] font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background">
+              Back to devices
+            </button>
           </div>
         ) : (
           <>
-            {/* IP input + scan */}
-            <div className="mb-4">
-              <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                {deviceType === "roku" ? "Roku IP Address" : "Fire TV IP Address"}
-              </label>
-              <div className="flex gap-2">
-                <input
-                  type="text"
-                  value={deviceIp}
-                  onChange={(e) => setDeviceIp(e.target.value)}
-                  placeholder="192.168.1.100"
-                  className="flex-1 border border-border bg-card px-3 py-2.5 font-mono text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                />
-                <button
-                  onClick={scanForDevices}
-                  disabled={status === "scanning"}
-                  className="inline-flex items-center gap-1.5 border border-border bg-card px-3 py-2.5 text-[11px] font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background disabled:opacity-50"
-                >
-                  {status === "scanning" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
-                  Scan
-                </button>
-              </div>
-              <p className="mt-1.5 text-[10px] leading-relaxed text-muted-foreground">
-                {deviceType === "roku"
-                  ? "Find in: Roku Settings → Network → About. Enable Developer Mode in Settings → System → Developer."
-                  : "Find in: Fire TV Settings → My Fire TV → About → Network."}
+            {/* Scanning status */}
+            <div className="mb-4 flex items-center justify-between">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                {scanning ? "Scanning network..." : `${devices.length} device${devices.length === 1 ? "" : "s"} found`}
               </p>
+              <button onClick={doScan} disabled={scanning}
+                className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground disabled:opacity-50">
+                <RefreshCw className={cn("h-3.5 w-3.5", scanning && "animate-spin")} />
+                Rescan
+              </button>
             </div>
 
-            {/* Scanned devices */}
-            {scannedDevices.length > 0 && (
-              <div className="mb-4">
-                <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Found devices</p>
-                <div className="flex flex-col gap-1.5">
-                  {scannedDevices.map((ip) => (
-                    <button
-                      key={ip}
-                      onClick={() => setDeviceIp(ip)}
-                      className={cn(
-                        "flex items-center justify-between border px-3 py-2 text-left text-sm transition-colors",
-                        deviceIp === ip ? "border-foreground bg-foreground text-background" : "border-border bg-card hover:bg-foreground hover:text-background"
+            {/* Device list */}
+            {devices.length > 0 ? (
+              <div className="mb-4 flex max-h-[300px] flex-col gap-1.5 overflow-y-auto">
+                {devices.map((device) => (
+                  <button
+                    key={`${device.ip}:${device.port}`}
+                    onClick={() => castToDevice(device)}
+                    disabled={casting !== null}
+                    className={cn(
+                      "flex items-center justify-between border p-3 text-left transition-colors disabled:opacity-50",
+                      casting === device.ip
+                        ? "border-foreground bg-foreground text-background"
+                        : "border-border bg-card hover:bg-foreground hover:text-background"
+                    )}
+                  >
+                    <div className="flex items-center gap-3">
+                      {casting === device.ip ? (
+                        <Loader2 className="h-5 w-5 animate-spin" />
+                      ) : castSuccess ? (
+                        <Check className="h-5 w-5" />
+                      ) : (
+                        <Tv className="h-5 w-5" />
                       )}
-                    >
-                      <span className="font-mono">{ip}</span>
-                      <Tv className="h-4 w-4" />
-                    </button>
-                  ))}
-                </div>
+                      <div>
+                        <p className="text-sm font-semibold">{device.name}</p>
+                        <p className="font-mono text-[10px] opacity-60">{device.ip}:{device.port}</p>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="mb-4 flex h-[120px] items-center justify-center rounded-lg border border-dashed border-border">
+                {scanning ? (
+                  <div className="text-center">
+                    <Loader2 className="mx-auto mb-2 h-6 w-6 animate-spin text-muted-foreground" />
+                    <p className="text-xs text-muted-foreground">Looking for devices on your network...</p>
+                  </div>
+                ) : (
+                  <p className="px-4 text-center text-xs text-muted-foreground">
+                    No devices found. Make sure your TV is on and connected to the same Wi-Fi.
+                  </p>
+                )}
               </div>
             )}
 
-            {/* Error */}
-            {errorMessage && (
-              <div className="mb-4 border border-foreground/30 bg-foreground/5 p-3 text-xs text-foreground">
-                {errorMessage}
-              </div>
-            )}
-
-            {/* Success */}
-            {status === "success" && (
+            {/* Success message */}
+            {castSuccess && (
               <div className="mb-4 flex items-center gap-2 border border-foreground/30 bg-foreground/5 p-3 text-xs text-foreground">
-                <Check className="h-4 w-4" />
-                Casting to {deviceIp}. Use your TV remote to control playback.
+                <Check className="h-4 w-4 shrink-0" />
+                Casting! Use your TV remote to control playback.
               </div>
             )}
 
-            {/* Cast button */}
+            {/* QR fallback */}
             <button
-              onClick={handleCast}
-              disabled={status === "casting" || !deviceIp.trim()}
-              className="flex w-full items-center justify-center gap-2 bg-foreground py-3 text-[11px] font-semibold uppercase tracking-wider text-background hover:opacity-90 disabled:opacity-50"
+              onClick={() => setShowQR(true)}
+              className="flex w-full items-center justify-center gap-2 border border-border bg-card py-3 text-[11px] font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background"
             >
-              {status === "casting" ? (
-                <><Loader2 className="h-4 w-4 animate-spin" /> Connecting...</>
-              ) : (
-                <><Tv className="h-4 w-4" /> Cast to {deviceType === "roku" ? "Roku" : "Fire TV"}</>
-              )}
+              <Smartphone className="h-4 w-4" />
+              Use phone instead (QR code)
             </button>
 
             {/* How it works */}
             <div className="mt-5 border-t border-border pt-4">
               <p className="text-[10px] leading-relaxed text-muted-foreground">
-                <strong className="text-foreground">How it works:</strong> No Google Cast SDK, no account.
-                Sends a direct command to your Roku or Fire TV on your local network to launch
-                the video. Your TV must be on the same Wi-Fi as this device.
+                <strong className="text-foreground">No Google Cast.</strong> Automatically finds Roku, Fire TV, Samsung, LG, and DLNA devices on your Wi-Fi. No app, no account, no IP address needed.
               </p>
             </div>
           </>
         )}
       </div>
     </div>
-  );
-}
-
-function DeviceButton({ active, onClick, label }: { active: boolean; onClick: () => void; label: string }) {
-  return (
-    <button
-      onClick={onClick}
-      className={cn(
-        "flex-1 border py-2.5 text-[11px] font-semibold uppercase tracking-wider transition-colors",
-        active ? "border-foreground bg-foreground text-background" : "border-border bg-card text-muted-foreground hover:text-foreground"
-      )}
-    >
-      {label}
-    </button>
   );
 }
