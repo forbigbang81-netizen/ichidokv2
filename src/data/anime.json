@@ -755,6 +755,226 @@
       "gdrive_slug_dub": "one-piece-dub"
     },
     {
+      "id": "seiken-gakuin-no-makentsukai",
+      "title": "The Demon Sword Master of Excalibur Academy",
+      "altTitles": [],
+      "type": "TV",
+      "status": "Finished",
+      "year": 2023,
+      "season": "Fall 2023",
+      "studio": "Passione",
+      "rating": 7.0,
+      "popularity": 5000,
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "synopsis": "The undead sorcerer Riselia awakens a powerful swordsman named Leonis to help fight against the Void threat that threatens humanity.",
+      "duration": 24,
+      "totalEpisodes": 12,
+      "featured": false,
+      "image_url": "",
+      "poster": {
+        "variant": 3,
+        "l1": 8,
+        "l2": 94,
+        "angle": 0,
+        "hash": "0fd55620"
+      },
+      "seasons": [
+        {
+          "name": "Season 1",
+          "episodeCount": 12,
+          "year": 2023,
+          "synopsis": "Season 1"
+        }
+      ]
+    },
+    {
+      "id": "shinryaku-ika-musume",
+      "title": "Squid Girl",
+      "altTitles": [],
+      "type": "TV",
+      "status": "Finished",
+      "year": 2010,
+      "season": "Fall 2010",
+      "studio": "Diomedea",
+      "rating": 7.0,
+      "popularity": 5000,
+      "genres": [
+        "Comedy",
+        "Slice of Life"
+      ],
+      "synopsis": "A squid girl from the sea comes to land to invade humanity, but ends up working at a beach house after breaking a wall she can't afford to repair.",
+      "duration": 24,
+      "totalEpisodes": 12,
+      "featured": false,
+      "image_url": "",
+      "poster": {
+        "variant": 3,
+        "l1": 10,
+        "l2": 94,
+        "angle": 0,
+        "hash": "273244f8"
+      },
+      "seasons": [
+        {
+          "name": "Season 1",
+          "episodeCount": 12,
+          "year": 2010,
+          "synopsis": "Season 1"
+        }
+      ]
+    },
+    {
+      "id": "monster-musume-no-oishasan",
+      "title": "Monster Girl Doctor",
+      "altTitles": [],
+      "type": "TV",
+      "status": "Finished",
+      "year": 2020,
+      "season": "Fall 2020",
+      "studio": "Arvo Animation",
+      "rating": 7.0,
+      "popularity": 5000,
+      "genres": [
+        "Fantasy",
+        "Slice of Life"
+      ],
+      "synopsis": "Dr. Glenn Litbeit runs a clinic in a town where humans and monsters coexist, treating monster patients of all kinds alongside his lamia assistant Saphentite.",
+      "duration": 24,
+      "totalEpisodes": 12,
+      "featured": false,
+      "image_url": "",
+      "poster": {
+        "variant": 3,
+        "l1": 11,
+        "l2": 90,
+        "angle": 45,
+        "hash": "2142f409"
+      },
+      "seasons": [
+        {
+          "name": "Season 1",
+          "episodeCount": 12,
+          "year": 2020,
+          "synopsis": "Season 1"
+        }
+      ]
+    },
+    {
+      "id": "watashi-no-oshi-wa-akuyaku-reijou",
+      "title": "I'm in Love with the Villainess",
+      "altTitles": [],
+      "type": "TV",
+      "status": "Finished",
+      "year": 2023,
+      "season": "Fall 2023",
+      "studio": "Platinum Vision",
+      "rating": 7.0,
+      "popularity": 5000,
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Fantasy"
+      ],
+      "synopsis": "Ordinary office worker Rei Oohashi wakes up as Rae Taylor, the heroine of her favorite otome game, and immediately rejects the male love interests to pursue the villainess Claire Francois.",
+      "duration": 24,
+      "totalEpisodes": 12,
+      "featured": false,
+      "image_url": "",
+      "poster": {
+        "variant": 1,
+        "l1": 16,
+        "l2": 86,
+        "angle": 90,
+        "hash": "6783ba82"
+      },
+      "seasons": [
+        {
+          "name": "Season 1",
+          "episodeCount": 12,
+          "year": 2023,
+          "synopsis": "Season 1"
+        }
+      ]
+    },
+    {
+      "id": "golden-kamuy",
+      "title": "Golden Kamuy",
+      "altTitles": [],
+      "type": "TV",
+      "status": "Finished",
+      "year": 2018,
+      "season": "Fall 2018",
+      "studio": "Brain's Base",
+      "rating": 7.0,
+      "popularity": 5000,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Historical"
+      ],
+      "synopsis": "Saichi Sugimoto, a veteran of the Russo-Japanese War, searches for a stash of hidden Ainu gold in Hokkaido, aided by an Ainu girl named Asirpa.",
+      "duration": 24,
+      "totalEpisodes": 8,
+      "featured": false,
+      "image_url": "",
+      "poster": {
+        "variant": 1,
+        "l1": 15,
+        "l2": 94,
+        "angle": 180,
+        "hash": "cd824474"
+      },
+      "seasons": [
+        {
+          "name": "Season 1",
+          "episodeCount": 8,
+          "year": 2018,
+          "synopsis": "Season 1"
+        }
+      ]
+    },
+    {
+      "id": "chrome-shelled-regios",
+      "title": "Chrome Shelled Regios",
+      "altTitles": [],
+      "type": "TV",
+      "status": "Finished",
+      "year": 2009,
+      "season": "Fall 2009",
+      "studio": "Zexcs",
+      "rating": 7.0,
+      "popularity": 5000,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "synopsis": "In a post-apocalyptic world polluted by contaminated air, humanity lives in mobile cities called Regios. Layfon Alseif enrolls in the Academy City of Zuelluni, hoping to start a new life away from his past as a Heavens Blade wielder.",
+      "duration": 24,
+      "totalEpisodes": 24,
+      "featured": false,
+      "image_url": "",
+      "poster": {
+        "variant": 0,
+        "l1": 19,
+        "l2": 90,
+        "angle": 90,
+        "hash": "8a68d07a"
+      },
+      "seasons": [
+        {
+          "name": "Season 1",
+          "episodeCount": 24,
+          "year": 2009,
+          "synopsis": "Season 1"
+        }
+      ]
+    },
+    {
       "title": "Attack on Titan",
       "altTitles": [
         "Shingeki no Kyojin",

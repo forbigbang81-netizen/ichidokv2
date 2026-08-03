@@ -183,55 +183,150 @@ export const gdriveEpisodes: Record<string, (GdriveEpisode | null)[][]> = {
       ep("1FN1n99bBiFiQA8YzSFy0rBnsao87luVw", "", "Naruto E01"),
       ep("1PPmDsJVWqNgKKiCfxYuSO2oFJaMjS5dY", "", "Naruto E02"),
       ep("1DqM1k6Tk1UcPGxTOcGSpS4hevxAQ9K3z", "", "Naruto E03"),
-      null, // Ep 4
-      null, // Ep 5
-      null, // Ep 6
+      null,
+      null,
+      null,
       ep("1YtthnSrlXgR_ELWF5xd1B4MtYgU3lone", "", "Naruto E07"),
-      null, // Ep 8
-      null, // Ep 9
-      null, // Ep 10
+      null,
+      null,
+      null,
       ep("1nuzJuAe74aC9Nj61RHJczAB4xjRwMqXx", "", "Naruto E11"),
-      null, // Ep 12
-      null, // Ep 13
+      null,
+      null,
       ep("1uUldZn5QTn3YzmY1xv6Ai9mLWgp5PlFT", "", "Naruto E14"),
-      null, // Ep 15
-      null, // Ep 16
+      null,
+      null,
       ep("1cnysnMdtMgqdm3pkHrP_hqnP8vLSTxUA", "", "Naruto E17"),
-      null, // Ep 18
+      null,
       ep("1uP0nvGrKLvfMuydG3bqwrw2Rl5NUvcPs", "", "Naruto E19"),
     ],
-    // Season 1 (Chunin Exam Arc, eps 20-60)
     [
-      null, // Ep 1 (20)
-      null, // Ep 2 (21)
-      null, // Ep 3 (22)
-      null, // Ep 4 (23)
-      null, // Ep 5 (24)
-      null, // Ep 6 (25)
-      null, // Ep 7 (26)
-      null, // Ep 8 (27)
-      ep("18c1nDYpuNhEi0jkyBlYmeTDyUjejwenT", "", "Naruto E28"), // Ep 9 (28)
-      ep("1_PJoV4IuryOhHixKhB3MeIkaeqMRqiG9", "", "Naruto E29"), // Ep 10 (29)
-      ep("1UZPaY_JkPbiIcA8kmYQR8FByMze8YuCG", "", "Naruto E30"), // Ep 11 (30)
-      ep("1rlErkBT9XFFAb1HtKrNsJJ0s_tDN90yP", "", "Naruto E31"), // Ep 12 (31)
-      null, // Ep 13 (32)
-      ep("102PsMFd4DdLilwRPGHwtnXHE4IknVSuM", "", "Naruto E33"), // Ep 14 (33)
-      null, // Ep 15 (34)
-      ep("1nDXdNQsYmtKuf2s7XwMcdL_ZTD1bFa_7", "", "Naruto E35"), // Ep 16 (35)
-      null, // Ep 17 (36)
-      null, // Ep 18 (37)
-      null, // Ep 19 (38)
-      ep("1YBdF5CYUpW8D2BAQ7SUBSo4wHoOlVtsD", "", "Naruto E39"), // Ep 20 (39)
-      null, // Ep 21 (40)
-      null, // Ep 22 (41)
-      null, // Ep 23 (42)
-      null, // Ep 24 (43)
-      null, // Ep 25 (44)
-      null, // Ep 26 (45)
-      null, // Ep 27 (46)
-      null, // Ep 28 (47)
-      ep("1uCBNLpGCaJC21RKhTKsvCXliyOOf54PJ", "", "Naruto E48"), // Ep 29 (48)
-      ep("1rKK7ntnkJw7sJremJHY9GZ1v_qKtQvrA", "", "Naruto E49"), // Ep 30 (49)
+      null, null, null, null, null, null, null, null,
+      ep("18c1nDYpuNhEi0jkyBlYmeTDyUjejwenT", "", "Naruto E28"),
+      ep("1_PJoV4IuryOhHixKhB3MeIkaeqMRqiG9", "", "Naruto E29"),
+      ep("1UZPaY_JkPbiIcA8kmYQR8FByMze8YuCG", "", "Naruto E30"),
+      ep("1rlErkBT9XFFAb1HtKrNsJJ0s_tDN90yP", "", "Naruto E31"),
+      null,
+      ep("102PsMFd4DdLilwRPGHwtnXHE4IknVSuM", "", "Naruto E33"),
+      null,
+      ep("1nDXdNQsYmtKuf2s7XwMcdL_ZTD1bFa_7", "", "Naruto E35"),
+      null, null, null,
+      ep("1YBdF5CYUpW8D2BAQ7SUBSo4wHoOlVtsD", "", "Naruto E39"),
+      null, null, null, null, null, null, null, null,
+      ep("1uCBNLpGCaJC21RKhTKsvCXliyOOf54PJ", "", "Naruto E48"),
+      ep("1rKK7ntnkJw7sJremJHY9GZ1v_qKtQvrA", "", "Naruto E49"),
+    ],
+  ],
+
+  // Chrome Shelled Regios — 16 of 24 episodes (1080p Dual Audio)
+  "chrome-shelled-regios": [
+    [
+      ep("1m5euIfTmR7jgw3iMP3_JPamh6rd3iJTn", "", "Chrome Shelled Regios E01"),
+      ep("1ywJGbV09Bd0iAnqaapFpKEX0_3kkLSfs", "", "Chrome Shelled Regios E02"),
+      ep("1yn9sUfVHOpjnLEeFdCXBVnUnjjQEl8Pe", "", "Chrome Shelled Regios E03"),
+      ep("1uI3Fza5oCBbDSyJ3wu9_9ZMc587uS6RK", "", "Chrome Shelled Regios E04"),
+      ep("17_quq1yrUUnH9VDkxpSpcHIKGxjDtLKH", "", "Chrome Shelled Regios E05"),
+      ep("1M6zgKHuSbtBajTIA8nRxqqFVgN7xJBt9", "", "Chrome Shelled Regios E06"),
+      ep("1Gddp_geWaDspLmD5ozsmyUQ8dWTm4NDZ", "", "Chrome Shelled Regios E07"),
+      null, null, null,
+      ep("1dsk5j8mAF1n2DeE1SDoGLHIU7OPNEPSv", "", "Chrome Shelled Regios E11"),
+      null,
+      ep("1oSuoHvf0IzK5_q6nuo2otrFMtgH2MjGV", "", "Chrome Shelled Regios E13"),
+      ep("1X2OXOnEQLaDOV04ki_yvVuKPEdbJbkDL", "", "Chrome Shelled Regios E14"),
+      null,
+      ep("1377QY_FPT6tn9UnfJAne6SCT8wL7VgXr", "", "Chrome Shelled Regios E16"),
+      null,
+      ep("1p0f_KrPjzFwYOs3_JkCgKFG_R5vquXku", "", "Chrome Shelled Regios E18"),
+      ep("1GAqo77x0FE5bfmUC9pSRjAocMHiOkPEH", "", "Chrome Shelled Regios E19"),
+      null,
+      ep("1yCH7CdF1dVNLOfH4LpBiUtSKG1ejlCpf", "", "Chrome Shelled Regios E21"),
+      null,
+      ep("119L6z2h3FFEmPirTHYioZuiEK8itWs0q", "", "Chrome Shelled Regios E23"),
+      ep("1BOrfWBCO5xljyrdKAap5OhKVcK7JDMPf", "", "Chrome Shelled Regios E24"),
+    ],
+  ],
+
+  // Golden Kamuy Final Season — 8 episodes (1080p Dual Audio)
+  "golden-kamuy": [
+    [
+      ep("19Azb28_n2aGn7eF8CysJ6IzEjUctGfpO", "", "Golden Kamuy S5E01"),
+      ep("1XPUT_i_8fQj6lU7Mz0fXTaZXhMC1eQYb", "", "Golden Kamuy S5E02"),
+      null,
+      ep("1qrApPIUlnoFN1V7KFmdpS_dTAJdpwb4M", "", "Golden Kamuy S5E04"),
+      ep("1ctUlmae5GDm5SFcyTmxujGBj5VELSRr_", "", "Golden Kamuy S5E05"),
+      ep("1vyyq7F2IAcIVbJa1MLDa_rirTrxeqcDU", "", "Golden Kamuy S5E06"),
+      ep("1XCrEqUJSAlOAPG9DwG5G7TqOPjgz7rit", "", "Golden Kamuy S5E07"),
+      ep("1LJ01lsuukvWtY20twkUkpfzxbuXqCsfi", "", "Golden Kamuy S5E08"),
+    ],
+  ],
+
+  // I'm in Love with the Villainess — 10 of 12 episodes (1080p Dual Audio)
+  "watashi-no-oshi-wa-akuyaku-reijou": [
+    [
+      ep("1bFJjDjkOTS6gxLeq6Ux4ArOK1eKdr1Ye", "", "Villainess E01"),
+      null,
+      ep("15fJQ7M1FJfRxaHqx3ynhFwSgAdXbtinM", "", "Villainess E03"),
+      ep("1iqVpu_XJQo4739KOmdzHw1MUHB9ee4Qq", "", "Villainess E04"),
+      null,
+      ep("16Tnwidv42wAMkjJIj8Y7miPcAisruMWu", "", "Villainess E06"),
+      ep("1Zb7Glhq6HPFrYeRQw9wVq6_g0ce2iP7P", "", "Villainess E07"),
+      ep("1WU2GeWe0_oGcOTNjmxLBeJAKlUex9phO", "", "Villainess E08"),
+      ep("11it33U8WMOzV95SHnaG_KEI4JNJ4J33R", "", "Villainess E09"),
+      ep("1tw9VZqN_6Ml7EljyHRpujqx79Z6EvvQ0", "", "Villainess E10"),
+      null,
+      ep("1cpnsAVgMTV1aCBV53WxVuSSGoS35uEgc", "", "Villainess E12"),
+    ],
+  ],
+
+  // Monster Girl Doctor — 8 of 12 episodes (1080p Dual Audio)
+  "monster-musume-no-oishasan": [
+    [
+      ep("1cqQ05jH_B3wk9a3MWA4i5fj1tP9QkPd_", "", "Monster Girl Doctor E01"),
+      ep("1fuwsqqwK2ZzUdqq7C_K0K3JNTzoQyU7k", "", "Monster Girl Doctor E02"),
+      null,
+      ep("1jDFIndl37dAwxKd9m9YfeXT28B2eXYJt", "", "Monster Girl Doctor E04"),
+      ep("1PuvuslZFWEvKO1_yclBzhmo9fEhv62RA", "", "Monster Girl Doctor E05"),
+      null, null,
+      ep("1zPANmvgfyYTwVaBP84Qk4HzrD9mE1Qjx", "", "Monster Girl Doctor E08"),
+      ep("1nSQzO6KlKSzVHLxnx959cMPjBBlAepYX", "", "Monster Girl Doctor E09"),
+      ep("19rEVTnRNUTO9pnqinmnqYudjUHF6gkNM", "", "Monster Girl Doctor E10"),
+      null,
+      ep("1TkIzAPP6dKUvl50X0cbaL5IVhLRQjSZs", "", "Monster Girl Doctor E12"),
+    ],
+  ],
+
+  // Squid Girl — 10 of 12 episodes (BD 1080p Dual Audio)
+  "shinryaku-ika-musume": [
+    [
+      ep("1pC6j7ck8C1IIZq_5OL3XABCkKozn9JzT", "", "Squid Girl E01"),
+      ep("1VK36Ll0nodd2uJKy46eR8joA2sbjObkf", "", "Squid Girl E02"),
+      ep("1rLdA0sPpYu8WSZRKIKXQpxtdtzkaM4OZ", "", "Squid Girl E03"),
+      null,
+      ep("16jNB4K_3au3CuwWLwdkYVWnxYJgLWqzY", "", "Squid Girl E05"),
+      null,
+      ep("13gga35hLONyl1kZrY3gJm3kXO_L67Os6", "", "Squid Girl E07"),
+      ep("1SdERMSdBGUpj0WpbSvfRNL8ZMEvGWmZE", "", "Squid Girl E08"),
+      ep("1yFYbTx3TFNzae9Kt09RKYayQyJCj43zn", "", "Squid Girl E09"),
+      null, null,
+      ep("1eluF95pkZy95Lhfvar1JqQIQgIaHgBVO", "", "Squid Girl E12"),
+    ],
+  ],
+
+  // The Demon Sword Master of Excalibur Academy — 11 of 12 episodes (1080p Dual Audio)
+  "seiken-gakuin-no-makentsukai": [
+    [
+      ep("1C5sdvq0gsJsyd7QxqPGbaa1exAEAjdVp", "", "Demon Sword Master E01"),
+      ep("13ANPequGM4gUVPSu4c6bpQJNObBo9bdv", "", "Demon Sword Master E02"),
+      ep("1hnBtJIXcvINtQAoZ2BR0tkXdMGlZCy_b", "", "Demon Sword Master E03"),
+      ep("18XLXxmQRo7_Np5IE_KRnkCVoq2HzbutS", "", "Demon Sword Master E04"),
+      ep("1xkTiKQ0jzSfgfzUKSuMtNCXTRu2sZdgt", "", "Demon Sword Master E05"),
+      ep("1LNW4Gm9mCiQr1Ir7V5uEpO9SdnQb3Vd1", "", "Demon Sword Master E06"),
+      ep("1nn0zuNIC82pAovVYdyoAeHSoY8HpBxkl", "", "Demon Sword Master E07"),
+      ep("1I0sxpm3bvKJgBuVqmqNojpw1h_W25l7o", "", "Demon Sword Master E08"),
+      ep("1cVYMOScwx3yJ9zNfcABoBMN69Otrj0kT", "", "Demon Sword Master E09"),
+      null,
+      ep("1SgZA3YuLqH0X575YpQSk9AtCSQ64F39e", "", "Demon Sword Master E11"),
+      ep("1jNbBZd1joxOnzbjBLjNuwqCZWgf1icSl", "", "Demon Sword Master E12"),
     ],
   ],
 };
