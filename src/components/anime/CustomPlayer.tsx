@@ -161,12 +161,17 @@ export function CustomPlayer({
 
   const toggleFullscreen = useCallback(async () => {
     const el = containerRef.current;
+    const v = videoRef.current;
     if (!el) return;
     try {
       if (!document.fullscreenElement) {
         await el.requestFullscreen();
+        // Flip horizontally in fullscreen (mirror effect)
+        if (v) v.style.transform = "scaleX(-1)";
       } else {
         await document.exitFullscreen();
+        // Remove mirror when exiting fullscreen
+        if (v) v.style.transform = "";
       }
     } catch {
       /* ignore — some browsers reject in iframes */
@@ -357,8 +362,6 @@ export function CustomPlayer({
         className="size-full bg-black object-contain"
         playsInline
         preload="metadata"
-        onClick={togglePlay}
-        onDoubleClick={toggleFullscreen}
         onLoadedMetadata={onLoaded}
         onTimeUpdate={onTime}
         onProgress={onTime}
@@ -609,7 +612,7 @@ export function CustomPlayer({
               </div>
 
               {/* Fullscreen */}
-              <PlayerButton onClick={toggleFullscreen} label="Fullscreen" className="hidden sm:inline-flex">
+              <PlayerButton onClick={toggleFullscreen} label="Fullscreen">
                 {fullscreen ? (
                   <Minimize className="size-5" />
                 ) : (
