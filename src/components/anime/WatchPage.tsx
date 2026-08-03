@@ -19,6 +19,7 @@ import {
   type PlayerLang,
 } from "@/lib/anime";
 import { getGdriveEpisode } from "@/lib/gdrive-sources";
+import { getArchiveEpisode } from "@/lib/archive-sources";
 import { CustomPlayer } from "./CustomPlayer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
@@ -111,22 +112,24 @@ export function WatchPage({
   const playerTitle = `${anime.title} — Episode ${currentEp.episodeInSeason}`;
   const playerSubtitle = `${currentEp.seasonName} · Ep ${currentEp.number} / ${allEpisodes.length}`;
 
-  // Look up a Google Drive source for this episode (preferred — works reliably)
+  // Look up a Google Drive source for this episode (preferred)
   const gdriveSource = getGdriveEpisode(
     anime.id,
     currentEp.seasonIndex,
     currentEp.episodeInSeason,
   );
 
-  // Use the Google Drive stream URL (our server-side proxy) if available.
-  // This plays the video in our own HTML5 player — no Google Drive iframe.
-  // Falls back to gdriveplayer embed if no Drive source exists.
-  const playerEmbedUrl = gdriveSource?.streamUrl || gdriveEmbedUrl(anime, currentEp, lang);
+  // Fallback: look up an Archive.org source (complete series, no proxy needed)
+  const archiveSource = getArchiveEpisode(
+    anime.id,
+    currentEp.seasonIndex,
+    currentEp.episodeInSeason,
+  );
 
-  // If we have a Drive stream URL, force manual mode (our HTML5 player)
-  // instead of embed mode (iframe). The streamUrl goes into the "source URL"
-  // field that our CustomPlayer uses for direct video playback.
-  const driveStreamUrl = gdriveSource?.streamUrl || null;
+  // Use Google Drive → Archive.org → gdriveplayer (in that order)
+  const directSource = gdriveSource || archiveSource;
+  const driveStreamUrl = directSource?.streamUrl || null;
+  const playerEmbedUrl = driveStreamUrl || gdriveEmbedUrl(anime, currentEp, lang);
 
   const switchLang = (newLang: PlayerLang) => {
     if (newLang === lang) return;
