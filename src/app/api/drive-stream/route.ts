@@ -1,16 +1,16 @@
 /**
  * /api/drive-stream — server-side proxy for Google Drive video files.
  *
- * Bypasses Google's "virus scan warning" page by adding confirm=t&uuid=<uuid>.
- * For MKV/HEVC files that browsers can't play natively, transcodes to H.264
- * mp4 using ffmpeg so the video (not just audio) works in all browsers.
+ * Bypasses Google's "virus scan warning" page. For MKV/HEVC files that
+ * browsers can't play natively, downloads the file and transcodes to H.264
+ * using ffmpeg so the video (not just audio) works in all browsers.
  *
  * Query params:
  *   id=<fileId>          (required) Google Drive file ID
  *   resourcekey=<key>    (optional) resource key for restricted files
  */
-import { NextRequest } from "next/server";
-import { spawn } from "child_process";
+import { NextRequest, NextResponse } from "next/server";
+import { Readable } from "stream";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -28,7 +28,6 @@ export async function GET(req: NextRequest) {
   const url = new URL(req.url);
   const fileId = url.searchParams.get("id");
   const resourceKey = url.searchParams.get("resourcekey") || "";
-  const transcode = url.searchParams.get("transcode") === "1";
 
   if (!fileId) {
     return new Response("Missing id parameter", { status: 400 });
@@ -44,26 +43,18 @@ export async function GET(req: NextRequest) {
     downloadUrl.searchParams.set("resourcekey", resourceKey);
   }
 
-  // Forward the Range header for seeking support
-  const range = req.headers.get("range");
-  if (range) {
-    BROWSER_HEADERS["Range"] = range;
-  } else {
-    delete BROWSER_HEADERS["Range"];
-  }
-
   try {
     const upstream = await fetch(downloadUrl.toString(), {
       headers: BROWSER_HEADERS,
       redirect: "follow",
-      signal: AbortSignal.timeout(30000),
+      signal: AbortSignal.timeout(60000),
     });
 
     const contentType = upstream.headers.get("content-type") || "";
     if (contentType.includes("text/html")) {
-      return new Response(
-        JSON.stringify({ error: "Google Drive returned the virus scan warning page.", fileId }),
-        { status: 502, headers: { "Content-Type": "application/json" } },
+      return NextResponse.json(
+        { error: "Google Drive returned the virus scan warning page.", fileId },
+        { status: 502 },
       );
     }
 
@@ -71,33 +62,39 @@ export async function GET(req: NextRequest) {
       return new Response(`Google Drive returned HTTP ${upstream.status}`, { status: 502 });
     }
 
-    // If the file is MKV (HEVC/x265), transcode to H.264 mp4 so the
-    // browser can display the video (not just audio). This is expensive
-    // but necessary — browsers can't decode HEVC video natively.
+    // Check if it's an MKV file (browsers can't play HEVC video in MKV)
     const contentDisposition = upstream.headers.get("content-disposition") || "";
     const isMkv = contentDisposition.includes(".mkv") || contentType.includes("matroska");
 
-    if (isMkv || transcode) {
-      // Transcode using ffmpeg: read from stdin, output H.264 mp4 to stdout
-      // Use -movflags frag_keyframe+empty_moov for fragmented mp4 (streamable)
+    if (isMkv) {
+      // Transcode MKV → H.264 mp4 using ffmpeg
+      // Convert the Web ReadableStream to a Node.js Readable for ffmpeg
+      const nodeStream = Readable.fromWeb(upstream.body as any);
+
+      const { spawn } = await import("child_process");
       const ffmpeg = spawn("ffmpeg", [
-        "-i", "pipe:0",           // Read from stdin
-        "-c:v", "libx264",        // Transcode video to H.264
-        "-preset", "ultrafast",   // Fastest preset (lower quality but real-time)
-        "-crf", "28",             // Compression quality (lower = better quality, higher = smaller)
-        "-c:a", "aac",            // Transcode audio to AAC
-        "-b:a", "128k",           // Audio bitrate
-        "-f", "mp4",              // Output format: mp4
-        "-movflags", "frag_keyframe+empty_moov",  // Streamable mp4
-        "pipe:1",                 // Write to stdout
+        "-i", "pipe:0",
+        "-c:v", "libx264",
+        "-preset", "ultrafast",
+        "-crf", "28",
+        "-c:a", "aac",
+        "-b:a", "128k",
+        "-f", "mp4",
+        "-movflags", "frag_keyframe+empty_moov",
+        "pipe:1",
       ]);
 
-      // Pipe the upstream response to ffmpeg's stdin
-      // @ts-expect-error — ReadableStream to WritableStream conversion
-      upstream.body.pipe(ffmpeg.stdin);
+      // Pipe upstream → ffmpeg stdin
+      nodeStream.pipe(ffmpeg.stdin);
 
-      // Return ffmpeg's stdout as the response
-      return new Response(ffmpeg.stdout, {
+      // Handle errors
+      nodeStream.on("error", () => ffmpeg.stdin.destroy());
+      ffmpeg.stdin.on("error", () => {});
+
+      // Convert ffmpeg stdout (Node Readable) to Web ReadableStream
+      const webStream = Readable.toWeb(ffmpeg.stdout as any);
+
+      return new Response(webStream, {
         status: 200,
         headers: {
           "Content-Type": "video/mp4",
@@ -109,9 +106,9 @@ export async function GET(req: NextRequest) {
       });
     }
 
-    // Direct passthrough for mp4/webm files
+    // Direct passthrough for mp4/webm files (no transcoding needed)
     const responseHeaders = new Headers();
-    responseHeaders.set("Content-Type", upstream.headers.get("content-type") || "video/mp4");
+    responseHeaders.set("Content-Type", "video/mp4");
     const contentLength = upstream.headers.get("content-length");
     if (contentLength) responseHeaders.set("Content-Length", contentLength);
     const contentRange = upstream.headers.get("content-range");

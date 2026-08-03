@@ -1,17 +1,19 @@
 /**
- * Archive.org episode sources — maps anime + episode to a direct Archive.org
- * video URL. These play directly in our HTML5 player (no proxy needed —
- * Archive.org serves with CORS + Range support).
+ * Archive.org episode sources — maps anime + episode to an Archive.org
+ * video URL routed through our /api/stream proxy (Archive.org returns 302
+ * redirects that browsers can't follow for <video> elements, so we proxy).
  */
 import type { GdriveEpisode } from "./gdrive-sources";
 
-// Helper for Archive.org episodes — uses the direct URL as both embedUrl and streamUrl
-function arc(directUrl: string, title: string): GdriveEpisode {
+// Helper for Archive.org episodes — routes through our /api/stream proxy
+// to handle Archive.org's 302 redirects
+function arc(archiveUrl: string, title: string): GdriveEpisode {
+  const proxiedUrl = `/api/stream?url=${encodeURIComponent(archiveUrl)}`;
   return {
     fileId: "",
     resourceKey: "",
-    embedUrl: directUrl,
-    streamUrl: directUrl, // Archive.org serves with CORS — no proxy needed
+    embedUrl: proxiedUrl,
+    streamUrl: proxiedUrl,
     title,
   };
 }
