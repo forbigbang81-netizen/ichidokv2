@@ -12,6 +12,7 @@ export type Movie = {
   url: string;
   size_gb: number;
   poster: string;
+  poster_url?: string;
 };
 
 const movies = moviesData as Movie[];
@@ -38,6 +39,8 @@ export function getFranchises(): { name: string; movies: Movie[] }[] {
 }
 
 export function moviePosterUrl(movie: Movie): string {
+  // Use official TMDB poster if available, otherwise fall back to Archive.org thumbnail
+  if (movie.poster_url) return movie.poster_url;
   return `https://archive.org/services/img/${encodeURIComponent(movie.identifier)}`;
 }
 

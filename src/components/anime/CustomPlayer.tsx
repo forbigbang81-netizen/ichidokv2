@@ -501,36 +501,20 @@ export function CustomPlayer({
               />
             </div>
 
-            {/* Buttons row */}
+            {/* Buttons row — Netflix-style: timestamp left, controls center, settings right */}
             <div className="mt-1 flex items-center gap-1 text-white sm:gap-2">
-              <PlayerButton onClick={onPrev} disabled={!hasPrev} label="Previous episode">
-                <SkipBack className="size-5 fill-current" />
-              </PlayerButton>
-              <PlayerButton onClick={togglePlay} label={playing ? "Pause" : "Play"}>
-                {playing ? (
-                  <Pause className="size-6 fill-current" />
-                ) : (
-                  <Play className="size-6 fill-current" />
-                )}
-              </PlayerButton>
-              <PlayerButton onClick={onNext} disabled={!hasNext} label="Next episode">
-                <SkipForward className="size-5 fill-current" />
-              </PlayerButton>
-
-              {/* Skip back 10s */}
-              <PlayerButton onClick={() => skip(-10)} label="Back 10 seconds" className="hidden sm:inline-flex">
-                <RotateCcw className="size-5" />
-              </PlayerButton>
-              <PlayerButton onClick={() => skip(10)} label="Forward 10 seconds" className="hidden sm:inline-flex">
-                <RotateCw className="size-5" />
-              </PlayerButton>
+              {/* Timestamp — bottom left */}
+              <div className="select-none font-mono text-xs text-white/90 tabular-nums whitespace-nowrap">
+                {formatTime(current)} <span className="text-white/40">/</span>{" "}
+                {formatTime(duration)}
+              </div>
 
               {/* Volume */}
               <div className="group/vol flex items-center">
                 <PlayerButton onClick={toggleMute} label="Mute">
                   <VolumeIcon className="size-5" />
                 </PlayerButton>
-                <div className="hidden w-0 overflow-hidden transition-all duration-200 group-hover/vol:w-20 sm:block">
+                <div className="hidden w-0 overflow-hidden transition-all duration-200 group-hover/vol:w-16 sm:block">
                   <input
                     type="range"
                     min={0}
@@ -544,11 +528,28 @@ export function CustomPlayer({
                 </div>
               </div>
 
-              {/* Time */}
-              <div className="ml-1 select-none font-mono text-xs text-white/90 tabular-nums">
-                {formatTime(current)} <span className="text-white/40">/</span>{" "}
-                {formatTime(duration)}
-              </div>
+              <div className="flex-1" />
+
+              {/* Center controls — prev, skip back, play/pause, skip forward, next */}
+              <PlayerButton onClick={() => skip(-10)} label="Back 10 seconds">
+                <RotateCcw className="size-5" />
+              </PlayerButton>
+              <PlayerButton onClick={onPrev} disabled={!hasPrev} label="Previous episode">
+                <SkipBack className="size-5 fill-current" />
+              </PlayerButton>
+              <PlayerButton onClick={togglePlay} label={playing ? "Pause" : "Play"}>
+                {playing ? (
+                  <Pause className="size-6 fill-current" />
+                ) : (
+                  <Play className="size-6 fill-current" />
+                )}
+              </PlayerButton>
+              <PlayerButton onClick={onNext} disabled={!hasNext} label="Next episode">
+                <SkipForward className="size-5 fill-current" />
+              </PlayerButton>
+              <PlayerButton onClick={() => skip(10)} label="Forward 10 seconds">
+                <RotateCw className="size-5" />
+              </PlayerButton>
 
               <div className="flex-1" />
 

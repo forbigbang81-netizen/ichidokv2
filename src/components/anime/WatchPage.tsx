@@ -121,7 +121,7 @@ export function WatchPage({ animeId, episode }: Props) {
           <CustomPlayer
             key={current.ep_num}
             title={anime.title}
-            subtitle={`Episode ${current.ep_num} — ${current.name.replace(/\.(mp4|mkv|webm)$/i, "")}`}
+            subtitle={`Episode ${current.ep_num}`}
             src={current.url}
             poster={posterUrl(anime)}
             hasPrev={Boolean(prevEp)}
@@ -237,7 +237,7 @@ export function WatchPage({ animeId, episode }: Props) {
                               : "text-foreground",
                           )}
                         >
-                          {ep.name.replace(/\.(mp4|mkv|webm)$/i, "")}
+                          Episode {ep.ep_num}
                         </span>
                       </span>
                       {active ? (

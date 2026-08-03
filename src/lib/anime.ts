@@ -9,6 +9,7 @@
  * is merged in from a hand-curated `META` map so the product feels real.
  */
 import archiveData from "@/data/anime-archive.json";
+import posterMap from "@/data/anime-posters.json";
 
 export type Episode = {
   name: string;
@@ -328,7 +329,9 @@ export function searchAnime(query: string): Anime[] {
  * The poster image used everywhere — Archive.org's thumbnail service.
  * Falls back gracefully if missing (handled by the <AnimeCard/>).
  */
-export function posterUrl(anime: Pick<Anime, "identifier">): string {
+export function posterUrl(anime: Pick<Anime, "id" | "identifier">): string {
+  const official = (posterMap as Record<string, string>)[anime.id];
+  if (official) return official;
   return `https://archive.org/services/img/${encodeURIComponent(anime.identifier)}`;
 }
 
