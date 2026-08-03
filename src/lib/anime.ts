@@ -131,6 +131,15 @@ const META: Record<
       "Tatsumi, a young fighter, sets out for the capital to earn money for his starving village — only to be recruited into Night Raid, a secret assassination group fighting the corrupt Empire with powerful weapons called Teigu.",
     backdropColor: "#2a0d0d",
   },
+  "100-girlfriends": {
+    year: 2023,
+    studio: "Bibury Animation Studios",
+    rating: 7.4,
+    popularity: 15,
+    genres: ["Comedy", "Romance", "Harem", "Supernatural"],
+    synopsis: "Aijou Rentarou has 100 soulmates. That's what the God of Love told him. The catch? If he doesn't return their feelings, they'll die. So he resolves to date all 100 of them.",
+    backdropColor: "#1c2a0d",
+  },
   "overlord": {
     year: 2015,
     studio: "Madhouse",
