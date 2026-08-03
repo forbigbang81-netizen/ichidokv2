@@ -120,6 +120,16 @@ const META: Record<
       "Bell Cranel dreams of becoming the greatest adventurer in Orario. Beneath the city lies a sprawling dungeon — and a goddess who sees something special in him.",
     backdropColor: "#2a1c2a",
   },
+  "akame-ga-kill": {
+    year: 2014,
+    studio: "White Fox",
+    rating: 7.5,
+    popularity: 5,
+    genres: ["Action", "Adventure", "Drama", "Fantasy"],
+    synopsis:
+      "Tatsumi, a young fighter, sets out for the capital to earn money for his starving village — only to be recruited into Night Raid, a secret assassination group fighting the corrupt Empire with powerful weapons called Teigu.",
+    backdropColor: "#2a0d0d",
+  },
   "overlord": {
     year: 2015,
     studio: "Madhouse",
@@ -322,8 +332,16 @@ export function posterUrl(anime: Pick<Anime, "identifier">): string {
   return `https://archive.org/services/img/${encodeURIComponent(anime.identifier)}`;
 }
 
-/** Stream URL routed through our own proxy so we can follow Archive.org 302s. */
+/** Stream URL routed through our own proxy.
+ * - Remote URLs (archive.org) go through /api/stream (handles 302 redirects)
+ * - Local MKV files go through /api/transcode (ffmpeg HEVC → H.264)
+ */
 export function streamProxyUrl(episodeUrl: string): string {
+  // Local MKV files — need ffmpeg transcoding (browsers can't play HEVC)
+  if (episodeUrl.startsWith("/") && episodeUrl.includes(".mkv")) {
+    return `/api/transcode?path=${encodeURIComponent(episodeUrl)}`;
+  }
+  // Remote URLs — use the stream proxy
   return `/api/stream?url=${encodeURIComponent(episodeUrl)}`;
 }
 

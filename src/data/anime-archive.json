@@ -1,5 +1,133 @@
 [
   {
+    "id": "akame-ga-kill",
+    "title": "Akame ga Kill!",
+    "identifier": "akame-ga-kill",
+    "episode_count": 24,
+    "episodes": [
+      {
+        "name": "[Judas] Akame ga Kill! - 01.mkv",
+        "ep_num": 1,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2001.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 02.mkv",
+        "ep_num": 2,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2002.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 03.mkv",
+        "ep_num": 3,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2003.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 04.mkv",
+        "ep_num": 4,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2004.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 05.mkv",
+        "ep_num": 5,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2005.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 06.mkv",
+        "ep_num": 6,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2006.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 07.mkv",
+        "ep_num": 7,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2007.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 08.mkv",
+        "ep_num": 8,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2008.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 09.mkv",
+        "ep_num": 9,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2009.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 10.mkv",
+        "ep_num": 10,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2010.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 11.mkv",
+        "ep_num": 11,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2011.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 12.mkv",
+        "ep_num": 12,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2012.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 13.mkv",
+        "ep_num": 13,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2013.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 14.mkv",
+        "ep_num": 14,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2014.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 15.mkv",
+        "ep_num": 15,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2015.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 16.mkv",
+        "ep_num": 16,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2016.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 17.mkv",
+        "ep_num": 17,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2017.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 18.mkv",
+        "ep_num": 18,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2018.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 19.mkv",
+        "ep_num": 19,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2019.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 20.mkv",
+        "ep_num": 20,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2020.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 21.mkv",
+        "ep_num": 21,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2021.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 22.mkv",
+        "ep_num": 22,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2022.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 23.mkv",
+        "ep_num": 23,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2023.mkv"
+      },
+      {
+        "name": "[Judas] Akame ga Kill! - 24.mkv",
+        "ep_num": 24,
+        "url": "/akame/%5BJudas%5D%20Akame%20ga%20Kill%21%20-%2024.mkv"
+      }
+    ]
+  },
+  {
     "id": "death-note",
     "title": "Death Note",
     "identifier": "death-note-complete-2006-2007",
