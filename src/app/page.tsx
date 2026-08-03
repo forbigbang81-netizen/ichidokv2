@@ -8,17 +8,12 @@ import { HomePage } from "@/components/anime/HomePage";
 import { CatalogPage } from "@/components/anime/CatalogPage";
 import { DetailsPage } from "@/components/anime/DetailsPage";
 import { WatchPage } from "@/components/anime/WatchPage";
+import { IchiflixPage } from "@/components/anime/IchiflixPage";
+import { MoviePlayerPage } from "@/components/anime/MoviePlayerPage";
 
-/**
- * App shell. The whole site lives on `/` and is driven by the hash router,
- * which lets us share deep links (#/watch/attack-on-titan?ep=1) and still
- * work on platforms that only expose a single route.
- */
 export default function Home() {
   const view = useApp((s) => s.view);
 
-  // A unique key per view + its main identifier, so AnimatePresence can
-  // animate between them.
   const key =
     view.name === "details"
       ? `details:${view.animeId}`
@@ -26,11 +21,18 @@ export default function Home() {
         ? `watch:${view.animeId}:${view.episode}`
         : view.name === "catalog"
           ? "catalog"
-          : "home";
+          : view.name === "ichiflix"
+            ? "ichiflix"
+            : view.name === "movie"
+              ? `movie:${view.movieId}`
+              : "home";
+
+  // Ichiflix and Movie views are full-screen (no navbar/footer)
+  const isFullScreen = view.name === "ichiflix" || view.name === "movie";
 
   return (
     <div className="grain relative flex min-h-screen flex-col bg-background">
-      <Navbar />
+      {!isFullScreen && <Navbar />}
       <main className="relative flex-1">
         <AnimatePresence mode="wait">
           <motion.div
@@ -48,10 +50,12 @@ export default function Home() {
             {view.name === "watch" && (
               <WatchPage animeId={view.animeId} episode={view.episode} />
             )}
+            {view.name === "ichiflix" && <IchiflixPage />}
+            {view.name === "movie" && <MoviePlayerPage movieId={view.movieId} />}
           </motion.div>
         </AnimatePresence>
       </main>
-      <Footer />
+      {!isFullScreen && <Footer />}
     </div>
   );
 }

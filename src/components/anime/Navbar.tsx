@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, Search, Home, LayoutGrid, X } from "lucide-react";
+import { Menu, Search, Home, LayoutGrid, X, Film } from "lucide-react";
 import { useApp } from "@/lib/store";
 import { SearchOverlay } from "@/components/anime/SearchOverlay";
 import { cn } from "@/lib/utils";
@@ -102,6 +102,9 @@ export function Navbar() {
               {navItem(isCatalog, "Catalog", <LayoutGrid className="size-4" />, () =>
                 go({ name: "catalog" }),
               )}
+              {navItem(false, "Ichiflix", <Film className="size-4" />, () =>
+                go({ name: "ichiflix" }),
+              )}
             </nav>
           </div>
 
@@ -161,6 +164,15 @@ export function Navbar() {
                 )}
               >
                 <LayoutGrid className="size-4" /> Catalog
+              </button>
+              <button
+                onClick={() => {
+                  go({ name: "ichiflix" });
+                  setMobileOpen(false);
+                }}
+                className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[#E50914] hover:bg-accent"
+              >
+                <Film className="size-4" /> Ichiflix
               </button>
             </div>
           </motion.div>

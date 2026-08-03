@@ -17,7 +17,9 @@ export type View =
   | { name: "home" }
   | { name: "catalog"; initialQuery?: string }
   | { name: "details"; animeId: string }
-  | { name: "watch"; animeId: string; episode: number };
+  | { name: "watch"; animeId: string; episode: number }
+  | { name: "ichiflix" }
+  | { name: "movie"; movieId: string };
 
 type AppState = {
   view: View;
@@ -56,6 +58,8 @@ function parseHash(): View | null {
       episode: ep || 1,
     };
   }
+  if (parts[0] === "ichiflix") return { name: "ichiflix" };
+  if (parts[0] === "movie" && parts[1]) return { name: "movie", movieId: decodeURIComponent(parts[1]) };
   return null;
 }
 
@@ -74,6 +78,10 @@ export function toHash(view: View): string {
       q.set("ep", String(view.episode));
       return `#/watch/${encodeURIComponent(view.animeId)}?${q.toString()}`;
     }
+    case "ichiflix":
+      return "#/ichiflix";
+    case "movie":
+      return `#/movie/${encodeURIComponent(view.movieId)}`;
   }
 }
 

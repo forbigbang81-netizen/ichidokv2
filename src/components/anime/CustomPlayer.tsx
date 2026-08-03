@@ -35,6 +35,7 @@ type Props = {
   onPrev?: () => void;
   hasPrev?: boolean;
   hasNext?: boolean;
+  autoPlay?: boolean;
 };
 
 const HIDE_DELAY = 3000; // ms before auto-hiding controls while playing
@@ -50,6 +51,7 @@ export function CustomPlayer({
   onPrev,
   hasPrev = false,
   hasNext = false,
+  autoPlay = true,
 }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
