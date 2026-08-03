@@ -129,6 +129,32 @@ export const gdriveEpisodes: Record<string, (GdriveEpisode | null)[][]> = {
       ep("1Ea3wOBCNrH3y4y4Hh0raAcasxcGd_Qji", "", "Psycho-Pass E21"),
     ],
   ],
+
+  // Puella Magi Madoka Magica Season 1 — 5 of 12 episodes + Rebellion movie (BD 1080p)
+  // Source: https://drive.google.com/drive/folders/1xLRToaeAOZiOPf26Y7qCE_VWCYMtZV8T
+  "mahou-shoujo-madokamagica": [
+    [
+      null, // Ep 1
+      null, // Ep 2
+      null, // Ep 3
+      ep("190G34Cw6jJrV2Ne45i5eT5OkhYz5P_je", "", "Madoka Magica E04"), // Ep 4
+      null, // Ep 5
+      null, // Ep 6
+      ep("1TOsDhVZczTyWl8ke1hWF4hOxJOTRKnyK", "", "Madoka Magica E07"), // Ep 7
+      ep("1XMAZniuzPUR0HoL327C0465Bhz8nmiUp", "", "Madoka Magica E08"), // Ep 8
+      ep("1l2lhMlXnYLppgFu5K7xvBVA_GeA44FQp", "", "Madoka Magica E09"), // Ep 9
+      ep("1jBieamf79YDTmkzEcPVBJaQTjyU1aOi8", "", "Madoka Magica E10"), // Ep 10
+      null, // Ep 11
+      null, // Ep 12
+    ],
+  ],
+
+  // Puella Magi Madoka Magica the Movie: Rebellion (BD 1080p)
+  "mahou-shoujo-madokamagica-movie-3-hangyaku-no-monogatari": [
+    [
+      ep("14tSEHlC6vt67KymPutWdYGbnZgXgVZIk", "", "Madoka Magica: Rebellion Movie"),
+    ],
+  ],
 };
 
 /**
