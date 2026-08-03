@@ -1,340 +1,238 @@
 "use client";
-import { useMemo, useState } from "react";
+
+import { useMemo } from "react";
+import { motion } from "framer-motion";
+import { Play, Star, Clock, Layers, ArrowLeft, Calendar } from "lucide-react";
 import {
-  ArrowLeft,
-  Play,
-  Star,
-  Calendar,
-  Clock,
-  Tv,
-  Building2,
-  CheckCircle2,
-  ListVideo,
-} from "lucide-react";
+  getAnimeById,
+  posterUrl,
+  formatRating,
+  type Anime,
+} from "@/lib/anime";
 import { useApp } from "@/lib/store";
-import { getAnimeById, buildEpisodeList } from "@/lib/anime";
-import { AnimePoster } from "./AnimePoster";
-import { AnimeCard } from "./AnimeCard";
-import { filterAnime } from "@/lib/anime";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export function DetailsPage({ animeId }: { animeId: string }) {
+  const anime = useMemo(() => getAnimeById(animeId), [animeId]);
   const go = useApp((s) => s.go);
   const back = useApp((s) => s.back);
   const canGoBack = useApp((s) => s.canGoBack());
-  const anime = getAnimeById(animeId);
-
-  const [activeSeason, setActiveSeason] = useState(0);
-
-  const episodes = useMemo(
-    () => (anime ? buildEpisodeList(anime) : []),
-    [anime],
-  );
-
-  const seasonEpisodes = useMemo(
-    () => episodes.filter((e) => e.seasonIndex === activeSeason),
-    [episodes, activeSeason],
-  );
-
-  // recommendations — same-genre, exclude self
-  const recs = useMemo(() => {
-    if (!anime) return [];
-    return filterAnime({ genre: anime.genres[0], sort: "popularity" })
-      .filter((a) => a.id !== anime.id)
-      .slice(0, 10);
-  }, [anime]);
 
   if (!anime) {
     return (
-      <div className="view-enter mx-auto max-w-[1400px] px-6 py-20 text-center md:px-10">
-        <p className="text-sm font-semibold">Anime not found.</p>
-        <button
-          onClick={() => go({ name: "home" })}
-          className="mt-4 inline-flex items-center gap-1 border border-border bg-card px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background"
-        >
-          Back home
-        </button>
+      <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 px-4 py-32 text-center">
+        <h1 className="text-2xl font-bold">Anime not found</h1>
+        <p className="text-sm text-muted-foreground">
+          The title you were looking for isn't in the catalog.
+        </p>
+        <Button onClick={() => go({ name: "catalog" })}>Back to catalog</Button>
       </div>
     );
   }
 
   return (
-    <div className="view-enter">
-      {/* Top bar with back button */}
-      <div className="border-b border-border bg-background/85 backdrop-blur">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-3 md:px-10">
-          {canGoBack ? (
+    <motion.div
+      initial={{ opacity: 0, x: 24 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -24 }}
+      transition={{ duration: 0.32, ease: [0.22, 0.61, 0.36, 1] }}
+    >
+      {/* Hero banner */}
+      <section className="relative w-full overflow-hidden">
+        {/* Backdrop */}
+        <div className="absolute inset-0">
+          <img
+            src={posterUrl(anime)}
+            alt=""
+            aria-hidden="true"
+            className="size-full object-cover opacity-30 blur-2xl scale-110"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(90deg, ${anime.backdropColor}dd 0%, rgba(10,10,10,0.85) 50%, rgba(10,10,10,0.95) 100%)`,
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        </div>
+
+        <div className="relative mx-auto w-full max-w-7xl px-4 pb-10 pt-6 sm:px-6 sm:pb-14 sm:pt-10 lg:px-8 lg:pb-16">
+          {canGoBack && (
             <button
               onClick={back}
-              className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground"
+              className="mb-6 inline-flex items-center gap-2 rounded-lg border border-border/60 bg-background/40 px-3 py-1.5 text-sm text-muted-foreground backdrop-blur-sm hover:text-foreground hover:border-[var(--brand)]/50"
             >
-              <ArrowLeft className="h-3.5 w-3.5" /> Back
-            </button>
-          ) : (
-            <button
-              onClick={() => go({ name: "home" })}
-              className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" /> Home
+              <ArrowLeft className="size-4" />
+              Back
             </button>
           )}
-          <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            Details
-          </span>
-        </div>
-      </div>
 
-      {/* Hero header */}
-      <section className="border-b border-border">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-8 px-6 py-8 md:grid-cols-[280px_1fr] md:px-10 md:py-10">
-          {/* Poster */}
-          <div className="mx-auto w-full max-w-[260px] md:mx-0">
-            <div className="aspect-[2/3] w-full overflow-hidden border border-border">
-              <AnimePoster
-                title={anime.title}
-                poster={anime.poster}
-                imageUrl={anime.image_url}
-                className="h-full w-full"
-              />
-            </div>
-            <button
+          <div className="flex flex-col gap-6 md:flex-row md:gap-8">
+            {/* Poster */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.05 }}
+              className="mx-auto w-40 shrink-0 sm:w-48 md:mx-0 lg:w-56"
+            >
+              <div className="relative overflow-hidden rounded-xl border border-white/10 shadow-2xl shadow-black/60">
+                <img
+                  src={posterUrl(anime)}
+                  alt={anime.title}
+                  className="aspect-[2/3] w-full object-cover"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.visibility =
+                      "hidden";
+                  }}
+                />
+              </div>
+            </motion.div>
+
+            {/* Details */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.12 }}
+              className="min-w-0 flex-1"
+            >
+              <div className="flex flex-wrap items-center gap-2">
+                {anime.featured && (
+                  <Badge className="bg-[var(--brand)] text-[var(--brand-foreground)] hover:bg-[var(--brand)]">
+                    Featured
+                  </Badge>
+                )}
+                <Badge variant="secondary" className="gap-1">
+                  <Calendar className="size-3" />
+                  {anime.year}
+                </Badge>
+                <Badge variant="secondary" className="gap-1">
+                  <Layers className="size-3" />
+                  {anime.episode_count} eps
+                </Badge>
+              </div>
+
+              <h1 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                {anime.title}
+              </h1>
+
+              <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1 font-semibold text-[var(--brand)]">
+                  <Star className="size-3.5 fill-current" />
+                  {formatRating(anime.rating)}
+                </span>
+                <span>{anime.studio}</span>
+                <span className="flex items-center gap-1">
+                  <Clock className="size-3.5" />~24 min/ep
+                </span>
+              </div>
+
+              {/* Genres */}
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                {anime.genres.map((g) => (
+                  <span
+                    key={g}
+                    className="rounded-full border border-border/60 bg-card/40 px-2.5 py-0.5 text-xs text-muted-foreground"
+                  >
+                    {g}
+                  </span>
+                ))}
+              </div>
+
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-foreground/80 sm:text-base">
+                {anime.synopsis}
+              </p>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <Button
+                  size="lg"
+                  onClick={() =>
+                    go({
+                      name: "watch",
+                      animeId: anime.id,
+                      episode: 1,
+                    })
+                  }
+                  className="gap-2 bg-[var(--brand)] text-[var(--brand-foreground)] hover:bg-[var(--brand)]/90 shadow-lg shadow-[var(--brand)]/25"
+                >
+                  <Play className="size-4 fill-current" />
+                  Play Episode 1
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Episodes */}
+      <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="mb-4 flex items-end justify-between">
+          <div>
+            <h2 className="text-xl font-bold tracking-tight sm:text-2xl">
+              Episodes
+            </h2>
+            <p className="mt-0.5 text-sm text-muted-foreground">
+              {anime.episode_count} episodes · {anime.title}
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {anime.episodes.map((ep, i) => (
+            <motion.button
+              key={ep.ep_num}
+              type="button"
               onClick={() =>
                 go({
                   name: "watch",
                   animeId: anime.id,
-                  episode: 1,
-                  seasonIndex: 0,
+                  episode: ep.ep_num,
                 })
               }
-              className="mt-4 inline-flex w-full items-center justify-center gap-2 bg-foreground py-3 text-[11px] font-semibold uppercase tracking-wider text-background hover:opacity-90"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.28,
+                delay: Math.min(i * 0.02, 0.4),
+                ease: [0.22, 0.61, 0.36, 1],
+              }}
+              whileHover={{ y: -2 }}
+              className="group flex items-center gap-3 overflow-hidden rounded-lg border border-border/50 bg-card/40 p-2 text-left transition-colors hover:border-[var(--brand)]/50 hover:bg-card"
             >
-              <Play className="h-3.5 w-3.5 fill-current" /> Start watching
-            </button>
-          </div>
-
-          {/* Info */}
-          <div>
-            {anime.altTitles.length > 0 && (
-              <p className="mb-1 text-[11px] uppercase tracking-wider text-muted-foreground">
-                {anime.altTitles[0]}
-              </p>
-            )}
-            <h1 className="text-balance text-3xl font-black leading-tight tracking-tight md:text-5xl">
-              {anime.title}
-            </h1>
-
-            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] uppercase tracking-wider text-muted-foreground">
-              <span className="inline-flex items-center gap-1">
-                <Star className="h-3 w-3 fill-current text-foreground" />
-                <span className="font-semibold text-foreground">
-                  {anime.rating.toFixed(2)}
-                </span>
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <Calendar className="h-3 w-3" /> {anime.season}
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <Tv className="h-3 w-3" /> {anime.type}
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <Building2 className="h-3 w-3" /> {anime.studio}
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <Clock className="h-3 w-3" /> {anime.duration}m/ep
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <ListVideo className="h-3 w-3" /> {anime.totalEpisodes} ep
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <CheckCircle2 className="h-3 w-3" /> {anime.status}
-              </span>
-            </div>
-
-            {/* genres */}
-            <div className="mt-4 flex flex-wrap gap-1.5">
-              {anime.genres.map((g) => (
-                <button
-                  key={g}
-                  onClick={() => go({ name: "catalog" })}
-                  className="border border-border bg-card px-2 py-1 text-[10px] font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background"
-                >
-                  {g}
-                </button>
-              ))}
-            </div>
-
-            {/* synopsis */}
-            <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-              {anime.synopsis}
-            </p>
-
-            {/* season summary */}
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <Stat label="Seasons" value={String(anime.seasons.length)} />
-              <Stat label="Episodes" value={String(anime.totalEpisodes)} />
-              <Stat label="Rating" value={anime.rating.toFixed(2)} />
-              <Stat label="Year" value={String(anime.year)} />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Seasons tabs + episode list */}
-      <section className="mx-auto max-w-[1400px] px-6 py-8 md:px-10">
-        <div className="mb-4 flex items-end justify-between gap-4">
-          <div>
-            <h2 className="text-2xl font-black tracking-tight">Episodes</h2>
-            <p className="mt-0.5 text-[11px] uppercase tracking-wider text-muted-foreground">
-              {anime.seasons.length} season{anime.seasons.length === 1 ? "" : "s"} ·{" "}
-              {anime.totalEpisodes} total episodes
-            </p>
-          </div>
-        </div>
-
-        {anime.seasons.length > 1 ? (
-          <Tabs
-            value={String(activeSeason)}
-            onValueChange={(v) => setActiveSeason(parseInt(v, 10))}
-          >
-            <TabsList className="flex h-auto flex-wrap gap-1 border border-border bg-card p-1">
-              {anime.seasons.map((s, i) => (
-                <TabsTrigger
-                  key={i}
-                  value={String(i)}
-                  className="data-[state=active]:bg-foreground data-[state=active]:text-background"
-                >
-                  {s.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-
-            {anime.seasons.map((s, i) => (
-              <TabsContent key={i} value={String(i)} className="mt-4">
-                <SeasonBlock
-                  animeId={anime.id}
-                  seasonIndex={i}
-                  seasonName={s.name}
-                  seasonSynopsis={s.synopsis}
-                  seasonYear={s.year}
-                  episodes={episodes.filter((e) => e.seasonIndex === i)}
-                  startEpisodeNumber={
-                    episodes.filter((e) => e.seasonIndex < i).length + 1
-                  }
+              {/* Thumb */}
+              <div className="relative aspect-video w-32 shrink-0 overflow-hidden rounded-md bg-muted sm:w-36">
+                <img
+                  src={posterUrl(anime)}
+                  alt=""
+                  loading="lazy"
+                  className="size-full object-cover opacity-70 transition-opacity duration-300 group-hover:opacity-100"
                 />
-              </TabsContent>
-            ))}
-          </Tabs>
-        ) : (
-          <SeasonBlock
-            animeId={anime.id}
-            seasonIndex={0}
-            seasonName={anime.seasons[0].name}
-            seasonSynopsis={anime.seasons[0].synopsis}
-            seasonYear={anime.seasons[0].year}
-            episodes={seasonEpisodes}
-            startEpisodeNumber={1}
-          />
-        )}
-      </section>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                  <span className="flex size-9 items-center justify-center rounded-full bg-[var(--brand)]/90 text-[var(--brand-foreground)] opacity-0 shadow-lg transition-opacity duration-300 group-hover:opacity-100">
+                    <Play className="size-4 fill-current" />
+                  </span>
+                </div>
+                <span className="absolute left-1.5 top-1.5 rounded bg-black/70 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-white">
+                  EP {ep.ep_num}
+                </span>
+              </div>
 
-      {/* Recommendations */}
-      {recs.length > 0 && (
-        <section className="mx-auto max-w-[1400px] px-6 pb-12 md:px-10">
-          <h2 className="mb-4 text-2xl font-black tracking-tight">
-            More like this
-          </h2>
-          <div className="grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-            {recs.map((a) => (
-              <AnimeCard key={a.id} anime={a} />
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
-  );
-}
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="border border-border bg-card p-3">
-      <p className="text-[10px] uppercase tracking-wider text-muted-foreground">
-        {label}
-      </p>
-      <p className="mt-0.5 text-lg font-black tabular-nums">{value}</p>
-    </div>
-  );
-}
-
-function SeasonBlock({
-  animeId,
-  seasonIndex,
-  seasonName,
-  seasonSynopsis,
-  seasonYear,
-  episodes,
-  startEpisodeNumber,
-}: {
-  animeId: string;
-  seasonIndex: number;
-  seasonName: string;
-  seasonSynopsis?: string;
-  seasonYear?: number;
-  episodes: ReturnType<typeof buildEpisodeList>;
-  startEpisodeNumber: number;
-}) {
-  const go = useApp((s) => s.go);
-
-  return (
-    <div>
-      <div className="mb-4 border border-border bg-card p-4">
-        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <h3 className="text-lg font-bold tracking-tight">{seasonName}</h3>
-          {seasonYear && (
-            <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
-              {seasonYear} · {episodes.length} ep
-            </span>
-          )}
+              {/* Text */}
+              <div className="min-w-0 flex-1">
+                <p className="line-clamp-1 text-sm font-semibold tracking-tight group-hover:text-[var(--brand)]">
+                  Episode {ep.ep_num}
+                </p>
+                <p className="mt-0.5 line-clamp-2 text-xs text-muted-foreground">
+                  {ep.name.replace(/\.(mp4|mkv|webm)$/i, "")}
+                </p>
+              </div>
+            </motion.button>
+          ))}
         </div>
-        {seasonSynopsis && (
-          <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-            {seasonSynopsis}
-          </p>
-        )}
-      </div>
-
-      <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
-        {episodes.map((ep, i) => (
-          <button
-            key={ep.number}
-            onClick={() =>
-              go({
-                name: "watch",
-                animeId,
-                episode: ep.number,
-                seasonIndex,
-              })
-            }
-            className={cn(
-              "group flex items-center gap-3 border border-border bg-card p-2.5 text-left transition-colors",
-              "hover:bg-foreground hover:text-background",
-            )}
-          >
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center border border-border text-sm font-bold tabular-nums group-hover:border-background">
-              {startEpisodeNumber + i}
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="line-clamp-1 text-xs font-semibold">
-                Episode {ep.episodeInSeason}
-              </p>
-              <p className="text-[10px] uppercase tracking-wider opacity-60">
-                {ep.duration}m · ep {ep.number}
-              </p>
-            </div>
-            <Play className="h-3.5 w-3.5 fill-current opacity-0 transition-opacity group-hover:opacity-100" />
-          </button>
-        ))}
-      </div>
-    </div>
+      </section>
+    </motion.div>
   );
 }
+
+// Re-export the Anime type so other modules can import it from here if needed.
+export type { Anime };

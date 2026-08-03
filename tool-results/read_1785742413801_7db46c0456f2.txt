@@ -1,0 +1,2002 @@
+     1→[
+     2→  {
+     3→    "id": "death-note",
+     4→    "title": "Death Note",
+     5→    "identifier": "death-note-complete-2006-2007",
+     6→    "episode_count": 37,
+     7→    "episodes": [
+     8→      {
+     9→        "name": "E01 - Rebirth.mp4",
+    10→        "ep_num": 1,
+    11→        "url": "https://archive.org/download/death-note-complete-2006-2007/E01%20-%20Rebirth.mp4"
+    12→      },
+    13→      {
+    14→        "name": "E02 - Confrontation.mp4",
+    15→        "ep_num": 2,
+    16→        "url": "https://archive.org/download/death-note-complete-2006-2007/E02%20-%20Confrontation.mp4"
+    17→      },
+    18→      {
+    19→        "name": "E03 - Dealings.mp4",
+    20→        "ep_num": 3,
+    21→        "url": "https://archive.org/download/death-note-complete-2006-2007/E03%20-%20Dealings.mp4"
+    22→      },
+    23→      {
+    24→        "name": "E04 - Pursuit.mp4",
+    25→        "ep_num": 4,
+    26→        "url": "https://archive.org/download/death-note-complete-2006-2007/E04%20-%20Pursuit.mp4"
+    27→      },
+    28→      {
+    29→        "name": "E05 - Tactics.mp4",
+    30→        "ep_num": 5,
+    31→        "url": "https://archive.org/download/death-note-complete-2006-2007/E05%20-%20Tactics.mp4"
+    32→      },
+    33→      {
+    34→        "name": "E06 - Unraveling.mp4",
+    35→        "ep_num": 6,
+    36→        "url": "https://archive.org/download/death-note-complete-2006-2007/E06%20-%20Unraveling.mp4"
+    37→      },
+    38→      {
+    39→        "name": "E07 - Overcast.mp4",
+    40→        "ep_num": 7,
+    41→        "url": "https://archive.org/download/death-note-complete-2006-2007/E07%20-%20Overcast.mp4"
+    42→      },
+    43→      {
+    44→        "name": "E08 - Glare.mp4",
+    45→        "ep_num": 8,
+    46→        "url": "https://archive.org/download/death-note-complete-2006-2007/E08%20-%20Glare.mp4"
+    47→      },
+    48→      {
+    49→        "name": "E09 - Encounter.mp4",
+    50→        "ep_num": 9,
+    51→        "url": "https://archive.org/download/death-note-complete-2006-2007/E09%20-%20Encounter.mp4"
+    52→      },
+    53→      {
+    54→        "name": "E10 - Doubt.mp4",
+    55→        "ep_num": 10,
+    56→        "url": "https://archive.org/download/death-note-complete-2006-2007/E10%20-%20Doubt.mp4"
+    57→      },
+    58→      {
+    59→        "name": "E11 - Assault.mp4",
+    60→        "ep_num": 11,
+    61→        "url": "https://archive.org/download/death-note-complete-2006-2007/E11%20-%20Assault.mp4"
+    62→      },
+    63→      {
+    64→        "name": "E12 - Love.mp4",
+    65→        "ep_num": 12,
+    66→        "url": "https://archive.org/download/death-note-complete-2006-2007/E12%20-%20Love.mp4"
+    67→      },
+    68→      {
+    69→        "name": "E13 - Confession.mp4",
+    70→        "ep_num": 13,
+    71→        "url": "https://archive.org/download/death-note-complete-2006-2007/E13%20-%20Confession.mp4"
+    72→      },
+    73→      {
+    74→        "name": "E14 - Friend.mp4",
+    75→        "ep_num": 14,
+    76→        "url": "https://archive.org/download/death-note-complete-2006-2007/E14%20-%20Friend.mp4"
+    77→      },
+    78→      {
+    79→        "name": "E15 - Wager.mp4",
+    80→        "ep_num": 15,
+    81→        "url": "https://archive.org/download/death-note-complete-2006-2007/E15%20-%20Wager.mp4"
+    82→      },
+    83→      {
+    84→        "name": "E16 - Decision.mp4",
+    85→        "ep_num": 16,
+    86→        "url": "https://archive.org/download/death-note-complete-2006-2007/E16%20-%20Decision.mp4"
+    87→      },
+    88→      {
+    89→        "name": "E17 - Execution.mp4",
+    90→        "ep_num": 17,
+    91→        "url": "https://archive.org/download/death-note-complete-2006-2007/E17%20-%20Execution.mp4"
+    92→      },
+    93→      {
+    94→        "name": "E18 - Ally.mp4",
+    95→        "ep_num": 18,
+    96→        "url": "https://archive.org/download/death-note-complete-2006-2007/E18%20-%20Ally.mp4"
+    97→      },
+    98→      {
+    99→        "name": "E19 - Matsuda.mp4",
+   100→        "ep_num": 19,
+   101→        "url": "https://archive.org/download/death-note-complete-2006-2007/E19%20-%20Matsuda.mp4"
+   102→      },
+   103→      {
+   104→        "name": "E20 - Makeshift.mp4",
+   105→        "ep_num": 20,
+   106→        "url": "https://archive.org/download/death-note-complete-2006-2007/E20%20-%20Makeshift.mp4"
+   107→      },
+   108→      {
+   109→        "name": "E21 - Performance.mp4",
+   110→        "ep_num": 21,
+   111→        "url": "https://archive.org/download/death-note-complete-2006-2007/E21%20-%20Performance.mp4"
+   112→      },
+   113→      {
+   114→        "name": "E22 - Guidance.mp4",
+   115→        "ep_num": 22,
+   116→        "url": "https://archive.org/download/death-note-complete-2006-2007/E22%20-%20Guidance.mp4"
+   117→      },
+   118→      {
+   119→        "name": "E23 - Frenzy.mp4",
+   120→        "ep_num": 23,
+   121→        "url": "https://archive.org/download/death-note-complete-2006-2007/E23%20-%20Frenzy.mp4"
+   122→      },
+   123→      {
+   124→        "name": "E24 - Revival.mp4",
+   125→        "ep_num": 24,
+   126→        "url": "https://archive.org/download/death-note-complete-2006-2007/E24%20-%20Revival.mp4"
+   127→      },
+   128→      {
+   129→        "name": "E25 - Silence.mp4",
+   130→        "ep_num": 25,
+   131→        "url": "https://archive.org/download/death-note-complete-2006-2007/E25%20-%20Silence.mp4"
+   132→      },
+   133→      {
+   134→        "name": "E26 - Renewal.mp4",
+   135→        "ep_num": 26,
+   136→        "url": "https://archive.org/download/death-note-complete-2006-2007/E26%20-%20Renewal.mp4"
+   137→      },
+   138→      {
+   139→        "name": "E27 - Abduction.mp4",
+   140→        "ep_num": 27,
+   141→        "url": "https://archive.org/download/death-note-complete-2006-2007/E27%20-%20Abduction.mp4"
+   142→      },
+   143→      {
+   144→        "name": "E28 - Impatience.mp4",
+   145→        "ep_num": 28,
+   146→        "url": "https://archive.org/download/death-note-complete-2006-2007/E28%20-%20Impatience.mp4"
+   147→      },
+   148→      {
+   149→        "name": "E29 - Father.mp4",
+   150→        "ep_num": 29,
+   151→        "url": "https://archive.org/download/death-note-complete-2006-2007/E29%20-%20Father.mp4"
+   152→      },
+   153→      {
+   154→        "name": "E30 - Justice.mp4",
+   155→        "ep_num": 30,
+   156→        "url": "https://archive.org/download/death-note-complete-2006-2007/E30%20-%20Justice.mp4"
+   157→      },
+   158→      {
+   159→        "name": "E31 - Transfer.mp4",
+   160→        "ep_num": 31,
+   161→        "url": "https://archive.org/download/death-note-complete-2006-2007/E31%20-%20Transfer.mp4"
+   162→      },
+   163→      {
+   164→        "name": "E32 - Selection.mp4",
+   165→        "ep_num": 32,
+   166→        "url": "https://archive.org/download/death-note-complete-2006-2007/E32%20-%20Selection.mp4"
+   167→      },
+   168→      {
+   169→        "name": "E33 - Scorn.mp4",
+   170→        "ep_num": 33,
+   171→        "url": "https://archive.org/download/death-note-complete-2006-2007/E33%20-%20Scorn.mp4"
+   172→      },
+   173→      {
+   174→        "name": "E34 - Vigilance.mp4",
+   175→        "ep_num": 34,
+   176→        "url": "https://archive.org/download/death-note-complete-2006-2007/E34%20-%20Vigilance.mp4"
+   177→      },
+   178→      {
+   179→        "name": "E35 - Malice.mp4",
+   180→        "ep_num": 35,
+   181→        "url": "https://archive.org/download/death-note-complete-2006-2007/E35%20-%20Malice.mp4"
+   182→      },
+   183→      {
+   184→        "name": "E36 - 1.28.mp4",
+   185→        "ep_num": 36,
+   186→        "url": "https://archive.org/download/death-note-complete-2006-2007/E36%20-%201.28.mp4"
+   187→      },
+   188→      {
+   189→        "name": "E37 - New World.mp4",
+   190→        "ep_num": 37,
+   191→        "url": "https://archive.org/download/death-note-complete-2006-2007/E37%20-%20New%20World.mp4"
+   192→      }
+   193→    ]
+   194→  },
+   195→  {
+   196→    "id": "overlord",
+   197→    "title": "Overlord",
+   198→    "identifier": "12_20210129",
+   199→    "episode_count": 13,
+   200→    "episodes": [
+   201→      {
+   202→        "name": "1.mp4",
+   203→        "ep_num": 1,
+   204→        "url": "https://archive.org/download/12_20210129/1.mp4"
+   205→      },
+   206→      {
+   207→        "name": "2.mp4",
+   208→        "ep_num": 2,
+   209→        "url": "https://archive.org/download/12_20210129/2.mp4"
+   210→      },
+   211→      {
+   212→        "name": "3.mp4",
+   213→        "ep_num": 3,
+   214→        "url": "https://archive.org/download/12_20210129/3.mp4"
+   215→      },
+   216→      {
+   217→        "name": "4.mp4",
+   218→        "ep_num": 4,
+   219→        "url": "https://archive.org/download/12_20210129/4.mp4"
+   220→      },
+   221→      {
+   222→        "name": "5.mp4",
+   223→        "ep_num": 5,
+   224→        "url": "https://archive.org/download/12_20210129/5.mp4"
+   225→      },
+   226→      {
+   227→        "name": "6.mp4",
+   228→        "ep_num": 6,
+   229→        "url": "https://archive.org/download/12_20210129/6.mp4"
+   230→      },
+   231→      {
+   232→        "name": "7.mp4",
+   233→        "ep_num": 7,
+   234→        "url": "https://archive.org/download/12_20210129/7.mp4"
+   235→      },
+   236→      {
+   237→        "name": "8.mp4",
+   238→        "ep_num": 8,
+   239→        "url": "https://archive.org/download/12_20210129/8.mp4"
+   240→      },
+   241→      {
+   242→        "name": "9.mp4",
+   243→        "ep_num": 9,
+   244→        "url": "https://archive.org/download/12_20210129/9.mp4"
+   245→      },
+   246→      {
+   247→        "name": "10.mp4",
+   248→        "ep_num": 10,
+   249→        "url": "https://archive.org/download/12_20210129/10.mp4"
+   250→      },
+   251→      {
+   252→        "name": "11.mp4",
+   253→        "ep_num": 11,
+   254→        "url": "https://archive.org/download/12_20210129/11.mp4"
+   255→      },
+   256→      {
+   257→        "name": "12.mp4",
+   258→        "ep_num": 12,
+   259→        "url": "https://archive.org/download/12_20210129/12.mp4"
+   260→      },
+   261→      {
+   262→        "name": "13.mp4",
+   263→        "ep_num": 13,
+   264→        "url": "https://archive.org/download/12_20210129/13.mp4"
+   265→      }
+   266→    ]
+   267→  },
+   268→  {
+   269→    "id": "overlord-ii",
+   270→    "title": "Overlord II",
+   271→    "identifier": "OverlordSeason2",
+   272→    "episode_count": 13,
+   273→    "episodes": [
+   274→      {
+   275→        "name": "01.mp4",
+   276→        "ep_num": 1,
+   277→        "url": "https://archive.org/download/OverlordSeason2/01.mp4"
+   278→      },
+   279→      {
+   280→        "name": "02.mp4",
+   281→        "ep_num": 2,
+   282→        "url": "https://archive.org/download/OverlordSeason2/02.mp4"
+   283→      },
+   284→      {
+   285→        "name": "03.mp4",
+   286→        "ep_num": 3,
+   287→        "url": "https://archive.org/download/OverlordSeason2/03.mp4"
+   288→      },
+   289→      {
+   290→        "name": "04.mp4",
+   291→        "ep_num": 4,
+   292→        "url": "https://archive.org/download/OverlordSeason2/04.mp4"
+   293→      },
+   294→      {
+   295→        "name": "05.mp4",
+   296→        "ep_num": 5,
+   297→        "url": "https://archive.org/download/OverlordSeason2/05.mp4"
+   298→      },
+   299→      {
+   300→        "name": "06.mp4",
+   301→        "ep_num": 6,
+   302→        "url": "https://archive.org/download/OverlordSeason2/06.mp4"
+   303→      },
+   304→      {
+   305→        "name": "07.mp4",
+   306→        "ep_num": 7,
+   307→        "url": "https://archive.org/download/OverlordSeason2/07.mp4"
+   308→      },
+   309→      {
+   310→        "name": "08.mp4",
+   311→        "ep_num": 8,
+   312→        "url": "https://archive.org/download/OverlordSeason2/08.mp4"
+   313→      },
+   314→      {
+   315→        "name": "09.mp4",
+   316→        "ep_num": 9,
+   317→        "url": "https://archive.org/download/OverlordSeason2/09.mp4"
+   318→      },
+   319→      {
+   320→        "name": "10.mp4",
+   321→        "ep_num": 10,
+   322→        "url": "https://archive.org/download/OverlordSeason2/10.mp4"
+   323→      },
+   324→      {
+   325→        "name": "11.mp4",
+   326→        "ep_num": 11,
+   327→        "url": "https://archive.org/download/OverlordSeason2/11.mp4"
+   328→      },
+   329→      {
+   330→        "name": "12.mp4",
+   331→        "ep_num": 12,
+   332→        "url": "https://archive.org/download/OverlordSeason2/12.mp4"
+   333→      },
+   334→      {
+   335→        "name": "13.mp4",
+   336→        "ep_num": 13,
+   337→        "url": "https://archive.org/download/OverlordSeason2/13.mp4"
+   338→      }
+   339→    ]
+   340→  },
+   341→  {
+   342→    "id": "attack-on-titan",
+   343→    "title": "Attack on Titan",
+   344→    "identifier": "shingeki-no-kyojin_aot",
+   345→    "episode_count": 75,
+   346→    "episodes": [
+   347→      {
+   348→        "name": "season-1_DUB-1080p/Attack_on_Titan-E1-1080p.mp4",
+   349→        "ep_num": 1,
+   350→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E1-1080p.mp4"
+   351→      },
+   352→      {
+   353→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E1-1080p.mp4",
+   354→        "ep_num": 1,
+   355→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E1-1080p.mp4"
+   356→      },
+   357→      {
+   358→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E1-1080p.mp4",
+   359→        "ep_num": 1,
+   360→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E1-1080p.mp4"
+   361→      },
+   362→      {
+   363→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E1-1080p.mp4",
+   364→        "ep_num": 1,
+   365→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E1-1080p.mp4"
+   366→      },
+   367→      {
+   368→        "name": "season-1_DUB-1080p/Attack_on_Titan-E2-1080p.mp4",
+   369→        "ep_num": 2,
+   370→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E2-1080p.mp4"
+   371→      },
+   372→      {
+   373→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E2-1080p.mp4",
+   374→        "ep_num": 2,
+   375→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E2-1080p.mp4"
+   376→      },
+   377→      {
+   378→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E2-1080p.mp4",
+   379→        "ep_num": 2,
+   380→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E2-1080p.mp4"
+   381→      },
+   382→      {
+   383→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E2-1080p.mp4",
+   384→        "ep_num": 2,
+   385→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E2-1080p.mp4"
+   386→      },
+   387→      {
+   388→        "name": "season-1_DUB-1080p/Attack_on_Titan-E3-1080p.mp4",
+   389→        "ep_num": 3,
+   390→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E3-1080p.mp4"
+   391→      },
+   392→      {
+   393→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E3-1080p.mp4",
+   394→        "ep_num": 3,
+   395→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E3-1080p.mp4"
+   396→      },
+   397→      {
+   398→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E3-1080p.mp4",
+   399→        "ep_num": 3,
+   400→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E3-1080p.mp4"
+   401→      },
+   402→      {
+   403→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E3-1080p.mp4",
+   404→        "ep_num": 3,
+   405→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E3-1080p.mp4"
+   406→      },
+   407→      {
+   408→        "name": "season-1_DUB-1080p/Attack_on_Titan-E4-1080p.mp4",
+   409→        "ep_num": 4,
+   410→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E4-1080p.mp4"
+   411→      },
+   412→      {
+   413→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E4-1080p.mp4",
+   414→        "ep_num": 4,
+   415→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E4-1080p.mp4"
+   416→      },
+   417→      {
+   418→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E4-1080p.mp4",
+   419→        "ep_num": 4,
+   420→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E4-1080p.mp4"
+   421→      },
+   422→      {
+   423→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E4-1080p.mp4",
+   424→        "ep_num": 4,
+   425→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E4-1080p.mp4"
+   426→      },
+   427→      {
+   428→        "name": "season-1_DUB-1080p/Attack_on_Titan-E5-1080p.mp4",
+   429→        "ep_num": 5,
+   430→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E5-1080p.mp4"
+   431→      },
+   432→      {
+   433→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E5-1080p.mp4",
+   434→        "ep_num": 5,
+   435→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E5-1080p.mp4"
+   436→      },
+   437→      {
+   438→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E5-1080p.mp4",
+   439→        "ep_num": 5,
+   440→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E5-1080p.mp4"
+   441→      },
+   442→      {
+   443→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E5-1080p.mp4",
+   444→        "ep_num": 5,
+   445→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E5-1080p.mp4"
+   446→      },
+   447→      {
+   448→        "name": "season-1_DUB-1080p/Attack_on_Titan-E6-1080p.mp4",
+   449→        "ep_num": 6,
+   450→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E6-1080p.mp4"
+   451→      },
+   452→      {
+   453→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E6-1080p.mp4",
+   454→        "ep_num": 6,
+   455→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E6-1080p.mp4"
+   456→      },
+   457→      {
+   458→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E6-1080p.mp4",
+   459→        "ep_num": 6,
+   460→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E6-1080p.mp4"
+   461→      },
+   462→      {
+   463→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E6-1080p.mp4",
+   464→        "ep_num": 6,
+   465→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E6-1080p.mp4"
+   466→      },
+   467→      {
+   468→        "name": "season-1_DUB-1080p/Attack_on_Titan-E7-1080p.mp4",
+   469→        "ep_num": 7,
+   470→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E7-1080p.mp4"
+   471→      },
+   472→      {
+   473→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E7-1080p.mp4",
+   474→        "ep_num": 7,
+   475→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E7-1080p.mp4"
+   476→      },
+   477→      {
+   478→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E7-1080p.mp4",
+   479→        "ep_num": 7,
+   480→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E7-1080p.mp4"
+   481→      },
+   482→      {
+   483→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E7-1080p.mp4",
+   484→        "ep_num": 7,
+   485→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E7-1080p.mp4"
+   486→      },
+   487→      {
+   488→        "name": "season-1_DUB-1080p/Attack_on_Titan-E8-1080p.mp4",
+   489→        "ep_num": 8,
+   490→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E8-1080p.mp4"
+   491→      },
+   492→      {
+   493→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E8-1080p.mp4",
+   494→        "ep_num": 8,
+   495→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E8-1080p.mp4"
+   496→      },
+   497→      {
+   498→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E8-1080p.mp4",
+   499→        "ep_num": 8,
+   500→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E8-1080p.mp4"
+   501→      },
+   502→      {
+   503→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E8-1080p.mp4",
+   504→        "ep_num": 8,
+   505→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E8-1080p.mp4"
+   506→      },
+   507→      {
+   508→        "name": "season-1_DUB-1080p/Attack_on_Titan-E9-1080p.mp4",
+   509→        "ep_num": 9,
+   510→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E9-1080p.mp4"
+   511→      },
+   512→      {
+   513→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E9-1080p.mp4",
+   514→        "ep_num": 9,
+   515→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E9-1080p.mp4"
+   516→      },
+   517→      {
+   518→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E9-1080p.mp4",
+   519→        "ep_num": 9,
+   520→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E9-1080p.mp4"
+   521→      },
+   522→      {
+   523→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E9-1080p.mp4",
+   524→        "ep_num": 9,
+   525→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E9-1080p.mp4"
+   526→      },
+   527→      {
+   528→        "name": "season-1_DUB-1080p/Attack_on_Titan-E10-1080p.mp4",
+   529→        "ep_num": 10,
+   530→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E10-1080p.mp4"
+   531→      },
+   532→      {
+   533→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E10-1080p.mp4",
+   534→        "ep_num": 10,
+   535→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E10-1080p.mp4"
+   536→      },
+   537→      {
+   538→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E10-1080p.mp4",
+   539→        "ep_num": 10,
+   540→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E10-1080p.mp4"
+   541→      },
+   542→      {
+   543→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E10-1080p.mp4",
+   544→        "ep_num": 10,
+   545→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E10-1080p.mp4"
+   546→      },
+   547→      {
+   548→        "name": "season-1_DUB-1080p/Attack_on_Titan-E11-1080p.mp4",
+   549→        "ep_num": 11,
+   550→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E11-1080p.mp4"
+   551→      },
+   552→      {
+   553→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E11-1080p.mp4",
+   554→        "ep_num": 11,
+   555→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E11-1080p.mp4"
+   556→      },
+   557→      {
+   558→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E11-1080p.mp4",
+   559→        "ep_num": 11,
+   560→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E11-1080p.mp4"
+   561→      },
+   562→      {
+   563→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E11-1080p.mp4",
+   564→        "ep_num": 11,
+   565→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E11-1080p.mp4"
+   566→      },
+   567→      {
+   568→        "name": "season-1_DUB-1080p/Attack_on_Titan-E12-1080p.mp4",
+   569→        "ep_num": 12,
+   570→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E12-1080p.mp4"
+   571→      },
+   572→      {
+   573→        "name": "season-2_DUB-1080p/Attack_on_Titan_Season_2-E12-1080p.mp4",
+   574→        "ep_num": 12,
+   575→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-2_DUB-1080p/Attack_on_Titan_Season_2-E12-1080p.mp4"
+   576→      },
+   577→      {
+   578→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E12-1080p.mp4",
+   579→        "ep_num": 12,
+   580→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E12-1080p.mp4"
+   581→      },
+   582→      {
+   583→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E12-1080p.mp4",
+   584→        "ep_num": 12,
+   585→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E12-1080p.mp4"
+   586→      },
+   587→      {
+   588→        "name": "season-1_DUB-1080p/Attack_on_Titan-E13-1080p.mp4",
+   589→        "ep_num": 13,
+   590→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E13-1080p.mp4"
+   591→      },
+   592→      {
+   593→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E13-1080p.mp4",
+   594→        "ep_num": 13,
+   595→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E13-1080p.mp4"
+   596→      },
+   597→      {
+   598→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E13-1080p.mp4",
+   599→        "ep_num": 13,
+   600→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E13-1080p.mp4"
+   601→      },
+   602→      {
+   603→        "name": "season-1_DUB-1080p/Attack_on_Titan-E14-1080p.mp4",
+   604→        "ep_num": 14,
+   605→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E14-1080p.mp4"
+   606→      },
+   607→      {
+   608→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E14-1080p.mp4",
+   609→        "ep_num": 14,
+   610→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E14-1080p.mp4"
+   611→      },
+   612→      {
+   613→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E14-1080p.mp4",
+   614→        "ep_num": 14,
+   615→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E14-1080p.mp4"
+   616→      },
+   617→      {
+   618→        "name": "season-1_DUB-1080p/Attack_on_Titan-E15-1080p.mp4",
+   619→        "ep_num": 15,
+   620→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E15-1080p.mp4"
+   621→      },
+   622→      {
+   623→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E15-1080p.mp4",
+   624→        "ep_num": 15,
+   625→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E15-1080p.mp4"
+   626→      },
+   627→      {
+   628→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E15-1080p.mp4",
+   629→        "ep_num": 15,
+   630→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E15-1080p.mp4"
+   631→      },
+   632→      {
+   633→        "name": "season-1_DUB-1080p/Attack_on_Titan-E16-1080p.mp4",
+   634→        "ep_num": 16,
+   635→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E16-1080p.mp4"
+   636→      },
+   637→      {
+   638→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E16-1080p.mp4",
+   639→        "ep_num": 16,
+   640→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E16-1080p.mp4"
+   641→      },
+   642→      {
+   643→        "name": "season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season,_Part_1-E16-1080p.mp4",
+   644→        "ep_num": 16,
+   645→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-finale-pt-1_DUB-1080p/Attack_on_Titan_Final_Season%2C_Part_1-E16-1080p.mp4"
+   646→      },
+   647→      {
+   648→        "name": "season-1_DUB-1080p/Attack_on_Titan-E17-1080p.mp4",
+   649→        "ep_num": 17,
+   650→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E17-1080p.mp4"
+   651→      },
+   652→      {
+   653→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E17-1080p.mp4",
+   654→        "ep_num": 17,
+   655→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E17-1080p.mp4"
+   656→      },
+   657→      {
+   658→        "name": "season-1_DUB-1080p/Attack_on_Titan-E18-1080p.mp4",
+   659→        "ep_num": 18,
+   660→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E18-1080p.mp4"
+   661→      },
+   662→      {
+   663→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E18-1080p.mp4",
+   664→        "ep_num": 18,
+   665→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E18-1080p.mp4"
+   666→      },
+   667→      {
+   668→        "name": "season-1_DUB-1080p/Attack_on_Titan-E19-1080p.mp4",
+   669→        "ep_num": 19,
+   670→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E19-1080p.mp4"
+   671→      },
+   672→      {
+   673→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E19-1080p.mp4",
+   674→        "ep_num": 19,
+   675→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E19-1080p.mp4"
+   676→      },
+   677→      {
+   678→        "name": "season-1_DUB-1080p/Attack_on_Titan-E20-1080p.mp4",
+   679→        "ep_num": 20,
+   680→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E20-1080p.mp4"
+   681→      },
+   682→      {
+   683→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E20-1080p.mp4",
+   684→        "ep_num": 20,
+   685→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E20-1080p.mp4"
+   686→      },
+   687→      {
+   688→        "name": "season-1_DUB-1080p/Attack_on_Titan-E21-1080p.mp4",
+   689→        "ep_num": 21,
+   690→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E21-1080p.mp4"
+   691→      },
+   692→      {
+   693→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E21-1080p.mp4",
+   694→        "ep_num": 21,
+   695→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E21-1080p.mp4"
+   696→      },
+   697→      {
+   698→        "name": "season-1_DUB-1080p/Attack_on_Titan-E22-1080p.mp4",
+   699→        "ep_num": 22,
+   700→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E22-1080p.mp4"
+   701→      },
+   702→      {
+   703→        "name": "season-3_DUB-1080p/Attack_on_Titan_Season_3-E22-1080p.mp4",
+   704→        "ep_num": 22,
+   705→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-3_DUB-1080p/Attack_on_Titan_Season_3-E22-1080p.mp4"
+   706→      },
+   707→      {
+   708→        "name": "season-1_DUB-1080p/Attack_on_Titan-E23-1080p.mp4",
+   709→        "ep_num": 23,
+   710→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E23-1080p.mp4"
+   711→      },
+   712→      {
+   713→        "name": "season-1_DUB-1080p/Attack_on_Titan-E24-1080p.mp4",
+   714→        "ep_num": 24,
+   715→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E24-1080p.mp4"
+   716→      },
+   717→      {
+   718→        "name": "season-1_DUB-1080p/Attack_on_Titan-E25-1080p.mp4",
+   719→        "ep_num": 25,
+   720→        "url": "https://archive.org/download/shingeki-no-kyojin_aot/season-1_DUB-1080p/Attack_on_Titan-E25-1080p.mp4"
+   721→      }
+   722→    ]
+   723→  },
+   724→  {
+   725→    "id": "black-clover",
+   726→    "title": "Black Clover",
+   727→    "identifier": "bl5ck-cl0v3r-tv-dub-seasons-1",
+   728→    "episode_count": 51,
+   729→    "episodes": [
+   730→      {
+   731→        "name": "Black Clover (TV) (Dub) Episode 1.mp4",
+   732→        "ep_num": 1,
+   733→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%201.mp4"
+   734→      },
+   735→      {
+   736→        "name": "Black Clover (TV) (Dub) Episode 2.mp4",
+   737→        "ep_num": 2,
+   738→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%202.mp4"
+   739→      },
+   740→      {
+   741→        "name": "Black Clover (TV) (Dub) Episode 3.mp4",
+   742→        "ep_num": 3,
+   743→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%203.mp4"
+   744→      },
+   745→      {
+   746→        "name": "Black Clover (TV) (Dub) Episode 4.mp4",
+   747→        "ep_num": 4,
+   748→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%204.mp4"
+   749→      },
+   750→      {
+   751→        "name": "Black Clover (TV) (Dub) Episode 5.mp4",
+   752→        "ep_num": 5,
+   753→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%205.mp4"
+   754→      },
+   755→      {
+   756→        "name": "Black Clover (TV) (Dub) Episode 6.mp4",
+   757→        "ep_num": 6,
+   758→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%206.mp4"
+   759→      },
+   760→      {
+   761→        "name": "Black Clover (TV) (Dub) Episode 7.mp4",
+   762→        "ep_num": 7,
+   763→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%207.mp4"
+   764→      },
+   765→      {
+   766→        "name": "Black Clover (TV) (Dub) Episode 8.mp4",
+   767→        "ep_num": 8,
+   768→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%208.mp4"
+   769→      },
+   770→      {
+   771→        "name": "Black Clover (TV) (Dub) Episode 9.mp4",
+   772→        "ep_num": 9,
+   773→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%209.mp4"
+   774→      },
+   775→      {
+   776→        "name": "Black Clover (TV) (Dub) Episode 10.mp4",
+   777→        "ep_num": 10,
+   778→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2010.mp4"
+   779→      },
+   780→      {
+   781→        "name": "Black Clover (TV) (Dub) Episode 11.mp4",
+   782→        "ep_num": 11,
+   783→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2011.mp4"
+   784→      },
+   785→      {
+   786→        "name": "Black Clover (TV) (Dub) Episode 12.mp4",
+   787→        "ep_num": 12,
+   788→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2012.mp4"
+   789→      },
+   790→      {
+   791→        "name": "Black Clover (TV) (Dub) Episode 13.mp4",
+   792→        "ep_num": 13,
+   793→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2013.mp4"
+   794→      },
+   795→      {
+   796→        "name": "Black Clover (TV) (Dub) Episode 14.mp4",
+   797→        "ep_num": 14,
+   798→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2014.mp4"
+   799→      },
+   800→      {
+   801→        "name": "Black Clover (TV) (Dub) Episode 15.mp4",
+   802→        "ep_num": 15,
+   803→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2015.mp4"
+   804→      },
+   805→      {
+   806→        "name": "Black Clover (TV) (Dub) Episode 16.mp4",
+   807→        "ep_num": 16,
+   808→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2016.mp4"
+   809→      },
+   810→      {
+   811→        "name": "Black Clover (TV) (Dub) Episode 17.mp4",
+   812→        "ep_num": 17,
+   813→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2017.mp4"
+   814→      },
+   815→      {
+   816→        "name": "Black Clover (TV) (Dub) Episode 18.mp4",
+   817→        "ep_num": 18,
+   818→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2018.mp4"
+   819→      },
+   820→      {
+   821→        "name": "Black Clover (TV) (Dub) Episode 19.mp4",
+   822→        "ep_num": 19,
+   823→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2019.mp4"
+   824→      },
+   825→      {
+   826→        "name": "Black Clover (TV) (Dub) Episode 20.mp4",
+   827→        "ep_num": 20,
+   828→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2020.mp4"
+   829→      },
+   830→      {
+   831→        "name": "Black Clover (TV) (Dub) Episode 21.mp4",
+   832→        "ep_num": 21,
+   833→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2021.mp4"
+   834→      },
+   835→      {
+   836→        "name": "Black Clover (TV) (Dub) Episode 22.mp4",
+   837→        "ep_num": 22,
+   838→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2022.mp4"
+   839→      },
+   840→      {
+   841→        "name": "Black Clover (TV) (Dub) Episode 23.mp4",
+   842→        "ep_num": 23,
+   843→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2023.mp4"
+   844→      },
+   845→      {
+   846→        "name": "Black Clover (TV) (Dub) Episode 24.mp4",
+   847→        "ep_num": 24,
+   848→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2024.mp4"
+   849→      },
+   850→      {
+   851→        "name": "Black Clover (TV) (Dub) Episode 25.mp4",
+   852→        "ep_num": 25,
+   853→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2025.mp4"
+   854→      },
+   855→      {
+   856→        "name": "Black Clover (TV) (Dub) Episode 26.mp4",
+   857→        "ep_num": 26,
+   858→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2026.mp4"
+   859→      },
+   860→      {
+   861→        "name": "Black Clover (TV) (Dub) Episode 27.mp4",
+   862→        "ep_num": 27,
+   863→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2027.mp4"
+   864→      },
+   865→      {
+   866→        "name": "Black Clover (TV) (Dub) Episode 28.mp4",
+   867→        "ep_num": 28,
+   868→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2028.mp4"
+   869→      },
+   870→      {
+   871→        "name": "Black Clover (TV) (Dub) Episode 29.mp4",
+   872→        "ep_num": 29,
+   873→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2029.mp4"
+   874→      },
+   875→      {
+   876→        "name": "Black Clover (TV) (Dub) Episode 30.mp4",
+   877→        "ep_num": 30,
+   878→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2030.mp4"
+   879→      },
+   880→      {
+   881→        "name": "Black Clover (TV) (Dub) Episode 31.mp4",
+   882→        "ep_num": 31,
+   883→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2031.mp4"
+   884→      },
+   885→      {
+   886→        "name": "Black Clover (TV) (Dub) Episode 32.mp4",
+   887→        "ep_num": 32,
+   888→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2032.mp4"
+   889→      },
+   890→      {
+   891→        "name": "Black Clover (TV) (Dub) Episode 33.mp4",
+   892→        "ep_num": 33,
+   893→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2033.mp4"
+   894→      },
+   895→      {
+   896→        "name": "Black Clover (TV) (Dub) Episode 34.mp4",
+   897→        "ep_num": 34,
+   898→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2034.mp4"
+   899→      },
+   900→      {
+   901→        "name": "Black Clover (TV) (Dub) Episode 35.mp4",
+   902→        "ep_num": 35,
+   903→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2035.mp4"
+   904→      },
+   905→      {
+   906→        "name": "Black Clover (TV) (Dub) Episode 36.mp4",
+   907→        "ep_num": 36,
+   908→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2036.mp4"
+   909→      },
+   910→      {
+   911→        "name": "Black Clover (TV) (Dub) Episode 37.mp4",
+   912→        "ep_num": 37,
+   913→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2037.mp4"
+   914→      },
+   915→      {
+   916→        "name": "Black Clover (TV) (Dub) Episode 38.mp4",
+   917→        "ep_num": 38,
+   918→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2038.mp4"
+   919→      },
+   920→      {
+   921→        "name": "Black Clover (TV) (Dub) Episode 39.mp4",
+   922→        "ep_num": 39,
+   923→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2039.mp4"
+   924→      },
+   925→      {
+   926→        "name": "Black Clover (TV) (Dub) Episode 40.mp4",
+   927→        "ep_num": 40,
+   928→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2040.mp4"
+   929→      },
+   930→      {
+   931→        "name": "Black Clover (TV) (Dub) Episode 41.mp4",
+   932→        "ep_num": 41,
+   933→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2041.mp4"
+   934→      },
+   935→      {
+   936→        "name": "Black Clover (TV) (Dub) Episode 42.mp4",
+   937→        "ep_num": 42,
+   938→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2042.mp4"
+   939→      },
+   940→      {
+   941→        "name": "Black Clover (TV) (Dub) Episode 43.mp4",
+   942→        "ep_num": 43,
+   943→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2043.mp4"
+   944→      },
+   945→      {
+   946→        "name": "Black Clover (TV) (Dub) Episode 44.mp4",
+   947→        "ep_num": 44,
+   948→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2044.mp4"
+   949→      },
+   950→      {
+   951→        "name": "Black Clover (TV) (Dub) Episode 45.mp4",
+   952→        "ep_num": 45,
+   953→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2045.mp4"
+   954→      },
+   955→      {
+   956→        "name": "Black Clover (TV) (Dub) Episode 46.mp4",
+   957→        "ep_num": 46,
+   958→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2046.mp4"
+   959→      },
+   960→      {
+   961→        "name": "Black Clover (TV) (Dub) Episode 47.mp4",
+   962→        "ep_num": 47,
+   963→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2047.mp4"
+   964→      },
+   965→      {
+   966→        "name": "Black Clover (TV) (Dub) Episode 48.mp4",
+   967→        "ep_num": 48,
+   968→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2048.mp4"
+   969→      },
+   970→      {
+   971→        "name": "Black Clover (TV) (Dub) Episode 49.mp4",
+   972→        "ep_num": 49,
+   973→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2049.mp4"
+   974→      },
+   975→      {
+   976→        "name": "Black Clover (TV) (Dub) Episode 50.mp4",
+   977→        "ep_num": 50,
+   978→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2050.mp4"
+   979→      },
+   980→      {
+   981→        "name": "Black Clover (TV) (Dub) Episode 51.mp4",
+   982→        "ep_num": 51,
+   983→        "url": "https://archive.org/download/bl5ck-cl0v3r-tv-dub-seasons-1/Black%20Clover%20%28TV%29%20%28Dub%29%20Episode%2051.mp4"
+   984→      }
+   985→    ]
+   986→  },
+   987→  {
+   988→    "id": "btooom",
+   989→    "title": "Btooom!",
+   990→    "identifier": "btooom-english-dubbed",
+   991→    "episode_count": 12,
+   992→    "episodes": [
+   993→      {
+   994→        "name": "Btooom! - Episode 001 - English Dub (1080p Quality).mp4.mp4",
+   995→        "ep_num": 1,
+   996→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20001%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+   997→      },
+   998→      {
+   999→        "name": "Btooom! - Episode 002 - English Dub (1080p Quality).mp4.mp4",
+  1000→        "ep_num": 2,
+  1001→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20002%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1002→      },
+  1003→      {
+  1004→        "name": "Btooom! - Episode 003 - English Dub (1080p Quality).mp4.mp4",
+  1005→        "ep_num": 3,
+  1006→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20003%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1007→      },
+  1008→      {
+  1009→        "name": "Btooom! - Episode 004 - English Dub (1080p Quality).mp4.mp4",
+  1010→        "ep_num": 4,
+  1011→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20004%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1012→      },
+  1013→      {
+  1014→        "name": "Btooom! - Episode 005 - English Dub (1080p Quality).mp4.mp4",
+  1015→        "ep_num": 5,
+  1016→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20005%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1017→      },
+  1018→      {
+  1019→        "name": "Btooom! - Episode 006 - English Dub (1080p Quality).mp4.mp4",
+  1020→        "ep_num": 6,
+  1021→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20006%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1022→      },
+  1023→      {
+  1024→        "name": "Btooom! - Episode 007 - English Dub (1080p Quality).mp4.mp4",
+  1025→        "ep_num": 7,
+  1026→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20007%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1027→      },
+  1028→      {
+  1029→        "name": "Btooom! - Episode 008 - English Dub (1080p Quality).mp4.mp4",
+  1030→        "ep_num": 8,
+  1031→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20008%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1032→      },
+  1033→      {
+  1034→        "name": "Btooom! - Episode 009 - English Dub (1080p Quality).mp4.mp4",
+  1035→        "ep_num": 9,
+  1036→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20009%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1037→      },
+  1038→      {
+  1039→        "name": "Btooom! - Episode 010 - English Dub (1080p Quality).mp4.mp4",
+  1040→        "ep_num": 10,
+  1041→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20010%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1042→      },
+  1043→      {
+  1044→        "name": "Btooom! - Episode 011 - English Dub (1080p Quality).mp4.mp4",
+  1045→        "ep_num": 11,
+  1046→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20011%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1047→      },
+  1048→      {
+  1049→        "name": "Btooom! - Episode 012 - English Dub (1080p Quality).mp4.mp4",
+  1050→        "ep_num": 12,
+  1051→        "url": "https://archive.org/download/btooom-english-dubbed/Btooom%21%20-%20Episode%20012%20-%20English%20Dub%20%281080p%20Quality%29.mp4.mp4"
+  1052→      }
+  1053→    ]
+  1054→  },
+  1055→  {
+  1056→    "id": "how-not-to-summon-a-demon-lord",
+  1057→    "title": "How Not to Summon a Demon Lord",
+  1058→    "identifier": "how-not-to-summon-a-demon-lord-dub-ENG",
+  1059→    "episode_count": 12,
+  1060→    "episodes": [
+  1061→      {
+  1062→        "name": "how not to summon a demon lord dub episode+1.mp4",
+  1063→        "ep_num": 1,
+  1064→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20episode%2B1.mp4"
+  1065→      },
+  1066→      {
+  1067→        "name": "how not to summon a demon lord dub Episode+2.mp4",
+  1068→        "ep_num": 2,
+  1069→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B2.mp4"
+  1070→      },
+  1071→      {
+  1072→        "name": "how not to summon a demon lord dub Episode+3.mp4",
+  1073→        "ep_num": 3,
+  1074→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B3.mp4"
+  1075→      },
+  1076→      {
+  1077→        "name": "how not to summon a demon lord dub Episode+4.mp4",
+  1078→        "ep_num": 4,
+  1079→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B4.mp4"
+  1080→      },
+  1081→      {
+  1082→        "name": "how not to summon a demon lord dub Episode+5.mp4",
+  1083→        "ep_num": 5,
+  1084→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B5.mp4"
+  1085→      },
+  1086→      {
+  1087→        "name": "how not to summon a demon lord dub Episode+6.mp4",
+  1088→        "ep_num": 6,
+  1089→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B6.mp4"
+  1090→      },
+  1091→      {
+  1092→        "name": "how not to summon a demon lord dub Episode+7.mp4",
+  1093→        "ep_num": 7,
+  1094→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B7.mp4"
+  1095→      },
+  1096→      {
+  1097→        "name": "how not to summon a demon lord dub Episode+8.mp4",
+  1098→        "ep_num": 8,
+  1099→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B8.mp4"
+  1100→      },
+  1101→      {
+  1102→        "name": "how not to summon a demon lord dub Episode+9.mp4",
+  1103→        "ep_num": 9,
+  1104→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B9.mp4"
+  1105→      },
+  1106→      {
+  1107→        "name": "how not to summon a demon lord dub Episode+10.mp4",
+  1108→        "ep_num": 10,
+  1109→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B10.mp4"
+  1110→      },
+  1111→      {
+  1112→        "name": "how not to summon a demon lord dub Episode+11.mp4",
+  1113→        "ep_num": 11,
+  1114→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B11.mp4"
+  1115→      },
+  1116→      {
+  1117→        "name": "how not to summon a demon lord dub Episode+12.mp4",
+  1118→        "ep_num": 12,
+  1119→        "url": "https://archive.org/download/how-not-to-summon-a-demon-lord-dub-ENG/how%20not%20to%20summon%20a%20demon%20lord%20dub%20Episode%2B12.mp4"
+  1120→      }
+  1121→    ]
+  1122→  },
+  1123→  {
+  1124→    "id": "danmachi",
+  1125→    "title": "DanMachi",
+  1126→    "identifier": "danmachi-s-03-e-08_202303",
+  1127→    "episode_count": 60,
+  1128→    "episodes": [
+  1129→      {
+  1130→        "name": "Sesion 3/Danmachi - S03E01.mp4",
+  1131→        "ep_num": 1,
+  1132→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E01.mp4"
+  1133→      },
+  1134→      {
+  1135→        "name": "[Kayoanime] DanMachi - S04E01.mp4",
+  1136→        "ep_num": 1,
+  1137→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E01.mp4"
+  1138→      },
+  1139→      {
+  1140→        "name": "[Kayoanime] Danmachi S1 - 01.mp4",
+  1141→        "ep_num": 1,
+  1142→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2001.mp4"
+  1143→      },
+  1144→      {
+  1145→        "name": "[Kayoanime] Danmachi S1 - 02.mp4",
+  1146→        "ep_num": 1,
+  1147→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2002.mp4"
+  1148→      },
+  1149→      {
+  1150→        "name": "[Kayoanime] Danmachi S1 - 03.mp4",
+  1151→        "ep_num": 1,
+  1152→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2003.mp4"
+  1153→      },
+  1154→      {
+  1155→        "name": "[Kayoanime] Danmachi S1 - 04.mp4",
+  1156→        "ep_num": 1,
+  1157→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2004.mp4"
+  1158→      },
+  1159→      {
+  1160→        "name": "[Kayoanime] Danmachi S1 - 05.mp4",
+  1161→        "ep_num": 1,
+  1162→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2005.mp4"
+  1163→      },
+  1164→      {
+  1165→        "name": "[Kayoanime] Danmachi S1 - 06.mp4",
+  1166→        "ep_num": 1,
+  1167→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2006.mp4"
+  1168→      },
+  1169→      {
+  1170→        "name": "[Kayoanime] Danmachi S1 - 07.mp4",
+  1171→        "ep_num": 1,
+  1172→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2007.mp4"
+  1173→      },
+  1174→      {
+  1175→        "name": "[Kayoanime] Danmachi S1 - 08.mp4",
+  1176→        "ep_num": 1,
+  1177→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2008.mp4"
+  1178→      },
+  1179→      {
+  1180→        "name": "[Kayoanime] Danmachi S1 - 09.mp4",
+  1181→        "ep_num": 1,
+  1182→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2009.mp4"
+  1183→      },
+  1184→      {
+  1185→        "name": "[Kayoanime] Danmachi S1 - 10.mp4",
+  1186→        "ep_num": 1,
+  1187→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2010.mp4"
+  1188→      },
+  1189→      {
+  1190→        "name": "[Kayoanime] Danmachi S1 - 11.mp4",
+  1191→        "ep_num": 1,
+  1192→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2011.mp4"
+  1193→      },
+  1194→      {
+  1195→        "name": "[Kayoanime] Danmachi S1 - 12.mp4",
+  1196→        "ep_num": 1,
+  1197→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2012.mp4"
+  1198→      },
+  1199→      {
+  1200→        "name": "[Kayoanime] Danmachi S1 - 13.mp4",
+  1201→        "ep_num": 1,
+  1202→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S1%20-%2013.mp4"
+  1203→      },
+  1204→      {
+  1205→        "name": "Danmachi - S03E02.mp4",
+  1206→        "ep_num": 2,
+  1207→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E02.mp4"
+  1208→      },
+  1209→      {
+  1210→        "name": "Sesion 3/Danmachi - S03E02.mp4",
+  1211→        "ep_num": 2,
+  1212→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E02.mp4"
+  1213→      },
+  1214→      {
+  1215→        "name": "Sesion 3/Sesion2/[Kayoanime] Danmachi S2 - 01.mp4",
+  1216→        "ep_num": 2,
+  1217→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Sesion2/%5BKayoanime%5D%20Danmachi%20S2%20-%2001.mp4"
+  1218→      },
+  1219→      {
+  1220→        "name": "[Kayoanime] DanMachi - S04E02.mp4",
+  1221→        "ep_num": 2,
+  1222→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E02.mp4"
+  1223→      },
+  1224→      {
+  1225→        "name": "[Kayoanime] Danmachi S2 - 01.mp4",
+  1226→        "ep_num": 2,
+  1227→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2001.mp4"
+  1228→      },
+  1229→      {
+  1230→        "name": "[Kayoanime] Danmachi S2 - 02.mp4",
+  1231→        "ep_num": 2,
+  1232→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2002.mp4"
+  1233→      },
+  1234→      {
+  1235→        "name": "[Kayoanime] Danmachi S2 - 03.mp4",
+  1236→        "ep_num": 2,
+  1237→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2003.mp4"
+  1238→      },
+  1239→      {
+  1240→        "name": "[Kayoanime] Danmachi S2 - 04.mp4",
+  1241→        "ep_num": 2,
+  1242→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2004.mp4"
+  1243→      },
+  1244→      {
+  1245→        "name": "[Kayoanime] Danmachi S2 - 05.mp4",
+  1246→        "ep_num": 2,
+  1247→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2005.mp4"
+  1248→      },
+  1249→      {
+  1250→        "name": "[Kayoanime] Danmachi S2 - 06.mp4",
+  1251→        "ep_num": 2,
+  1252→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2006.mp4"
+  1253→      },
+  1254→      {
+  1255→        "name": "[Kayoanime] Danmachi S2 - 07.mp4",
+  1256→        "ep_num": 2,
+  1257→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2007.mp4"
+  1258→      },
+  1259→      {
+  1260→        "name": "[Kayoanime] Danmachi S2 - 08.mp4",
+  1261→        "ep_num": 2,
+  1262→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2008.mp4"
+  1263→      },
+  1264→      {
+  1265→        "name": "[Kayoanime] Danmachi S2 - 09.mp4",
+  1266→        "ep_num": 2,
+  1267→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2009.mp4"
+  1268→      },
+  1269→      {
+  1270→        "name": "[Kayoanime] Danmachi S2 - 10.mp4",
+  1271→        "ep_num": 2,
+  1272→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2010.mp4"
+  1273→      },
+  1274→      {
+  1275→        "name": "[Kayoanime] Danmachi S2 - 11.mp4",
+  1276→        "ep_num": 2,
+  1277→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2011.mp4"
+  1278→      },
+  1279→      {
+  1280→        "name": "[Kayoanime] Danmachi S2 - 12.mp4",
+  1281→        "ep_num": 2,
+  1282→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20Danmachi%20S2%20-%2012.mp4"
+  1283→      },
+  1284→      {
+  1285→        "name": "Danmachi - S03E03.mp4",
+  1286→        "ep_num": 3,
+  1287→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E03.mp4"
+  1288→      },
+  1289→      {
+  1290→        "name": "Sesion 3/Danmachi - S03E03.mp4",
+  1291→        "ep_num": 3,
+  1292→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E03.mp4"
+  1293→      },
+  1294→      {
+  1295→        "name": "[Kayoanime] DanMachi - S04E03.mp4",
+  1296→        "ep_num": 3,
+  1297→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E03.mp4"
+  1298→      },
+  1299→      {
+  1300→        "name": "Danmachi - S03E04.mp4",
+  1301→        "ep_num": 4,
+  1302→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E04.mp4"
+  1303→      },
+  1304→      {
+  1305→        "name": "Sesion 3/Danmachi - S03E04.mp4",
+  1306→        "ep_num": 4,
+  1307→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E04.mp4"
+  1308→      },
+  1309→      {
+  1310→        "name": "[Kayoanime] DanMachi - S04E04.mp4",
+  1311→        "ep_num": 4,
+  1312→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E04.mp4"
+  1313→      },
+  1314→      {
+  1315→        "name": "Danmachi - S03E05.mp4",
+  1316→        "ep_num": 5,
+  1317→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E05.mp4"
+  1318→      },
+  1319→      {
+  1320→        "name": "Sesion 3/Danmachi - S03E05.mp4",
+  1321→        "ep_num": 5,
+  1322→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E05.mp4"
+  1323→      },
+  1324→      {
+  1325→        "name": "[Kayoanime] DanMachi - S04E05.mp4",
+  1326→        "ep_num": 5,
+  1327→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E05.mp4"
+  1328→      },
+  1329→      {
+  1330→        "name": "Danmachi - S03E06.mp4",
+  1331→        "ep_num": 6,
+  1332→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E06.mp4"
+  1333→      },
+  1334→      {
+  1335→        "name": "Sesion 3/Danmachi - S03E06.mp4",
+  1336→        "ep_num": 6,
+  1337→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E06.mp4"
+  1338→      },
+  1339→      {
+  1340→        "name": "[Kayoanime] DanMachi - S04E06.mp4",
+  1341→        "ep_num": 6,
+  1342→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E06.mp4"
+  1343→      },
+  1344→      {
+  1345→        "name": "Danmachi - S03E07.mp4",
+  1346→        "ep_num": 7,
+  1347→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E07.mp4"
+  1348→      },
+  1349→      {
+  1350→        "name": "Sesion 3/Danmachi - S03E07.mp4",
+  1351→        "ep_num": 7,
+  1352→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E07.mp4"
+  1353→      },
+  1354→      {
+  1355→        "name": "[Kayoanime] DanMachi - S04E07.mp4",
+  1356→        "ep_num": 7,
+  1357→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E07.mp4"
+  1358→      },
+  1359→      {
+  1360→        "name": "Danmachi - S03E08.mp4",
+  1361→        "ep_num": 8,
+  1362→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E08.mp4"
+  1363→      },
+  1364→      {
+  1365→        "name": "Sesion 3/Danmachi - S03E08.mp4",
+  1366→        "ep_num": 8,
+  1367→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E08.mp4"
+  1368→      },
+  1369→      {
+  1370→        "name": "[Kayoanime] DanMachi - S04E08.mp4",
+  1371→        "ep_num": 8,
+  1372→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E08.mp4"
+  1373→      },
+  1374→      {
+  1375→        "name": "Danmachi - S03E09.mp4",
+  1376→        "ep_num": 9,
+  1377→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E09.mp4"
+  1378→      },
+  1379→      {
+  1380→        "name": "Sesion 3/Danmachi - S03E09.mp4",
+  1381→        "ep_num": 9,
+  1382→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E09.mp4"
+  1383→      },
+  1384→      {
+  1385→        "name": "[Kayoanime] DanMachi - S04E09.mp4",
+  1386→        "ep_num": 9,
+  1387→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E09.mp4"
+  1388→      },
+  1389→      {
+  1390→        "name": "Danmachi - S03E10.mp4",
+  1391→        "ep_num": 10,
+  1392→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E10.mp4"
+  1393→      },
+  1394→      {
+  1395→        "name": "Sesion 3/Danmachi - S03E10.mp4",
+  1396→        "ep_num": 10,
+  1397→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E10.mp4"
+  1398→      },
+  1399→      {
+  1400→        "name": "[Kayoanime] DanMachi - S04E10.mp4",
+  1401→        "ep_num": 10,
+  1402→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E10.mp4"
+  1403→      },
+  1404→      {
+  1405→        "name": "Danmachi - S03E11.mp4",
+  1406→        "ep_num": 11,
+  1407→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E11.mp4"
+  1408→      },
+  1409→      {
+  1410→        "name": "Sesion 3/Danmachi - S03E11.mp4",
+  1411→        "ep_num": 11,
+  1412→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E11.mp4"
+  1413→      },
+  1414→      {
+  1415→        "name": "[Kayoanime] DanMachi - S04E11.mp4",
+  1416→        "ep_num": 11,
+  1417→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/%5BKayoanime%5D%20DanMachi%20-%20S04E11.mp4"
+  1418→      },
+  1419→      {
+  1420→        "name": "Danmachi - S03E12.mp4",
+  1421→        "ep_num": 12,
+  1422→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Danmachi%20-%20S03E12.mp4"
+  1423→      },
+  1424→      {
+  1425→        "name": "Sesion 3/Danmachi - S03E12.mp4",
+  1426→        "ep_num": 12,
+  1427→        "url": "https://archive.org/download/danmachi-s-03-e-08_202303/Sesion%203/Danmachi%20-%20S03E12.mp4"
+  1428→      }
+  1429→    ]
+  1430→  },
+  1431→  {
+  1432→    "id": "bobobo-bo-bo-bobo",
+  1433→    "title": "BoBoBo-Bo Bo-BoBo",
+  1434→    "identifier": "bobobo-bo_bo-bobo",
+  1435→    "episode_count": 85,
+  1436→    "episodes": [
+  1437→      {
+  1438→        "name": "01 - Bo-nafide Soulful Bo-tector of Hair.mp4",
+  1439→        "ep_num": 1,
+  1440→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/01%20-%20Bo-nafide%20Soulful%20Bo-tector%20of%20Hair.mp4"
+  1441→      },
+  1442→      {
+  1443→        "name": "02 - Let's Get Wiggy With It.mp4",
+  1444→        "ep_num": 2,
+  1445→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/02%20-%20Let%27s%20Get%20Wiggy%20With%20It.mp4"
+  1446→      },
+  1447→      {
+  1448→        "name": "03 - Wacky Quacker Cooks His Own Goose.mp4",
+  1449→        "ep_num": 3,
+  1450→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/03%20-%20Wacky%20Quacker%20Cooks%20His%20Own%20Goose.mp4"
+  1451→      },
+  1452→      {
+  1453→        "name": "04 - BaBaBa-Ba Ba-BaBa! The Honorable King Nosehair.mp4",
+  1454→        "ep_num": 4,
+  1455→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/04%20-%20BaBaBa-Ba%20Ba-BaBa%21%20The%20Honorable%20King%20Nosehair.mp4"
+  1456→      },
+  1457→      {
+  1458→        "name": "Blu-Ray Credits.mp4",
+  1459→        "ep_num": 4,
+  1460→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/Blu-Ray%20Credits.mp4"
+  1461→      },
+  1462→      {
+  1463→        "name": "Character Overviews.mp4",
+  1464→        "ep_num": 4,
+  1465→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/Character%20Overviews.mp4"
+  1466→      },
+  1467→      {
+  1468→        "name": "Creditless Endings.mp4",
+  1469→        "ep_num": 4,
+  1470→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/Creditless%20Endings.mp4"
+  1471→      },
+  1472→      {
+  1473→        "name": "Creditless Openings.mp4",
+  1474→        "ep_num": 4,
+  1475→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/Creditless%20Openings.mp4"
+  1476→      },
+  1477→      {
+  1478→        "name": "Game Commercials.mp4",
+  1479→        "ep_num": 4,
+  1480→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/Game%20Commercials.mp4"
+  1481→      },
+  1482→      {
+  1483→        "name": "Japanese TV Commercials.mp4",
+  1484→        "ep_num": 4,
+  1485→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/Japanese%20TV%20Commercials.mp4"
+  1486→      },
+  1487→      {
+  1488→        "name": "Vintage English Home Video Credits.mp4",
+  1489→        "ep_num": 4,
+  1490→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/Vintage%20English%20Home%20Video%20Credits.mp4"
+  1491→      },
+  1492→      {
+  1493→        "name": "Vintage English TV Credits.mp4",
+  1494→        "ep_num": 4,
+  1495→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/Vintage%20English%20TV%20Credits.mp4"
+  1496→      },
+  1497→      {
+  1498→        "name": "05 - To Be or Snot to Be.mp4",
+  1499→        "ep_num": 5,
+  1500→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/05%20-%20To%20Be%20or%20Snot%20to%20Be.mp4"
+  1501→      },
+  1502→      {
+  1503→        "name": "06 - Pasta... the Perfect Food!.mp4",
+  1504→        "ep_num": 6,
+  1505→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/06%20-%20Pasta...%20the%20Perfect%20Food%21.mp4"
+  1506→      },
+  1507→      {
+  1508→        "name": "07 - Queen Chicken Level and the Video Store of Dumb.mp4",
+  1509→        "ep_num": 7,
+  1510→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/07%20-%20Queen%20Chicken%20Level%20and%20the%20Video%20Store%20of%20Dumb.mp4"
+  1511→      },
+  1512→      {
+  1513→        "name": "08 - We All Scream for Ice Cream!.mp4",
+  1514→        "ep_num": 8,
+  1515→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/08%20-%20We%20All%20Scream%20for%20Ice%20Cream%21.mp4"
+  1516→      },
+  1517→      {
+  1518→        "name": "09 - Gasser Up! I'm Ready to Drive!.mp4",
+  1519→        "ep_num": 9,
+  1520→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/09%20-%20Gasser%20Up%21%20I%27m%20Ready%20to%20Drive%21.mp4"
+  1521→      },
+  1522→      {
+  1523→        "name": "10 - Protect the Environment... Something Stinks in Here.mp4",
+  1524→        "ep_num": 10,
+  1525→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/10%20-%20Protect%20the%20Environment...%20Something%20Stinks%20in%20Here.mp4"
+  1526→      },
+  1527→      {
+  1528→        "name": "11 - A Bird in the Hand Can Play Chicken, but Still Smells Fowl!.mp4",
+  1529→        "ep_num": 11,
+  1530→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/11%20-%20A%20Bird%20in%20the%20Hand%20Can%20Play%20Chicken%2C%20but%20Still%20Smells%20Fowl%21.mp4"
+  1531→      },
+  1532→      {
+  1533→        "name": "12 - The Weally Wobbly World of Bo-BoBo's Foe, General Jelly Jiggler!.mp4",
+  1534→        "ep_num": 12,
+  1535→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/12%20-%20The%20Weally%20Wobbly%20World%20of%20Bo-BoBo%27s%20Foe%2C%20General%20Jelly%20Jiggler%21.mp4"
+  1536→      },
+  1537→      {
+  1538→        "name": "13 - Bo-BoBo's Rappin' Roller Coaster Ride.mp4",
+  1539→        "ep_num": 13,
+  1540→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/13%20-%20Bo-BoBo%27s%20Rappin%27%20Roller%20Coaster%20Ride.mp4"
+  1541→      },
+  1542→      {
+  1543→        "name": "14 - Haunted HollowBo-BoBo.mp4",
+  1544→        "ep_num": 14,
+  1545→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/14%20-%20Haunted%20HollowBo-BoBo.mp4"
+  1546→      },
+  1547→      {
+  1548→        "name": "15 - General Jelly Jiggler! Supreme Hair Enemy or Dastardly Dessert.mp4",
+  1549→        "ep_num": 15,
+  1550→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/15%20-%20General%20Jelly%20Jiggler%21%20Supreme%20Hair%20Enemy%20or%20Dastardly%20Dessert.mp4"
+  1551→      },
+  1552→      {
+  1553→        "name": "16 - Snot in my Neighborhood!.mp4",
+  1554→        "ep_num": 16,
+  1555→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/16%20-%20Snot%20in%20my%20Neighborhood%21.mp4"
+  1556→      },
+  1557→      {
+  1558→        "name": "17 - The Ducktail vs Afro Showdown.mp4",
+  1559→        "ep_num": 17,
+  1560→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/17%20-%20The%20Ducktail%20vs%20Afro%20Showdown.mp4"
+  1561→      },
+  1562→      {
+  1563→        "name": "18 - Beauty is in the Eye of her Holder.mp4",
+  1564→        "ep_num": 18,
+  1565→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/18%20-%20Beauty%20is%20in%20the%20Eye%20of%20her%20Holder.mp4"
+  1566→      },
+  1567→      {
+  1568→        "name": "19 - The Entangled Nose Hair of Destiny - Who Will Pass the Test.mp4",
+  1569→        "ep_num": 19,
+  1570→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/19%20-%20The%20Entangled%20Nose%20Hair%20of%20Destiny%20-%20Who%20Will%20Pass%20the%20Test.mp4"
+  1571→      },
+  1572→      {
+  1573→        "name": "20 - World of Blabs-a-Lot! The Sappiest Place on Earth.mp4",
+  1574→        "ep_num": 20,
+  1575→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/20%20-%20World%20of%20Blabs-a-Lot%21%20The%20Sappiest%20Place%20on%20Earth.mp4"
+  1576→      },
+  1577→      {
+  1578→        "name": "21 - Good-Bye Bo-BoBo! The Final Showdown.mp4",
+  1579→        "ep_num": 21,
+  1580→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/21%20-%20Good-Bye%20Bo-BoBo%21%20The%20Final%20Showdown.mp4"
+  1581→      },
+  1582→      {
+  1583→        "name": "22 - Hatenko the Hunk Has the Key to Your Heart!.mp4",
+  1584→        "ep_num": 22,
+  1585→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/22%20-%20Hatenko%20the%20Hunk%20Has%20the%20Key%20to%20Your%20Heart%21.mp4"
+  1586→      },
+  1587→      {
+  1588→        "name": "23 - Weddings, Wiggins, and Water Torture.mp4",
+  1589→        "ep_num": 23,
+  1590→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/23%20-%20Weddings%2C%20Wiggins%2C%20and%20Water%20Torture.mp4"
+  1591→      },
+  1592→      {
+  1593→        "name": "24 - The Terrifying Z-Block is Here!.mp4",
+  1594→        "ep_num": 24,
+  1595→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/24%20-%20The%20Terrifying%20Z-Block%20is%20Here%21.mp4"
+  1596→      },
+  1597→      {
+  1598→        "name": "25 - The New Bo-Bobo With the Old Bo-BoBody!.mp4",
+  1599→        "ep_num": 25,
+  1600→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/25%20-%20The%20New%20Bo-Bobo%20With%20the%20Old%20Bo-BoBody%21.mp4"
+  1601→      },
+  1602→      {
+  1603→        "name": "26 - Dengaku Man, Pixie or Pitbull\u2014 He'll Love You or Hate You!.mp4",
+  1604→        "ep_num": 26,
+  1605→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/26%20-%20Dengaku%20Man%2C%20Pixie%20or%20Pitbull%E2%80%94%20He%27ll%20Love%20You%20or%20Hate%20You%21.mp4"
+  1606→      },
+  1607→      {
+  1608→        "name": "27 - Luck Let a Wiggin' See... How Nice a Hanky Can Be!.mp4",
+  1609→        "ep_num": 27,
+  1610→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/27%20-%20Luck%20Let%20a%20Wiggin%27%20See...%20How%20Nice%20a%20Hanky%20Can%20Be%21.mp4"
+  1611→      },
+  1612→      {
+  1613→        "name": "28 - Mortal Match! Fist of Nose Hair vs Fist of Rice!.mp4",
+  1614→        "ep_num": 28,
+  1615→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/28%20-%20Mortal%20Match%21%20Fist%20of%20Nose%20Hair%20vs%20Fist%20of%20Rice%21.mp4"
+  1616→      },
+  1617→      {
+  1618→        "name": "29 - Instant Rice - Ready in Half an Hour.mp4",
+  1619→        "ep_num": 29,
+  1620→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/29%20-%20Instant%20Rice%20-%20Ready%20in%20Half%20an%20Hour.mp4"
+  1621→      },
+  1622→      {
+  1623→        "name": "30 - Revenge is a Dish Best Served Cold with Shiitake Mushroom Sauce.mp4",
+  1624→        "ep_num": 30,
+  1625→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/30%20-%20Revenge%20is%20a%20Dish%20Best%20Served%20Cold%20with%20Shiitake%20Mushroom%20Sauce.mp4"
+  1626→      },
+  1627→      {
+  1628→        "name": "31 - The Ultimate Five Assassins vs Bo-BoBo All Stars!.mp4",
+  1629→        "ep_num": 31,
+  1630→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/31%20-%20The%20Ultimate%20Five%20Assassins%20vs%20Bo-BoBo%20All%20Stars%21.mp4"
+  1631→      },
+  1632→      {
+  1633→        "name": "32 - Enter BoBoPatchiggler! Is That How It's Spelled.mp4",
+  1634→        "ep_num": 32,
+  1635→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/32%20-%20Enter%20BoBoPatchiggler%21%20Is%20That%20How%20It%27s%20Spelled.mp4"
+  1636→      },
+  1637→      {
+  1638→        "name": "32.5 - The Time Has Come! Reopened and Refurbished!! It's Finally Here! The Age of Patchmi.mp4",
+  1639→        "ep_num": 32,
+  1640→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/32.5%20-%20The%20Time%20Has%20Come%21%20Reopened%20and%20Refurbished%21%21%20It%27s%20Finally%20Here%21%20The%20Age%20of%20Patchmi.mp4"
+  1641→      },
+  1642→      {
+  1643→        "name": "33 - It Ain't OVER 'Til the Fat Lady Sings!.mp4",
+  1644→        "ep_num": 33,
+  1645→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/33%20-%20It%20Ain%27t%20OVER%20%27Til%20the%20Fat%20Lady%20Sings%21.mp4"
+  1646→      },
+  1647→      {
+  1648→        "name": "34 - Torpedo Girl, Man or Myth or Mythes.mp4",
+  1649→        "ep_num": 34,
+  1650→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/34%20-%20Torpedo%20Girl%2C%20Man%20or%20Myth%20or%20Mythes.mp4"
+  1651→      },
+  1652→      {
+  1653→        "name": "35 - King Nose Hair Presents the Follicle Follies of the Future.mp4",
+  1654→        "ep_num": 35,
+  1655→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/35%20-%20King%20Nose%20Hair%20Presents%20the%20Follicle%20Follies%20of%20the%20Future.mp4"
+  1656→      },
+  1657→      {
+  1658→        "name": "36 - Next Stop... Holy Guacamole Land!.mp4",
+  1659→        "ep_num": 36,
+  1660→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/36%20-%20Next%20Stop...%20Holy%20Guacamole%20Land%21.mp4"
+  1661→      },
+  1662→      {
+  1663→        "name": "37 - Holy Guacamole Land Isn't Just for Breakfast Anymore!.mp4",
+  1664→        "ep_num": 37,
+  1665→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/37%20-%20Holy%20Guacamole%20Land%20Isn%27t%20Just%20for%20Breakfast%20Anymore%21.mp4"
+  1666→      },
+  1667→      {
+  1668→        "name": "38 - Money Castle! Cash Only Please, Credit Cards Not Accepted.mp4",
+  1669→        "ep_num": 38,
+  1670→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/38%20-%20Money%20Castle%21%20Cash%20Only%20Please%2C%20Credit%20Cards%20Not%20Accepted.mp4"
+  1671→      },
+  1672→      {
+  1673→        "name": "39 - The Terrible Triplets vs the Wiggin' Trio.mp4",
+  1674→        "ep_num": 39,
+  1675→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/39%20-%20The%20Terrible%20Triplets%20vs%20the%20Wiggin%27%20Trio.mp4"
+  1676→      },
+  1677→      {
+  1678→        "name": "40 - The Fall of Halekulani! And the Winter of Discontent!.mp4",
+  1679→        "ep_num": 40,
+  1680→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/40%20-%20The%20Fall%20of%20Halekulani%21%20And%20the%20Winter%20of%20Discontent%21.mp4"
+  1681→      },
+  1682→      {
+  1683→        "name": "41 - The Magical Battle Against Halekulani.mp4",
+  1684→        "ep_num": 41,
+  1685→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/41%20-%20The%20Magical%20Battle%20Against%20Halekulani.mp4"
+  1686→      },
+  1687→      {
+  1688→        "name": "42 - Bo-BoBo Braves the Board Game That's Berry, Berry Bothersome.mp4",
+  1689→        "ep_num": 42,
+  1690→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/42%20-%20Bo-BoBo%20Braves%20the%20Board%20Game%20That%27s%20Berry%2C%20Berry%20Bothersome.mp4"
+  1691→      },
+  1692→      {
+  1693→        "name": "43 - Ha-Le Oo-Pu Ah-Ah!.mp4",
+  1694→        "ep_num": 43,
+  1695→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/43%20-%20Ha-Le%20Oo-Pu%20Ah-Ah%21.mp4"
+  1696→      },
+  1697→      {
+  1698→        "name": "44 - The Seriously Circular Skirmish in Cyber City.mp4",
+  1699→        "ep_num": 44,
+  1700→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/44%20-%20The%20Seriously%20Circular%20Skirmish%20in%20Cyber%20City.mp4"
+  1701→      },
+  1702→      {
+  1703→        "name": "45 - Begin the Bungee Battle! Last One Down is a Rotten Egg!.mp4",
+  1704→        "ep_num": 45,
+  1705→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/45%20-%20Begin%20the%20Bungee%20Battle%21%20Last%20One%20Down%20is%20a%20Rotten%20Egg%21.mp4"
+  1706→      },
+  1707→      {
+  1708→        "name": "46 - Libraries and Driving Tests!.mp4",
+  1709→        "ep_num": 46,
+  1710→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/46%20-%20Libraries%20and%20Driving%20Tests%21.mp4"
+  1711→      },
+  1712→      {
+  1713→        "name": "47 - A Battle of Skills and Wills With One Green Onion... Or Is It Garlic.mp4",
+  1714→        "ep_num": 47,
+  1715→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/47%20-%20A%20Battle%20of%20Skills%20and%20Wills%20With%20One%20Green%20Onion...%20Or%20Is%20It%20Garlic.mp4"
+  1716→      },
+  1717→      {
+  1718→        "name": "48 - Silly Singing Saves the Show From a Sinister Scoundrel.mp4",
+  1719→        "ep_num": 48,
+  1720→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/48%20-%20Silly%20Singing%20Saves%20the%20Show%20From%20a%20Sinister%20Scoundrel.mp4"
+  1721→      },
+  1722→      {
+  1723→        "name": "49 - The Battle of Brains Begins!.mp4",
+  1724→        "ep_num": 49,
+  1725→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/49%20-%20The%20Battle%20of%20Brains%20Begins%21.mp4"
+  1726→      },
+  1727→      {
+  1728→        "name": "50 - Giga Goes Gaga! Alarming Attacks with Aggressive Art.mp4",
+  1729→        "ep_num": 50,
+  1730→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/50%20-%20Giga%20Goes%20Gaga%21%20Alarming%20Attacks%20with%20Aggressive%20Art.mp4"
+  1731→      },
+  1732→      {
+  1733→        "name": "51 - The Art of Art and the Fist of All Fists!.mp4",
+  1734→        "ep_num": 51,
+  1735→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/51%20-%20The%20Art%20of%20Art%20and%20the%20Fist%20of%20All%20Fists%21.mp4"
+  1736→      },
+  1737→      {
+  1738→        "name": "52 - Gasser's Back! A Whole New Season, Same Old Stench!.mp4",
+  1739→        "ep_num": 52,
+  1740→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/52%20-%20Gasser%27s%20Back%21%20A%20Whole%20New%20Season%2C%20Same%20Old%20Stench%21.mp4"
+  1741→      },
+  1742→      {
+  1743→        "name": "53 - Dancin' and Trainin' for Quickly Attainin' the Enemies' Painin'.mp4",
+  1744→        "ep_num": 53,
+  1745→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/53%20-%20Dancin%27%20and%20Trainin%27%20for%20Quickly%20Attainin%27%20the%20Enemies%27%20Painin%27.mp4"
+  1746→      },
+  1747→      {
+  1748→        "name": "54 - The War of the Roses... or Lilacs ...or Daffodils.mp4",
+  1749→        "ep_num": 54,
+  1750→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/54%20-%20The%20War%20of%20the%20Roses...%20or%20Lilacs%20...or%20Daffodils.mp4"
+  1751→      },
+  1752→      {
+  1753→        "name": "55 - The Gang's All Here! And Boy, Are They Weird!.mp4",
+  1754→        "ep_num": 55,
+  1755→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/55%20-%20The%20Gang%27s%20All%20Here%21%20And%20Boy%2C%20Are%20They%20Weird%21.mp4"
+  1756→      },
+  1757→      {
+  1758→        "name": "56 - The Ultimate SF Battle! Supreme Fisticuffs or Certain Free-for-All.mp4",
+  1759→        "ep_num": 56,
+  1760→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/56%20-%20The%20Ultimate%20SF%20Battle%21%20Supreme%20Fisticuffs%20or%20Certain%20Free-for-All.mp4"
+  1761→      },
+  1762→      {
+  1763→        "name": "57 - The Water Slide That's Bona Fide to Leave You Terrified!.mp4",
+  1764→        "ep_num": 57,
+  1765→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/57%20-%20The%20Water%20Slide%20That%27s%20Bona%20Fide%20to%20Leave%20You%20Terrified%21.mp4"
+  1766→      },
+  1767→      {
+  1768→        "name": "58 - Face the Cold Hard Facts! It's Freezing in Here!.mp4",
+  1769→        "ep_num": 58,
+  1770→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/58%20-%20Face%20the%20Cold%20Hard%20Facts%21%20It%27s%20Freezing%20in%20Here%21.mp4"
+  1771→      },
+  1772→      {
+  1773→        "name": "59 - Enemy Cruisin' for a Bruisin' - Then Just Try Fusion!.mp4",
+  1774→        "ep_num": 59,
+  1775→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/59%20-%20Enemy%20Cruisin%27%20for%20a%20Bruisin%27%20-%20Then%20Just%20Try%20Fusion%21.mp4"
+  1776→      },
+  1777→      {
+  1778→        "name": "60 - Blowing Your Savings on Bubbles - Is It Worth It.mp4",
+  1779→        "ep_num": 60,
+  1780→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/60%20-%20Blowing%20Your%20Savings%20on%20Bubbles%20-%20Is%20It%20Worth%20It.mp4"
+  1781→      },
+  1782→      {
+  1783→        "name": "61 - United We Stand, Divided We Also Stand, Just Further Apart!.mp4",
+  1784→        "ep_num": 61,
+  1785→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/61%20-%20United%20We%20Stand%2C%20Divided%20We%20Also%20Stand%2C%20Just%20Further%20Apart%21.mp4"
+  1786→      },
+  1787→      {
+  1788→        "name": "62 - Good Night! Sleep Tight! And Don't Let the Bed Bugs Bug Ya!.mp4",
+  1789→        "ep_num": 62,
+  1790→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/62%20-%20Good%20Night%21%20Sleep%20Tight%21%20And%20Don%27t%20Let%20the%20Bed%20Bugs%20Bug%20Ya%21.mp4"
+  1791→      },
+  1792→      {
+  1793→        "name": "63 - Our Dream Team Turns Bad Dreams to Bad Guys' Screams!.mp4",
+  1794→        "ep_num": 63,
+  1795→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/63%20-%20Our%20Dream%20Team%20Turns%20Bad%20Dreams%20to%20Bad%20Guys%27%20Screams%21.mp4"
+  1796→      },
+  1797→      {
+  1798→        "name": "64 - Geometry 101 - Painful Perplexing and Pungent Polygons!.mp4",
+  1799→        "ep_num": 64,
+  1800→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/64%20-%20Geometry%20101%20-%20Painful%20Perplexing%20and%20Pungent%20Polygons%21.mp4"
+  1801→      },
+  1802→      {
+  1803→        "name": "65 - The Unreal Meal That's a Major Ordeal for Real!.mp4",
+  1804→        "ep_num": 65,
+  1805→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/65%20-%20The%20Unreal%20Meal%20That%27s%20a%20Major%20Ordeal%20for%20Real%21.mp4"
+  1806→      },
+  1807→      {
+  1808→        "name": "66 - Fishcake Frenzy! A Freeze Dried, French Fried, Freaked Out Fracas.mp4",
+  1809→        "ep_num": 66,
+  1810→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/66%20-%20Fishcake%20Frenzy%21%20A%20Freeze%20Dried%2C%20French%20Fried%2C%20Freaked%20Out%20Fracas.mp4"
+  1811→      },
+  1812→      {
+  1813→        "name": "67 - The Pacifist That Packs a Punch Like a Pugilist.mp4",
+  1814→        "ep_num": 67,
+  1815→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/67%20-%20The%20Pacifist%20That%20Packs%20a%20Punch%20Like%20a%20Pugilist.mp4"
+  1816→      },
+  1817→      {
+  1818→        "name": "68 - The Battle of Baldy Bald - Buckle Up and Brace Yourself.mp4",
+  1819→        "ep_num": 68,
+  1820→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/68%20-%20The%20Battle%20of%20Baldy%20Bald%20-%20Buckle%20Up%20and%20Brace%20Yourself.mp4"
+  1821→      },
+  1822→      {
+  1823→        "name": "69 - Yummy, Yummy, Yummy! Bo-BoBo's in My Tummy!.mp4",
+  1824→        "ep_num": 69,
+  1825→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/69%20-%20Yummy%2C%20Yummy%2C%20Yummy%21%20Bo-BoBo%27s%20in%20My%20Tummy%21.mp4"
+  1826→      },
+  1827→      {
+  1828→        "name": "70 - Baldy Bald Bottoms Out! Best of Luck, Be Well and Bye-Bye!.mp4",
+  1829→        "ep_num": 70,
+  1830→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/70%20-%20Baldy%20Bald%20Bottoms%20Out%21%20Best%20of%20Luck%2C%20Be%20Well%20and%20Bye-Bye%21.mp4"
+  1831→      },
+  1832→      {
+  1833→        "name": "71 - Funneled Into a Tunnel and Bamboozled by Noodles!.mp4",
+  1834→        "ep_num": 71,
+  1835→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/71%20-%20Funneled%20Into%20a%20Tunnel%20and%20Bamboozled%20by%20Noodles%21.mp4"
+  1836→      },
+  1837→      {
+  1838→        "name": "72 - Si, Se\u00f1or, It's No Bore! It's Hair Hunters Galore!.mp4",
+  1839→        "ep_num": 72,
+  1840→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/72%20-%20Si%2C%20Se%C3%B1or%2C%20It%27s%20No%20Bore%21%20It%27s%20Hair%20Hunters%20Galore%21.mp4"
+  1841→      },
+  1842→      {
+  1843→        "name": "73 - Take a Stance Against the Dance, Mr. Smarty-Pants!.mp4",
+  1844→        "ep_num": 73,
+  1845→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/73%20-%20Take%20a%20Stance%20Against%20the%20Dance%2C%20Mr.%20Smarty-Pants%21.mp4"
+  1846→      },
+  1847→      {
+  1848→        "name": "74 - The Bigger the Gasser, the Smellier the Gas!.mp4",
+  1849→        "ep_num": 74,
+  1850→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/74%20-%20The%20Bigger%20the%20Gasser%2C%20the%20Smellier%20the%20Gas%21.mp4"
+  1851→      },
+  1852→      {
+  1853→        "name": "75 - Finally! The Final Fight of Finality! Except the Final One!.mp4",
+  1854→        "ep_num": 75,
+  1855→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/75%20-%20Finally%21%20The%20Final%20Fight%20of%20Finality%21%20Except%20the%20Final%20One%21.mp4"
+  1856→      },
+  1857→      {
+  1858→        "name": "76 - Finally! The Final Fight of Finality! This Time We Mean It!.mp4",
+  1859→        "ep_num": 76,
+  1860→        "url": "https://archive.org/download/bobobo-bo_bo-bobo/76%20-%20Finally%21%20The%20Final%20Fight%20of%20Finality%21%20This%20Time%20We%20Mean%20It%21.mp4"
+  1861→      }
+  1862→    ]
+  1863→  },
+  1864→  {
+  1865→    "id": "welcome-to-the-nhk",
+  1866→    "title": "Welcome to the N.H.K.",
+  1867→    "identifier": "welcometothenhk480p",
+  1868→    "episode_count": 24,
+  1869→    "episodes": [
+  1870→      {
+  1871→        "name": "01. Welcome to the Project!.mp4",
+  1872→        "ep_num": 1,
+  1873→        "url": "https://archive.org/download/welcometothenhk480p/01.%20Welcome%20to%20the%20Project%21.mp4"
+  1874→      },
+  1875→      {
+  1876→        "name": "02. Welcome to the Creator!.mp4",
+  1877→        "ep_num": 2,
+  1878→        "url": "https://archive.org/download/welcometothenhk480p/02.%20Welcome%20to%20the%20Creator%21.mp4"
+  1879→      },
+  1880→      {
+  1881→        "name": "03. Welcome to the Beautiful Girls!.mp4",
+  1882→        "ep_num": 3,
+  1883→        "url": "https://archive.org/download/welcometothenhk480p/03.%20Welcome%20to%20the%20Beautiful%20Girls%21.mp4"
+  1884→      },
+  1885→      {
+  1886→        "name": "04. Welcome to the New World!.mp4",
+  1887→        "ep_num": 4,
+  1888→        "url": "https://archive.org/download/welcometothenhk480p/04.%20Welcome%20to%20the%20New%20World%21.mp4"
+  1889→      },
+  1890→      {
+  1891→        "name": "05. Welcome to Counseling!.mp4",
+  1892→        "ep_num": 5,
+  1893→        "url": "https://archive.org/download/welcometothenhk480p/05.%20Welcome%20to%20Counseling%21.mp4"
+  1894→      },
+  1895→      {
+  1896→        "name": "06. Welcome to the Classroom!.mp4",
+  1897→        "ep_num": 6,
+  1898→        "url": "https://archive.org/download/welcometothenhk480p/06.%20Welcome%20to%20the%20Classroom%21.mp4"
+  1899→      },
+  1900→      {
+  1901→        "name": "07. Welcome to the Moratorium!.mp4",
+  1902→        "ep_num": 7,
+  1903→        "url": "https://archive.org/download/welcometothenhk480p/07.%20Welcome%20to%20the%20Moratorium%21.mp4"
+  1904→      },
+  1905→      {
+  1906→        "name": "08. Welcome to China Town!.mp4",
+  1907→        "ep_num": 8,
+  1908→        "url": "https://archive.org/download/welcometothenhk480p/08.%20Welcome%20to%20China%20Town%21.mp4"
+  1909→      },
+  1910→      {
+  1911→        "name": "09. Welcome to a Summer Day!.mp4",
+  1912→        "ep_num": 9,
+  1913→        "url": "https://archive.org/download/welcometothenhk480p/09.%20Welcome%20to%20a%20Summer%20Day%21.mp4"
+  1914→      },
+  1915→      {
+  1916→        "name": "10. Welcome to the Dark Side!.mp4",
+  1917→        "ep_num": 10,
+  1918→        "url": "https://archive.org/download/welcometothenhk480p/10.%20Welcome%20to%20the%20Dark%20Side%21.mp4"
+  1919→      },
+  1920→      {
+  1921→        "name": "11. Welcome to the Conspiracy!.mp4",
+  1922→        "ep_num": 11,
+  1923→        "url": "https://archive.org/download/welcometothenhk480p/11.%20Welcome%20to%20the%20Conspiracy%21.mp4"
+  1924→      },
+  1925→      {
+  1926→        "name": "12. Welcome to the \u201cOff\u201d Meeting!.mp4",
+  1927→        "ep_num": 12,
+  1928→        "url": "https://archive.org/download/welcometothenhk480p/12.%20Welcome%20to%20the%20%E2%80%9COff%E2%80%9D%20Meeting%21.mp4"
+  1929→      },
+  1930→      {
+  1931→        "name": "13. Welcome to Paradise!.mp4",
+  1932→        "ep_num": 13,
+  1933→        "url": "https://archive.org/download/welcometothenhk480p/13.%20Welcome%20to%20Paradise%21.mp4"
+  1934→      },
+  1935→      {
+  1936→        "name": "14. Welcome to Reality!.mp4",
+  1937→        "ep_num": 14,
+  1938→        "url": "https://archive.org/download/welcometothenhk480p/14.%20Welcome%20to%20Reality%21.mp4"
+  1939→      },
+  1940→      {
+  1941→        "name": "15. Welcome to the Fantasy!.mp4",
+  1942→        "ep_num": 15,
+  1943→        "url": "https://archive.org/download/welcometothenhk480p/15.%20Welcome%20to%20the%20Fantasy%21.mp4"
+  1944→      },
+  1945→      {
+  1946→        "name": "16. Welcome to the Game Over!.mp4",
+  1947→        "ep_num": 16,
+  1948→        "url": "https://archive.org/download/welcometothenhk480p/16.%20Welcome%20to%20the%20Game%20Over%21.mp4"
+  1949→      },
+  1950→      {
+  1951→        "name": "17. Welcome to Happiness!.mp4",
+  1952→        "ep_num": 17,
+  1953→        "url": "https://archive.org/download/welcometothenhk480p/17.%20Welcome%20to%20Happiness%21.mp4"
+  1954→      },
+  1955→      {
+  1956→        "name": "18. Welcome to No Future!.mp4",
+  1957→        "ep_num": 18,
+  1958→        "url": "https://archive.org/download/welcometothenhk480p/18.%20Welcome%20to%20No%20Future%21.mp4"
+  1959→      },
+  1960→      {
+  1961→        "name": "19. Welcome to the Blue Bird!.mp4",
+  1962→        "ep_num": 19,
+  1963→        "url": "https://archive.org/download/welcometothenhk480p/19.%20Welcome%20to%20the%20Blue%20Bird%21.mp4"
+  1964→      },
+  1965→      {
+  1966→        "name": "20. Welcome to Winter Days!.mp4",
+  1967→        "ep_num": 20,
+  1968→        "url": "https://archive.org/download/welcometothenhk480p/20.%20Welcome%20to%20Winter%20Days%21.mp4"
+  1969→      },
+  1970→      {
+  1971→        "name": "21. Welcome to Reset!.mp4",
+  1972→        "ep_num": 21,
+  1973→        "url": "https://archive.org/download/welcometothenhk480p/21.%20Welcome%20to%20Reset%21.mp4"
+  1974→      },
+  1975→      {
+  1976→        "name": "22. Welcome to the God!.mp4",
+  1977→        "ep_num": 22,
+  1978→        "url": "https://archive.org/download/welcometothenhk480p/22.%20Welcome%20to%20the%20God%21.mp4"
+  1979→      },
+  1980→      {
+  1981→        "name": "23. Welcome to Misaki!.mp4",
+  1982→        "ep_num": 23,
+  1983→        "url": "https://archive.org/download/welcometothenhk480p/23.%20Welcome%20to%20Misaki%21.mp4"
+  1984→      },
+  1985→      {
+  1986→        "name": "24. Welcome to the NHK!.mp4",
+  1987→        "ep_num": 24,
+  1988→        "url": "https://archive.org/download/welcometothenhk480p/24.%20Welcome%20to%20the%20NHK%21.mp4"
+  1989→      }
+  1990→    ]
+  1991→  },
+  1992→  {
+  1993→    "id": "dr-stone",
+  1994→    "title": "Dr. Stone",
+  1995→    "identifier": "kayoanime-dr-stone-s-01-e-05-1080p-dual-audio-eng-sub",
+  1996→    "episode_count": 21,
+  1997→    "episodes": [
+  1998→      {
+  1999→        "name": "[Kayoanime] Dr Stone - S01E01 [1080p][Dual-Audio][Eng-Sub].mp4",
+  2000→        "ep_num": 1,
+
+[showing lines 1-2000 of 3778; use offset=2001 with limit to continue reading]

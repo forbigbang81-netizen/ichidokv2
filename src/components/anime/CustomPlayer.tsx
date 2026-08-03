@@ -1,550 +1,662 @@
 "use client";
+
 import { useCallback, useEffect, useRef, useState } from "react";
-import Hls from "hls.js";
+import { AnimatePresence, motion } from "framer-motion";
 import {
-  Play,
-  Pause,
-  Volume2,
-  VolumeX,
+  AlertCircle,
+  Cast,
+  Gauge,
+  Loader2,
   Maximize,
   Minimize,
-  Rewind,
-  FastForward,
-  Loader2,
-  AlertCircle,
-  Link2,
-  X,
-  Gauge,
-  Tv,
-  SkipForward,
+  Pause,
+  Play,
+  RotateCcw,
+  RotateCw,
+  Settings,
   SkipBack,
+  SkipForward,
+  Volume1,
+  Volume2,
+  VolumeX,
 } from "lucide-react";
+import { streamProxyUrl, formatTime } from "@/lib/anime";
+import { CastDialog } from "@/components/anime/CastDialog";
 import { cn } from "@/lib/utils";
-import { CastDialog } from "./CastDialog";
 
 type Props = {
-  storageKey: string;
-  poster?: string;
   title: string;
   subtitle?: string;
+  /** Raw episode URL (Archive.org). We wrap it through /api/stream. */
+  src: string;
+  poster?: string;
+  onEnded?: () => void;
   onNext?: () => void;
   onPrev?: () => void;
-  hasNext?: boolean;
   hasPrev?: boolean;
-  embedUrl?: string | null;
-  directSourceUrl?: string | null;
+  hasNext?: boolean;
 };
 
-const STORAGE_PREFIX = "ichidok:source:";
+const HIDE_DELAY = 3000; // ms before auto-hiding controls while playing
 const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5, 2];
 
-type PlayerState = "idle" | "loading" | "playing" | "paused" | "error";
-
 export function CustomPlayer({
-  storageKey,
-  poster,
   title,
   subtitle,
+  src,
+  poster,
+  onEnded,
   onNext,
   onPrev,
-  hasNext,
-  hasPrev,
-  embedUrl,
-  directSourceUrl,
+  hasPrev = false,
+  hasNext = false,
 }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const hlsRef = useRef<Hls | null>(null);
-  const hideTimerRef = useRef<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const dragging = useRef(false);
 
-  // Source URL
-  const [sourceUrl, setSourceUrl] = useState<string>(
-    directSourceUrl || (typeof window !== "undefined" ? localStorage.getItem(STORAGE_PREFIX + storageKey) || "" : ""),
-  );
-  const [sourceInput, setSourceInput] = useState<string>(sourceUrl);
-  const [showSourceInput, setShowSourceInput] = useState<boolean>(
-    !sourceUrl && !embedUrl && !directSourceUrl,
-  );
-
-  // Player state
-  const [state, setState] = useState<PlayerState>(sourceUrl ? "loading" : "idle");
-  const [errorMessage, setErrorMessage] = useState<string>("");
-  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [ready, setReady] = useState(false);
+  const [playing, setPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
+  const [current, setCurrent] = useState(0);
   const [buffered, setBuffered] = useState(0);
   const [volume, setVolume] = useState(1);
   const [muted, setMuted] = useState(false);
-  const [speed, setSpeed] = useState(1);
-  const [showSpeedMenu, setShowSpeedMenu] = useState(false);
+  const [rate, setRate] = useState(1);
+  const [fullscreen, setFullscreen] = useState(false);
   const [showControls, setShowControls] = useState(true);
-  const [showCastDialog, setShowCastDialog] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [showSettings, setShowSettings] = useState(false);
+  const [castOpen, setCastOpen] = useState(false);
+  const [hoverFrac, setHoverFrac] = useState<number | null>(null);
 
-  const [mode, setMode] = useState<"embed" | "manual">(
-    sourceUrl ? "manual" : embedUrl ? "embed" : "manual",
-  );
+  const proxiedSrc = streamProxyUrl(src);
+  const absoluteVideoUrl =
+    typeof window !== "undefined"
+      ? `${window.location.origin}${proxiedSrc}`
+      : proxiedSrc;
 
-  // Reset on storageKey change
-  const [prevStorageKey, setPrevStorageKey] = useState(storageKey);
-  if (prevStorageKey !== storageKey) {
-    setPrevStorageKey(storageKey);
-    const newSource = directSourceUrl || (typeof window !== "undefined" ? localStorage.getItem(STORAGE_PREFIX + storageKey) || "" : "");
-    setSourceUrl(newSource);
-    setSourceInput(newSource);
-    setShowSourceInput(!newSource && !embedUrl && !directSourceUrl);
-    setState(newSource ? "loading" : "idle");
-    setErrorMessage("");
-    setMode(newSource ? "manual" : embedUrl ? "embed" : "manual");
-  }
-
-  const [prevSourceUrl, setPrevSourceUrl] = useState(sourceUrl);
-  if (prevSourceUrl !== sourceUrl) {
-    setPrevSourceUrl(sourceUrl);
-    if (sourceUrl) {
-      setState("loading");
-      setErrorMessage("");
-    }
-  }
-
-  // Video + HLS setup
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video || !sourceUrl) return;
-    if (hlsRef.current) { hlsRef.current.destroy(); hlsRef.current = null; }
-
-    const isHls = /\.m3u8(\?|$)/i.test(sourceUrl);
-    const onReady = () => setState("paused");
-    video.addEventListener("canplay", onReady, { once: true });
-
-    if (isHls) {
-      if (Hls.isSupported()) {
-        const hls = new Hls({ enableWorker: true });
-        hlsRef.current = hls;
-        hls.loadSource(sourceUrl);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => setState("paused"));
-        hls.on(Hls.Events.ERROR, (_e, data) => {
-          if (data.fatal) {
-            setState("error");
-            setErrorMessage(data.details === Hls.ErrorDetails.MANIFEST_LOAD_ERROR
-              ? "Could not load the stream." : `Stream error: ${data.details || "unknown"}`);
-          }
-        });
-      } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-        video.src = sourceUrl;
-      } else {
-        queueMicrotask(() => { setState("error"); setErrorMessage("HLS not supported."); });
+  // ---- Controls visibility (auto-hide while playing) ----
+  const revealControls = useCallback(() => {
+    setShowControls(true);
+    if (hideTimer.current) clearTimeout(hideTimer.current);
+    hideTimer.current = setTimeout(() => {
+      // Only hide when actually playing AND not dragging the seek bar.
+      if (videoRef.current && !videoRef.current.paused && !dragging.current) {
+        setShowControls(false);
+        setShowSettings(false);
       }
-    } else {
-      video.src = sourceUrl;
-    }
-
-    return () => {
-      video.removeEventListener("canplay", onReady);
-      if (hlsRef.current) { hlsRef.current.destroy(); hlsRef.current = null; }
-    };
-  }, [sourceUrl]);
-
-  // Sync volume / muted / speed
-  useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.volume = volume; v.muted = muted; v.playbackRate = speed;
-  }, [volume, muted, speed]);
-
-  // Video event listeners
-  useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    const onMeta = () => setDuration(v.duration || 0);
-    const onTime = () => {
-      setCurrentTime(v.currentTime);
-      if (v.buffered.length > 0) setBuffered(v.buffered.end(v.buffered.length - 1));
-    };
-    const onPlay = () => setState("playing");
-    const onPause = () => setState((s) => (s === "error" ? s : "paused"));
-    const onWaiting = () => setState((s) => (s === "error" ? s : "loading"));
-    const onPlaying = () => setState("playing");
-    const onError = () => {
-      setState("error");
-      setErrorMessage("Could not play this video. The URL may be invalid or blocked by CORS.");
-    };
-    const onEnded = () => { if (onNext && hasNext) onNext(); };
-    v.addEventListener("loadedmetadata", onMeta);
-    v.addEventListener("timeupdate", onTime);
-    v.addEventListener("play", onPlay);
-    v.addEventListener("pause", onPause);
-    v.addEventListener("waiting", onWaiting);
-    v.addEventListener("playing", onPlaying);
-    v.addEventListener("error", onError);
-    v.addEventListener("ended", onEnded);
-    return () => {
-      v.removeEventListener("loadedmetadata", onMeta);
-      v.removeEventListener("timeupdate", onTime);
-      v.removeEventListener("play", onPlay);
-      v.removeEventListener("pause", onPause);
-      v.removeEventListener("waiting", onWaiting);
-      v.removeEventListener("playing", onPlaying);
-      v.removeEventListener("error", onError);
-      v.removeEventListener("ended", onEnded);
-    };
-  }, [onNext, hasNext]);
-
-  // Fullscreen
-  useEffect(() => {
-    const onFs = () => setIsFullscreen(Boolean(document.fullscreenElement));
-    document.addEventListener("fullscreenchange", onFs);
-    return () => document.removeEventListener("fullscreenchange", onFs);
+    }, HIDE_DELAY);
   }, []);
 
-  // Auto-hide controls
-  const resetHideTimer = useCallback(() => {
-    setShowControls(true);
-    if (hideTimerRef.current) window.clearTimeout(hideTimerRef.current);
-    if (state === "playing") {
-      hideTimerRef.current = window.setTimeout(() => setShowControls(false), 3000);
+  const hideControlsNow = useCallback(() => {
+    if (videoRef.current && !videoRef.current.paused && !dragging.current) {
+      if (hideTimer.current) clearTimeout(hideTimer.current);
+      setShowControls(false);
+      setShowSettings(false);
     }
-  }, [state]);
+  }, []);
 
-  useEffect(() => {
-    // Only manage the timer, not the visible state — showControls is
-    // derived from mouse activity + player state
-    if (state === "playing") {
-      if (hideTimerRef.current) window.clearTimeout(hideTimerRef.current);
-      hideTimerRef.current = window.setTimeout(() => setShowControls(false), 3000);
-    } else {
-      if (hideTimerRef.current) window.clearTimeout(hideTimerRef.current);
-    }
-  }, [state]);
-
-  // Actions
+  // ---- Playback control ----
   const togglePlay = useCallback(() => {
     const v = videoRef.current;
-    if (!v || !sourceUrl) return;
-    if (v.paused) v.play().catch(() => {}); else v.pause();
-  }, [sourceUrl]);
-
-  const toggleFullscreen = useCallback(() => {
-    const c = containerRef.current;
-    if (!c) return;
-    if (document.fullscreenElement) document.exitFullscreen();
-    else c.requestFullscreen().catch(() => {});
+    if (!v) return;
+    if (v.paused) {
+      void v.play().catch(() => {
+        /* autoplay block / network error — surfaced via onerror */
+      });
+    } else {
+      v.pause();
+    }
   }, []);
 
-  const seek = useCallback((time: number) => {
+  const seekTo = useCallback((seconds: number) => {
     const v = videoRef.current;
     if (!v) return;
-    v.currentTime = Math.max(0, Math.min(v.duration || 0, time));
+    const clamped = Math.max(0, Math.min(seconds, v.duration || 0));
+    v.currentTime = clamped;
+    setCurrent(clamped);
   }, []);
+
+  const seekByFraction = useCallback((frac: number) => {
+    const v = videoRef.current;
+    if (!v || !v.duration) return;
+    seekTo(frac * v.duration);
+  }, [seekTo]);
 
   const skip = useCallback((delta: number) => {
     const v = videoRef.current;
     if (!v) return;
-    seek(v.currentTime + delta);
-  }, [seek]);
+    seekTo(v.currentTime + delta);
+  }, [seekTo]);
 
-  // Keyboard shortcuts
+  const setVol = useCallback((v: number) => {
+    const vid = videoRef.current;
+    if (!vid) return;
+    const clamped = Math.max(0, Math.min(1, v));
+    vid.volume = clamped;
+    setVolume(clamped);
+    if (clamped > 0 && vid.muted) {
+      vid.muted = false;
+      setMuted(false);
+    }
+  }, []);
+
+  const toggleMute = useCallback(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = !v.muted;
+    setMuted(v.muted);
+  }, []);
+
+  const setPlaybackRate = useCallback((r: number) => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.playbackRate = r;
+    setRate(r);
+    setShowSettings(false);
+  }, []);
+
+  const toggleFullscreen = useCallback(async () => {
+    const el = containerRef.current;
+    if (!el) return;
+    try {
+      if (!document.fullscreenElement) {
+        await el.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch {
+      /* ignore — some browsers reject in iframes */
+    }
+  }, []);
+
+  // ---- Kick off autoplay on mount ----
+  // The WatchPage remounts this component (via `key`) whenever the episode
+  // changes, so internal state already resets — no per-src effect needed.
   useEffect(() => {
-    const c = containerRef.current;
-    if (!c) return;
+    const v = videoRef.current;
+    if (!v) return;
+    const p = v.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+  }, []);
+
+  // ---- Fullscreen state sync ----
+  useEffect(() => {
+    const onFs = () => setFullscreen(Boolean(document.fullscreenElement));
+    document.addEventListener("fullscreenchange", onFs);
+    return () => document.removeEventListener("fullscreenchange", onFs);
+  }, []);
+
+  // ---- Keyboard shortcuts ----
+  useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      const v = videoRef.current;
-      if (!v) return;
+      const t = e.target as HTMLElement | null;
+      const tag = t?.tagName?.toLowerCase();
+      if (tag === "input" || tag === "textarea" || t?.isContentEditable) return;
+      // Only respond when the player area is in view.
+      const el = containerRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (!inView) return;
+
       switch (e.key) {
-        case " ": case "k": e.preventDefault(); togglePlay(); break;
-        case "ArrowLeft": e.preventDefault(); v.currentTime = Math.max(0, v.currentTime - 10); break;
-        case "ArrowRight": e.preventDefault(); v.currentTime = Math.min(v.duration || 0, v.currentTime + 10); break;
-        case "ArrowUp": e.preventDefault(); setVolume((vol) => Math.min(1, vol + 0.1)); break;
-        case "ArrowDown": e.preventDefault(); setVolume((vol) => Math.max(0, vol - 0.1)); break;
-        case "f": toggleFullscreen(); break;
-        case "m": setMuted((m) => !m); break;
+        case " ":
+        case "k":
+          e.preventDefault();
+          togglePlay();
+          revealControls();
+          break;
+        case "ArrowLeft":
+        case "j":
+          e.preventDefault();
+          skip(-10);
+          revealControls();
+          break;
+        case "ArrowRight":
+        case "l":
+          e.preventDefault();
+          skip(10);
+          revealControls();
+          break;
+        case "ArrowUp":
+          e.preventDefault();
+          setVol(volume + 0.1);
+          revealControls();
+          break;
+        case "ArrowDown":
+          e.preventDefault();
+          setVol(volume - 0.1);
+          revealControls();
+          break;
+        case "f":
+          e.preventDefault();
+          toggleFullscreen();
+          break;
+        case "m":
+          e.preventDefault();
+          toggleMute();
+          revealControls();
+          break;
+        case "0":
+        case "1":
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "6":
+        case "7":
+        case "8":
+        case "9": {
+          e.preventDefault();
+          seekByFraction(parseInt(e.key, 10) / 10);
+          revealControls();
+          break;
+        }
       }
     };
-    c.addEventListener("keydown", onKey);
-    return () => c.removeEventListener("keydown", onKey);
-  }, [togglePlay, toggleFullscreen]);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [togglePlay, skip, setVol, toggleFullscreen, toggleMute, seekByFraction, revealControls, volume]);
 
-  const saveSource = () => {
-    const url = sourceInput.trim();
-    if (!url || !/^https?:\/\//i.test(url)) {
-      setErrorMessage(url ? "URL must start with http:// or https://" : "Please paste a video URL.");
-      return;
+  // ---- Video element event wiring ----
+  const onLoaded = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    setDuration(v.duration || 0);
+    setReady(true);
+    setLoading(false);
+    setVolume(v.volume);
+    setMuted(v.muted);
+    setRate(v.playbackRate);
+  };
+  const onTime = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (!dragging.current) setCurrent(v.currentTime);
+    // Update buffered end
+    if (v.buffered.length) {
+      setBuffered(v.buffered.end(v.buffered.length - 1));
     }
-    localStorage.setItem(STORAGE_PREFIX + storageKey, url);
-    setSourceUrl(url); setErrorMessage(""); setShowSourceInput(false); setMode("manual");
+  };
+  const onPlayEvt = () => {
+    setPlaying(true);
+    revealControls();
+  };
+  const onPauseEvt = () => {
+    setPlaying(false);
+    setShowControls(true);
+    if (hideTimer.current) clearTimeout(hideTimer.current);
+  };
+  const onWaiting = () => setLoading(true);
+  const onPlaying = () => setLoading(false);
+  const onCanPlay = () => setLoading(false);
+  const onError = () => {
+    setError(
+      "Could not load this episode. The source may be temporarily unavailable — try again in a moment.",
+    );
+    setLoading(false);
   };
 
-  const clearSource = () => {
-    localStorage.removeItem(STORAGE_PREFIX + storageKey);
-    setSourceUrl(""); setSourceInput(""); setShowSourceInput(!embedUrl);
-    const v = videoRef.current; if (v) { v.removeAttribute("src"); v.load(); }
-    if (embedUrl) { setMode("embed"); setState("idle"); } else { setMode("manual"); setState("idle"); }
-  };
+  const frac = duration > 0 ? current / duration : 0;
+  const bufferedFrac = duration > 0 ? buffered / duration : 0;
 
-  const progressPct = duration > 0 ? (currentTime / duration) * 100 : 0;
-  const bufferedPct = duration > 0 ? (buffered / duration) * 100 : 0;
+  // ---- Seek bar interaction (pointer events) ----
+  const seekBarRef = useRef<HTMLDivElement>(null);
+  const fractionFromEvent = (clientX: number) => {
+    const el = seekBarRef.current;
+    if (!el) return 0;
+    const rect = el.getBoundingClientRect();
+    const f = (clientX - rect.left) / rect.width;
+    return Math.max(0, Math.min(1, f));
+  };
+  const onSeekPointerDown = (e: React.PointerEvent) => {
+    e.stopPropagation();
+    dragging.current = true;
+    const f = fractionFromEvent(e.clientX);
+    seekByFraction(f);
+    (e.target as Element).setPointerCapture?.(e.pointerId);
+    revealControls();
+  };
+  const onSeekPointerMove = (e: React.PointerEvent) => {
+    const f = fractionFromEvent(e.clientX);
+    setHoverFrac(f);
+    if (dragging.current) seekByFraction(f);
+  };
+  const onSeekPointerUp = (e: React.PointerEvent) => {
+    if (dragging.current) {
+      dragging.current = false;
+      seekByFraction(fractionFromEvent(e.clientX));
+    }
+    (e.target as Element).releasePointerCapture?.(e.pointerId);
+  };
+  const onSeekPointerLeave = () => setHoverFrac(null);
+
+  const VolumeIcon = muted || volume === 0 ? VolumeX : volume < 0.5 ? Volume1 : Volume2;
 
   return (
     <div
       ref={containerRef}
-      tabIndex={0}
-      className="group relative h-full w-full overflow-hidden bg-black outline-none"
-      onMouseMove={resetHideTimer}
-      onMouseLeave={() => state === "playing" && setShowControls(false)}
+      onMouseMove={revealControls}
+      onMouseLeave={hideControlsNow}
+      onTouchStart={revealControls}
+      className={cn(
+        "group relative aspect-video w-full select-none overflow-hidden rounded-xl border border-border/60 bg-black",
+        fullscreen && "rounded-none border-0",
+        showControls ? "cursor-default" : "cursor-none",
+      )}
     >
-      {/* EMBED MODE: iframe */}
-      {mode === "embed" && embedUrl && !showSourceInput && (
-        <>
-          <iframe
-            key={embedUrl}
-            src={embedUrl}
-            title={title}
-            className="absolute inset-0 h-full w-full"
-            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-            allowFullScreen
-            referrerPolicy="no-referrer"
-            sandbox="allow-scripts allow-same-origin allow-presentation allow-forms allow-popups"
-          />
-          <div className="pointer-events-none absolute left-3 top-3 z-20 border border-white/20 bg-black/60 px-2 py-1 font-mono text-[9px] uppercase tracking-wider text-white/70">ichidok</div>
-        </>
-      )}
-
       {/* Video element */}
-      {mode !== "embed" && (
-        <video
-          ref={videoRef}
-          poster={poster}
-          className="absolute inset-0 h-full w-full object-contain"
-          playsInline
-          onDoubleClick={toggleFullscreen}
-        />
-      )}
-
-      {/* Source input */}
-      {mode === "manual" && (!sourceUrl || showSourceInput) && state !== "playing" && (
-        <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/95 p-6">
-          <div className="w-full max-w-lg">
-            <div className="mb-4 flex items-center gap-2 text-foreground">
-              <Link2 className="h-5 w-5" />
-              <h3 className="text-sm font-bold uppercase tracking-wider">{sourceUrl ? "Change source" : "Add a source URL"}</h3>
-            </div>
-            <p className="mb-4 text-xs leading-relaxed text-muted-foreground">
-              Paste a direct video URL. Supports <span className="font-mono text-foreground">.mp4</span>, <span className="font-mono text-foreground">.webm</span>, <span className="font-mono text-foreground">.m3u8</span> (HLS), and <span className="font-mono text-foreground">.mov</span>.
-            </p>
-            <textarea
-              value={sourceInput} onChange={(e) => setSourceInput(e.target.value)}
-              placeholder="https://example.com/anime/episode-1.mp4" rows={3}
-              className="w-full resize-none border border-border bg-card p-3 font-mono text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" autoFocus
-            />
-            {errorMessage && (
-              <div className="mt-3 flex items-start gap-2 border border-foreground/30 bg-foreground/5 p-2 text-xs text-foreground">
-                <AlertCircle className="mt-0.5 h-3.5 w-3.5 shrink-0" /><span>{errorMessage}</span>
-              </div>
-            )}
-            <div className="mt-4 flex gap-2">
-              <button onClick={saveSource} className="flex-1 bg-foreground py-2.5 text-[11px] font-semibold uppercase tracking-wider text-background hover:opacity-90">Load video</button>
-              {sourceUrl && <button onClick={() => setShowSourceInput(false)} className="border border-border bg-card px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background">Cancel</button>}
-            </div>
-          </div>
-        </div>
-      )}
+      <video
+        ref={videoRef}
+        src={proxiedSrc}
+        poster={poster}
+        className="size-full bg-black object-contain"
+        playsInline
+        preload="metadata"
+        onClick={togglePlay}
+        onDoubleClick={toggleFullscreen}
+        onLoadedMetadata={onLoaded}
+        onTimeUpdate={onTime}
+        onProgress={onTime}
+        onPlay={onPlayEvt}
+        onPause={onPauseEvt}
+        onWaiting={onWaiting}
+        onPlaying={onPlaying}
+        onCanPlay={onCanPlay}
+        onEnded={onEnded}
+        onError={onError}
+        crossOrigin="anonymous"
+      />
 
       {/* Loading spinner */}
-      {mode === "manual" && state === "loading" && sourceUrl && !showSourceInput && (
-        <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center">
-          <Loader2 className="h-10 w-10 animate-spin text-foreground" />
-        </div>
-      )}
+      <AnimatePresence>
+        {loading && !error && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="pointer-events-none absolute inset-0 flex items-center justify-center"
+          >
+            <Loader2 className="size-10 animate-spin text-[var(--brand)]" />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Error */}
-      {mode === "manual" && state === "error" && !showSourceInput && (
-        <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/85 p-6">
-          <div className="max-w-md text-center">
-            <AlertCircle className="mx-auto mb-3 h-8 w-8 text-foreground" />
-            <h3 className="mb-1 text-sm font-bold uppercase tracking-wider">Playback failed</h3>
-            <p className="mb-4 text-xs text-muted-foreground">{errorMessage || "An unknown error occurred."}</p>
-            <div className="flex justify-center gap-2">
-              <button onClick={() => setShowSourceInput(true)} className="bg-foreground px-4 py-2 text-[11px] font-semibold uppercase tracking-wider text-background hover:opacity-90">Try a different source</button>
-              <button onClick={() => { if (videoRef.current) { setState("loading"); videoRef.current.load(); } }} className="border border-border bg-card px-4 py-2 text-[11px] font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background">Retry</button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* === Crunchyroll-style controls === */}
-      {mode === "manual" && sourceUrl && !showSourceInput && (
-        <>
-          {/* Top gradient bar with title + cast */}
-          <div className={cn(
-            "absolute inset-x-0 top-0 z-20 bg-gradient-to-b from-black/90 via-black/50 to-transparent px-4 pb-12 pt-4 transition-opacity duration-300",
-            showControls ? "opacity-100" : "opacity-0 pointer-events-none",
-          )}>
-            <div className="flex items-start justify-between gap-3">
-              <div className="min-w-0 flex-1">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-white/50">{subtitle}</p>
-                <h3 className="mt-0.5 line-clamp-1 text-sm font-bold tracking-tight text-white md:text-base">{title}</h3>
-              </div>
-              {/* Cast to TV button */}
-              <button
-                onClick={() => setShowCastDialog(true)}
-                className="shrink-0 rounded-md border border-white/20 bg-black/60 p-2 text-white/80 transition-colors hover:bg-white/20 hover:text-white"
-                title="Cast to TV"
-                aria-label="Cast to TV"
-              >
-                <Tv className="h-5 w-5" />
-              </button>
-            </div>
-          </div>
-
-          {/* Center play/pause button (Crunchyroll style) */}
-          {state === "paused" && (
+      {/* Error state */}
+      <AnimatePresence>
+        {error && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/80 p-6 text-center"
+          >
+            <AlertCircle className="size-10 text-[var(--brand)]" />
+            <p className="max-w-sm text-sm text-foreground/80">{error}</p>
             <button
-              onClick={togglePlay}
-              className="absolute inset-0 z-10 flex items-center justify-center"
-              aria-label="Play"
+              onClick={() => {
+                setError(null);
+                setLoading(true);
+                const v = videoRef.current;
+                if (!v) return;
+                v.load();
+                void v.play().catch(() => {});
+              }}
+              className="mt-2 rounded-lg bg-[var(--brand)] px-4 py-2 text-sm font-semibold text-[var(--brand-foreground)] hover:bg-[var(--brand)]/90"
             >
-              <span className="flex h-20 w-20 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm transition-transform hover:scale-110">
-                <Play className="h-9 w-9 fill-white text-white" />
-              </span>
+              Retry
             </button>
-          )}
-          {state === "playing" && showControls && (
-            <button
-              onClick={togglePlay}
-              className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2"
-              aria-label="Pause"
-            >
-              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-black/40 opacity-0 backdrop-blur-sm transition-opacity hover:opacity-100">
-                <Pause className="h-7 w-7 fill-white text-white" />
-              </span>
-            </button>
-          )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-          {/* Bottom controls bar */}
-          <div className={cn(
-            "absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/95 via-black/70 to-transparent px-4 pb-3 pt-16 transition-opacity duration-300",
-            showControls ? "opacity-100" : "opacity-0 pointer-events-none",
-          )}>
-            {/* Seek bar — Crunchyroll style (thick, orange/white) */}
-            <div className="group/seek mb-3 flex items-center gap-3">
-              <span className="font-mono text-xs tabular-nums text-white">{formatTime(currentTime)}</span>
-              <div
-                className="relative h-1.5 flex-1 cursor-pointer rounded-full bg-white/20 transition-all hover:h-2.5"
-                onClick={(e) => {
-                  const rect = e.currentTarget.getBoundingClientRect();
-                  seek(((e.clientX - rect.left) / rect.width) * duration);
-                }}
-              >
+      {/* Center play button (when paused & ready) */}
+      <AnimatePresence>
+        {ready && !playing && !loading && !error && (
+          <motion.button
+            key="center-play"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.2 }}
+            onClick={togglePlay}
+            className="absolute inset-0 z-10 flex items-center justify-center"
+            aria-label="Play"
+          >
+            <span className="flex size-16 items-center justify-center rounded-full bg-[var(--brand)]/95 text-[var(--brand-foreground)] shadow-2xl shadow-black/60 backdrop-blur-sm transition-transform hover:scale-105 sm:size-20">
+              <Play className="size-7 fill-current sm:size-9" />
+            </span>
+          </motion.button>
+        )}
+      </AnimatePresence>
+
+      {/* Top gradient + title */}
+      <AnimatePresence>
+        {showControls && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="pointer-events-none absolute inset-x-0 top-0 z-20 bg-gradient-to-b from-black/80 via-black/30 to-transparent p-4 pb-12"
+          >
+            <div className="min-w-0">
+              <h2 className="truncate text-sm font-semibold text-white sm:text-base">
+                {title}
+              </h2>
+              {subtitle && (
+                <p className="truncate text-xs text-white/70">{subtitle}</p>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Bottom control bar */}
+      <AnimatePresence>
+        {showControls && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 12 }}
+            transition={{ duration: 0.2 }}
+            className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-3 pb-2 pt-10 sm:px-4 sm:pb-3"
+          >
+            {/* Seek bar */}
+            <div
+              ref={seekBarRef}
+              onPointerDown={onSeekPointerDown}
+              onPointerMove={onSeekPointerMove}
+              onPointerUp={onSeekPointerUp}
+              onPointerLeave={onSeekPointerLeave}
+              className="group/seek relative flex h-4 cursor-pointer items-center"
+            >
+              <div className="relative h-1 w-full overflow-hidden rounded-full bg-white/20">
                 {/* Buffered */}
-                <div className="absolute inset-y-0 left-0 rounded-full bg-white/30" style={{ width: `${bufferedPct}%` }} />
-                {/* Progress — white bar */}
-                <div className="absolute inset-y-0 left-0 rounded-full bg-white" style={{ width: `${progressPct}%` }} />
-                {/* Scrubber dot */}
-                <div className="absolute top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-md transition-opacity opacity-0 group-hover/seek:opacity-100" style={{ left: `${progressPct}%` }} />
+                <div
+                  className="absolute inset-y-0 left-0 rounded-full bg-white/30"
+                  style={{ width: `${bufferedFrac * 100}%` }}
+                />
+                {/* Played */}
+                <div
+                  className="absolute inset-y-0 left-0 rounded-full bg-[var(--brand)]"
+                  style={{ width: `${frac * 100}%` }}
+                />
+                {/* Hover preview */}
+                {hoverFrac !== null && (
+                  <div
+                    className="absolute inset-y-0 w-0.5 bg-white/60"
+                    style={{ left: `${hoverFrac * 100}%` }}
+                  />
+                )}
               </div>
-              <span className="font-mono text-xs tabular-nums text-white">{formatTime(duration)}</span>
+              {/* Thumb */}
+              <div
+                className="pointer-events-none absolute top-1/2 size-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--brand)] opacity-0 shadow transition-opacity group-hover/seek:opacity-100"
+                style={{ left: `${frac * 100}%` }}
+              />
             </div>
 
             {/* Buttons row */}
-            <div className="flex items-center gap-2">
-              {/* Previous episode */}
-              <button onClick={onPrev} disabled={!hasPrev}
-                className="rounded p-1.5 text-white/70 transition-colors hover:text-white disabled:opacity-30"
-                title="Previous episode" aria-label="Previous episode">
-                <SkipBack className="h-5 w-5" />
-              </button>
+            <div className="mt-1 flex items-center gap-1 text-white sm:gap-2">
+              <PlayerButton onClick={onPrev} disabled={!hasPrev} label="Previous episode">
+                <SkipBack className="size-5 fill-current" />
+              </PlayerButton>
+              <PlayerButton onClick={togglePlay} label={playing ? "Pause" : "Play"}>
+                {playing ? (
+                  <Pause className="size-6 fill-current" />
+                ) : (
+                  <Play className="size-6 fill-current" />
+                )}
+              </PlayerButton>
+              <PlayerButton onClick={onNext} disabled={!hasNext} label="Next episode">
+                <SkipForward className="size-5 fill-current" />
+              </PlayerButton>
 
               {/* Skip back 10s */}
-              <button onClick={() => skip(-10)}
-                className="rounded p-1.5 text-white/70 transition-colors hover:text-white"
-                title="Back 10s" aria-label="Back 10 seconds">
-                <Rewind className="h-5 w-5" />
-              </button>
-
-              {/* Play/Pause */}
-              <button onClick={togglePlay}
-                className="rounded p-2 text-white transition-colors hover:text-white/80"
-                title="Play/Pause (Space)" aria-label={state === "playing" ? "Pause" : "Play"}>
-                {state === "playing" ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
-              </button>
-
-              {/* Skip forward 10s */}
-              <button onClick={() => skip(10)}
-                className="rounded p-1.5 text-white/70 transition-colors hover:text-white"
-                title="Forward 10s" aria-label="Forward 10 seconds">
-                <FastForward className="h-5 w-5" />
-              </button>
-
-              {/* Next episode */}
-              <button onClick={onNext} disabled={!hasNext}
-                className="rounded p-1.5 text-white/70 transition-colors hover:text-white disabled:opacity-30"
-                title="Next episode" aria-label="Next episode">
-                <SkipForward className="h-5 w-5" />
-              </button>
+              <PlayerButton onClick={() => skip(-10)} label="Back 10 seconds" className="hidden sm:inline-flex">
+                <RotateCcw className="size-5" />
+              </PlayerButton>
+              <PlayerButton onClick={() => skip(10)} label="Forward 10 seconds" className="hidden sm:inline-flex">
+                <RotateCw className="size-5" />
+              </PlayerButton>
 
               {/* Volume */}
-              <div className="group/vol ml-2 flex items-center">
-                <button onClick={() => setMuted((m) => !m)}
-                  className="rounded p-1.5 text-white/70 transition-colors hover:text-white"
-                  title="Mute (M)" aria-label={muted ? "Unmute" : "Mute"}>
-                  {muted || volume === 0 ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
-                </button>
-                <input type="range" min={0} max={1} step={0.05} value={muted ? 0 : volume}
-                  onChange={(e) => { const v = parseFloat(e.target.value); setVolume(v); setMuted(v === 0); }}
-                  className="ml-1 h-1 w-0 cursor-pointer appearance-none rounded-full bg-white/30 opacity-0 transition-all group-hover/vol:w-20 group-hover/vol:opacity-100"
-                  aria-label="Volume"
-                />
+              <div className="group/vol flex items-center">
+                <PlayerButton onClick={toggleMute} label="Mute">
+                  <VolumeIcon className="size-5" />
+                </PlayerButton>
+                <div className="hidden w-0 overflow-hidden transition-all duration-200 group-hover/vol:w-20 sm:block">
+                  <input
+                    type="range"
+                    min={0}
+                    max={1}
+                    step={0.05}
+                    value={muted ? 0 : volume}
+                    onChange={(e) => setVol(parseFloat(e.target.value))}
+                    className="ichidoki-range w-full"
+                    aria-label="Volume"
+                  />
+                </div>
+              </div>
+
+              {/* Time */}
+              <div className="ml-1 select-none font-mono text-xs text-white/90 tabular-nums">
+                {formatTime(current)} <span className="text-white/40">/</span>{" "}
+                {formatTime(duration)}
               </div>
 
               <div className="flex-1" />
 
-              {/* Speed */}
+              {/* Cast */}
+              <PlayerButton onClick={() => setCastOpen(true)} label="Cast to TV">
+                <Cast className="size-5" />
+              </PlayerButton>
+
+              {/* Settings (speed) */}
               <div className="relative">
-                <button onClick={() => setShowSpeedMenu((v) => !v)}
-                  className="flex items-center gap-1 rounded p-1.5 text-white/70 transition-colors hover:text-white"
-                  title="Playback speed" aria-label="Playback speed">
-                  <Gauge className="h-5 w-5" />
-                  <span className="font-mono text-xs tabular-nums">{speed}x</span>
-                </button>
-                {showSpeedMenu && (
-                  <div className="absolute bottom-full right-0 mb-2 overflow-hidden rounded-lg border border-border bg-card shadow-2xl">
-                    {SPEEDS.map((s) => (
-                      <button key={s} onClick={() => { setSpeed(s); setShowSpeedMenu(false); }}
-                        className={cn("block w-full px-4 py-2 text-left font-mono text-xs tabular-nums transition-colors hover:bg-foreground hover:text-background",
-                          s === speed && "bg-foreground text-background")}>{s}x</button>
-                    ))}
-                  </div>
-                )}
+                <PlayerButton
+                  onClick={() => setShowSettings((v) => !v)}
+                  label="Playback speed"
+                >
+                  <Gauge className="size-5" />
+                </PlayerButton>
+                <AnimatePresence>
+                  {showSettings && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 6, scale: 0.96 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 6, scale: 0.96 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute bottom-10 right-0 w-40 overflow-hidden rounded-lg border border-border/60 bg-card/95 p-1 shadow-2xl backdrop-blur-xl"
+                    >
+                      <p className="px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                        Speed
+                      </p>
+                      {SPEEDS.map((s) => (
+                        <button
+                          key={s}
+                          onClick={() => setPlaybackRate(s)}
+                          className={cn(
+                            "flex w-full items-center justify-between rounded-md px-3 py-1.5 text-sm transition-colors",
+                            rate === s
+                              ? "bg-brand-muted text-[var(--brand)]"
+                              : "text-foreground hover:bg-accent",
+                          )}
+                        >
+                          {s === 1 ? "Normal" : `${s}×`}
+                          {rate === s && <span className="text-xs">✓</span>}
+                        </button>
+                      ))}
+                      <div className="my-1 h-px bg-border/60" />
+                      <button
+                        onClick={toggleFullscreen}
+                        className="flex w-full items-center gap-2 rounded-md px-3 py-1.5 text-sm text-foreground hover:bg-accent"
+                      >
+                        {fullscreen ? (
+                          <Minimize className="size-4" />
+                        ) : (
+                          <Maximize className="size-4" />
+                        )}
+                        {fullscreen ? "Exit full" : "Fullscreen"}
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               {/* Fullscreen */}
-              <button onClick={toggleFullscreen}
-                className="rounded p-1.5 text-white/70 transition-colors hover:text-white"
-                title="Fullscreen (F)" aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}>
-                {isFullscreen ? <Minimize className="h-5 w-5" /> : <Maximize className="h-5 w-5" />}
-              </button>
+              <PlayerButton onClick={toggleFullscreen} label="Fullscreen" className="hidden sm:inline-flex">
+                {fullscreen ? (
+                  <Minimize className="size-5" />
+                ) : (
+                  <Maximize className="size-5" />
+                )}
+              </PlayerButton>
             </div>
-          </div>
-        </>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Cast dialog */}
       <CastDialog
-        open={showCastDialog}
-        onClose={() => setShowCastDialog(false)}
-        videoUrl={sourceUrl}
-        title={title}
+        open={castOpen}
+        onOpenChange={setCastOpen}
+        videoUrl={absoluteVideoUrl}
+        title={subtitle ? `${title} — ${subtitle}` : title}
       />
     </div>
   );
 }
 
-function formatTime(seconds: number): string {
-  if (!Number.isFinite(seconds)) return "0:00";
-  const h = Math.floor(seconds / 3600);
-  const m = Math.floor((seconds % 3600) / 60);
-  const s = Math.floor(seconds % 60);
-  const mm = h > 0 ? String(m).padStart(2, "0") : String(m);
-  const ss = String(s).padStart(2, "0");
-  return h > 0 ? `${h}:${mm}:${ss}` : `${mm}:${ss}`;
+/** Small reusable icon button in the control bar. */
+function PlayerButton({
+  onClick,
+  children,
+  label,
+  disabled,
+  className,
+}: {
+  onClick?: () => void;
+  children: React.ReactNode;
+  label: string;
+  disabled?: boolean;
+  className?: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      aria-label={label}
+      className={cn(
+        "flex size-9 items-center justify-center rounded-md text-white/90 transition-colors hover:bg-white/15 hover:text-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent",
+        className,
+      )}
+    >
+      {children}
+    </button>
+  );
 }

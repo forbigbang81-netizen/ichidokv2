@@ -1,278 +1,194 @@
 "use client";
-/**
- * CastDialog v2 — auto-discovers devices on the local network without
- * requiring the user to enter an IP address.
- *
- * Works by scanning common local network ranges (192.168.1.x, 192.168.0.x,
- * 10.0.0.x) for devices that respond on known casting ports:
- *   - Port 8060: Roku ECP
- *   - Port 8009: Fire TV / Android TV DIAL
- *   - Port 8222: Some Samsung TVs
- *   - Port 3001: Some LG webOS TVs
- *   - Port 9197: Some DLNA renderers
- *
- * The scan runs automatically when the dialog opens. Found devices are
- * listed with auto-detected names. User just clicks one to cast.
- *
- * For devices that can't be auto-discovered, falls back to QR code
- * (user scans with phone, then AirPlays/screen-mirrors to their TV).
- *
- * No Google Cast SDK. No account. No manual IP entry.
- */
-import { useState, useEffect, useRef } from "react";
-import { Tv, X, Loader2, Check, RefreshCw, Smartphone } from "lucide-react";
-import { cn } from "@/lib/utils";
+
+import { useMemo, useState } from "react";
+import { Cast, CheckCircle2, MonitorPlay, Smartphone, Tv } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 
 type Props = {
   open: boolean;
-  onClose: () => void;
+  onOpenChange: (open: boolean) => void;
+  /** Absolute URL the receiver / phone should open to play the video. */
   videoUrl: string;
+  /** Human title shown in the dialog (anime + episode). */
   title: string;
 };
 
-type CastDevice = {
-  ip: string;
-  port: number;
-  type: "roku" | "firetv" | "samsung" | "lg" | "dlna" | "unknown";
-  name: string;
-};
+type CastStatus = "idle" | "connecting" | "connected" | "unsupported" | "error";
 
-const DEVICE_PORTS = [
-  { port: 8060, type: "roku" as const, name: "Roku" },
-  { port: 8009, type: "firetv" as const, name: "Fire TV" },
-  { port: 9197, type: "dlna" as const, name: "DLNA TV" },
-  { port: 8222, type: "samsung" as const, name: "Samsung TV" },
-  { port: 3001, type: "lg" as const, name: "LG TV" },
-];
+/**
+ * "Cast to TV" dialog — no Google Cast SDK.
+ *
+ * 1. If the browser supports the Presentation API (Chrome/Edge desktop), we
+ *    offer a "Start Cast" button that calls `new PresentationRequest(url).start()`.
+ *    This casts the video URL to any Chromecast / smart TV that the browser
+ *    knows how to reach (Chrome's built-in cast menu).
+ * 2. As a reliable fallback (and on unsupported browsers), we show a QR code
+ *    of the absolute video URL — the user scans it with their phone and
+ *    AirPlays / casts from there.
+ */
+export function CastDialog({ open, onOpenChange, videoUrl, title }: Props) {
+  // Detect Presentation API support once (client-only). Computed via useMemo
+  // so it doesn't trigger a setState-in-effect cascade. Safe because the
+  // dialog content only renders after a user click (post-hydration).
+  const supportsPresentation = useMemo(() => {
+    if (typeof window === "undefined") return false;
+    return (
+      typeof (window as unknown as { PresentationRequest?: unknown })
+        .PresentationRequest !== "undefined"
+    );
+  }, []);
+  const [status, setStatus] = useState<CastStatus>("idle");
 
-const DEVICE_STORAGE_KEY = "ichidok:cast-device";
-
-export function CastDialog({ open, onClose, videoUrl, title }: Props) {
-  const [scanning, setScanning] = useState(false);
-  const [devices, setDevices] = useState<CastDevice[]>([]);
-  const [casting, setCasting] = useState<string | null>(null);
-  const [castSuccess, setCastSuccess] = useState(false);
-  const [showQR, setShowQR] = useState(false);
-  const scanCancelledRef = useRef(false);
-
-  // Auto-scan when dialog opens
-  useEffect(() => {
-    if (!open) return;
-    scanCancelledRef.current = false;
-    setDevices([]);
-    setCastSuccess(false);
-    setShowQR(false);
-    // Defer scan to next tick so startScan is defined
-    const t = setTimeout(() => doScan(), 0);
-    return () => { scanCancelledRef.current = true; clearTimeout(t); };
-  }, [open]);
-
-  const doScan = async () => {
-    setScanning(true);
-    setDevices([]);
-    const found: CastDevice[] = [];
-    const foundIps = new Set<string>();
-
-    // Get our own IP range by creating a temporary RTCPeerConnection
-    // (this tells us what subnet we're on)
-    let baseIps = ["192.168.1", "192.168.0", "10.0.0", "192.168.4", "192.168.2"];
-
-    // Scan each IP × each port concurrently (in batches)
-    const batchSize = 20;
-    const allIps: string[] = [];
-    for (const base of baseIps) {
-      for (let i = 1; i <= 254; i++) {
-        allIps.push(`${base}.${i}`);
-      }
-    }
-
-    for (let i = 0; i < allIps.length; i += batchSize) {
-      if (scanCancelledRef.current) break;
-      const batch = allIps.slice(i, i + batchSize);
-      await Promise.all(batch.map(async (ip) => {
-        if (scanCancelledRef.current || foundIps.has(ip)) return;
-        for (const { port, type, name } of DEVICE_PORTS) {
-          try {
-            const controller = new AbortController();
-            const timeout = setTimeout(() => controller.abort(), 500);
-            await fetch(`http://${ip}:${port}/`, {
-              signal: controller.signal,
-              mode: "no-cors",
-            });
-            clearTimeout(timeout);
-            // If fetch didn't throw, something is listening on this port
-            if (!foundIps.has(ip)) {
-              foundIps.add(ip);
-              const device: CastDevice = { ip, port, type, name };
-              found.push(device);
-              setDevices([...found]);
-            }
-          } catch {
-            // No response — skip
-          }
-        }
-      }));
-    }
-
-    setScanning(false);
+  // Reset cast status whenever the dialog closes — done in the open-change
+  // handler (not an effect) to avoid cascading renders.
+  const handleOpenChange = (next: boolean) => {
+    if (!next) setStatus("idle");
+    onOpenChange(next);
   };
 
-  const castToDevice = async (device: CastDevice) => {
-    setCasting(device.ip);
-    setCastSuccess(false);
-    const url = encodeURIComponent(videoUrl);
-
+  const startCast = async () => {
     try {
-      if (device.type === "roku") {
-        // Roku ECP: launch the built-in media player with our URL
-        await fetch(`http://${device.ip}:8060/launch/dev?contentId=${url}`, {
-          method: "POST",
-          mode: "no-cors",
-        });
-      } else if (device.type === "firetv") {
-        // Fire TV DIAL: launch YouTube app with the URL
-        await fetch(`http://${device.ip}:8009/apps/YouTube`, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain" },
-          body: `v=${videoUrl}`,
-        });
-      } else {
-        // DLNA/other: try a generic SOAP request
-        await fetch(`http://${device.ip}:${device.port}/`, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/xml" },
-          body: `<?xml version="1.0"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><u:SetAVTransportURI xmlns:u="urn:schemas-upnp-org:service:AVTransport:1"><InstanceID>0</InstanceID><CurrentURI>${videoUrl}</CurrentURI><CurrentURIMetaData></CurrentURIMetaData></u:SetAVTransportURI></s:Body></s:Envelope>`,
-        });
+      setStatus("connecting");
+      const PresentationRequestCtor = (
+        window as unknown as {
+          PresentationRequest: new (urls: string | string[]) => unknown;
+        }
+      ).PresentationRequest;
+      const request = new PresentationRequestCtor(videoUrl);
+      // Some browsers expose navigator.presentation; the simplest path is
+      // to call .start() on the request directly.
+      const session = await (
+        request as unknown as {
+          start: () => Promise<{
+            connection: unknown;
+            onstatechange?: ((e: unknown) => void) | null;
+            close: () => void;
+          }>;
+        }
+      ).start();
+      setStatus("connected");
+      toast.success("Casting started", {
+        description: title,
+      });
+      // Close the dialog once casting has begun.
+      handleOpenChange(false);
+      // Clean up the session if the user navigates away.
+      void session;
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      // AbortError means the user dismissed the picker — not a real error.
+      if (msg && /abort/i.test(msg)) {
+        setStatus("idle");
+        return;
       }
-
-      localStorage.setItem(DEVICE_STORAGE_KEY, device.ip);
-      setCastSuccess(true);
-      setTimeout(() => { setCastSuccess(false); setCasting(null); }, 3000);
-    } catch {
-      setCasting(null);
+      setStatus("error");
+      toast.error("Cast failed", {
+        description:
+          "Your browser couldn't start a cast session. Try the QR code instead.",
+      });
     }
   };
 
-  if (!open) return null;
-
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(videoUrl)}&bgcolor=000000&color=ffffff`;
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data=${encodeURIComponent(videoUrl)}`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur" onClick={onClose}>
-      <div className="mx-auto w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
-        {/* Header */}
-        <div className="mb-6 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Tv className="h-5 w-5" />
-            <h2 className="text-lg font-bold tracking-tight">Cast to TV</h2>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
+      <DialogContent className="max-w-md border-border/70 bg-card/95 backdrop-blur-xl">
+        <DialogHeader>
+          <div className="mb-1 flex size-11 items-center justify-center rounded-full bg-brand-muted">
+            <Cast className="size-5 text-[var(--brand)]" />
           </div>
-          <button onClick={onClose} className="text-muted-foreground hover:text-foreground" aria-label="Close">
-            <X className="h-5 w-5" />
-          </button>
-        </div>
+          <DialogTitle className="text-xl">Cast to TV</DialogTitle>
+          <DialogDescription>
+            Send <span className="font-medium text-foreground">{title}</span> to
+            any Chromecast, smart TV, or AirPlay device.
+          </DialogDescription>
+        </DialogHeader>
 
-        {showQR ? (
-          /* QR code mode */
-          <div className="text-center">
-            <p className="mb-3 text-xs text-muted-foreground">
-              Scan with your phone camera, then AirPlay or Screen Mirror to your TV.
-            </p>
-            <div className="mx-auto flex aspect-square w-full max-w-[240px] items-center justify-center border border-border bg-white p-2">
-              <img src={qrUrl} alt="QR code" className="h-full w-full" />
+        {/* Option 1 — Presentation API */}
+        {supportsPresentation && (
+          <div className="rounded-lg border border-border/60 bg-background/50 p-4">
+            <div className="flex items-start gap-3">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand)]/15">
+                <Tv className="size-5 text-[var(--brand)]" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold">Use this device</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">
+                  Opens your browser&apos;s built-in cast picker. Choose any
+                  available Chromecast or smart TV on your network.
+                </p>
+              </div>
             </div>
-            <p className="mt-3 line-clamp-1 text-center text-xs text-muted-foreground">{title}</p>
-            <button onClick={() => setShowQR(false)} className="mt-4 border border-border bg-card px-4 py-2 text-[11px] font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background">
-              Back to devices
-            </button>
-          </div>
-        ) : (
-          <>
-            {/* Scanning status */}
-            <div className="mb-4 flex items-center justify-between">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                {scanning ? "Scanning network..." : `${devices.length} device${devices.length === 1 ? "" : "s"} found`}
-              </p>
-              <button onClick={doScan} disabled={scanning}
-                className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground hover:text-foreground disabled:opacity-50">
-                <RefreshCw className={cn("h-3.5 w-3.5", scanning && "animate-spin")} />
-                Rescan
-              </button>
-            </div>
-
-            {/* Device list */}
-            {devices.length > 0 ? (
-              <div className="mb-4 flex max-h-[300px] flex-col gap-1.5 overflow-y-auto">
-                {devices.map((device) => (
-                  <button
-                    key={`${device.ip}:${device.port}`}
-                    onClick={() => castToDevice(device)}
-                    disabled={casting !== null}
-                    className={cn(
-                      "flex items-center justify-between border p-3 text-left transition-colors disabled:opacity-50",
-                      casting === device.ip
-                        ? "border-foreground bg-foreground text-background"
-                        : "border-border bg-card hover:bg-foreground hover:text-background"
-                    )}
-                  >
-                    <div className="flex items-center gap-3">
-                      {casting === device.ip ? (
-                        <Loader2 className="h-5 w-5 animate-spin" />
-                      ) : castSuccess ? (
-                        <Check className="h-5 w-5" />
-                      ) : (
-                        <Tv className="h-5 w-5" />
-                      )}
-                      <div>
-                        <p className="text-sm font-semibold">{device.name}</p>
-                        <p className="font-mono text-[10px] opacity-60">{device.ip}:{device.port}</p>
-                      </div>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            ) : (
-              <div className="mb-4 flex h-[120px] items-center justify-center rounded-lg border border-dashed border-border">
-                {scanning ? (
-                  <div className="text-center">
-                    <Loader2 className="mx-auto mb-2 h-6 w-6 animate-spin text-muted-foreground" />
-                    <p className="text-xs text-muted-foreground">Looking for devices on your network...</p>
-                  </div>
-                ) : (
-                  <p className="px-4 text-center text-xs text-muted-foreground">
-                    No devices found. Make sure your TV is on and connected to the same Wi-Fi.
-                  </p>
-                )}
-              </div>
-            )}
-
-            {/* Success message */}
-            {castSuccess && (
-              <div className="mb-4 flex items-center gap-2 border border-foreground/30 bg-foreground/5 p-3 text-xs text-foreground">
-                <Check className="h-4 w-4 shrink-0" />
-                Casting! Use your TV remote to control playback.
-              </div>
-            )}
-
-            {/* QR fallback */}
-            <button
-              onClick={() => setShowQR(true)}
-              className="flex w-full items-center justify-center gap-2 border border-border bg-card py-3 text-[11px] font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background"
+            <Button
+              onClick={startCast}
+              disabled={status === "connecting" || status === "connected"}
+              className="mt-3 w-full gap-2 bg-[var(--brand)] text-[var(--brand-foreground)] hover:bg-[var(--brand)]/90"
             >
-              <Smartphone className="h-4 w-4" />
-              Use phone instead (QR code)
-            </button>
+              {status === "connected" ? (
+                <>
+                  <CheckCircle2 className="size-4" /> Casting started
+                </>
+              ) : status === "connecting" ? (
+                <>
+                  <MonitorPlay className="size-4 animate-pulse" /> Connecting…
+                </>
+              ) : (
+                <>
+                  <Cast className="size-4" /> Start Cast
+                </>
+              )}
+            </Button>
+          </div>
+        )}
 
-            {/* How it works */}
-            <div className="mt-5 border-t border-border pt-4">
-              <p className="text-[10px] leading-relaxed text-muted-foreground">
-                <strong className="text-foreground">No Google Cast.</strong> Automatically finds Roku, Fire TV, Samsung, LG, and DLNA devices on your Wi-Fi. No app, no account, no IP address needed.
+        {!supportsPresentation && (
+          <div className="rounded-lg border border-border/60 bg-background/50 p-4 text-sm text-muted-foreground">
+            <p>
+              This browser doesn&apos;t support the Presentation API. Use the QR
+              code below to cast from your phone.
+            </p>
+          </div>
+        )}
+
+        {/* Option 2 — QR fallback */}
+        <div className="rounded-lg border border-border/60 bg-background/50 p-4">
+          <div className="flex items-start gap-3">
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand)]/15">
+              <Smartphone className="size-5 text-[var(--brand)]" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="font-semibold">Cast from your phone</p>
+              <p className="mt-0.5 text-xs text-muted-foreground">
+                Scan with your phone camera, open the link, then AirPlay or cast
+                from your phone&apos;s video player.
               </p>
             </div>
-          </>
-        )}
-      </div>
-    </div>
+          </div>
+
+          <div className="mt-3 flex justify-center rounded-lg bg-white p-3">
+            <img
+              src={qrUrl}
+              alt="QR code linking to the video stream"
+              className="size-48"
+            />
+          </div>
+
+          <div className="mt-3 max-h-16 overflow-y-auto rounded-md bg-muted/60 p-2">
+            <p className="break-all font-mono text-[10px] leading-tight text-muted-foreground">
+              {videoUrl}
+            </p>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 }
