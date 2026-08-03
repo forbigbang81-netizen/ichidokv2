@@ -161,17 +161,12 @@ export function CustomPlayer({
 
   const toggleFullscreen = useCallback(async () => {
     const el = containerRef.current;
-    const v = videoRef.current;
     if (!el) return;
     try {
       if (!document.fullscreenElement) {
         await el.requestFullscreen();
-        // Flip horizontally in fullscreen (mirror effect)
-        if (v) v.style.transform = "scaleX(-1)";
       } else {
         await document.exitFullscreen();
-        // Remove mirror when exiting fullscreen
-        if (v) v.style.transform = "";
       }
     } catch {
       /* ignore — some browsers reject in iframes */
@@ -359,7 +354,8 @@ export function CustomPlayer({
         ref={videoRef}
         src={proxiedSrc}
         poster={poster}
-        className="size-full bg-black object-contain"
+        className={`size-full bg-black object-contain ${fullscreen ? "ichidoki-flip" : ""}`}
+        style={fullscreen ? { transform: "scaleX(-1) !important" } : undefined}
         playsInline
         preload="metadata"
         onLoadedMetadata={onLoaded}

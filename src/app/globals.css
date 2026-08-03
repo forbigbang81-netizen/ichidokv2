@@ -302,3 +302,11 @@ video::-internal-media-controls-overlay-cast-button {
   border: none;
   box-shadow: 0 0 0 4px oklch(0.68 0.22 45 / 0.18);
 }
+
+/* Force horizontal flip on video when in fullscreen */
+.ichidoki-flip {
+  transform: scaleX(-1) !important;
+  -webkit-transform: scaleX(-1) !important;
+  -moz-transform: scaleX(-1) !important;
+  -o-transform: scaleX(-1) !important;
+}
