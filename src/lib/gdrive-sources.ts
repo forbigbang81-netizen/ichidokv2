@@ -155,6 +155,85 @@ export const gdriveEpisodes: Record<string, (GdriveEpisode | null)[][]> = {
       ep("14tSEHlC6vt67KymPutWdYGbnZgXgVZIk", "", "Madoka Magica: Rebellion Movie"),
     ],
   ],
+
+  // Overlord Season 1 — 10 of 13 episodes
+  // Source: https://drive.google.com/drive/folders/1nopLk3ascFJldV9RYSvDF6Ir-EL97XgJ
+  "overlord": [
+    [
+      ep("1bDHOKTJuW85z1i1Ix8VId8jPNh8uCQHW", "", "Overlord E01"),
+      ep("1OsMQGMRywWlep6jih26t9sueg2VMmbEm", "", "Overlord E02"),
+      null, // Ep 3
+      ep("1ER_sTxR85Ve6xiklpTSDkuHHudaS3liS", "", "Overlord E04"),
+      ep("1B22A4b_e2d8S85uHboZoJiARbhAo4dwO", "", "Overlord E05"),
+      ep("118xlw6ba6sy6uEcG0NbKh3aX10_yFayj", "", "Overlord E06"),
+      ep("1QKirtJwC6eOIf_lvaB8XhnSsqlEHddHt", "", "Overlord E07"),
+      ep("1xXPSlFVa227vv9Zt6kIbqOLWJluWNyhG", "", "Overlord E08"),
+      ep("1rZ9rH_AHm3ldQeQ9KhVUnAqo1Sh05qps", "", "Overlord E09"),
+      ep("1Rb6Oe9hPJubTa2gfyPSQnchetnlpHpqt", "", "Overlord E10"),
+      null, // Ep 11
+      ep("1QWkxJdyDHZfAxN2m0aOsI9qVnJD75Dw9", "", "Overlord E12"),
+      null, // Ep 13
+    ],
+  ],
+
+  // Naruto — Season 0 (Prologue / Land of Waves Arc, eps 1-19)
+  // Source: https://drive.google.com/drive/folders/1gDzL8p8wG8P4R21kMJmQ2sDcKc2SuQlf
+  "naruto": [
+    [
+      ep("1FN1n99bBiFiQA8YzSFy0rBnsao87luVw", "", "Naruto E01"),
+      ep("1PPmDsJVWqNgKKiCfxYuSO2oFJaMjS5dY", "", "Naruto E02"),
+      ep("1DqM1k6Tk1UcPGxTOcGSpS4hevxAQ9K3z", "", "Naruto E03"),
+      null, // Ep 4
+      null, // Ep 5
+      null, // Ep 6
+      ep("1YtthnSrlXgR_ELWF5xd1B4MtYgU3lone", "", "Naruto E07"),
+      null, // Ep 8
+      null, // Ep 9
+      null, // Ep 10
+      ep("1nuzJuAe74aC9Nj61RHJczAB4xjRwMqXx", "", "Naruto E11"),
+      null, // Ep 12
+      null, // Ep 13
+      ep("1uUldZn5QTn3YzmY1xv6Ai9mLWgp5PlFT", "", "Naruto E14"),
+      null, // Ep 15
+      null, // Ep 16
+      ep("1cnysnMdtMgqdm3pkHrP_hqnP8vLSTxUA", "", "Naruto E17"),
+      null, // Ep 18
+      ep("1uP0nvGrKLvfMuydG3bqwrw2Rl5NUvcPs", "", "Naruto E19"),
+    ],
+    // Season 1 (Chunin Exam Arc, eps 20-60)
+    [
+      null, // Ep 1 (20)
+      null, // Ep 2 (21)
+      null, // Ep 3 (22)
+      null, // Ep 4 (23)
+      null, // Ep 5 (24)
+      null, // Ep 6 (25)
+      null, // Ep 7 (26)
+      null, // Ep 8 (27)
+      ep("18c1nDYpuNhEi0jkyBlYmeTDyUjejwenT", "", "Naruto E28"), // Ep 9 (28)
+      ep("1_PJoV4IuryOhHixKhB3MeIkaeqMRqiG9", "", "Naruto E29"), // Ep 10 (29)
+      ep("1UZPaY_JkPbiIcA8kmYQR8FByMze8YuCG", "", "Naruto E30"), // Ep 11 (30)
+      ep("1rlErkBT9XFFAb1HtKrNsJJ0s_tDN90yP", "", "Naruto E31"), // Ep 12 (31)
+      null, // Ep 13 (32)
+      ep("102PsMFd4DdLilwRPGHwtnXHE4IknVSuM", "", "Naruto E33"), // Ep 14 (33)
+      null, // Ep 15 (34)
+      ep("1nDXdNQsYmtKuf2s7XwMcdL_ZTD1bFa_7", "", "Naruto E35"), // Ep 16 (35)
+      null, // Ep 17 (36)
+      null, // Ep 18 (37)
+      null, // Ep 19 (38)
+      ep("1YBdF5CYUpW8D2BAQ7SUBSo4wHoOlVtsD", "", "Naruto E39"), // Ep 20 (39)
+      null, // Ep 21 (40)
+      null, // Ep 22 (41)
+      null, // Ep 23 (42)
+      null, // Ep 24 (43)
+      null, // Ep 25 (44)
+      null, // Ep 26 (45)
+      null, // Ep 27 (46)
+      null, // Ep 28 (47)
+      ep("1uCBNLpGCaJC21RKhTKsvCXliyOOf54PJ", "", "Naruto E48"), // Ep 29 (48)
+      ep("1rKK7ntnkJw7sJremJHY9GZ1v_qKtQvrA", "", "Naruto E49"), // Ep 30 (49)
+    ],
+  ],
 };
 
 /**
