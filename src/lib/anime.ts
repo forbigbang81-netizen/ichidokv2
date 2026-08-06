@@ -214,6 +214,8 @@ const META: Record<
       "When his favorite MMORPG shuts down, Momonga stays logged in — and wakes up as his skeletal overlord avatar, ruling a tomb of fanatically loyal NPCs in a strange new world.",
     backdropColor: "#1a0d2a",
     audio: "both",
+    franchise: "overlord",
+    season: 1,
   },
   "overlord-ii": {
     year: 2018,
@@ -225,6 +227,8 @@ const META: Record<
       "Ainz Ooal Gown expands his grip on the new world, dispatching his Floor Guardians to crush kingdoms while uncovering the truth behind this reality.",
     backdropColor: "#1a0d2a",
     audio: "both",
+    franchise: "overlord",
+    season: 2,
   },
   "rwby": {
     year: 2013,
@@ -1391,6 +1395,8 @@ const META: Record<
     backdropColor: "#1c0d3a",
     audio: "both",
     featured: true,
+    franchise: "solo-leveling",
+    season: 1,
   },
   "solo-leveling-season-2-arise-from-the-shadow": {
     year: 2025,

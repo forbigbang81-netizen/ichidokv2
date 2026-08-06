@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Play, Star, Clock, Layers, ArrowLeft, Calendar } from "lucide-react";
 import {
   getAnimeById,
+  getSeasons,
   posterUrl,
   formatRating,
   type Anime,
@@ -12,12 +13,15 @@ import {
 import { useApp } from "@/lib/store";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { SeasonsTab } from "@/components/anime/SeasonsTab";
 
 export function DetailsPage({ animeId }: { animeId: string }) {
   const anime = useMemo(() => getAnimeById(animeId), [animeId]);
   const go = useApp((s) => s.go);
   const back = useApp((s) => s.back);
   const canGoBack = useApp((s) => s.canGoBack());
+  const seasons = useMemo(() => (anime ? getSeasons(anime) : []), [anime]);
+  const hasMultipleSeasons = seasons.length > 1;
 
   if (!anime) {
     return (
@@ -102,6 +106,11 @@ export function DetailsPage({ animeId }: { animeId: string }) {
                     Featured
                   </Badge>
                 )}
+                {hasMultipleSeasons && anime.season && (
+                  <Badge className="bg-[var(--brand)]/15 text-[var(--brand)] hover:bg-[var(--brand)]/20">
+                    Season {anime.season}
+                  </Badge>
+                )}
                 <Badge variant="secondary" className="gap-1">
                   <Calendar className="size-3" />
                   {anime.year}
@@ -163,6 +172,9 @@ export function DetailsPage({ animeId }: { animeId: string }) {
           </div>
         </div>
       </section>
+
+      {/* Seasons (only shows if multiple seasons exist) */}
+      <SeasonsTab anime={anime} />
 
       {/* Episodes */}
       <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">

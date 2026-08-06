@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import {
   getAnimeById,
+  getSeasons,
   posterUrl,
   streamProxyUrl,
   isEmbedUrl,
@@ -97,6 +98,18 @@ export function WatchPage({ animeId, episode }: Props) {
     const url = effectiveAudio === "dub" && current.dub_url ? current.dub_url : current.url;
     return isEmbedUrl(url);
   }, [current, effectiveAudio]);
+
+  // For multi-season franchises: find the next/previous season so the user
+  // can jump between seasons directly from the watch page.
+  const seasons = useMemo(() => (anime ? getSeasons(anime) : []), [anime]);
+  const nextSeason = useMemo(() => {
+    if (!anime?.season || seasons.length <= 1) return undefined;
+    return seasons.find((s) => s.season === anime.season! + 1);
+  }, [anime, seasons]);
+  const prevSeason = useMemo(() => {
+    if (!anime?.season || seasons.length <= 1) return undefined;
+    return seasons.find((s) => s.season === anime.season! - 1);
+  }, [anime, seasons]);
 
   // Update document title for nicer browser tab / share.
   useEffect(() => {
@@ -287,6 +300,45 @@ export function WatchPage({ animeId, episode }: Props) {
                 )}
                 <ChevronRight className="size-4" />
               </Button>
+
+              {/* Next / Previous season */}
+              {prevSeason && (
+                <Button
+                  variant="outline"
+                  onClick={() =>
+                    replace({
+                      name: "watch",
+                      animeId: prevSeason.id,
+                      episode: 1,
+                    })
+                  }
+                  className="gap-2 border-[var(--brand)]/40 text-[var(--brand)] hover:bg-[var(--brand)]/10"
+                >
+                  <ChevronLeft className="size-4" />
+                  Prev Season
+                  <span className="ml-1 hidden text-xs text-muted-foreground sm:inline">
+                    S{prevSeason.season}
+                  </span>
+                </Button>
+              )}
+              {nextSeason && (
+                <Button
+                  onClick={() =>
+                    replace({
+                      name: "watch",
+                      animeId: nextSeason.id,
+                      episode: 1,
+                    })
+                  }
+                  className="gap-2 border-[var(--brand)]/40 bg-[var(--brand)]/10 text-[var(--brand)] hover:bg-[var(--brand)]/20"
+                >
+                  Next Season
+                  <span className="ml-1 hidden text-xs text-[var(--brand)]/70 sm:inline">
+                    S{nextSeason.season}
+                  </span>
+                  <ChevronRight className="size-4" />
+                </Button>
+              )}
             </div>
           </div>
         </div>
