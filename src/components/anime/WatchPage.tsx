@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -24,6 +24,7 @@ import {
 } from "@/lib/anime";
 import { useApp } from "@/lib/store";
 import { CustomPlayer } from "@/components/anime/CustomPlayer";
+import { EmbedPlayer } from "@/components/anime/EmbedPlayer";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -92,6 +93,40 @@ export function WatchPage({ animeId, episode }: Props) {
     return streamProxyUrl(current.url);
   }, [current, effectiveAudio]);
 
+  // Track playback position for the current episode (for resuming when
+  // switching sub/dub or navigating back to the same episode).
+  const positionRef = useRef<number>(0);
+  const [resumePosition, setResumePosition] = useState<number>(0);
+
+  // Save position to localStorage
+  const savePosition = useCallback(
+    (pos: number) => {
+      if (typeof window === "undefined" || !anime || !current) return;
+      if (pos > 5) {
+        localStorage.setItem(
+          `pos:${anime.id}:${current.ep_num}`,
+          String(Math.floor(pos)),
+        );
+      }
+    },
+    [anime, current],
+  );
+
+  // Load saved position when episode changes
+  useEffect(() => {
+    if (typeof window === "undefined" || !anime || !current) return;
+    const saved = localStorage.getItem(`pos:${anime.id}:${current.ep_num}`);
+    positionRef.current = saved ? parseInt(saved, 10) : 0;
+    setResumePosition(positionRef.current);
+  }, [anime?.id, current?.ep_num]);
+
+  // Save position before audio mode switch (so we can resume)
+  const handleAudioSwitch = (mode: "sub" | "dub") => {
+    savePosition(positionRef.current);
+    setAudio(mode);
+    setResumePosition(positionRef.current);
+  };
+
   // Check if current stream is an embed URL (iframe player).
   const isEmbed = useMemo(() => {
     if (!current) return false;
@@ -135,10 +170,19 @@ export function WatchPage({ animeId, episode }: Props) {
 
   const navigateEp = (ep: Episode | undefined) => {
     if (!ep) return;
+    // Save current position before navigating
+    savePosition(positionRef.current);
     // Replace history (so back doesn't step through every watched ep).
     replace({ name: "watch", animeId: anime.id, episode: ep.ep_num });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  // Save position when component unmounts
+  useEffect(() => {
+    return () => {
+      savePosition(positionRef.current);
+    };
+  }, [savePosition]);
 
   // Show SUB/DUB toggle if anime has both audio versions OR is embed (zokoanime/megaplay always have dub)
   const showAudioToggle = anime.audio === "both";
@@ -182,18 +226,21 @@ export function WatchPage({ animeId, episode }: Props) {
         {/* Player + info */}
         <div className="lg:col-span-2">
           {isEmbed ? (
-            // Embed player (iframe) for zokoanime/megaplay
-            <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border/50 bg-black">
-              <iframe
-                key={`${current.ep_num}-${effectiveAudio}`}
-                src={currentStreamUrl}
-                className="size-full"
-                allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
-                allowFullScreen
-                frameBorder={0}
-                scrolling="no"
-              />
-            </div>
+            // Embed player (iframe) for zokoanime/megaplay with Cast + position tracking
+            <EmbedPlayer
+              src={currentStreamUrl}
+              poster={posterUrl(anime)}
+              title={anime.title}
+              episode={current.ep_num}
+              reloadKey={`${current.ep_num}-${effectiveAudio}`}
+              initialPosition={resumePosition}
+              onTimeUpdate={(pos) => {
+                positionRef.current = pos;
+              }}
+              onComplete={() => {
+                if (nextEp) navigateEp(nextEp);
+              }}
+            />
           ) : (
             <CustomPlayer
               key={`${current.ep_num}-${effectiveAudio}`}
@@ -220,7 +267,7 @@ export function WatchPage({ animeId, episode }: Props) {
               {showAudioToggle && (
                 <div className="inline-flex items-center gap-0.5 rounded-md border border-border/60 bg-card/40 p-0.5">
                   <button
-                    onClick={() => setAudio("sub")}
+                    onClick={() => handleAudioSwitch("sub")}
                     className={cn(
                       "rounded-sm px-3 py-1 text-xs font-bold uppercase tracking-widest transition-colors",
                       effectiveAudio === "sub"
@@ -231,7 +278,7 @@ export function WatchPage({ animeId, episode }: Props) {
                     SUB
                   </button>
                   <button
-                    onClick={() => setAudio("dub")}
+                    onClick={() => handleAudioSwitch("dub")}
                     className={cn(
                       "rounded-sm px-3 py-1 text-xs font-bold uppercase tracking-widest transition-colors",
                       effectiveAudio === "dub"
