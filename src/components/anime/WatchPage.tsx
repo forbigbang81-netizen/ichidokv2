@@ -107,6 +107,11 @@ export function WatchPage({ animeId, episode }: Props) {
           `pos:${anime.id}:${current.ep_num}`,
           String(Math.floor(pos)),
         );
+        // Also save the watch timestamp (for sorting Continue Watching by recency)
+        localStorage.setItem(
+          `time:${anime.id}:${current.ep_num}`,
+          String(Date.now()),
+        );
       }
     },
     [anime, current],

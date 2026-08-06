@@ -14,6 +14,7 @@ import {
 } from "@/lib/anime";
 import { useApp } from "@/lib/store";
 import { AnimeCard } from "@/components/anime/AnimeCard";
+import { ContinueWatchingRail } from "@/components/anime/ContinueWatchingRail";
 import { cn } from "@/lib/utils";
 
 /** A horizontal rail of cards with snap-scrolling + hidden scrollbar. */
@@ -269,6 +270,7 @@ export function HomePage() {
       <Hero items={featured} />
 
       <div className="mt-8 space-y-10 sm:mt-12">
+        <ContinueWatchingRail />
         <Rail
           title="Popular Now"
           subtitle="What everyone's watching this week"
