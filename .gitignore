@@ -69,3 +69,4 @@ server.log
 public/akame/
 *.mkv
 public/100gf/
+.github/workflows/auto-import.yml
