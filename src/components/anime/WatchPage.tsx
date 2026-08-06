@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -15,6 +15,8 @@ import {
 import {
   getAnimeById,
   posterUrl,
+  streamProxyUrl,
+  isEmbedUrl,
   formatRating,
   type Anime,
   type Episode,
@@ -36,6 +38,24 @@ export function WatchPage({ animeId, episode }: Props) {
   const canGoBack = useApp((s) => s.canGoBack());
   const replace = useApp((s) => s.replace);
 
+  // Audio mode: "sub" or "dub". Persisted per-anime in localStorage.
+  const [audioMode, setAudioMode] = useState<"sub" | "dub">(() => {
+    if (typeof window === "undefined") return "sub";
+    const saved = localStorage.getItem(`audio:${animeId}`);
+    return saved === "dub" ? "dub" : "sub";
+  });
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const saved = localStorage.getItem(`audio:${animeId}`);
+    setAudioMode(saved === "dub" ? "dub" : "sub");
+  }, [animeId]);
+  const setAudio = (mode: "sub" | "dub") => {
+    setAudioMode(mode);
+    if (typeof window !== "undefined") {
+      localStorage.setItem(`audio:${animeId}`, mode);
+    }
+  };
+
   // Current + prev/next episodes.
   const current = useMemo(
     () => anime?.episodes.find((e) => e.ep_num === episode),
@@ -50,6 +70,33 @@ export function WatchPage({ animeId, episode }: Props) {
     () => anime?.episodes.find((e) => e.ep_num === episode + 1),
     [anime, episode],
   );
+
+  // Determine the effective audio mode for this anime.
+  // - If anime.audio === "dub", always dub.
+  // - If anime.audio === "both", respect user's audioMode toggle.
+  // - If anime.audio === "sub", always sub.
+  const effectiveAudio: "sub" | "dub" =
+    anime?.audio === "dub"
+      ? "dub"
+      : anime?.audio === "both"
+      ? audioMode
+      : "sub";
+
+  // Pick the right stream URL based on audio mode.
+  const currentStreamUrl = useMemo(() => {
+    if (!current) return "";
+    if (effectiveAudio === "dub" && current.dub_url) {
+      return streamProxyUrl(current.dub_url);
+    }
+    return streamProxyUrl(current.url);
+  }, [current, effectiveAudio]);
+
+  // Check if current stream is an embed URL (iframe player).
+  const isEmbed = useMemo(() => {
+    if (!current) return false;
+    const url = effectiveAudio === "dub" && current.dub_url ? current.dub_url : current.url;
+    return isEmbedUrl(url);
+  }, [current, effectiveAudio]);
 
   // Update document title for nicer browser tab / share.
   useEffect(() => {
@@ -79,6 +126,9 @@ export function WatchPage({ animeId, episode }: Props) {
     replace({ name: "watch", animeId: anime.id, episode: ep.ep_num });
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  // Show SUB/DUB toggle if anime has both audio versions OR is embed (zokoanime/megaplay always have dub)
+  const showAudioToggle = anime.audio === "both";
 
   return (
     <motion.div
@@ -118,26 +168,74 @@ export function WatchPage({ animeId, episode }: Props) {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {/* Player + info */}
         <div className="lg:col-span-2">
-          <CustomPlayer
-            key={current.ep_num}
-            title={anime.title}
-            subtitle={`Episode ${current.ep_num}`}
-            src={current.url}
-            poster={posterUrl(anime)}
-            hasPrev={Boolean(prevEp)}
-            hasNext={Boolean(nextEp)}
-            onPrev={() => navigateEp(prevEp)}
-            onNext={() => navigateEp(nextEp)}
-            onEnded={() => {
-              if (nextEp) navigateEp(nextEp);
-            }}
-          />
+          {isEmbed ? (
+            // Embed player (iframe) for zokoanime/megaplay
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border/50 bg-black">
+              <iframe
+                key={`${current.ep_num}-${effectiveAudio}`}
+                src={currentStreamUrl}
+                className="size-full"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+                allowFullScreen
+                frameBorder={0}
+                scrolling="no"
+              />
+            </div>
+          ) : (
+            <CustomPlayer
+              key={`${current.ep_num}-${effectiveAudio}`}
+              title={anime.title}
+              subtitle={`Episode ${current.ep_num} · ${effectiveAudio === "dub" ? "English Dub" : "Subbed"}`}
+              src={effectiveAudio === "dub" && current.dub_url ? current.dub_url : current.url}
+              poster={posterUrl(anime)}
+              hasPrev={Boolean(prevEp)}
+              hasNext={Boolean(nextEp)}
+              onPrev={() => navigateEp(prevEp)}
+              onNext={() => navigateEp(nextEp)}
+              onEnded={() => {
+                if (nextEp) navigateEp(nextEp);
+              }}
+            />
+          )}
 
           {/* Title + meta */}
           <div className="mt-4">
-            <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
-              Episode {current.ep_num}
-            </h1>
+            <div className="flex items-center gap-3 flex-wrap">
+              <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
+                Episode {current.ep_num}
+              </h1>
+              {showAudioToggle && (
+                <div className="inline-flex items-center gap-0.5 rounded-md border border-border/60 bg-card/40 p-0.5">
+                  <button
+                    onClick={() => setAudio("sub")}
+                    className={cn(
+                      "rounded-sm px-3 py-1 text-xs font-bold uppercase tracking-widest transition-colors",
+                      effectiveAudio === "sub"
+                        ? "bg-[var(--brand)] text-[var(--brand-foreground)]"
+                        : "text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    SUB
+                  </button>
+                  <button
+                    onClick={() => setAudio("dub")}
+                    className={cn(
+                      "rounded-sm px-3 py-1 text-xs font-bold uppercase tracking-widest transition-colors",
+                      effectiveAudio === "dub"
+                        ? "bg-[var(--brand)] text-[var(--brand-foreground)]"
+                        : "text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    DUB
+                  </button>
+                </div>
+              )}
+              {!showAudioToggle && (
+                <span className="inline-flex shrink-0 items-center rounded-md border border-border/60 bg-card/40 px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+                  {anime.audio === "dub" ? "Dub" : "Sub"}
+                </span>
+              )}
+            </div>
             <p className="mt-1 text-sm text-muted-foreground">
               {current.name.replace(/\.(mp4|mkv|webm)$/i, "")} · {anime.title}
             </p>
