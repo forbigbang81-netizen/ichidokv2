@@ -14,6 +14,7 @@ import { useApp } from "@/lib/store";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SeasonsTab } from "@/components/anime/SeasonsTab";
+import { CastButton } from "@/components/anime/CastButton";
 
 export function DetailsPage({ animeId }: { animeId: string }) {
   const anime = useMemo(() => getAnimeById(animeId), [animeId]);
@@ -62,15 +63,24 @@ export function DetailsPage({ animeId }: { animeId: string }) {
         </div>
 
         <div className="relative mx-auto w-full max-w-7xl px-4 pb-10 pt-6 sm:px-6 sm:pb-14 sm:pt-10 lg:px-8 lg:pb-16">
-          {canGoBack && (
-            <button
-              onClick={back}
-              className="mb-6 inline-flex items-center gap-2 rounded-lg border border-border/60 bg-background/40 px-3 py-1.5 text-sm text-muted-foreground backdrop-blur-sm hover:text-foreground hover:border-[var(--brand)]/50"
-            >
-              <ArrowLeft className="size-4" />
-              Back
-            </button>
-          )}
+          {/* Top bar: Back button (left) + Cast button (right) */}
+          <div className="mb-6 flex items-center justify-between gap-2">
+            {canGoBack ? (
+              <button
+                onClick={back}
+                className="inline-flex items-center gap-2 rounded-lg border border-border/60 bg-background/40 px-3 py-1.5 text-sm text-muted-foreground backdrop-blur-sm hover:text-foreground hover:border-[var(--brand)]/50"
+              >
+                <ArrowLeft className="size-4" />
+                Back
+              </button>
+            ) : (
+              <span />
+            )}
+            <CastButton
+              size={5}
+              className="size-10 border-border/60 bg-background/40"
+            />
+          </div>
 
           <div className="flex flex-col gap-6 md:flex-row md:gap-8">
             {/* Poster */}
