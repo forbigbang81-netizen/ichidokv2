@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Play, Star, Clock, Layers, ArrowLeft, Calendar } from "lucide-react";
+import { Play, Star, Clock, Layers, ArrowLeft, Calendar, RotateCcw } from "lucide-react";
 import {
   getAnimeById,
   getSeasons,
@@ -16,6 +16,48 @@ import { Badge } from "@/components/ui/badge";
 import { SeasonsTab } from "@/components/anime/SeasonsTab";
 import { CastButton } from "@/components/anime/CastButton";
 
+/** Check localStorage for the last watched episode of this anime. */
+function useContinueWatching(animeId: string, episodeCount: number) {
+  const [continueEp, setContinueEp] = useState<number | null>(null);
+  const [continuePos, setContinuePos] = useState<number>(0);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    // Scan localStorage for pos:{animeId}:{epNum} entries
+    // Find the episode with the most recent saved position
+    let bestEp: number | null = null;
+    let bestPos = 0;
+    for (let ep = 1; ep <= episodeCount; ep++) {
+      const saved = localStorage.getItem(`pos:${animeId}:${ep}`);
+      if (saved) {
+        const pos = parseInt(saved, 10);
+        // Only consider positions that are past 10s but not at the very end
+        if (pos > 10 && pos < 1400) { // ~23 min episode, skip if near end
+          if (pos > bestPos) {
+            bestPos = pos;
+            bestEp = ep;
+          }
+        }
+      }
+    }
+    setContinueEp(bestEp);
+    setContinuePos(bestPos);
+  }, [animeId, episodeCount]);
+
+  return { continueEp, continuePos };
+}
+
+/** Format seconds as M:SS or H:MM:SS */
+function fmtTime(s: number): string {
+  if (!Number.isFinite(s) || s < 0) return "0:00";
+  const sec = Math.floor(s % 60);
+  const min = Math.floor((s / 60) % 60);
+  const hr = Math.floor(s / 3600);
+  const ss = sec.toString().padStart(2, "0");
+  if (hr > 0) return `${hr}:${min.toString().padStart(2, "0")}:${ss}`;
+  return `${min}:${ss}`;
+}
+
 export function DetailsPage({ animeId }: { animeId: string }) {
   const anime = useMemo(() => getAnimeById(animeId), [animeId]);
   const go = useApp((s) => s.go);
@@ -23,6 +65,10 @@ export function DetailsPage({ animeId }: { animeId: string }) {
   const canGoBack = useApp((s) => s.canGoBack());
   const seasons = useMemo(() => (anime ? getSeasons(anime) : []), [anime]);
   const hasMultipleSeasons = seasons.length > 1;
+  const { continueEp, continuePos } = useContinueWatching(
+    animeId,
+    anime?.episode_count ?? 0,
+  );
 
   if (!anime) {
     return (
@@ -163,20 +209,57 @@ export function DetailsPage({ animeId }: { animeId: string }) {
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <Button
-                  size="lg"
-                  onClick={() =>
-                    go({
-                      name: "watch",
-                      animeId: anime.id,
-                      episode: 1,
-                    })
-                  }
-                  className="gap-2 bg-[var(--brand)] text-[var(--brand-foreground)] hover:bg-[var(--brand)]/90 shadow-lg shadow-[var(--brand)]/25"
-                >
-                  <Play className="size-4 fill-current" />
-                  Play Episode 1
-                </Button>
+                {continueEp ? (
+                  <>
+                    <Button
+                      size="lg"
+                      onClick={() =>
+                        go({
+                          name: "watch",
+                          animeId: anime.id,
+                          episode: continueEp,
+                        })
+                      }
+                      className="gap-2 bg-[var(--brand)] text-[var(--brand-foreground)] hover:bg-[var(--brand)]/90 shadow-lg shadow-[var(--brand)]/25"
+                    >
+                      <Play className="size-4 fill-current" />
+                      Continue Episode {continueEp}
+                      <span className="ml-1 text-xs opacity-70">
+                        {fmtTime(continuePos)}
+                      </span>
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      onClick={() =>
+                        go({
+                          name: "watch",
+                          animeId: anime.id,
+                          episode: 1,
+                        })
+                      }
+                      className="gap-2"
+                    >
+                      <RotateCcw className="size-4" />
+                      Restart
+                    </Button>
+                  </>
+                ) : (
+                  <Button
+                    size="lg"
+                    onClick={() =>
+                      go({
+                        name: "watch",
+                        animeId: anime.id,
+                        episode: 1,
+                      })
+                    }
+                    className="gap-2 bg-[var(--brand)] text-[var(--brand-foreground)] hover:bg-[var(--brand)]/90 shadow-lg shadow-[var(--brand)]/25"
+                  >
+                    <Play className="size-4 fill-current" />
+                    Play Episode 1
+                  </Button>
+                )}
               </div>
             </motion.div>
           </div>

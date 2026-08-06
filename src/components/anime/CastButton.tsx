@@ -3,25 +3,19 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Cast, Loader2, X, Tv, Smartphone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 
 /**
  * CastButton — Google Cast (CAF SDK) button.
  *
- * Uses the Google Cast Application Framework (CAF) SDK via the
- * `cast_sender.js?loadCastFramework=1` loader. The cast context is
- * shared app-wide (singleton on window), so a session started on the
- * details page stays connected when the user navigates to the player.
+ * Uses the Google Cast Application Framework (CAF) SDK. The cast context is
+ * shared app-wide (singleton on window), so a session started on the details
+ * page stays connected when the user navigates to the player.
  *
- * Props:
- *  - videoUrl: the absolute URL to cast (the embed player URL)
- *  - title:    title for the cast metadata
- *  - poster:   poster image URL for cast metadata
- *  - className: extra classes for the button
- *  - size:     icon size (default 5)
- *  - onSessionChange: callback when cast session connects/disconnects
+ * For zokoanime/megaplay embed URLs, the button first extracts the actual
+ * HLS video URL (via /api/extract-stream) before casting — the Chromecast
+ * Default Media Receiver can play HLS URLs but NOT iframe embed pages.
  */
 type Props = {
   videoUrl?: string;
@@ -53,59 +47,82 @@ function initCast() {
 
   w.__onGCastApiAvailable = (isAvailable: boolean) => {
     if (!isAvailable) return;
-    const cast = (window as unknown as {
-      cast?: {
-        framework?: {
-          CastContext?: {
-            getInstance?: () => {
-              setOptions: (opts: Record<string, unknown>) => void;
-              addEventListener: (
-                type: string,
-                fn: (e: unknown) => void,
-              ) => void;
-              getCastState?: () => string;
-              requestSession?: () => Promise<unknown>;
-              getCurrentSession?: () => unknown;
-            };
-          };
-        };
-      };
-    }).cast;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const cast = (window as any).cast;
     const ctx = cast?.framework?.CastContext?.getInstance?.();
     if (!ctx) return;
     ctx.setOptions({
-      receiverApplicationId: "CC1AD845",
+      receiverApplicationId: "CC1AD845", // Default Media Receiver
       autoJoinPolicy: "origin_scoped",
       resumeSavedSession: true,
     });
-    // Listen for session state changes
-    ctx.addEventListener(
-      "caststatechanged",
-      (e: unknown) => {
-        const event = e as { castState?: string };
-        const connected =
-          event.castState === "CONNECTED" ||
-          event.castState === "CONNECTING";
-        notifySessionListeners(connected);
-      },
-    );
-    // Check initial state
+    ctx.addEventListener("caststatechanged", (e: { castState?: string }) => {
+      const connected =
+        e.castState === "CONNECTED" || e.castState === "CONNECTING";
+      notifySessionListeners(connected);
+    });
     const initialState = ctx.getCastState?.();
     if (initialState === "CONNECTED" || initialState === "CONNECTING") {
       notifySessionListeners(true);
     }
   };
 
-  // Load the SDK script
-  const existing = document.querySelector(
-    'script[src*="cast_sender.js"]',
-  );
+  // Load the CAF SDK script
+  const existing = document.querySelector('script[src*="cast_sender.js"]');
   if (existing) return;
   const script = document.createElement("script");
   script.src =
     "https://www.gstatic.com/cv/js/sender/1.0/cast_sender.js?loadCastFramework=1";
   script.async = true;
   document.head.appendChild(script);
+}
+
+/** Extract the HLS URL from a zokoanime/megaplay embed page. */
+async function extractHlsUrl(embedUrl: string): Promise<string | null> {
+  try {
+    const api = `/api/extract-stream?url=${encodeURIComponent(embedUrl)}`;
+    const r = await fetch(api);
+    if (!r.ok) return null;
+    const data = await r.json();
+    return data.src || null;
+  } catch {
+    return null;
+  }
+}
+
+/** Load media into an existing cast session */
+async function loadMedia(
+  session: unknown,
+  videoUrl: string,
+  title: string,
+  poster?: string,
+) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const cast = (window as any).cast;
+  const framework = cast?.framework;
+  const messages = framework?.messages;
+  if (!messages) return;
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const mediaInfo: any = new messages.MediaInformation(
+    messages.MediaType?.MOVIE,
+  );
+  mediaInfo.contentId = videoUrl;
+  mediaInfo.contentUrl = videoUrl;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const metadata: any = new messages.GenericMediaMetadata();
+  metadata.title = title;
+  metadata.metadataType = 0; // GenericMediaMetadata
+  if (poster) {
+    metadata.images = [{ url: poster }];
+  }
+  mediaInfo.metadata = metadata;
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const request: any = new framework.LoadRequest(mediaInfo);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const s = session as any;
+  await s?.loadMedia?.(request);
 }
 
 export function CastButton({
@@ -126,17 +143,14 @@ export function CastButton({
   // Init cast on mount
   useEffect(() => {
     initCast();
-    // Check if SDK already loaded
     const check = setInterval(() => {
-      const cast = (window as unknown as {
-        cast?: { framework?: unknown };
-      }).cast;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const cast = (window as any).cast;
       if (cast?.framework) {
         setCastReady(true);
         clearInterval(check);
       }
     }, 300);
-    // Timeout after 10s
     const timeout = setTimeout(() => clearInterval(check), 10000);
     return () => {
       clearInterval(check);
@@ -156,33 +170,42 @@ export function CastButton({
     };
   }, []);
 
+  /** Start a new cast session and load media */
   const startCast = useCallback(async () => {
-    const cast = (window as unknown as {
-      cast?: {
-        framework?: {
-          CastContext?: {
-            getInstance?: () => {
-              requestSession?: () => Promise<unknown>;
-              getCurrentSession?: () => unknown;
-            };
-          };
-        };
-      };
-    }).cast;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const cast = (window as any).cast;
     const ctx = cast?.framework?.CastContext?.getInstance?.();
     if (!ctx) {
       toast.error("Cast not available", {
-        description: "Google Cast SDK failed to load. Use Chrome or Edge.",
+        description: "Google Cast requires Chrome or Edge desktop.",
       });
       return;
     }
     setConnecting(true);
     try {
-      await ctx.requestSession?.();
-      // If we have a video URL, load it now
+      // 1. Request session (shows device picker)
+      await ctx.requestSession();
       const session = ctx.getCurrentSession?.();
+
+      // 2. If we have a video URL, extract HLS and load it
       if (session && videoUrl) {
-        await loadMedia(session, videoUrl, title, poster);
+        toast.info("Loading video...", { duration: 3000 });
+        // For zokoanime/megaplay, extract the HLS URL
+        let castUrl = videoUrl;
+        if (
+          videoUrl.includes("zokoanime.video") ||
+          videoUrl.includes("megaplay.buzz")
+        ) {
+          const hlsUrl = await extractHlsUrl(videoUrl);
+          if (hlsUrl) {
+            castUrl = hlsUrl;
+          } else {
+            toast.error("Could not extract video URL for casting");
+            return;
+          }
+        }
+        await loadMedia(session, castUrl, title, poster);
+        toast.success("Casting to TV", { description: title });
       }
     } catch (e) {
       const err = e as { code?: string };
@@ -194,20 +217,43 @@ export function CastButton({
     }
   }, [videoUrl, title, poster]);
 
+  /** Load a new episode into an existing session */
+  const loadNewMedia = useCallback(async () => {
+    if (!videoUrl) return;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const cast = (window as any).cast;
+    const ctx = cast?.framework?.CastContext?.getInstance?.();
+    const session = ctx?.getCurrentSession?.();
+    if (!session) return;
+
+    setConnecting(true);
+    try {
+      toast.info("Loading video...", { duration: 3000 });
+      let castUrl = videoUrl;
+      if (
+        videoUrl.includes("zokoanime.video") ||
+        videoUrl.includes("megaplay.buzz")
+      ) {
+        const hlsUrl = await extractHlsUrl(videoUrl);
+        if (hlsUrl) {
+          castUrl = hlsUrl;
+        } else {
+          toast.error("Could not extract video URL");
+          return;
+        }
+      }
+      await loadMedia(session, castUrl, title, poster);
+      toast.success("Now playing on TV", { description: title });
+    } catch {
+      toast.error("Failed to load media");
+    } finally {
+      setConnecting(false);
+    }
+  }, [videoUrl, title, poster]);
+
   const stopCast = useCallback(async () => {
-    const cast = (window as unknown as {
-      cast?: {
-        framework?: {
-          CastContext?: {
-            getInstance?: () => {
-              getCurrentSession?: () => {
-                endSession?: (stopCasting: boolean) => Promise<void>;
-              };
-            };
-          };
-        };
-      };
-    }).cast;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const cast = (window as any).cast;
     const ctx = cast?.framework?.CastContext?.getInstance?.();
     const session = ctx?.getCurrentSession?.();
     if (session?.endSession) {
@@ -215,32 +261,13 @@ export function CastButton({
     }
   }, []);
 
-  // If connected (no videoUrl), clicking stops cast
-  // If connected (with videoUrl), clicking loads new media
-  // If not connected, clicking opens picker
   const handleClick = () => {
     if (connected && !videoUrl) {
-      // Stop casting
       stopCast();
       return;
     }
     if (connected && videoUrl) {
-      // Load new media into existing session
-      const cast = (window as unknown as {
-        cast?: {
-          framework?: {
-            CastContext?: { getInstance?: () => unknown };
-          };
-        };
-      }).cast;
-      const ctx = cast?.framework?.CastContext?.getInstance?.() as {
-        getCurrentSession?: () => unknown;
-      };
-      const session = ctx?.getCurrentSession?.();
-      if (session) {
-        loadMedia(session, videoUrl, title, poster);
-        toast.success("Now playing on TV", { description: title });
-      }
+      loadNewMedia();
       return;
     }
     // Not connected — open picker
@@ -281,12 +308,12 @@ export function CastButton({
         )}
       </button>
 
-      {/* Cast picker dialog */}
       <AnimatePresence>
         {showPicker && (
           <CastPicker
             title={title}
             castReady={castReady}
+            connecting={connecting}
             onCast={async () => {
               setShowPicker(false);
               await startCast();
@@ -300,49 +327,18 @@ export function CastButton({
   );
 }
 
-/** Load media into an existing cast session */
-async function loadMedia(
-  session: unknown,
-  videoUrl: string,
-  title: string,
-  poster?: string,
-) {
-  // Use eslint-disable for the cast SDK which doesn't have proper types
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const cast = (window as any).cast;
-  const framework = cast?.framework;
-  const messages = framework?.messages;
-  if (!messages) return;
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const mediaInfo: any = new messages.MediaInformation(messages.MediaType?.MOVIE);
-  mediaInfo.contentId = videoUrl;
-  mediaInfo.contentUrl = videoUrl;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const metadata: any = new messages.GenericMediaMetadata();
-  metadata.title = title;
-  if (poster) {
-    metadata.images = [{ url: poster }];
-  }
-  mediaInfo.metadata = metadata;
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const request: any = new framework.LoadRequest(mediaInfo);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const s = session as any;
-  await s?.loadMedia?.(request);
-}
-
 /** Cast picker dialog */
 function CastPicker({
   title,
   castReady,
+  connecting,
   onCast,
   onClose,
   videoUrl,
 }: {
   title: string;
   castReady: boolean;
+  connecting: boolean;
   onCast: () => void;
   onClose: () => void;
   videoUrl?: string;
@@ -361,7 +357,9 @@ function CastPicker({
     if (!videoUrl) return;
     try {
       const PresentationRequestCtor = (
-        window as unknown as { PresentationRequest: new (url: string) => { start: () => Promise<unknown> } }
+        window as unknown as {
+          PresentationRequest: new (url: string) => { start: () => Promise<unknown> };
+        }
       ).PresentationRequest;
       const request = new PresentationRequestCtor(videoUrl);
       await request.start();
@@ -407,17 +405,26 @@ function CastPicker({
         )}
 
         <div className="space-y-2">
+          {/* Google Cast SDK button */}
           <button
             onClick={onCast}
-            disabled={!castReady}
+            disabled={!castReady || connecting}
             className="flex w-full items-center gap-3 rounded-lg border border-border/60 bg-card/40 p-3 text-left transition-colors hover:border-[var(--brand)]/50 hover:bg-accent disabled:opacity-50"
           >
             <div className="flex size-10 items-center justify-center rounded-full bg-[var(--brand)]/15">
-              <Cast className="size-5 text-[var(--brand)]" />
+              {connecting ? (
+                <Loader2 className="size-5 animate-spin text-[var(--brand)]" />
+              ) : (
+                <Cast className="size-5 text-[var(--brand)]" />
+              )}
             </div>
             <div className="flex-1">
               <p className="text-sm font-semibold">
-                {castReady ? "Chromecast / Google TV" : "Loading..."}
+                {!castReady
+                  ? "Loading Cast SDK..."
+                  : connecting
+                    ? "Connecting..."
+                    : "Chromecast / Google TV"}
               </p>
               <p className="text-xs text-muted-foreground">
                 Cast to any Chromecast device on your network
@@ -436,7 +443,7 @@ function CastPicker({
               <div className="flex-1">
                 <p className="text-sm font-semibold">Browser Cast</p>
                 <p className="text-xs text-muted-foreground">
-                  Use Chrome&apos;s built-in cast
+                  Use Chrome&apos;s built-in cast (Presentation API)
                 </p>
               </div>
             </button>
